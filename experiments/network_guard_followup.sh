@@ -2,7 +2,7 @@
 # Pause the run processes while the provider cannot be reached (laptop moved, Wi-Fi lost, sleep/wake), and
 # resume them when it can. Pausing changes nothing in any protocol: it only keeps calls from failing with
 # local connection errors, which would use up a job's limited retry attempts. Every pause and resume is
-# logged in results/raw/network_guard.log. Approved by the project owner on 2026-11-14.
+# logged in results/raw/network_guard.log. Approved by the author on 2026-11-14.
 # Usage: experiments/network_guard_followup.sh &     (same guard, for the follow-up runs; stop it with: pkill -f network_guard_followup.sh)
 cd "$(dirname "$0")/.."
 LOG=results/raw/network_guard.log

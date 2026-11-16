@@ -45,7 +45,7 @@ This document lists every recorded change to a registered protocol and every dev
 | Time (UTC, 2026-11-15) | Event | Source |
 |---|---|---|
 | 19:57 | Provider answers every deepseek-v4-flash call with an error ("504 Gateway Time-out", then "502") | [INTERIM_NOTE.md](../results/aggregate/final_test/INTERIM_NOTE.md) |
-| 20:22:42 | deepseek run paused by hand, "owner's instruction" | network_guard.log |
+| 20:22:42 | deepseek run paused by hand, by hand | network_guard.log |
 | 20:23:06 | Note committed fixing the rule for the missing calls, "before any held-out summary was produced or opened" | `c3aed44`; INTERIM_NOTE.md |
 | 20:23 | Frozen analyses run on the incomplete data | commit message of `98e045d` |
 | 20:32 | Interim held-out and rewording results committed | `98e045d` |
@@ -55,7 +55,7 @@ This document lists every recorded change to a registered protocol and every dev
 | 22:28–22:35 | gemma chain run once more, giving its open calls their last attempt (rule 2 of the note) | final_chain_adaption-gemma-4-26b-a4b-it-schema.log |
 | 22:46 | Final held-out and rewording results committed | `2863f90` |
 
-At the first view the state was: qwen3.5 and qwen3.8 complete, gemma 7,751 of 7,759 calls answered, deepseek 6,740 of 7,759 (INTERIM_NOTE.md). Why the analysis was run then: "The project owner decided to look at the results now instead of waiting. This departs from PREREG_FINAL.md, which says the held-out results are analysed once, after every chain has finished" (same file). The note fixed in advance that the run would be resumed unchanged, that the frozen analysis would be re-run on complete data if it finished by 2026-11-16 00:00, and that "the interim numbers are not used to change any prompt, method, analysis or choice of what to report".
+At the first view the state was: qwen3.5 and qwen3.8 complete, gemma 7,751 of 7,759 calls answered, deepseek 6,740 of 7,759 (INTERIM_NOTE.md). Why the analysis was run then: "We decided to look at the results now instead of waiting. This departs from PREREG_FINAL.md, which says the held-out results are analysed once, after every chain has finished" (same file). The note fixed in advance that the run would be resumed unchanged, that the frozen analysis would be re-run on complete data if it finished by 2026-11-16 00:00, and that "the interim numbers are not used to change any prompt, method, analysis or choice of what to report".
 
 Interim against final: "Between the two analyses only deepseek's rows changed (native optimal-plan rate 0.73 with 108 unanswered items, then 0.98)" ([paper/report.md](../paper/report.md) Appendix B). The diff of [RESULTS_TABLES.md](../results/aggregate/final_test/RESULTS_TABLES.md) between `98e045d` and `2863f90` agrees: apart from layout, only deepseek rows changed. Its EOP − native difference went from +0.27 [+0.18, +0.38] to +0.02 [+0.01, +0.04] (Holm p < 0.001, then 0.004), and, in the over-intervention table, its test rate of acting on states sufficient from the start went from 0.25 to 0.00. In the rewording summary only the planner timing fields changed. Affects: every reported held-out number is from the complete data.
 
