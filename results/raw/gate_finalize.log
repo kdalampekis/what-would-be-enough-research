@@ -1,0 +1,311 @@
+=== 2026-11-14T16:24:04Z fill pass
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-qwen3.5-397b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-qwen3.5-397b: status=ok parse_error=None tokens={'input_tokens': 3616, 'output_tokens': 4547, 'reasoning_tokens': 4444, 'cached_input_tokens': 0} cost=credits 0.0179 served=qwen3.5-397b-a17b-nvfp4 seconds=51.15
+adaption-qwen3.5-397b {'skipped_done': 2105, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 200.2009 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-qwen3.5-397b/pilot_dev/summary.json and report.md
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 405 pairs (810 items) from 62 families
+471 instances, 62 families, 810 jobs per model; pools {'plan_t1': 810}
+WARNING adaption-qwen3.5-397b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-qwen3.5-397b: status=ok parse_error=None tokens={'input_tokens': 3596, 'output_tokens': 6511, 'reasoning_tokens': 6390, 'cached_input_tokens': 0} cost=credits 0.0248 served=qwen3.5-397b-a17b-nvfp4 seconds=130.63
+adaption-qwen3.5-397b {'skipped_done': 810, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 200.2009 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.5-397b v3dev s3: status=ok parse_error=None
+adaption-qwen3.5-397b v3dev s3 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.5-397b v3dev s1: status=ok parse_error=None
+adaption-qwen3.5-397b v3dev s1 {'skipped_done': 1018, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.5-397b v3dev s3v2: status=ok parse_error=None
+adaption-qwen3.5-397b v3dev s3v2 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1b', 544)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.5-397b t1b s3: status=ok parse_error=extraction invalid: KeyError: 'handle'
+adaption-qwen3.5-397b t1b s3 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.5-397b t1b s1: status=ok parse_error=None
+adaption-qwen3.5-397b t1b s1 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1b', 544)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.5-397b t1b s3v2: status=ok parse_error=None
+adaption-qwen3.5-397b t1b s3v2 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.5-397b t1pilot s3: status=ok parse_error=None
+adaption-qwen3.5-397b t1pilot s3 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.5-397b t1pilot s1: status=ok parse_error=None
+adaption-qwen3.5-397b t1pilot s1 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.5-397b t1pilot s3v2: status=ok parse_error=None
+adaption-qwen3.5-397b t1pilot s3v2 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 3658, 'output_tokens': 624, 'reasoning_tokens': 522, 'cached_input_tokens': 0} cost=credits 0.0009 served=qwen3.8-27b seconds=4.49
+adaption-qwen3.8-27b {'skipped_done': 2105, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 200.2009 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-qwen3.8-27b/pilot_dev/summary.json and report.md
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 405 pairs (810 items) from 62 families
+471 instances, 62 families, 810 jobs per model; pools {'plan_t1': 810}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 3638, 'output_tokens': 6358, 'reasoning_tokens': 6228, 'cached_input_tokens': 0} cost=credits 0.0081 served=qwen3.8-27b seconds=105.17
+adaption-qwen3.8-27b {'skipped_done': 810, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 200.2009 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.8-27b v3dev s3: status=ok parse_error=None
+adaption-qwen3.8-27b v3dev s3 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b v3dev s1: status=ok parse_error=None
+adaption-qwen3.8-27b v3dev s1 {'skipped_done': 1018, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.8-27b v3dev s3v2: status=ok parse_error=None
+adaption-qwen3.8-27b v3dev s3v2 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1b', 544)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.8-27b t1b s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+adaption-qwen3.8-27b t1b s3 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1b s1: status=ok parse_error=None
+adaption-qwen3.8-27b t1b s1 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1b', 544)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.8-27b t1b s3v2: status=ok parse_error=None
+adaption-qwen3.8-27b t1b s3v2 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.8-27b t1pilot s3: status=ok parse_error=None
+adaption-qwen3.8-27b t1pilot s3 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1pilot s1: status=ok parse_error=None
+adaption-qwen3.8-27b t1pilot s1 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2009
+smoke adaption-qwen3.8-27b t1pilot s3v2: status=ok parse_error=None
+adaption-qwen3.8-27b t1pilot s3v2 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 3869, 'output_tokens': 529, 'reasoning_tokens': 0, 'cached_input_tokens': 256} cost=credits 0.0004 served=gemma-4-26b-a4b-it seconds=2.66
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 2105, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 1}
+cumulative estimated spend credits 200.2009 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-gemma-4-26b-a4b-it-schema/pilot_dev/summary.json and report.md
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 405 pairs (810 items) from 62 families
+471 instances, 62 families, 810 jobs per model; pools {'plan_t1': 810}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 3849, 'output_tokens': 114, 'reasoning_tokens': 0, 'cached_input_tokens': 3840} cost=credits 0.0003 served=gemma-4-26b-a4b-it seconds=61.26
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 810, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 1}
+cumulative estimated spend credits 200.2009 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-gemma-4-26b-a4b-it-schema v3dev s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema v3dev s3 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema v3dev s1: status=ok parse_error=no text
+adaption-gemma-4-26b-a4b-it-schema v3dev s1 {'skipped_done': 1018, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1b', 544)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-gemma-4-26b-a4b-it-schema t1b s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema t1b s3 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1b s1: status=ok parse_error=no text
+adaption-gemma-4-26b-a4b-it-schema t1b s1 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-gemma-4-26b-a4b-it-schema t1pilot s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema t1pilot s3 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1pilot s1: status=ok parse_error=no text
+adaption-gemma-4-26b-a4b-it-schema t1pilot s1 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2009 of 519.4324
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 3303, 'output_tokens': 684, 'reasoning_tokens': 578, 'cached_input_tokens': 0} cost=credits 0.0002 served=deepseek-v4-flash seconds=5.1
+adaption-deepseek-v4-flash {'skipped_done': 2105, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 200.2009 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-deepseek-v4-flash/pilot_dev/summary.json and report.md
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 405 pairs (810 items) from 62 families
+471 instances, 62 families, 810 jobs per model; pools {'plan_t1': 810}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 3283, 'output_tokens': 4658, 'reasoning_tokens': 4535, 'cached_input_tokens': 0} cost=credits 0.0008 served=deepseek-v4-flash seconds=27.89
+adaption-deepseek-v4-flash {'skipped_done': 810, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 200.2009 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2009
+smoke adaption-deepseek-v4-flash v3dev s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+adaption-deepseek-v4-flash v3dev s3 {'skipped_done': 538, 'ok': 7, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 7, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash v3dev s1: status=ok parse_error=None
+adaption-deepseek-v4-flash v3dev s1 {'skipped_done': 1018, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2028 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2028
+smoke adaption-deepseek-v4-flash v3dev s3v2: status=ok parse_error=None
+adaption-deepseek-v4-flash v3dev s3v2 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2028 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1b', 544)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2028
+smoke adaption-deepseek-v4-flash t1b s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+adaption-deepseek-v4-flash t1b s3 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1b s1: status=ok parse_error=None
+adaption-deepseek-v4-flash t1b s1 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2028 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1b', 544)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2028
+smoke adaption-deepseek-v4-flash t1b s3v2: status=ok parse_error=None
+adaption-deepseek-v4-flash t1b s3v2 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2028 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 200.2028
+smoke adaption-deepseek-v4-flash t1pilot s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+adaption-deepseek-v4-flash t1pilot s3 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1pilot s1: status=ok parse_error=None
+adaption-deepseek-v4-flash t1pilot s1 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2028 of 519.4324
+EOP comparison (msep-s1-obligations-v1); sets [('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 200.2028
+smoke adaption-deepseek-v4-flash t1pilot s3v2: status=ok parse_error=None
+adaption-deepseek-v4-flash t1pilot s3v2 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 200.2028 of 519.4324
+=== 2026-11-14T16:31:24Z analyses
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+wrote results/aggregate/v3dev/pilot_dev/summary.json and report.md
+{
+ "adaption-qwen3.5-397b": {
+  "O1": {
+   "mean": 0.1721311475409836,
+   "lo95": 0.09917355371900827,
+   "hi95": 0.256198347107438,
+   "one_sided_lo95": 0.11016949152542373,
+   "p_T_OI_1": 0.0004
+  },
+  "native": 0.11904761904761904,
+  "diff": {
+   "mean": 0.05308352849336456,
+   "lo95": -0.04951538137378847,
+   "hi95": 0.15266106442577032,
+   "p_T_OI_2": 0.1472
+  },
+  "T_OI_1": {
+   "p": 0.0004,
+   "holm_p": 0.0012000000000000001,
+   "supported": true
+  },
+  "T_OI_2": {
+   "p": 0.1472,
+   "holm_p": 0.5184,
+   "supported": false
+  }
+ },
+ "adaption-qwen3.8-27b": {
+  "O1": {
+   "mean": 0.0,
+   "lo95": 0.0,
+   "hi95": 0.0,
+   "one_sided_lo95": 0.0,
+   "p_T_OI_1": 1.0
+  },
+  "native": 0.0,
+  "diff": {
+   "mean": 0.0,
+   "lo95": 0.0,
+   "hi95": 0.0,
+   "p_T_OI_2": 1.0
+  },
+  "T_OI_1": {
+   "p": 1.0,
+   "holm_p": 1.0,
+   "supported": false
+  },
+  "T_OI_2": {
+   "p": 1.0,
+   "holm_p": 1.0,
+   "supported": false
+  }
+ },
+ "adaption-gemma-4-26b-a4b-it-schema": {
+  "O1": {
+   "mean": 0.680327868852459,
+   "lo95": 0.5607476635514018,
+   "hi95": 0.7804878048780488,
+   "one_sided_lo95": 0.5811965811965812,
+   "p_T_OI_1": 0.0
+  },
+  "native": 0.6428571428571429,
+  "diff": {
+   "mean": 0.03747072599531609,
+   "lo95": -0.12199747155499363,
+   "hi95": 0.19674185463659144,
+   "p_T_OI_2": 0.3266
+  },
+  "T_OI_1": {
+   "p": 0.0,
+   "holm_p": 0.0,
+   "supported": true
+  },
+  "T_OI_2": {
+   "p": 0.3266,
+   "holm_p": 0.6532,
+   "supported": false
+  }
+ },
+ "adaption-deepseek-v4-flash": {
+  "O1": {
+   "mean": 0.01639344262295082,
+   "lo95": 0.0,
+   "hi95": 0.04132231404958678,
+   "one_sided_lo95": 0.0,
+   "p_T_OI_1": 0.9943
+  },
+  "native": 0.0,
+  "diff": {
+   "mean": 0.01639344262295082,
+   "lo95": 0.0,
+   "hi95": 0.04132231404958678,
+   "p_T_OI_2": 0.1296
+  },
+  "T_OI_1": {
+   "p": 0.9943,
+   "holm_p": 1.0,
+   "supported": false
+  },
+  "T_OI_2": {
+   "p": 0.1296,
+   "holm_p": 0.5184,
+   "supported": false
+  }
+ }
+}
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+wrote results/aggregate/eop_dev/eop_summary.json
+=== 2026-11-14T16:38:17Z gate finalize done

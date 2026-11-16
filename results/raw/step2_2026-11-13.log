@@ -1,0 +1,14 @@
+loaded from .env: ['ADAPTION_API_KEY']
+74 instances, 10 families, 278 jobs per model; pools {'plan': 192, 'decision': 10, 'judgment': 76}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+WARNING adaption-gemma-4-26b-a4b-it: written from SDK source, no live call yet; run --smoke first
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+WARNING adaption-glm-53-flash: written from SDK source, no live call yet; run --smoke first
+WARNING adaption-glm-5.2-32k: written from SDK source, no live call yet; run --smoke first
+budget credits 50.00; already spent credits 7.05
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 1996, 'output_tokens': 477, 'reasoning_tokens': 373, 'cached_input_tokens': 0} cost=credits 0.0007 served=qwen3.8-27b seconds=4.02
+smoke adaption-gemma-4-26b-a4b-it: status=ok parse_error=None tokens={'input_tokens': 1950, 'output_tokens': 117, 'reasoning_tokens': 0, 'cached_input_tokens': 0} cost=credits 0.0002 served=gemma-4-26b-a4b-it seconds=0.92
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 1864, 'output_tokens': 586, 'reasoning_tokens': 492, 'cached_input_tokens': 0} cost=credits 0.0002 served=deepseek-v4-flash seconds=3.82
+smoke adaption-glm-53-flash: status=ok parse_error=None tokens={'input_tokens': 1789, 'output_tokens': 273, 'reasoning_tokens': 152, 'cached_input_tokens': 0} cost=credits 0.0004 served=glm-5.3-flash seconds=1.91
+smoke adaption-glm-5.2-32k: status=truncated parse_error=no text tokens={'input_tokens': 1789, 'output_tokens': 32000, 'reasoning_tokens': 32000, 'cached_input_tokens': 0} cost=credits 0.1433 served=glm-5.2 seconds=483.16
+smoke test failed: stopping before any further calls

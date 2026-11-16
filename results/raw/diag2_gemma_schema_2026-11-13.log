@@ -1,0 +1,98 @@
+loaded from .env: ['ADAPTION_API_KEY']
+74 instances, 10 families, 278 jobs per model; pools {'plan': 192, 'decision': 10, 'judgment': 76}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 24.83; already spent credits 9.83
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 2199, 'output_tokens': 212, 'reasoning_tokens': 0, 'cached_input_tokens': 0} cost=credits 0.0002 served=gemma-4-26b-a4b-it seconds=1.36
+  adaption-gemma-4-26b-a4b-it-schema: 50/276
+  adaption-gemma-4-26b-a4b-it-schema: 100/276
+  adaption-gemma-4-26b-a4b-it-schema: 150/276
+  adaption-gemma-4-26b-a4b-it-schema: 200/276
+  adaption-gemma-4-26b-a4b-it-schema: 250/276
+Traceback (most recent call last):
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 127, in __iter__
+    for part in self._httpcore_stream:
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py", line 407, in __iter__
+    raise exc from None
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py", line 403, in __iter__
+    for part in self._stream:
+                ^^^^^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpcore/_sync/http11.py", line 342, in __iter__
+    raise exc
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpcore/_sync/http11.py", line 334, in __iter__
+    for chunk in self._connection._receive_response_body(**kwargs):
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpcore/_sync/http11.py", line 203, in _receive_response_body
+    event = self._receive_event(timeout=timeout)
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpcore/_sync/http11.py", line 213, in _receive_event
+    with map_exceptions({h11.RemoteProtocolError: RemoteProtocolError}):
+         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "PROJECT_ROOT/experiments/run_pilot.py", line 230, in <module>
+    hk = f"heuristic-{h}"
+         ^^^^^^
+  File "PROJECT_ROOT/experiments/run_pilot.py", line 185, in main
+    # smoke gate: one plan job per model through the same accounted path
+  File "PROJECT_ROOT/src/msep/models/runner.py", line 189, in run_jobs
+    status, perr = f.result()
+                   ~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "PROJECT_ROOT/src/msep/models/runner.py", line 154, in one
+    res = provider.complete(job.prompt, schema, name)
+  File "PROJECT_ROOT/src/msep/models/providers/adaption_provider.py", line 85, in complete
+    resp, text, last_type, err = self._stream(request)
+                                 ~~~~~~~~~~~~^^^^^^^^^
+  File "PROJECT_ROOT/src/msep/models/providers/adaption_provider.py", line 58, in _stream
+    for ev in stream:
+              ^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/adaption/_streaming.py", line 48, in __iter__
+    for item in self._iterator:
+                ^^^^^^^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/adaption/_streaming.py", line 61, in __stream__
+    for sse in iterator:
+               ^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/adaption/_streaming.py", line 52, in _iter_events
+    yield from self._decoder.iter_bytes(self.response.iter_bytes())
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/adaption/_streaming.py", line 244, in iter_bytes
+    for chunk in self._iter_chunks(iterator):
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/adaption/_streaming.py", line 255, in _iter_chunks
+    for chunk in iterator:
+                 ^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpx/_models.py", line 897, in iter_bytes
+    for raw_bytes in self.iter_raw():
+                     ~~~~~~~~~~~~~^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpx/_models.py", line 951, in iter_raw
+    for raw_stream_bytes in self.stream:
+                            ^^^^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpx/_client.py", line 153, in __iter__
+    for chunk in self._stream:
+                 ^^^^^^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 126, in __iter__
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "PROJECT_ROOT/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.RemoteProtocolError: peer closed connection without sending complete message body (incomplete chunked read)

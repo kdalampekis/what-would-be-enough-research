@@ -1,0 +1,8 @@
+loaded from .env: ['ADAPTION_API_KEY']
+74 instances, 10 families, 278 jobs per model; pools {'plan': 192, 'decision': 10, 'judgment': 76}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 24.83; already spent credits 9.91
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 2199, 'output_tokens': 212, 'reasoning_tokens': 0, 'cached_input_tokens': 0} cost=credits 0.0002 served=gemma-4-26b-a4b-it seconds=1.36
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 276, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 9.9118 of credits 24.83
+wrote results/aggregate/diagnostics_2026-11-13/gemma_schema_run/calibration_dev/summary.json and report.md

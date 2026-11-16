@@ -1,0 +1,3 @@
+loaded from .env: ['ADAPTION_API_KEY']
+74 instances, 10 families, 278 jobs per model; pools {'plan': 192, 'decision': 10, 'judgment': 76}
+wrote PROJECT_ROOT/results/aggregate/calibration_dev/summary.json and report.md

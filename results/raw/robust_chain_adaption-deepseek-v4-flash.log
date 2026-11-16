@@ -1,0 +1,62 @@
+=== 2026-11-14T20:20:12Z pass 1
+robustness study: 548 variant items; conditions ['frozen', 's3v3', 'a', 's1']
+budget 519.4324; already spent 201.3365
+  adaption-deepseek-v4-flash: 50/548
+  adaption-deepseek-v4-flash: 100/548
+  adaption-deepseek-v4-flash: 150/548
+  adaption-deepseek-v4-flash: 200/548
+  adaption-deepseek-v4-flash: 250/548
+  adaption-deepseek-v4-flash: 300/548
+  adaption-deepseek-v4-flash: 350/548
+  adaption-deepseek-v4-flash: 400/548
+  adaption-deepseek-v4-flash: 450/548
+  adaption-deepseek-v4-flash: 500/548
+adaption-deepseek-v4-flash s3v2 {'skipped_done': 0, 'ok': 249, 'refusal': 0, 'truncated': 9, 'error': 290, 'parse_error': 22, 'budget_stopped': 0, 'retry_cap_reached': 0}
+  adaption-deepseek-v4-flash: 50/548
+  adaption-deepseek-v4-flash: 100/548
+  adaption-deepseek-v4-flash: 150/548
+  adaption-deepseek-v4-flash: 200/548
+  adaption-deepseek-v4-flash: 250/548
+  adaption-deepseek-v4-flash: 300/548
+  adaption-deepseek-v4-flash: 350/548
+  adaption-deepseek-v4-flash: 400/548
+  adaption-deepseek-v4-flash: 450/548
+  adaption-deepseek-v4-flash: 500/548
+adaption-deepseek-v4-flash s3v3 {'skipped_done': 0, 'ok': 489, 'refusal': 0, 'truncated': 37, 'error': 22, 'parse_error': 38, 'budget_stopped': 0, 'retry_cap_reached': 0}
+  adaption-deepseek-v4-flash: 50/548
+  adaption-deepseek-v4-flash: 100/548
+  adaption-deepseek-v4-flash: 150/548
+  adaption-deepseek-v4-flash: 200/548
+  adaption-deepseek-v4-flash: 250/548
+  adaption-deepseek-v4-flash: 300/548
+  adaption-deepseek-v4-flash: 350/548
+  adaption-deepseek-v4-flash: 400/548
+  adaption-deepseek-v4-flash: 450/548
+  adaption-deepseek-v4-flash: 500/548
+adaption-deepseek-v4-flash a {'skipped_done': 0, 'ok': 530, 'refusal': 0, 'truncated': 18, 'error': 0, 'parse_error': 18, 'budget_stopped': 0, 'retry_cap_reached': 0}
+  adaption-deepseek-v4-flash: 50/548
+  adaption-deepseek-v4-flash: 100/548
+  adaption-deepseek-v4-flash: 150/548
+  adaption-deepseek-v4-flash: 200/548
+  adaption-deepseek-v4-flash: 250/548
+  adaption-deepseek-v4-flash: 300/548
+  adaption-deepseek-v4-flash: 350/548
+  adaption-deepseek-v4-flash: 400/548
+  adaption-deepseek-v4-flash: 450/548
+  adaption-deepseek-v4-flash: 500/548
+adaption-deepseek-v4-flash s1 {'skipped_done': 0, 'ok': 512, 'refusal': 0, 'truncated': 36, 'error': 0, 'parse_error': 36, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 202.4598 of 519.4324
+=== 2026-11-15T16:42:21Z pass 2
+robustness study: 548 variant items; conditions ['frozen', 's3v3', 'a', 's1']
+budget 519.4324; already spent 395.8010
+  adaption-deepseek-v4-flash: 50/290
+  adaption-deepseek-v4-flash: 100/290
+  adaption-deepseek-v4-flash: 150/290
+  adaption-deepseek-v4-flash: 200/290
+  adaption-deepseek-v4-flash: 250/290
+adaption-deepseek-v4-flash s3v2 {'skipped_done': 258, 'ok': 287, 'refusal': 0, 'truncated': 3, 'error': 0, 'parse_error': 18, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-deepseek-v4-flash s3v3 {'skipped_done': 526, 'ok': 19, 'refusal': 0, 'truncated': 3, 'error': 0, 'parse_error': 3, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-deepseek-v4-flash a {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-deepseek-v4-flash s1 {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 395.9162 of 519.4324
+=== 2026-11-15T18:38:01Z chain done

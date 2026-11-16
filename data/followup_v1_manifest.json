@@ -1,0 +1,48 @@
+{
+ "generator": "followup-v1",
+ "split": "train",
+ "clarity": {
+  "families": 60,
+  "states": 436,
+  "items": 872,
+  "states_by_group_class_exposure": {
+   "edited_into_sufficient | ALREADY_SUFFICIENT | exposed": 179,
+   "edited_into_sufficient | ALREADY_SUFFICIENT | not_exposed": 17,
+   "sibling | ALREADY_SUFFICIENT | exposed": 58,
+   "sibling | ALREADY_SUFFICIENT | not_exposed": 2,
+   "sibling | BOTH | exposed": 42,
+   "sibling | BOTH | not_exposed": 18,
+   "sibling | COMPUTATION_ONLY | exposed": 38,
+   "sibling | COMPUTATION_ONLY | not_exposed": 22,
+   "sibling | NEITHER | exposed": 40,
+   "sibling | NEITHER | not_exposed": 20
+  },
+  "first_family": "G007bbf8ae2",
+  "last_family": "G5bc64ade4b"
+ },
+ "cost": {
+  "families": 60,
+  "sweeps": 209,
+  "items": 780,
+  "items_by_relation": {
+   "below": 209,
+   "equal": 209,
+   "above": 362
+  },
+  "sweeps_dropped_before_family_choice": {
+   "sweep without all three sides (a cost below 1 would be needed)": 49
+  },
+  "first_family": "G5f7a49da28",
+  "last_family": "Gfa115182f0"
+ },
+ "sha256": {
+  "clarity.jsonl": "028a4e4c549bcd92412724107eac94e0c0a42c95ed78aab6c90cfc66502ba8db",
+  "cost.jsonl": "04938eebc76d7302bd636536ee53ba60b42e0f308aa3d938e40cc1bdb85f8375"
+ },
+ "wording": {
+  "header_W0": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known):",
+  "header_W1": "Computational facts (each is fully determined by inputs shown here; its certified value is unknown unless it is listed under \"Known so far\"):",
+  "known_W0": "Known so far: ",
+  "known_W1": "Known so far (established values, including certified results of computations already run): "
+ }
+}

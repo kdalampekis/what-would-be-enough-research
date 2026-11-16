@@ -1,0 +1,209 @@
+=== 2026-11-14T20:05:05Z pass 1: v3 test native (E1-E9, three modes)
+loaded from .env: ['ADAPTION_API_KEY']
+468 instances, 63 families, 1814 jobs per model; pools {'plan': 1215, 'decision': 63, 'judgment': 536}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 834, 'output_tokens': 497, 'reasoning_tokens': 385, 'cached_input_tokens': 0} cost=credits 0.0001 served=deepseek-v4-flash seconds=10.43
+  adaption-deepseek-v4-flash: 50/1813
+  adaption-deepseek-v4-flash: 100/1813
+  adaption-deepseek-v4-flash: 150/1813
+  adaption-deepseek-v4-flash: 200/1813
+  adaption-deepseek-v4-flash: 250/1813
+  adaption-deepseek-v4-flash: 300/1813
+  adaption-deepseek-v4-flash: 350/1813
+  adaption-deepseek-v4-flash: 400/1813
+  adaption-deepseek-v4-flash: 450/1813
+  adaption-deepseek-v4-flash: 500/1813
+  adaption-deepseek-v4-flash: 550/1813
+  adaption-deepseek-v4-flash: 600/1813
+  adaption-deepseek-v4-flash: 650/1813
+  adaption-deepseek-v4-flash: 700/1813
+  adaption-deepseek-v4-flash: 750/1813
+  adaption-deepseek-v4-flash: 800/1813
+  adaption-deepseek-v4-flash: 850/1813
+  adaption-deepseek-v4-flash: 900/1813
+  adaption-deepseek-v4-flash: 950/1813
+  adaption-deepseek-v4-flash: 1000/1813
+  adaption-deepseek-v4-flash: 1050/1813
+  adaption-deepseek-v4-flash: 1100/1813
+  adaption-deepseek-v4-flash: 1150/1813
+  adaption-deepseek-v4-flash: 1200/1813
+  adaption-deepseek-v4-flash: 1250/1813
+  adaption-deepseek-v4-flash: 1300/1813
+  adaption-deepseek-v4-flash: 1350/1813
+  adaption-deepseek-v4-flash: 1400/1813
+  adaption-deepseek-v4-flash: 1450/1813
+  adaption-deepseek-v4-flash: 1500/1813
+  adaption-deepseek-v4-flash: 1550/1813
+  adaption-deepseek-v4-flash: 1600/1813
+  adaption-deepseek-v4-flash: 1650/1813
+  adaption-deepseek-v4-flash: 1700/1813
+  adaption-deepseek-v4-flash: 1750/1813
+  adaption-deepseek-v4-flash: 1800/1813
+adaption-deepseek-v4-flash {'skipped_done': 1, 'ok': 1330, 'refusal': 0, 'truncated': 21, 'error': 462, 'parse_error': 21, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 200.8001 of credits 519.43
+wrote results/aggregate/final_test/by_model/adaption-deepseek-v4-flash/pilot_test/summary.json and report.md
+=== 2026-11-15T07:01:53Z pass 1: EOP v3 test extraction
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468)]; conditions ['s3v2']
+budget 519.4324; already spent 286.4071
+smoke adaption-deepseek-v4-flash v3test s3v2: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/467
+  adaption-deepseek-v4-flash: 100/467
+  adaption-deepseek-v4-flash: 150/467
+  adaption-deepseek-v4-flash: 200/467
+  adaption-deepseek-v4-flash: 250/467
+  adaption-deepseek-v4-flash: 300/467
+  adaption-deepseek-v4-flash: 350/467
+  adaption-deepseek-v4-flash: 400/467
+  adaption-deepseek-v4-flash: 450/467
+adaption-deepseek-v4-flash v3test s3v2 {'skipped_done': 1, 'ok': 466, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 286.5174 of 519.4324
+=== 2026-11-15T09:05:24Z pass 1: EOP v3 test structured prompt
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468)]; conditions ['s1']
+budget 519.4324; already spent 306.3353
+smoke adaption-deepseek-v4-flash v3test s1: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/872
+  adaption-deepseek-v4-flash: 100/872
+  adaption-deepseek-v4-flash: 150/872
+  adaption-deepseek-v4-flash: 200/872
+  adaption-deepseek-v4-flash: 250/872
+  adaption-deepseek-v4-flash: 300/872
+  adaption-deepseek-v4-flash: 350/872
+  adaption-deepseek-v4-flash: 400/872
+  adaption-deepseek-v4-flash: 450/872
+  adaption-deepseek-v4-flash: 500/872
+  adaption-deepseek-v4-flash: 550/872
+  adaption-deepseek-v4-flash: 600/872
+  adaption-deepseek-v4-flash: 650/872
+  adaption-deepseek-v4-flash: 700/872
+  adaption-deepseek-v4-flash: 750/872
+  adaption-deepseek-v4-flash: 800/872
+  adaption-deepseek-v4-flash: 850/872
+adaption-deepseek-v4-flash v3test s1 {'skipped_done': 1, 'ok': 830, 'refusal': 0, 'truncated': 41, 'error': 1, 'parse_error': 41, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 306.9245 of 519.4324
+=== 2026-11-15T14:56:08Z pass 1: T1 test native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 402 pairs (804 items) from 63 families
+468 instances, 63 families, 804 jobs per model; pools {'plan_t1': 804}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 373.87
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 809, 'output_tokens': 1602, 'reasoning_tokens': 1457, 'cached_input_tokens': 0} cost=credits 0.0002 served=deepseek-v4-flash seconds=11.34
+  adaption-deepseek-v4-flash: 50/803
+  adaption-deepseek-v4-flash: 100/803
+  adaption-deepseek-v4-flash: 150/803
+  adaption-deepseek-v4-flash: 200/803
+  adaption-deepseek-v4-flash: 250/803
+  adaption-deepseek-v4-flash: 300/803
+  adaption-deepseek-v4-flash: 350/803
+  adaption-deepseek-v4-flash: 400/803
+  adaption-deepseek-v4-flash: 450/803
+  adaption-deepseek-v4-flash: 500/803
+  adaption-deepseek-v4-flash: 550/803
+  adaption-deepseek-v4-flash: 600/803
+  adaption-deepseek-v4-flash: 650/803
+  adaption-deepseek-v4-flash: 700/803
+  adaption-deepseek-v4-flash: 750/803
+  adaption-deepseek-v4-flash: 800/803
+adaption-deepseek-v4-flash {'skipped_done': 1, 'ok': 774, 'refusal': 0, 'truncated': 29, 'error': 0, 'parse_error': 29, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 374.3246 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-15T18:38:32Z pass 1: EOP T1 test extraction
+EOP comparison (msep-s1-obligations-v1); sets [('t1test', 804)]; conditions ['s3v2']
+budget 519.4324; already spent 418.2914
+smoke adaption-deepseek-v4-flash t1test s3v2: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/803
+  adaption-deepseek-v4-flash: 100/803
+  adaption-deepseek-v4-flash: 150/803
+  adaption-deepseek-v4-flash: 200/803
+  adaption-deepseek-v4-flash: 250/803
+  adaption-deepseek-v4-flash: 300/803
+  adaption-deepseek-v4-flash: 350/803
+  adaption-deepseek-v4-flash: 400/803
+  adaption-deepseek-v4-flash: 450/803
+  adaption-deepseek-v4-flash: 500/803
+  adaption-deepseek-v4-flash: 550/803
+  adaption-deepseek-v4-flash: 600/803
+  adaption-deepseek-v4-flash: 650/803
+  adaption-deepseek-v4-flash: 700/803
+  adaption-deepseek-v4-flash: 750/803
+  adaption-deepseek-v4-flash: 800/803
+adaption-deepseek-v4-flash t1test s3v2 {'skipped_done': 1, 'ok': 803, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 418.4820 of 519.4324
+=== 2026-11-15T19:28:30Z pass 1: EOP T1 test structured prompt
+EOP comparison (msep-s1-obligations-v1); sets [('t1test', 804)]; conditions ['s1']
+budget 519.4324; already spent 425.7726
+smoke adaption-deepseek-v4-flash t1test s1: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/803
+  adaption-deepseek-v4-flash: 100/803
+  adaption-deepseek-v4-flash: 150/803
+  adaption-deepseek-v4-flash: 200/803
+  adaption-deepseek-v4-flash: 250/803
+  adaption-deepseek-v4-flash: 300/803
+  adaption-deepseek-v4-flash: 350/803
+  adaption-deepseek-v4-flash: 400/803
+  adaption-deepseek-v4-flash: 450/803
+  adaption-deepseek-v4-flash: 500/803
+  adaption-deepseek-v4-flash: 550/803
+  adaption-deepseek-v4-flash: 600/803
+  adaption-deepseek-v4-flash: 650/803
+  adaption-deepseek-v4-flash: 700/803
+  adaption-deepseek-v4-flash: 750/803
+  adaption-deepseek-v4-flash: 800/803
+adaption-deepseek-v4-flash t1test s1 {'skipped_done': 1, 'ok': 585, 'refusal': 0, 'truncated': 27, 'error': 191, 'parse_error': 27, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 426.1550 of 519.4324
+=== 2026-11-15T21:22:17Z pass 2: v3 test native (E1-E9, three modes)
+loaded from .env: ['ADAPTION_API_KEY']
+468 instances, 63 families, 1814 jobs per model; pools {'plan': 1215, 'decision': 63, 'judgment': 536}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 427.96
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 834, 'output_tokens': 497, 'reasoning_tokens': 385, 'cached_input_tokens': 0} cost=credits 0.0001 served=deepseek-v4-flash seconds=10.43
+  adaption-deepseek-v4-flash: 50/462
+  adaption-deepseek-v4-flash: 100/462
+  adaption-deepseek-v4-flash: 150/462
+  adaption-deepseek-v4-flash: 200/462
+  adaption-deepseek-v4-flash: 250/462
+  adaption-deepseek-v4-flash: 300/462
+  adaption-deepseek-v4-flash: 350/462
+  adaption-deepseek-v4-flash: 400/462
+  adaption-deepseek-v4-flash: 450/462
+adaption-deepseek-v4-flash {'skipped_done': 1352, 'ok': 457, 'refusal': 0, 'truncated': 5, 'error': 0, 'parse_error': 5, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 428.1747 of credits 519.43
+wrote results/aggregate/final_test/by_model/adaption-deepseek-v4-flash/pilot_test/summary.json and report.md
+=== 2026-11-15T21:58:03Z pass 2: EOP v3 test extraction
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468)]; conditions ['s3v2']
+budget 519.4324; already spent 431.8854
+smoke adaption-deepseek-v4-flash v3test s3v2: status=ok parse_error=None
+adaption-deepseek-v4-flash v3test s3v2 {'skipped_done': 467, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 431.8857 of 519.4324
+=== 2026-11-15T21:58:19Z pass 2: EOP v3 test structured prompt
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468)]; conditions ['s1']
+budget 519.4324; already spent 431.9074
+smoke adaption-deepseek-v4-flash v3test s1: status=ok parse_error=None
+adaption-deepseek-v4-flash v3test s1 {'skipped_done': 872, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 431.9078 of 519.4324
+=== 2026-11-15T21:58:40Z pass 2: T1 test native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 402 pairs (804 items) from 63 families
+468 instances, 63 families, 804 jobs per model; pools {'plan_t1': 804}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 431.95
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 809, 'output_tokens': 1602, 'reasoning_tokens': 1457, 'cached_input_tokens': 0} cost=credits 0.0002 served=deepseek-v4-flash seconds=11.34
+adaption-deepseek-v4-flash {'skipped_done': 804, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 431.9508 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-15T21:58:43Z pass 2: EOP T1 test extraction
+EOP comparison (msep-s1-obligations-v1); sets [('t1test', 804)]; conditions ['s3v2']
+budget 519.4324; already spent 431.9508
+smoke adaption-deepseek-v4-flash t1test s3v2: status=ok parse_error=None
+adaption-deepseek-v4-flash t1test s3v2 {'skipped_done': 804, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 431.9508 of 519.4324
+=== 2026-11-15T21:58:46Z pass 2: EOP T1 test structured prompt
+EOP comparison (msep-s1-obligations-v1); sets [('t1test', 804)]; conditions ['s1']
+budget 519.4324; already spent 431.9598
+smoke adaption-deepseek-v4-flash t1test s1: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/191
+  adaption-deepseek-v4-flash: 100/191
+  adaption-deepseek-v4-flash: 150/191
+adaption-deepseek-v4-flash t1test s1 {'skipped_done': 613, 'ok': 186, 'refusal': 0, 'truncated': 5, 'error': 0, 'parse_error': 5, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 432.0755 of 519.4324
+=== 2026-11-15T22:26:37Z chain done

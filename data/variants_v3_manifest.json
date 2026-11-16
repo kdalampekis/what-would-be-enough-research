@@ -1,0 +1,13 @@
+{
+  "pool": "data/generated/pool_v3/instances.jsonl",
+  "counts": {
+    "risk": 6000,
+    "shift_skin": 2282,
+    "cost": 2375
+  },
+  "sha256": {
+    "cost": "7273fc7820727557d003ab65248ebe96ddaf62b8e1b084f195af04370eb582a8",
+    "risk": "d142e8b45d594af8cb9dbd809a6a890dc9a55beccec4cfcd3fbaf737ef99fad9",
+    "shift": "4472fa6714ef853d7c1d0a85bb66dfdc14d07a80f8bdc59f14ed69518e8d9692"
+  }
+}

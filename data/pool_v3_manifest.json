@@ -1,0 +1,31 @@
+{
+  "template": "v3",
+  "families": 300,
+  "seed_offset": 0,
+  "instances": 2282,
+  "sibling_types": {
+    "ALREADY_SUFFICIENT": 300,
+    "INFORMATION_ONLY": 300,
+    "COMPUTATION_ONLY": 300,
+    "BOTH": 300,
+    "NEITHER": 300,
+    "SUFFICIENT_NON_MINIMAL": 178,
+    "RELEVANT_INSUFFICIENT_COMPUTATION": 173,
+    "PREMATURE_STOP": 231,
+    "RELEVANT_INSUFFICIENT_INFORMATION": 200
+  },
+  "resource_classes": {
+    "ALREADY_SUFFICIENT": 300,
+    "INFORMATION_ONLY": 419,
+    "COMPUTATION_ONLY": 415,
+    "BOTH": 848,
+    "NEITHER": 300
+  },
+  "families_per_split": {
+    "train": 165,
+    "dev": 72,
+    "test": 63
+  },
+  "instances_jsonl_sha256": "660012bdae121635dcaef41a3b018da0bf31cfd2553757f797c8a3267680e2cd",
+  "regenerate": "python experiments/generate_benchmark.py --template v3 --families 300 --out data/generated/pool_v3"
+}

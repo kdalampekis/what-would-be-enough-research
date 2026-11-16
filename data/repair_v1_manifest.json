@@ -1,0 +1,32 @@
+{
+ "generator": "repair-v1",
+ "split": "train",
+ "families": [
+  "G68dfe61882",
+  "G6b569067c0",
+  "G6cd7cbf62e",
+  "G761c17f24d",
+  "G78ee0aede8",
+  "G797f46a0b9",
+  "G7a751484a4",
+  "G7be3c81643",
+  "G7d1b0f89f1",
+  "G882eb66a27",
+  "G888db646aa",
+  "G8a042a7307"
+ ],
+ "states": 87,
+ "items": 174,
+ "items_by_wording": {
+  "syntax": 87,
+  "prose": 87
+ },
+ "states_by_class": {
+  "ALREADY_SUFFICIENT": 12,
+  "INFORMATION_ONLY": 18,
+  "COMPUTATION_ONLY": 12,
+  "BOTH": 33,
+  "NEITHER": 12
+ },
+ "sha256": "9924445d013b60a834ac3b1fef2259beeb7bfaeabc5a0879e9c8dc8d78053adc"
+}

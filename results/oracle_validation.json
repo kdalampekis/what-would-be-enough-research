@@ -1,0 +1,213 @@
+{
+  "experiment": "E0 oracle validation",
+  "status": "PASS",
+  "git_commit": "1d147932a8f014590e171c3ef5eb3d4fdc2f88ab",
+  "python": "3.13.18",
+  "pysat": "1.9.dev17",
+  "seconds": 145.4,
+  "suites": {
+    "random_small": {
+      "instances": 10000,
+      "classes": {
+        "NEITHER": 2688,
+        "INFORMATION_ONLY": 1687,
+        "ALREADY_SUFFICIENT": 4192,
+        "COMPUTATION_ONLY": 697,
+        "BOTH": 644,
+        "AMBIGUOUS": 92
+      },
+      "decision_rules": {
+        "logical_entailment": 7493,
+        "posterior_threshold": 2507
+      },
+      "max_vars": 8,
+      "max_actions": 7,
+      "mean_vars": 4.9951,
+      "mean_actions": 3.2887
+    },
+    "random_medium": {
+      "instances": 2000,
+      "classes": {
+        "ALREADY_SUFFICIENT": 869,
+        "NEITHER": 518,
+        "BOTH": 143,
+        "INFORMATION_ONLY": 333,
+        "COMPUTATION_ONLY": 126,
+        "AMBIGUOUS": 11
+      },
+      "decision_rules": {
+        "logical_entailment": 1576,
+        "posterior_threshold": 424
+      },
+      "max_vars": 10,
+      "max_actions": 9,
+      "mean_vars": 6.541,
+      "mean_actions": 4.5175
+    },
+    "families_v3": {
+      "families": 100,
+      "instances": 765,
+      "sibling_types": {
+        "ALREADY_SUFFICIENT": 100,
+        "INFORMATION_ONLY": 100,
+        "COMPUTATION_ONLY": 100,
+        "BOTH": 100,
+        "NEITHER": 100,
+        "SUFFICIENT_NON_MINIMAL": 61,
+        "RELEVANT_INSUFFICIENT_COMPUTATION": 59,
+        "PREMATURE_STOP": 78,
+        "RELEVANT_INSUFFICIENT_INFORMATION": 67
+      }
+    },
+    "families": {
+      "families": 200,
+      "instances": 2200,
+      "classes": {
+        "ALREADY_SUFFICIENT": 200,
+        "INFORMATION_ONLY": 1000,
+        "COMPUTATION_ONLY": 400,
+        "BOTH": 400,
+        "NEITHER": 200
+      },
+      "sibling_types": {
+        "ALREADY_SUFFICIENT": 200,
+        "INFORMATION_ONLY": 200,
+        "COMPUTATION_ONLY": 200,
+        "BOTH": 200,
+        "NEITHER": 200,
+        "RELEVANT_INSUFFICIENT_INFORMATION": 200,
+        "RELEVANT_INSUFFICIENT_COMPUTATION": 200,
+        "SUFFICIENT_NON_MINIMAL": 200,
+        "MULTIPLE_PLANS_DIFFERENT_COSTS": 200,
+        "PREMATURE_STOP": 200,
+        "UNNECESSARY_EXTRA_ACTION": 200
+      },
+      "mean_attempts_per_family": 1.0
+    }
+  },
+  "checks": {
+    "both_every_optimal_plan_mixed": {
+      "passed": 1477,
+      "failed": 0,
+      "skipped": 0
+    },
+    "both_single_resource_insufficient": {
+      "passed": 1459,
+      "failed": 0,
+      "skipped": 0
+    },
+    "computation_outcome_world_invariant": {
+      "passed": 24256,
+      "failed": 0,
+      "skipped": 0
+    },
+    "family_label_oracle_vs_brute": {
+      "passed": 2200,
+      "failed": 0,
+      "skipped": 0
+    },
+    "family_plans_oracle_vs_brute": {
+      "passed": 2200,
+      "failed": 0,
+      "skipped": 0
+    },
+    "family_v3_label_oracle_vs_brute": {
+      "passed": 765,
+      "failed": 0,
+      "skipped": 0
+    },
+    "family_v3_plans_oracle_vs_brute": {
+      "passed": 765,
+      "failed": 0,
+      "skipped": 0
+    },
+    "latent_world_exists": {
+      "passed": 14965,
+      "failed": 0,
+      "skipped": 0
+    },
+    "neither_full_plan_insufficient": {
+      "passed": 2899,
+      "failed": 0,
+      "skipped": 0
+    },
+    "neither_no_sufficient_plan": {
+      "passed": 607,
+      "failed": 0,
+      "skipped": 0
+    },
+    "no_obligations_iff_sufficient": {
+      "passed": 12034,
+      "failed": 0,
+      "skipped": 0
+    },
+    "obligations_sat_vs_brute": {
+      "passed": 12034,
+      "failed": 0,
+      "skipped": 0
+    },
+    "optimal_plan_cheapest": {
+      "passed": 11813,
+      "failed": 0,
+      "skipped": 0
+    },
+    "optimal_plan_inclusion_minimal": {
+      "passed": 11813,
+      "failed": 0,
+      "skipped": 0
+    },
+    "optimal_plan_sufficient": {
+      "passed": 11813,
+      "failed": 0,
+      "skipped": 0
+    },
+    "plan_analysis_solver_vs_brute": {
+      "passed": 12034,
+      "failed": 0,
+      "skipped": 0
+    },
+    "plan_analysis_wmc_vs_brute": {
+      "passed": 2931,
+      "failed": 0,
+      "skipped": 0
+    },
+    "planner_neither": {
+      "passed": 2899,
+      "failed": 0,
+      "skipped": 0
+    },
+    "planner_optimal_cost": {
+      "passed": 9135,
+      "failed": 0,
+      "skipped": 0
+    },
+    "posterior_tau1_equals_logical": {
+      "passed": 12034,
+      "failed": 0,
+      "skipped": 0
+    },
+    "posteriors_wmc_vs_brute": {
+      "passed": 2931,
+      "failed": 0,
+      "skipped": 0
+    },
+    "random_plan_sufficiency_sat_vs_brute": {
+      "passed": 60170,
+      "failed": 0,
+      "skipped": 0
+    },
+    "resource_class_solver_vs_brute": {
+      "passed": 12034,
+      "failed": 0,
+      "skipped": 0
+    },
+    "resource_class_wmc_vs_brute": {
+      "passed": 2931,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "total_checks": 228199,
+  "total_failed": 0,
+  "failures": []
+}

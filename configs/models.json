@@ -1,0 +1,230 @@
+{
+  "_note": "Calibration settings authorised 2026-11-03: output capped at 1000 tokens on both models (the cap includes reasoning/thinking tokens on both APIs); GPT-5.6 Sol at reasoning effort medium; Claude Sonnet 5.5 at effort medium (not specified by the authorisation; chosen to match). No sampling parameters are sent: Claude Sonnet 5.5 rejects non-default temperature; GPT-5.6 Sol support is unverified. Prices are required for the budget guard; a model with null prices will not run.",
+  "gpt-5.6-sol": {
+    "provider": "openai",
+    "model_id": "gpt-5.6-sol",
+    "verified": "NO: OpenAI docs blocked from this environment; run --smoke first",
+    "settings": {
+      "max_tokens": 1000,
+      "reasoning_effort": "medium",
+      "max_retries": 5
+    },
+    "prices": null
+  },
+  "claude-sonnet-5-5": {
+    "provider": "anthropic",
+    "model_id": "claude-sonnet-5-5",
+    "verified": "model ID and parameters checked against the Claude API reference; no live call yet",
+    "settings": {
+      "max_tokens": 1000,
+      "effort": "medium",
+      "max_retries": 5
+    },
+    "prices": {
+      "input_per_mtok": 2.0,
+      "output_per_mtok": 10.0,
+      "source": "Claude API model table (cached 2026-10-06)"
+    }
+  },
+  "_note_adaption": "Adaption-hosted open-weight models added 2026-11-13 at the user's request (free credits). Prices are Adaption credits per 1M tokens (cached-input discounts ignored, so estimates err high), copied from the Adaption 'Models' docs page pasted by the user; the docs host was unreachable from the build environment. max_tokens 16000 because these models reason before answering and the API has no reasoning control (smoke 2026-11-13: qwen3.5-397b used 4,578 of 4,685 output tokens on reasoning); streaming on because a non-streamed glm-5.2 call returned 504 after 375 s; SDK retries cut to 2; temperature 0.0 for determinism where the backend honours it. No JSON-schema enforcement (not in SDK 0.19.0). --budget-usd is read in the model's currency: for these models, credits. Do not mix currencies in one run.",
+  "adaption-gemma-4-31b-it": {
+    "provider": "adaption",
+    "model_id": "gemma-4-31b-it",
+    "verified": "NO: written from SDK 0.19.0 source and the pasted docs page; run --smoke first",
+    "context_tokens": 256000,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.09,
+      "output_per_mtok": 0.34,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-glm-5.2": {
+    "provider": "adaption",
+    "model_id": "glm-5.2",
+    "verified": "NO: written from SDK 0.19.0 source and the pasted docs page; run --smoke first",
+    "context_tokens": 786432,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 1.4,
+      "output_per_mtok": 4.4,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-glm-5.2-32k": {
+    "provider": "adaption",
+    "model_id": "glm-5.2",
+    "verified": "NO: glm-5.2 at a 32,000-token cap; the 16,000-token smoke call (2026-11-13) reasoned to the cap without answering",
+    "context_tokens": 786432,
+    "settings": {
+      "max_tokens": 32000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 1.4,
+      "output_per_mtok": 4.4,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-qwen3.5-397b": {
+    "provider": "adaption",
+    "model_id": "qwen3.5-397b",
+    "verified": "NO: written from SDK 0.19.0 source and the pasted docs page; run --smoke first",
+    "context_tokens": 131072,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.55,
+      "output_per_mtok": 3.5,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-gemma-4-26b-a4b-it": {
+    "provider": "adaption",
+    "model_id": "gemma-4-26b-a4b-it",
+    "verified": "NO: written from SDK 0.19.0 source and the pasted docs page; run --smoke first",
+    "context_tokens": 256000,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.0765,
+      "output_per_mtok": 0.255,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-gemma-4-26b-a4b-it-schema": {
+    "provider": "adaption",
+    "model_id": "gemma-4-26b-a4b-it",
+    "verified": "NO: diagnostic condition (2026-11-13). Same model and 16k cap as adaption-gemma-4-26b-a4b-it, plus settings.structured=function_tool (the job schema sent as a forced strict function tool). Probe with one call first.",
+    "context_tokens": 256000,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2,
+      "structured": "function_tool"
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.0765,
+      "output_per_mtok": 0.255,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-qwen3.8-27b": {
+    "provider": "adaption",
+    "model_id": "qwen3.8-27b",
+    "verified": "NO: written from SDK 0.19.0 source and the pasted docs page; run --smoke first",
+    "context_tokens": 262144,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.039,
+      "output_per_mtok": 1.25,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-deepseek-v4-flash": {
+    "provider": "adaption",
+    "model_id": "deepseek-v4-flash",
+    "verified": "NO: written from SDK 0.19.0 source and the pasted docs page; run --smoke first",
+    "context_tokens": 1048576,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.04444,
+      "output_per_mtok": 0.13332,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-glm-53-flash": {
+    "provider": "adaption",
+    "model_id": "glm-53-flash",
+    "verified": "NO: written from SDK 0.19.0 source and the pasted docs page; run --smoke first",
+    "context_tokens": 1048576,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.5,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-glm-53-flash-schema": {
+    "provider": "adaption",
+    "model_id": "glm-53-flash",
+    "verified": "NO: diagnostic condition (2026-11-13). Same model and 16k cap as adaption-glm-53-flash, plus settings.structured=function_tool. Probe with one call first.",
+    "context_tokens": 1048576,
+    "settings": {
+      "max_tokens": 16000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2,
+      "structured": "function_tool"
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.5,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  },
+  "adaption-glm-53-flash-32k": {
+    "provider": "adaption",
+    "model_id": "glm-53-flash",
+    "verified": "NO: diagnostic condition (2026-11-13). Same as adaption-glm-53-flash with a 32,000-token cap; used only to re-run the jobs that truncated at 16,000 in the original run. Not the original condition.",
+    "context_tokens": 1048576,
+    "settings": {
+      "max_tokens": 32000,
+      "temperature": 0.0,
+      "stream": true,
+      "max_retries": 2
+    },
+    "prices": {
+      "currency": "credits",
+      "input_per_mtok": 0.15,
+      "output_per_mtok": 0.5,
+      "source": "Adaption Models docs page (pasted 2026-11-13)"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+loaded from .env: ['ADAPTION_API_KEY']
+--rerun-of adaption-gemma-4-26b-a4b-it status in ['parse_error']: 95 jobs selected
+74 instances, 10 families, 95 jobs per model; pools {'plan': 83, 'decision': 5, 'judgment': 7}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 24.83; already spent credits 9.83
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 2154, 'output_tokens': 172, 'reasoning_tokens': 0, 'cached_input_tokens': 0} cost=credits 0.0002 served=gemma-4-26b-a4b-it seconds=1.2
+smoke passed; spent so far credits 9.8299
+loaded from .env: ['ADAPTION_API_KEY']
+--rerun-of adaption-glm-53-flash status in ['ok']: 205 jobs selected
+74 instances, 10 families, 205 jobs per model; pools {'plan': 120, 'decision': 10, 'judgment': 75}
+WARNING adaption-glm-53-flash-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 24.83; already spent credits 9.83
+smoke adaption-glm-53-flash-schema: status=ok parse_error=None tokens={'input_tokens': 2129, 'output_tokens': 1582, 'reasoning_tokens': 1445, 'cached_input_tokens': 0} cost=credits 0.0011 served=glm-5.3-flash seconds=8.63
+smoke passed; spent so far credits 9.8310

@@ -1,0 +1,5772 @@
+{
+ "splits": [
+  "dev"
+ ],
+ "families": 61,
+ "agents": {
+  "h1": {
+   "skipped_done": 0,
+   "ok": 9207,
+   "refusal": 0,
+   "truncated": 0,
+   "error": 0,
+   "parse_error": 0,
+   "budget_stopped": 0
+  },
+  "h1p": {
+   "skipped_done": 0,
+   "ok": 9207,
+   "refusal": 0,
+   "truncated": 0,
+   "error": 0,
+   "parse_error": 0,
+   "budget_stopped": 0
+  },
+  "h1pp": {
+   "skipped_done": 0,
+   "ok": 9207,
+   "refusal": 0,
+   "truncated": 0,
+   "error": 0,
+   "parse_error": 0,
+   "budget_stopped": 0
+  }
+ },
+ "agent_descriptions": {
+  "h1": "HEURISTIC baseline: act on unknown variables in the rule defining Q (text only)",
+  "h1p": "HEURISTIC baseline: h1 + aliases + NEITHER when an action is missing (text only)",
+  "h1pp": "HEURISTIC baseline: h1p + one level of definition expansion (text only)"
+ },
+ "by_model": {
+  "heuristic-h1": {
+   "response_status": {
+    "ok": 1830
+   },
+   "usage": {
+    "all": {
+     "requests": 9207,
+     "status": {
+      "ok": 9207
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 9207,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 9207,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 9207,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "plan": {
+     "requests": 1830,
+     "status": {
+      "ok": 1830
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 1830,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 1830,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 1830,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "judgment": {
+     "requests": 648,
+     "status": {
+      "ok": 648
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 648,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 648,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 648,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "decision": {
+     "requests": 61,
+     "status": {
+      "ok": 61
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 61,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 61,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 61,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    }
+   },
+   "synthetic": false,
+   "E1": {
+    "a_base_decision_accuracy": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "a_invalid": 0,
+    "b_end_to_end_on_sufficient_states": {
+     "says_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "proposes_any_action": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "decision_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     }
+    }
+   },
+   "E2": {
+    "mode": "end_to_end",
+    "detection_accuracy": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 671,
+     "clusters": 61
+    },
+    "insufficiency_detected (sensitivity)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "sufficiency_recognised (specificity)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "balanced_detection_accuracy": 1.0,
+    "over_answering": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "unnecessary_intervention": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "by_sibling": {
+     "ALREADY_SUFFICIENT": 1.0,
+     "BOTH": 1.0,
+     "COMPUTATION_ONLY": 1.0,
+     "INFORMATION_ONLY": 1.0,
+     "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+     "NEITHER": 1.0,
+     "PREMATURE_STOP": 1.0,
+     "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+     "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+     "SUFFICIENT_NON_MINIMAL": 1.0,
+     "UNNECESSARY_EXTRA_ACTION": 1.0
+    }
+   },
+   "E3": {
+    "detection_controlled": {
+     "n": 610,
+     "invalid": 0,
+     "accuracy": {
+      "mean": 0.9,
+      "lo": 0.9,
+      "hi": 0.9,
+      "n": 610,
+      "clusters": 61
+     },
+     "macro_f1": {
+      "value": 0.7006586765651651,
+      "lo": 0.697905244134166,
+      "hi": 0.7039687329867397
+     },
+     "balanced_accuracy": {
+      "value": 0.75,
+      "lo": 0.75,
+      "hi": 0.75
+     },
+     "confusion": {
+      "INFORMATION_ONLY": {
+       "INFORMATION_ONLY": 305,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "COMPUTATION_ONLY": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 122,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "BOTH": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 122,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "NEITHER": {
+       "INFORMATION_ONLY": 14,
+       "COMPUTATION_ONLY": 29,
+       "BOTH": 18,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "ALREADY_SUFFICIENT": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      }
+     },
+     "accuracy_by_sibling": {
+      "BOTH": 1.0,
+      "COMPUTATION_ONLY": 1.0,
+      "INFORMATION_ONLY": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "NEITHER": 0.0,
+      "PREMATURE_STOP": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "UNNECESSARY_EXTRA_ACTION": 1.0
+     },
+     "h2_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient_given_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_paired_class_minus_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "end_to_end": {
+     "n": 610,
+     "invalid": 0,
+     "accuracy": {
+      "mean": 0.9,
+      "lo": 0.9,
+      "hi": 0.9,
+      "n": 610,
+      "clusters": 61
+     },
+     "macro_f1": {
+      "value": 0.7006586765651651,
+      "lo": 0.6979606015095495,
+      "hi": 0.7036849255979017
+     },
+     "balanced_accuracy": {
+      "value": 0.75,
+      "lo": 0.75,
+      "hi": 0.75
+     },
+     "confusion": {
+      "INFORMATION_ONLY": {
+       "INFORMATION_ONLY": 305,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "COMPUTATION_ONLY": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 122,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "BOTH": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 122,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "NEITHER": {
+       "INFORMATION_ONLY": 14,
+       "COMPUTATION_ONLY": 29,
+       "BOTH": 18,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "ALREADY_SUFFICIENT": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      }
+     },
+     "accuracy_by_sibling": {
+      "BOTH": 1.0,
+      "COMPUTATION_ONLY": 1.0,
+      "INFORMATION_ONLY": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "NEITHER": 0.0,
+      "PREMATURE_STOP": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "UNNECESSARY_EXTRA_ACTION": 1.0
+     },
+     "detection_accuracy": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "diagnosis_given_detected": {
+      "mean": 0.9,
+      "lo": 0.9,
+      "hi": 0.9,
+      "n": 610,
+      "clusters": 61
+     },
+     "h2_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient_given_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_paired_class_minus_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "surface_feature_baseline": {
+     "action_counts": {
+      "features": [
+       "n_ask",
+       "n_compute"
+      ],
+      "probe_accuracy": 0.5639344262295082,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 44
+     },
+     "knowledge_counts": {
+      "features": [
+       "n_known_world",
+       "n_known_computed",
+       "n_unknown_world",
+       "n_unknown_computed"
+      ],
+      "probe_accuracy": 0.6918032786885245,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 74
+     },
+     "all_counts": {
+      "features": [
+       "n_ask",
+       "n_compute",
+       "n_known_world",
+       "n_known_computed",
+       "n_unknown_world",
+       "n_unknown_computed"
+      ],
+      "probe_accuracy": 0.578688524590164,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 747
+     }
+    }
+   },
+   "E4": {
+    "diagnosis_controlled": {
+     "n": 549,
+     "exact_match": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_precision": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_recall": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     }
+    },
+    "detection_controlled": {
+     "n": 549,
+     "exact_match": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_precision": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_recall": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "class_correct_but_plan_insufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     }
+    }
+   },
+   "E5": {
+    "a_judgment": {
+     "n_items": 648,
+     "invalid": 0,
+     "all_insufficient_candidates_relevant": true,
+     "accuracy_sufficient_candidates": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 244,
+      "clusters": 61
+     },
+     "accuracy_relevant_insufficient_candidates": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "relevant_insufficient_judged_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "pair_both_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "paired_diff_sufficient_minus_insufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "by_sibling_and_kind": {
+      "BOTH/optimal": 1.0,
+      "BOTH/without_ASK_w1": 1.0,
+      "BOTH/without_COMPUTE_c1": 1.0,
+      "BOTH/without_COMPUTE_c2": 1.0,
+      "PREMATURE_STOP/optimal": 1.0,
+      "PREMATURE_STOP/without_ASK_w1": 1.0,
+      "PREMATURE_STOP/without_ASK_w2": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION/decoy_only": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION/optimal": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION/decoy_only": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION/optimal": 1.0
+     }
+    },
+    "b_construction": {
+     "detection_controlled": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     },
+     "diagnosis_controlled": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     },
+     "end_to_end": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     }
+    }
+   },
+   "E6": {
+    "detection_controlled": {
+     "n": 549,
+     "plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "optimal_given_sufficient": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "inclusion_minimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "excess_cost_given_sufficient": {
+      "mean": 0.07468123861566485,
+      "lo": 0.051001821493624776,
+      "hi": 0.09836065573770492,
+      "n": 549,
+      "clusters": 61
+     },
+     "regret": {
+      "mean": 0.07468123861566485,
+      "lo": 0.051001821493624776,
+      "hi": 0.09836065573770492,
+      "n": 549,
+      "clusters": 61
+     },
+     "by_sibling_optimal_given_sufficient": {
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 0.5901639344262295,
+      "BOTH": 1.0,
+      "INFORMATION_ONLY": 1.0
+     }
+    },
+    "diagnosis_controlled": {
+     "n": 549,
+     "plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "optimal_given_sufficient": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "inclusion_minimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "excess_cost_given_sufficient": {
+      "mean": 0.07468123861566485,
+      "lo": 0.051001821493624776,
+      "hi": 0.09836065573770492,
+      "n": 549,
+      "clusters": 61
+     },
+     "regret": {
+      "mean": 0.07468123861566485,
+      "lo": 0.051001821493624776,
+      "hi": 0.09836065573770492,
+      "n": 549,
+      "clusters": 61
+     },
+     "by_sibling_optimal_given_sufficient": {
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 0.5901639344262295,
+      "BOTH": 1.0,
+      "INFORMATION_ONLY": 1.0
+     }
+    }
+   },
+   "E7": {
+    "detection_controlled": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "diagnosis_controlled": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "end_to_end": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    }
+   },
+   "E8": {
+    "end_to_end": {
+     "n": 61,
+     "correct_defer": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "inappropriate_persistence": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "hallucinated_actions": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "premature_answer": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "classified_neither": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     }
+    },
+    "detection_controlled": {
+     "n": 61,
+     "correct_defer": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "inappropriate_persistence": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "hallucinated_actions": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "premature_answer": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "classified_neither": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     }
+    }
+   },
+   "E9": {
+    "detection_controlled": {
+     "n": 549,
+     "premature_stop": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "abstained": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "continued_after_expost_sufficiency": {
+      "mean": 0.10200364298724955,
+      "lo": 0.058287795992714025,
+      "hi": 0.14571948998178508,
+      "n": 549,
+      "clusters": 61
+     },
+     "static_actions_after_expost_sufficiency_mean": {
+      "mean": 0.10200364298724955,
+      "lo": 0.058287795992714025,
+      "hi": 0.14571948998178508,
+      "n": 549,
+      "clusters": 61
+     },
+     "note": "continued_after_expost_sufficiency is not an error for a static plan; read it against the oracle agent's value (the adaptive saving available).",
+     "PREMATURE_STOP": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "UNNECESSARY_EXTRA_ACTION": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "ALREADY_SUFFICIENT": {
+      "premature_stop": null,
+      "continued_after_expost_sufficiency": null
+     }
+    },
+    "end_to_end": {
+     "n": 610,
+     "premature_stop": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "abstained": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "continued_after_expost_sufficiency": {
+      "mean": 0.09180327868852459,
+      "lo": 0.05245901639344262,
+      "hi": 0.1377049180327869,
+      "n": 610,
+      "clusters": 61
+     },
+     "static_actions_after_expost_sufficiency_mean": {
+      "mean": 0.09180327868852459,
+      "lo": 0.05245901639344262,
+      "hi": 0.1377049180327869,
+      "n": 610,
+      "clusters": 61
+     },
+     "note": "continued_after_expost_sufficiency is not an error for a static plan; read it against the oracle agent's value (the adaptive saving available).",
+     "PREMATURE_STOP": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "UNNECESSARY_EXTRA_ACTION": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "ALREADY_SUFFICIENT": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     }
+    }
+   },
+   "E10": {
+    "detection_controlled": {
+     "n": 556,
+     "optimal_rate": {
+      "mean": 0.658273381294964,
+      "lo": 0.6398601398601399,
+      "hi": 0.6752767527675276,
+      "n": 556,
+      "clusters": 61
+     },
+     "chose_swept_action_by_cost_relation": {
+      "above": 0.0,
+      "below": 0.0,
+      "equal": 0.0
+     },
+     "oracle_expectation": "swept action chosen when its cost is below the rival's, not when above; both are optimal when equal",
+     "sweeps_optimal_at_every_cost": 0.0,
+     "sweeps": 122
+    },
+    "diagnosis_controlled": {
+     "n": 556,
+     "optimal_rate": {
+      "mean": 0.658273381294964,
+      "lo": 0.6398601398601399,
+      "hi": 0.6752767527675276,
+      "n": 556,
+      "clusters": 61
+     },
+     "chose_swept_action_by_cost_relation": {
+      "above": 0.0,
+      "below": 0.0,
+      "equal": 0.0
+     },
+     "oracle_expectation": "swept action chosen when its cost is below the rival's, not when above; both are optimal when equal",
+     "sweeps_optimal_at_every_cost": 0.0,
+     "sweeps": 122
+    }
+   },
+   "E11": {
+    "end_to_end": {
+     "1": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.2,
+      "model_answers_rate": 0.2,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.8
+     },
+     "19/20": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.2098360655737705,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.9901639344262295,
+      "plan_optimal": 0.7901639344262295
+     },
+     "3/5": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.46885245901639344,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.7311475409836066,
+      "plan_optimal": 0.5180327868852459
+     },
+     "4/5": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.31475409836065577,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.8852459016393442,
+      "plan_optimal": 0.659016393442623
+     }
+    },
+    "detection_controlled": {
+     "1": {
+      "n": 244,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.75
+     },
+     "19/20": {
+      "n": 241,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.7468879668049793
+     },
+     "3/5": {
+      "n": 162,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.5987654320987654
+     },
+     "4/5": {
+      "n": 209,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.6698564593301436
+     }
+    }
+   },
+   "E12": {
+    "detection_controlled": {
+     "width": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     },
+     "depth": {
+      "pairs": 427,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 0.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 1.0,
+       "lo": 1.0,
+       "hi": 1.0,
+       "n": 427,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 0.14285714285714285,
+      "mcnemar_plan_sufficient": {
+       "a_only": 427,
+       "b_only": 0,
+       "p_value": 5.770611636116085e-129
+      }
+     },
+     "skin": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     }
+    },
+    "end_to_end": {
+     "width": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     },
+     "depth": {
+      "pairs": 427,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 0.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 1.0,
+       "lo": 1.0,
+       "hi": 1.0,
+       "n": 427,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 0.14285714285714285,
+      "mcnemar_plan_sufficient": {
+       "a_only": 427,
+       "b_only": 0,
+       "p_value": 5.770611636116085e-129
+      }
+     },
+     "skin": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     }
+    }
+   },
+   "mode_decomposition": {
+    "e2e_success": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "e2e_fail_detection_wrong": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "e2e_fail_but_dc_success": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "dc_fail_but_dxc_success (diagnosis-attributable)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "fail_in_all_modes (planning)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    }
+   },
+   "instruction_compliance": {
+    "dc_claims_state_sufficient": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "dxc_claims_state_sufficient": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "dxc_class_differs_from_given": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    }
+   },
+   "hierarchical": {
+    "A_D detection (E2E)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 671,
+     "clusters": 61
+    },
+    "A_G diagnosis given insufficiency (DC)": {
+     "mean": 0.9,
+     "lo": 0.9,
+     "hi": 0.9,
+     "n": 610,
+     "clusters": 61
+    },
+    "A_P plan optimal given correct diagnosis (DC)": {
+     "mean": 0.9544626593806922,
+     "lo": 0.941712204007286,
+     "hi": 0.9672131147540983,
+     "n": 549,
+     "clusters": 61
+    },
+    "A_P' plan optimal given class (DxC)": {
+     "mean": 0.9544626593806922,
+     "lo": 0.941712204007286,
+     "hi": 0.9672131147540983,
+     "n": 549,
+     "clusters": 61
+    },
+    "A_S sufficiency judgment (E5)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 404,
+     "clusters": 61
+    },
+    "A_E2E fully correct behaviour (E2E)": {
+     "mean": 0.8718330849478391,
+     "lo": 0.8613636363636364,
+     "hi": 0.8822652757078987,
+     "n": 671,
+     "clusters": 61
+    }
+   },
+   "calibration": {
+    "end_to_end": {
+     "n": 671,
+     "brier": 0.25,
+     "ece": 0.40909090909090906
+    },
+    "detection_controlled": {
+     "n": 610,
+     "brier": 0.25,
+     "ece": 0.4
+    },
+    "diagnosis_controlled": {
+     "n": 549,
+     "brier": 0.25,
+     "ece": 0.5
+    }
+   },
+   "regret_dc_vs_dxc": {
+    "mean_difference": 0.0,
+    "p_value": 1.0,
+    "clusters": 61
+   },
+   "by_heuristic_stratum": {
+    "heuristic_easy": {
+     "n_instances": 671,
+     "dc_class_correct": {
+      "mean": 0.9,
+      "lo": 0.9,
+      "hi": 0.9,
+      "n": 610,
+      "clusters": 61
+     },
+     "dc_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "dc_plan_optimal": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "e2e_detection": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 671,
+      "clusters": 61
+     }
+    }
+   },
+   "by_template": {
+    "v2": {
+     "n_instances": 671,
+     "dc_class_correct": {
+      "mean": 0.9,
+      "lo": 0.9,
+      "hi": 0.9,
+      "n": 610,
+      "clusters": 61
+     },
+     "dc_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "dc_plan_optimal": {
+      "mean": 0.9544626593806922,
+      "lo": 0.941712204007286,
+      "hi": 0.9672131147540983,
+      "n": 549,
+      "clusters": 61
+     },
+     "e2e_detection": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 671,
+      "clusters": 61
+     }
+    }
+   },
+   "error_taxonomy": {
+    "end_to_end": {
+     "minimality": 25,
+     "correct": 585,
+     "diagnosis": 61
+    },
+    "detection_controlled": {
+     "correct": 524,
+     "diagnosis": 61,
+     "minimality": 25
+    },
+    "diagnosis_controlled": {
+     "correct": 524,
+     "minimality": 25
+    }
+   },
+   "confirmatory": {
+    "raw_p": {
+     "H2_diagnosis_vs_plan_sufficiency_DC": 1.0,
+     "H3_relevance_vs_sufficiency_judgment": 1.0,
+     "H4_INFO_vs_BOTH_DC": 1.0,
+     "H4_COMP_vs_BOTH_DC": 1.0
+    },
+    "holm_adjusted_p": {
+     "H2_diagnosis_vs_plan_sufficiency_DC": 1.0,
+     "H3_relevance_vs_sufficiency_judgment": 1.0,
+     "H4_COMP_vs_BOTH_DC": 1.0,
+     "H4_INFO_vs_BOTH_DC": 1.0
+    }
+   },
+   "ceiling_floor": [
+    {
+     "metric": "E1 base decision accuracy",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 detection_controlled plan sufficient (resolvable)",
+     "mean": 1.0,
+     "n": 549,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 end_to_end plan sufficient (resolvable)",
+     "mean": 1.0,
+     "n": 549,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E5 judgment accuracy, sufficient plans",
+     "mean": 1.0,
+     "n": 244,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E5 judgment accuracy, relevant-insufficient plans",
+     "mean": 1.0,
+     "n": 404,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    }
+   ]
+  },
+  "heuristic-h1p": {
+   "response_status": {
+    "ok": 1830
+   },
+   "usage": {
+    "all": {
+     "requests": 9207,
+     "status": {
+      "ok": 9207
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 9207,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 9207,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 9207,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "plan": {
+     "requests": 1830,
+     "status": {
+      "ok": 1830
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 1830,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 1830,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 1830,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "judgment": {
+     "requests": 648,
+     "status": {
+      "ok": 648
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 648,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 648,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 648,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "decision": {
+     "requests": 61,
+     "status": {
+      "ok": 61
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 61,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 61,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 61,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    }
+   },
+   "synthetic": false,
+   "E1": {
+    "a_base_decision_accuracy": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "a_invalid": 0,
+    "b_end_to_end_on_sufficient_states": {
+     "says_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "proposes_any_action": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "decision_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     }
+    }
+   },
+   "E2": {
+    "mode": "end_to_end",
+    "detection_accuracy": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 671,
+     "clusters": 61
+    },
+    "insufficiency_detected (sensitivity)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "sufficiency_recognised (specificity)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "balanced_detection_accuracy": 1.0,
+    "over_answering": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "unnecessary_intervention": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "by_sibling": {
+     "ALREADY_SUFFICIENT": 1.0,
+     "BOTH": 1.0,
+     "COMPUTATION_ONLY": 1.0,
+     "INFORMATION_ONLY": 1.0,
+     "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+     "NEITHER": 1.0,
+     "PREMATURE_STOP": 1.0,
+     "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+     "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+     "SUFFICIENT_NON_MINIMAL": 1.0,
+     "UNNECESSARY_EXTRA_ACTION": 1.0
+    }
+   },
+   "E3": {
+    "detection_controlled": {
+     "n": 610,
+     "invalid": 0,
+     "accuracy": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "macro_f1": {
+      "value": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "balanced_accuracy": {
+      "value": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "confusion": {
+      "INFORMATION_ONLY": {
+       "INFORMATION_ONLY": 305,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "COMPUTATION_ONLY": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 122,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "BOTH": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 122,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "NEITHER": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 61,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "ALREADY_SUFFICIENT": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      }
+     },
+     "accuracy_by_sibling": {
+      "BOTH": 1.0,
+      "COMPUTATION_ONLY": 1.0,
+      "INFORMATION_ONLY": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "NEITHER": 1.0,
+      "PREMATURE_STOP": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "UNNECESSARY_EXTRA_ACTION": 1.0
+     },
+     "h2_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient_given_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_paired_class_minus_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "end_to_end": {
+     "n": 610,
+     "invalid": 0,
+     "accuracy": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "macro_f1": {
+      "value": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "balanced_accuracy": {
+      "value": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "confusion": {
+      "INFORMATION_ONLY": {
+       "INFORMATION_ONLY": 305,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "COMPUTATION_ONLY": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 122,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "BOTH": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 122,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "NEITHER": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 61,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "ALREADY_SUFFICIENT": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      }
+     },
+     "accuracy_by_sibling": {
+      "BOTH": 1.0,
+      "COMPUTATION_ONLY": 1.0,
+      "INFORMATION_ONLY": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "NEITHER": 1.0,
+      "PREMATURE_STOP": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "UNNECESSARY_EXTRA_ACTION": 1.0
+     },
+     "detection_accuracy": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "diagnosis_given_detected": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "h2_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient_given_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_paired_class_minus_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "surface_feature_baseline": {
+     "action_counts": {
+      "features": [
+       "n_ask",
+       "n_compute"
+      ],
+      "probe_accuracy": 0.5639344262295082,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 44
+     },
+     "knowledge_counts": {
+      "features": [
+       "n_known_world",
+       "n_known_computed",
+       "n_unknown_world",
+       "n_unknown_computed"
+      ],
+      "probe_accuracy": 0.6918032786885245,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 74
+     },
+     "all_counts": {
+      "features": [
+       "n_ask",
+       "n_compute",
+       "n_known_world",
+       "n_known_computed",
+       "n_unknown_world",
+       "n_unknown_computed"
+      ],
+      "probe_accuracy": 0.578688524590164,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 747
+     }
+    }
+   },
+   "E4": {
+    "diagnosis_controlled": {
+     "n": 549,
+     "exact_match": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_precision": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_recall": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     }
+    },
+    "detection_controlled": {
+     "n": 549,
+     "exact_match": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_precision": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_recall": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "class_correct_but_plan_insufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     }
+    }
+   },
+   "E5": {
+    "a_judgment": {
+     "n_items": 648,
+     "invalid": 0,
+     "all_insufficient_candidates_relevant": true,
+     "accuracy_sufficient_candidates": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 244,
+      "clusters": 61
+     },
+     "accuracy_relevant_insufficient_candidates": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "relevant_insufficient_judged_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "pair_both_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "paired_diff_sufficient_minus_insufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "by_sibling_and_kind": {
+      "BOTH/optimal": 1.0,
+      "BOTH/without_ASK_w1": 1.0,
+      "BOTH/without_COMPUTE_c1": 1.0,
+      "BOTH/without_COMPUTE_c2": 1.0,
+      "PREMATURE_STOP/optimal": 1.0,
+      "PREMATURE_STOP/without_ASK_w1": 1.0,
+      "PREMATURE_STOP/without_ASK_w2": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION/decoy_only": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION/optimal": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION/decoy_only": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION/optimal": 1.0
+     }
+    },
+    "b_construction": {
+     "detection_controlled": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     },
+     "diagnosis_controlled": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     },
+     "end_to_end": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     }
+    }
+   },
+   "E6": {
+    "detection_controlled": {
+     "n": 549,
+     "plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "optimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "inclusion_minimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "excess_cost_given_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "regret": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "by_sibling_optimal_given_sufficient": {
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "BOTH": 1.0,
+      "INFORMATION_ONLY": 1.0
+     }
+    },
+    "diagnosis_controlled": {
+     "n": 549,
+     "plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "optimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "inclusion_minimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "excess_cost_given_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "regret": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "by_sibling_optimal_given_sufficient": {
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "BOTH": 1.0,
+      "INFORMATION_ONLY": 1.0
+     }
+    }
+   },
+   "E7": {
+    "detection_controlled": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "diagnosis_controlled": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "end_to_end": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    }
+   },
+   "E8": {
+    "end_to_end": {
+     "n": 61,
+     "correct_defer": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "inappropriate_persistence": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "hallucinated_actions": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "premature_answer": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "classified_neither": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     }
+    },
+    "detection_controlled": {
+     "n": 61,
+     "correct_defer": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "inappropriate_persistence": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "hallucinated_actions": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "premature_answer": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "classified_neither": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     }
+    }
+   },
+   "E9": {
+    "detection_controlled": {
+     "n": 549,
+     "premature_stop": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "abstained": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "continued_after_expost_sufficiency": {
+      "mean": 0.10200364298724955,
+      "lo": 0.058287795992714025,
+      "hi": 0.15300546448087432,
+      "n": 549,
+      "clusters": 61
+     },
+     "static_actions_after_expost_sufficiency_mean": {
+      "mean": 0.10200364298724955,
+      "lo": 0.058287795992714025,
+      "hi": 0.15300546448087432,
+      "n": 549,
+      "clusters": 61
+     },
+     "note": "continued_after_expost_sufficiency is not an error for a static plan; read it against the oracle agent's value (the adaptive saving available).",
+     "PREMATURE_STOP": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "UNNECESSARY_EXTRA_ACTION": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "ALREADY_SUFFICIENT": {
+      "premature_stop": null,
+      "continued_after_expost_sufficiency": null
+     }
+    },
+    "end_to_end": {
+     "n": 610,
+     "premature_stop": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "abstained": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "continued_after_expost_sufficiency": {
+      "mean": 0.09180327868852459,
+      "lo": 0.05245901639344262,
+      "hi": 0.1377049180327869,
+      "n": 610,
+      "clusters": 61
+     },
+     "static_actions_after_expost_sufficiency_mean": {
+      "mean": 0.09180327868852459,
+      "lo": 0.05245901639344262,
+      "hi": 0.1377049180327869,
+      "n": 610,
+      "clusters": 61
+     },
+     "note": "continued_after_expost_sufficiency is not an error for a static plan; read it against the oracle agent's value (the adaptive saving available).",
+     "PREMATURE_STOP": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "UNNECESSARY_EXTRA_ACTION": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "ALREADY_SUFFICIENT": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     }
+    }
+   },
+   "E10": {
+    "detection_controlled": {
+     "n": 556,
+     "optimal_rate": {
+      "mean": 0.829136690647482,
+      "lo": 0.8199300699300699,
+      "hi": 0.8388888888888889,
+      "n": 556,
+      "clusters": 61
+     },
+     "chose_swept_action_by_cost_relation": {
+      "above": 0.0,
+      "below": 0.5,
+      "equal": 0.0
+     },
+     "oracle_expectation": "swept action chosen when its cost is below the rival's, not when above; both are optimal when equal",
+     "sweeps_optimal_at_every_cost": 0.5,
+     "sweeps": 122
+    },
+    "diagnosis_controlled": {
+     "n": 556,
+     "optimal_rate": {
+      "mean": 0.829136690647482,
+      "lo": 0.8210526315789474,
+      "hi": 0.8388888888888889,
+      "n": 556,
+      "clusters": 61
+     },
+     "chose_swept_action_by_cost_relation": {
+      "above": 0.0,
+      "below": 0.5,
+      "equal": 0.0
+     },
+     "oracle_expectation": "swept action chosen when its cost is below the rival's, not when above; both are optimal when equal",
+     "sweeps_optimal_at_every_cost": 0.5,
+     "sweeps": 122
+    }
+   },
+   "E11": {
+    "end_to_end": {
+     "1": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.2,
+      "model_answers_rate": 0.2,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.8
+     },
+     "19/20": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.2098360655737705,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.9901639344262295,
+      "plan_optimal": 0.780327868852459
+     },
+     "3/5": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.46885245901639344,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.7311475409836066,
+      "plan_optimal": 0.49508196721311476
+     },
+     "4/5": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.31475409836065577,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.8852459016393442,
+      "plan_optimal": 0.6196721311475409
+     }
+    },
+    "detection_controlled": {
+     "1": {
+      "n": 244,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.75
+     },
+     "19/20": {
+      "n": 241,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.7344398340248963
+     },
+     "3/5": {
+      "n": 162,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.47530864197530864
+     },
+     "4/5": {
+      "n": 209,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.5980861244019139
+     }
+    }
+   },
+   "E12": {
+    "detection_controlled": {
+     "width": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     },
+     "depth": {
+      "pairs": 427,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 0.14285714285714285,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.8571428571428571,
+       "lo": 0.8571428571428571,
+       "hi": 0.8571428571428571,
+       "n": 427,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 0.14285714285714285,
+      "mcnemar_plan_sufficient": {
+       "a_only": 366,
+       "b_only": 0,
+       "p_value": 1.3306124500025471e-110
+      }
+     },
+     "skin": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     }
+    },
+    "end_to_end": {
+     "width": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     },
+     "depth": {
+      "pairs": 427,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 0.14285714285714285,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.8571428571428571,
+       "lo": 0.8571428571428571,
+       "hi": 0.8571428571428571,
+       "n": 427,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 0.14285714285714285,
+      "mcnemar_plan_sufficient": {
+       "a_only": 366,
+       "b_only": 0,
+       "p_value": 1.3306124500025471e-110
+      }
+     },
+     "skin": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     }
+    }
+   },
+   "mode_decomposition": {
+    "e2e_success": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "e2e_fail_detection_wrong": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "e2e_fail_but_dc_success": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "dc_fail_but_dxc_success (diagnosis-attributable)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "fail_in_all_modes (planning)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    }
+   },
+   "instruction_compliance": {
+    "dc_claims_state_sufficient": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "dxc_claims_state_sufficient": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "dxc_class_differs_from_given": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    }
+   },
+   "hierarchical": {
+    "A_D detection (E2E)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 671,
+     "clusters": 61
+    },
+    "A_G diagnosis given insufficiency (DC)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "A_P plan optimal given correct diagnosis (DC)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "A_P' plan optimal given class (DxC)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "A_S sufficiency judgment (E5)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 404,
+     "clusters": 61
+    },
+    "A_E2E fully correct behaviour (E2E)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 671,
+     "clusters": 61
+    }
+   },
+   "calibration": {
+    "end_to_end": {
+     "n": 671,
+     "brier": 0.25,
+     "ece": 0.40909090909090906
+    },
+    "detection_controlled": {
+     "n": 610,
+     "brier": 0.25,
+     "ece": 0.4
+    },
+    "diagnosis_controlled": {
+     "n": 549,
+     "brier": 0.25,
+     "ece": 0.5
+    }
+   },
+   "regret_dc_vs_dxc": {
+    "mean_difference": 0.0,
+    "p_value": 1.0,
+    "clusters": 61
+   },
+   "by_heuristic_stratum": {
+    "heuristic_easy": {
+     "n_instances": 671,
+     "dc_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "dc_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "dc_plan_optimal": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "e2e_detection": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 671,
+      "clusters": 61
+     }
+    }
+   },
+   "by_template": {
+    "v2": {
+     "n_instances": 671,
+     "dc_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "dc_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "dc_plan_optimal": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "e2e_detection": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 671,
+      "clusters": 61
+     }
+    }
+   },
+   "error_taxonomy": {
+    "end_to_end": {
+     "correct": 671
+    },
+    "detection_controlled": {
+     "correct": 610
+    },
+    "diagnosis_controlled": {
+     "correct": 549
+    }
+   },
+   "confirmatory": {
+    "raw_p": {
+     "H2_diagnosis_vs_plan_sufficiency_DC": 1.0,
+     "H3_relevance_vs_sufficiency_judgment": 1.0,
+     "H4_INFO_vs_BOTH_DC": 1.0,
+     "H4_COMP_vs_BOTH_DC": 1.0
+    },
+    "holm_adjusted_p": {
+     "H2_diagnosis_vs_plan_sufficiency_DC": 1.0,
+     "H3_relevance_vs_sufficiency_judgment": 1.0,
+     "H4_COMP_vs_BOTH_DC": 1.0,
+     "H4_INFO_vs_BOTH_DC": 1.0
+    }
+   },
+   "ceiling_floor": [
+    {
+     "metric": "E1 base decision accuracy",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 detection_controlled class accuracy",
+     "mean": 1.0,
+     "n": 610,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 detection_controlled plan sufficient (resolvable)",
+     "mean": 1.0,
+     "n": 549,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 end_to_end class accuracy",
+     "mean": 1.0,
+     "n": 610,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 end_to_end plan sufficient (resolvable)",
+     "mean": 1.0,
+     "n": 549,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E5 judgment accuracy, sufficient plans",
+     "mean": 1.0,
+     "n": 244,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E5 judgment accuracy, relevant-insufficient plans",
+     "mean": 1.0,
+     "n": 404,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    }
+   ]
+  },
+  "heuristic-h1pp": {
+   "response_status": {
+    "ok": 1830
+   },
+   "usage": {
+    "all": {
+     "requests": 9207,
+     "status": {
+      "ok": 9207
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 9207,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 9207,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 9207,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "plan": {
+     "requests": 1830,
+     "status": {
+      "ok": 1830
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 1830,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 1830,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 1830,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "judgment": {
+     "requests": 648,
+     "status": {
+      "ok": 648
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 648,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 648,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 648,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    },
+    "decision": {
+     "requests": 61,
+     "status": {
+      "ok": 61
+     },
+     "parse_error_rate": 0.0,
+     "refusal_rate": 0.0,
+     "truncation_rate": 0.0,
+     "input_tokens": {
+      "n": 61,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "output_tokens": {
+      "n": 61,
+      "min": 0,
+      "p10": 0,
+      "p50": 0,
+      "p90": 0,
+      "max": 0,
+      "mean": 0.0
+     },
+     "reasoning_tokens": null,
+     "cost_usd_total": 0.0,
+     "cost_usd_per_request": {
+      "n": 61,
+      "min": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+     }
+    }
+   },
+   "synthetic": false,
+   "E1": {
+    "a_base_decision_accuracy": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "a_invalid": 0,
+    "b_end_to_end_on_sufficient_states": {
+     "says_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "proposes_any_action": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "decision_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     }
+    }
+   },
+   "E2": {
+    "mode": "end_to_end",
+    "detection_accuracy": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 671,
+     "clusters": 61
+    },
+    "insufficiency_detected (sensitivity)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "sufficiency_recognised (specificity)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "balanced_detection_accuracy": 1.0,
+    "over_answering": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "unnecessary_intervention": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 61,
+     "clusters": 61
+    },
+    "by_sibling": {
+     "ALREADY_SUFFICIENT": 1.0,
+     "BOTH": 1.0,
+     "COMPUTATION_ONLY": 1.0,
+     "INFORMATION_ONLY": 1.0,
+     "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+     "NEITHER": 1.0,
+     "PREMATURE_STOP": 1.0,
+     "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+     "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+     "SUFFICIENT_NON_MINIMAL": 1.0,
+     "UNNECESSARY_EXTRA_ACTION": 1.0
+    }
+   },
+   "E3": {
+    "detection_controlled": {
+     "n": 610,
+     "invalid": 0,
+     "accuracy": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "macro_f1": {
+      "value": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "balanced_accuracy": {
+      "value": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "confusion": {
+      "INFORMATION_ONLY": {
+       "INFORMATION_ONLY": 305,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "COMPUTATION_ONLY": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 122,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "BOTH": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 122,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "NEITHER": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 61,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "ALREADY_SUFFICIENT": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      }
+     },
+     "accuracy_by_sibling": {
+      "BOTH": 1.0,
+      "COMPUTATION_ONLY": 1.0,
+      "INFORMATION_ONLY": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "NEITHER": 1.0,
+      "PREMATURE_STOP": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "UNNECESSARY_EXTRA_ACTION": 1.0
+     },
+     "h2_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient_given_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_paired_class_minus_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "end_to_end": {
+     "n": 610,
+     "invalid": 0,
+     "accuracy": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "macro_f1": {
+      "value": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "balanced_accuracy": {
+      "value": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "confusion": {
+      "INFORMATION_ONLY": {
+       "INFORMATION_ONLY": 305,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "COMPUTATION_ONLY": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 122,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "BOTH": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 122,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "NEITHER": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 61,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      },
+      "ALREADY_SUFFICIENT": {
+       "INFORMATION_ONLY": 0,
+       "COMPUTATION_ONLY": 0,
+       "BOTH": 0,
+       "NEITHER": 0,
+       "ALREADY_SUFFICIENT": 0,
+       "INVALID": 0
+      }
+     },
+     "accuracy_by_sibling": {
+      "BOTH": 1.0,
+      "COMPUTATION_ONLY": 1.0,
+      "INFORMATION_ONLY": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "NEITHER": 1.0,
+      "PREMATURE_STOP": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION": 1.0,
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "UNNECESSARY_EXTRA_ACTION": 1.0
+     },
+     "detection_accuracy": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "diagnosis_given_detected": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "h2_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_plan_sufficient_given_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_paired_class_minus_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "h2_mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "surface_feature_baseline": {
+     "action_counts": {
+      "features": [
+       "n_ask",
+       "n_compute"
+      ],
+      "probe_accuracy": 0.5639344262295082,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 44
+     },
+     "knowledge_counts": {
+      "features": [
+       "n_known_world",
+       "n_known_computed",
+       "n_unknown_world",
+       "n_unknown_computed"
+      ],
+      "probe_accuracy": 0.6918032786885245,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 74
+     },
+     "all_counts": {
+      "features": [
+       "n_ask",
+       "n_compute",
+       "n_known_world",
+       "n_known_computed",
+       "n_unknown_world",
+       "n_unknown_computed"
+      ],
+      "probe_accuracy": 0.578688524590164,
+      "majority_baseline": 0.5,
+      "majority_class": "INFORMATION_ONLY",
+      "n_test": 610,
+      "distinct_keys": 747
+     }
+    }
+   },
+   "E4": {
+    "diagnosis_controlled": {
+     "n": 549,
+     "exact_match": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_precision": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_recall": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     }
+    },
+    "detection_controlled": {
+     "n": 549,
+     "exact_match": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_precision": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "action_recall": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "class_correct_but_plan_insufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     }
+    }
+   },
+   "E5": {
+    "a_judgment": {
+     "n_items": 648,
+     "invalid": 0,
+     "all_insufficient_candidates_relevant": true,
+     "accuracy_sufficient_candidates": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 244,
+      "clusters": 61
+     },
+     "accuracy_relevant_insufficient_candidates": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "relevant_insufficient_judged_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "pair_both_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "paired_diff_sufficient_minus_insufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 404,
+      "clusters": 61
+     },
+     "mcnemar": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "by_sibling_and_kind": {
+      "BOTH/optimal": 1.0,
+      "BOTH/without_ASK_w1": 1.0,
+      "BOTH/without_COMPUTE_c1": 1.0,
+      "BOTH/without_COMPUTE_c2": 1.0,
+      "PREMATURE_STOP/optimal": 1.0,
+      "PREMATURE_STOP/without_ASK_w1": 1.0,
+      "PREMATURE_STOP/without_ASK_w2": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION/decoy_only": 1.0,
+      "RELEVANT_INSUFFICIENT_COMPUTATION/optimal": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION/decoy_only": 1.0,
+      "RELEVANT_INSUFFICIENT_INFORMATION/optimal": 1.0
+     }
+    },
+    "b_construction": {
+     "detection_controlled": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     },
+     "diagnosis_controlled": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     },
+     "end_to_end": {
+      "RELEVANT_INSUFFICIENT_INFORMATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      },
+      "RELEVANT_INSUFFICIENT_COMPUTATION": {
+       "families": 61,
+       "plan_sufficient_with_decoy": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_sufficient_clean_sibling": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_selected": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "decoy_only_plan": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "mcnemar_clean_vs_decoy": {
+        "a_only": 0,
+        "b_only": 0,
+        "p_value": 1.0
+       }
+      }
+     }
+    }
+   },
+   "E6": {
+    "detection_controlled": {
+     "n": 549,
+     "plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "optimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "inclusion_minimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "excess_cost_given_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "regret": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "by_sibling_optimal_given_sufficient": {
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "BOTH": 1.0,
+      "INFORMATION_ONLY": 1.0
+     }
+    },
+    "diagnosis_controlled": {
+     "n": 549,
+     "plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "optimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "inclusion_minimal_given_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "excess_cost_given_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "regret": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "by_sibling_optimal_given_sufficient": {
+      "SUFFICIENT_NON_MINIMAL": 1.0,
+      "MULTIPLE_PLANS_DIFFERENT_COSTS": 1.0,
+      "BOTH": 1.0,
+      "INFORMATION_ONLY": 1.0
+     }
+    }
+   },
+   "E7": {
+    "detection_controlled": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "diagnosis_controlled": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": null,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    },
+    "end_to_end": {
+     "per_class": {
+      "INFORMATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "COMPUTATION_ONLY": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      },
+      "BOTH": {
+       "n": 61,
+       "invalid": 0,
+       "class_correct": 1.0,
+       "plan_sufficient": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 61,
+        "clusters": 61
+       },
+       "plan_optimal": 1.0,
+       "exact_match": 1.0,
+       "stages": {
+        "correct": 61
+       }
+      }
+     },
+     "both_single_resource_plans": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "paired_INFORMATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_INFORMATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     },
+     "paired_COMPUTATION_ONLY_minus_BOTH_plan_sufficient": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "mcnemar_COMPUTATION_ONLY_vs_BOTH": {
+      "a_only": 0,
+      "b_only": 0,
+      "p_value": 1.0
+     }
+    }
+   },
+   "E8": {
+    "end_to_end": {
+     "n": 61,
+     "correct_defer": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "inappropriate_persistence": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "hallucinated_actions": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "premature_answer": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "classified_neither": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     }
+    },
+    "detection_controlled": {
+     "n": 61,
+     "correct_defer": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "inappropriate_persistence": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "hallucinated_actions": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "premature_answer": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 61,
+      "clusters": 61
+     },
+     "classified_neither": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 61,
+      "clusters": 61
+     }
+    }
+   },
+   "E9": {
+    "detection_controlled": {
+     "n": 549,
+     "premature_stop": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "abstained": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "continued_after_expost_sufficiency": {
+      "mean": 0.10200364298724955,
+      "lo": 0.058287795992714025,
+      "hi": 0.14571948998178508,
+      "n": 549,
+      "clusters": 61
+     },
+     "static_actions_after_expost_sufficiency_mean": {
+      "mean": 0.10200364298724955,
+      "lo": 0.058287795992714025,
+      "hi": 0.14571948998178508,
+      "n": 549,
+      "clusters": 61
+     },
+     "note": "continued_after_expost_sufficiency is not an error for a static plan; read it against the oracle agent's value (the adaptive saving available).",
+     "PREMATURE_STOP": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "UNNECESSARY_EXTRA_ACTION": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "ALREADY_SUFFICIENT": {
+      "premature_stop": null,
+      "continued_after_expost_sufficiency": null
+     }
+    },
+    "end_to_end": {
+     "n": 610,
+     "premature_stop": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "abstained": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "continued_after_expost_sufficiency": {
+      "mean": 0.09180327868852459,
+      "lo": 0.05245901639344262,
+      "hi": 0.1377049180327869,
+      "n": 610,
+      "clusters": 61
+     },
+     "static_actions_after_expost_sufficiency_mean": {
+      "mean": 0.09180327868852459,
+      "lo": 0.05245901639344262,
+      "hi": 0.1377049180327869,
+      "n": 610,
+      "clusters": 61
+     },
+     "note": "continued_after_expost_sufficiency is not an error for a static plan; read it against the oracle agent's value (the adaptive saving available).",
+     "PREMATURE_STOP": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "UNNECESSARY_EXTRA_ACTION": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     },
+     "ALREADY_SUFFICIENT": {
+      "premature_stop": 0.0,
+      "continued_after_expost_sufficiency": 0.0
+     }
+    }
+   },
+   "E10": {
+    "detection_controlled": {
+     "n": 556,
+     "optimal_rate": {
+      "mean": 0.829136690647482,
+      "lo": 0.8210526315789474,
+      "hi": 0.8388888888888889,
+      "n": 556,
+      "clusters": 61
+     },
+     "chose_swept_action_by_cost_relation": {
+      "above": 0.0,
+      "below": 0.5,
+      "equal": 0.0
+     },
+     "oracle_expectation": "swept action chosen when its cost is below the rival's, not when above; both are optimal when equal",
+     "sweeps_optimal_at_every_cost": 0.5,
+     "sweeps": 122
+    },
+    "diagnosis_controlled": {
+     "n": 556,
+     "optimal_rate": {
+      "mean": 0.829136690647482,
+      "lo": 0.8210526315789474,
+      "hi": 0.8388888888888889,
+      "n": 556,
+      "clusters": 61
+     },
+     "chose_swept_action_by_cost_relation": {
+      "above": 0.0,
+      "below": 0.5,
+      "equal": 0.0
+     },
+     "oracle_expectation": "swept action chosen when its cost is below the rival's, not when above; both are optimal when equal",
+     "sweeps_optimal_at_every_cost": 0.5,
+     "sweeps": 122
+    }
+   },
+   "E11": {
+    "end_to_end": {
+     "1": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.2,
+      "model_answers_rate": 0.2,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.8
+     },
+     "19/20": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.2098360655737705,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.9901639344262295,
+      "plan_optimal": 0.780327868852459
+     },
+     "3/5": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.46885245901639344,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.7311475409836066,
+      "plan_optimal": 0.49508196721311476
+     },
+     "4/5": {
+      "n": 305,
+      "oracle_answer_justified_rate": 0.31475409836065577,
+      "model_answers_rate": 0.2,
+      "detection_correct": 0.8852459016393442,
+      "plan_optimal": 0.6196721311475409
+     }
+    },
+    "detection_controlled": {
+     "1": {
+      "n": 244,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.75
+     },
+     "19/20": {
+      "n": 241,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.7344398340248963
+     },
+     "3/5": {
+      "n": 162,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.47530864197530864
+     },
+     "4/5": {
+      "n": 209,
+      "oracle_answer_justified_rate": 0.0,
+      "model_answers_rate": 0.0,
+      "detection_correct": 1.0,
+      "plan_optimal": 0.5980861244019139
+     }
+    }
+   },
+   "E12": {
+    "detection_controlled": {
+     "width": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     },
+     "depth": {
+      "pairs": 427,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 427,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     },
+     "skin": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     }
+    },
+    "end_to_end": {
+     "width": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     },
+     "depth": {
+      "pairs": 427,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 427,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     },
+     "skin": {
+      "pairs": 549,
+      "in_distribution_plan_sufficient": 1.0,
+      "shifted_plan_sufficient": 1.0,
+      "paired_drop_plan_sufficient": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 549,
+       "clusters": 61
+      },
+      "in_distribution_class_correct": 1.0,
+      "shifted_class_correct": 1.0,
+      "mcnemar_plan_sufficient": {
+       "a_only": 0,
+       "b_only": 0,
+       "p_value": 1.0
+      }
+     }
+    }
+   },
+   "mode_decomposition": {
+    "e2e_success": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "e2e_fail_detection_wrong": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "e2e_fail_but_dc_success": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "dc_fail_but_dxc_success (diagnosis-attributable)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "fail_in_all_modes (planning)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    }
+   },
+   "instruction_compliance": {
+    "dc_claims_state_sufficient": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "dxc_claims_state_sufficient": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "dxc_class_differs_from_given": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 549,
+     "clusters": 61
+    }
+   },
+   "hierarchical": {
+    "A_D detection (E2E)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 671,
+     "clusters": 61
+    },
+    "A_G diagnosis given insufficiency (DC)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 610,
+     "clusters": 61
+    },
+    "A_P plan optimal given correct diagnosis (DC)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "A_P' plan optimal given class (DxC)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 549,
+     "clusters": 61
+    },
+    "A_S sufficiency judgment (E5)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 404,
+     "clusters": 61
+    },
+    "A_E2E fully correct behaviour (E2E)": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 671,
+     "clusters": 61
+    }
+   },
+   "calibration": {
+    "end_to_end": {
+     "n": 671,
+     "brier": 0.25,
+     "ece": 0.40909090909090906
+    },
+    "detection_controlled": {
+     "n": 610,
+     "brier": 0.25,
+     "ece": 0.4
+    },
+    "diagnosis_controlled": {
+     "n": 549,
+     "brier": 0.25,
+     "ece": 0.5
+    }
+   },
+   "regret_dc_vs_dxc": {
+    "mean_difference": 0.0,
+    "p_value": 1.0,
+    "clusters": 61
+   },
+   "by_heuristic_stratum": {
+    "heuristic_easy": {
+     "n_instances": 671,
+     "dc_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "dc_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "dc_plan_optimal": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "e2e_detection": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 671,
+      "clusters": 61
+     }
+    }
+   },
+   "by_template": {
+    "v2": {
+     "n_instances": 671,
+     "dc_class_correct": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 610,
+      "clusters": 61
+     },
+     "dc_plan_sufficient": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "dc_plan_optimal": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 549,
+      "clusters": 61
+     },
+     "e2e_detection": {
+      "mean": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "n": 671,
+      "clusters": 61
+     }
+    }
+   },
+   "error_taxonomy": {
+    "end_to_end": {
+     "correct": 671
+    },
+    "detection_controlled": {
+     "correct": 610
+    },
+    "diagnosis_controlled": {
+     "correct": 549
+    }
+   },
+   "confirmatory": {
+    "raw_p": {
+     "H2_diagnosis_vs_plan_sufficiency_DC": 1.0,
+     "H3_relevance_vs_sufficiency_judgment": 1.0,
+     "H4_INFO_vs_BOTH_DC": 1.0,
+     "H4_COMP_vs_BOTH_DC": 1.0
+    },
+    "holm_adjusted_p": {
+     "H2_diagnosis_vs_plan_sufficiency_DC": 1.0,
+     "H3_relevance_vs_sufficiency_judgment": 1.0,
+     "H4_COMP_vs_BOTH_DC": 1.0,
+     "H4_INFO_vs_BOTH_DC": 1.0
+    }
+   },
+   "ceiling_floor": [
+    {
+     "metric": "E1 base decision accuracy",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 detection_controlled class accuracy",
+     "mean": 1.0,
+     "n": 610,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 detection_controlled plan sufficient (resolvable)",
+     "mean": 1.0,
+     "n": 549,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 end_to_end class accuracy",
+     "mean": 1.0,
+     "n": 610,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E3 end_to_end plan sufficient (resolvable)",
+     "mean": 1.0,
+     "n": 549,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E5 judgment accuracy, sufficient plans",
+     "mean": 1.0,
+     "n": 244,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E5 judgment accuracy, relevant-insufficient plans",
+     "mean": 1.0,
+     "n": 404,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 detection_controlled BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 diagnosis_controlled BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end INFORMATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end COMPUTATION_ONLY plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    },
+    {
+     "metric": "E7 end_to_end BOTH plan sufficient",
+     "mean": 1.0,
+     "n": 61,
+     "kind": "ceiling"
+    }
+   ]
+  }
+ },
+ "spend_usd": 0.0
+}

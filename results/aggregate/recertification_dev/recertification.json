@@ -1,0 +1,122 @@
+{
+ "split": "dev",
+ "exploratory": true,
+ "states_offering_a_computation_for_a_known_computational_fact": {
+  "n": 183,
+  "of": 194
+ },
+ "models": {
+  "adaption-qwen3.5-397b": {
+   "native_already_sufficient": {
+    "already_sufficient_items": 72,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 66,
+    "non_empty_plan": 6,
+    "every_action_reveals_only_known_values": 4,
+    "some_action_reveals_an_unknown_value": 2,
+    "a_computation_on_an_already_known_computational_fact": 4,
+    "plan_is_computation_only": 6,
+    "rate_non_empty_plan": 0.08333333333333333,
+    "rate_acting_on_an_unknown_value": 0.027777777777777776
+   },
+   "edited_into_already_sufficient": {
+    "already_sufficient_items": 122,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 101,
+    "non_empty_plan": 21,
+    "every_action_reveals_only_known_values": 11,
+    "some_action_reveals_an_unknown_value": 10,
+    "a_computation_on_an_already_known_computational_fact": 14,
+    "plan_is_computation_only": 19,
+    "rate_non_empty_plan": 0.1721311475409836,
+    "rate_acting_on_an_unknown_value": 0.08196721311475409
+   }
+  },
+  "adaption-qwen3.8-27b": {
+   "native_already_sufficient": {
+    "already_sufficient_items": 72,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 72,
+    "non_empty_plan": 0,
+    "every_action_reveals_only_known_values": 0,
+    "some_action_reveals_an_unknown_value": 0,
+    "a_computation_on_an_already_known_computational_fact": 0,
+    "plan_is_computation_only": 0,
+    "rate_non_empty_plan": 0.0,
+    "rate_acting_on_an_unknown_value": 0.0
+   },
+   "edited_into_already_sufficient": {
+    "already_sufficient_items": 122,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 122,
+    "non_empty_plan": 0,
+    "every_action_reveals_only_known_values": 0,
+    "some_action_reveals_an_unknown_value": 0,
+    "a_computation_on_an_already_known_computational_fact": 0,
+    "plan_is_computation_only": 0,
+    "rate_non_empty_plan": 0.0,
+    "rate_acting_on_an_unknown_value": 0.0
+   }
+  },
+  "adaption-deepseek-v4-flash": {
+   "native_already_sufficient": {
+    "already_sufficient_items": 72,
+    "no_response": 0,
+    "unparsed": 1,
+    "empty_plan": 71,
+    "non_empty_plan": 0,
+    "every_action_reveals_only_known_values": 0,
+    "some_action_reveals_an_unknown_value": 0,
+    "a_computation_on_an_already_known_computational_fact": 0,
+    "plan_is_computation_only": 0,
+    "rate_non_empty_plan": 0.0,
+    "rate_acting_on_an_unknown_value": 0.0
+   },
+   "edited_into_already_sufficient": {
+    "already_sufficient_items": 122,
+    "no_response": 0,
+    "unparsed": 1,
+    "empty_plan": 120,
+    "non_empty_plan": 1,
+    "every_action_reveals_only_known_values": 0,
+    "some_action_reveals_an_unknown_value": 1,
+    "a_computation_on_an_already_known_computational_fact": 0,
+    "plan_is_computation_only": 1,
+    "rate_non_empty_plan": 0.00819672131147541,
+    "rate_acting_on_an_unknown_value": 0.00819672131147541
+   }
+  },
+  "adaption-gemma-4-26b-a4b-it-schema": {
+   "native_already_sufficient": {
+    "already_sufficient_items": 72,
+    "no_response": 0,
+    "unparsed": 6,
+    "empty_plan": 28,
+    "non_empty_plan": 38,
+    "every_action_reveals_only_known_values": 4,
+    "some_action_reveals_an_unknown_value": 34,
+    "a_computation_on_an_already_known_computational_fact": 10,
+    "plan_is_computation_only": 19,
+    "rate_non_empty_plan": 0.5277777777777778,
+    "rate_acting_on_an_unknown_value": 0.4722222222222222
+   },
+   "edited_into_already_sufficient": {
+    "already_sufficient_items": 122,
+    "no_response": 0,
+    "unparsed": 7,
+    "empty_plan": 39,
+    "non_empty_plan": 76,
+    "every_action_reveals_only_known_values": 6,
+    "some_action_reveals_an_unknown_value": 70,
+    "a_computation_on_an_already_known_computational_fact": 8,
+    "plan_is_computation_only": 34,
+    "rate_non_empty_plan": 0.6229508196721312,
+    "rate_acting_on_an_unknown_value": 0.5737704918032787
+   }
+  }
+ }
+}

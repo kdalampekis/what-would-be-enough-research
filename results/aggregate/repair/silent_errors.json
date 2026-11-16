@@ -1,0 +1,3193 @@
+{
+ "status": "EXPLORATORY, POST HOC: designed 2026-11-15 after the Study 3 results were seen; not registered; no model calls (stored Study 3 records only)",
+ "data": "data/generated/repair_v1/items.jsonl (174 reworded items, 12 train families); records in results/raw/pilot",
+ "classes": [
+  "still_optimal",
+  "sufficient_but_costlier",
+  "insufficient",
+  "unnecessary_intervention",
+  "wrong_stop_or_defer",
+  "planner_error"
+ ],
+ "models": {
+  "gemma-4-26b-a4b-it-schema | F": {
+   "first_answer": {
+    "items": 174,
+    "accepted": 49,
+    "accepted_exact": 37,
+    "accepted_but_wrong": 12,
+    "classes": {
+     "still_optimal": 11,
+     "sufficient_but_costlier": 0,
+     "insufficient": 0,
+     "unnecessary_intervention": 0,
+     "wrong_stop_or_defer": 1,
+     "planner_error": 0
+    },
+    "class_share_of_accepted_but_wrong": {
+     "still_optimal": 0.917,
+     "sufficient_but_costlier": 0.0,
+     "insufficient": 0.0,
+     "unnecessary_intervention": 0.0,
+     "wrong_stop_or_defer": 0.083,
+     "planner_error": 0.0
+    },
+    "silent_consequential": 1,
+    "silent_consequential_share_of_accepted_but_wrong": {
+     "mean": 0.08333333333333333,
+     "lo": 0.0,
+     "hi": 0.2727272727272727,
+     "n": 12,
+     "clusters": 6
+    },
+    "silent_consequential_per_item": {
+     "mean": 0.005747126436781609,
+     "lo": 0.0,
+     "hi": 0.01764705882352941,
+     "n": 174,
+     "clusters": 12
+    },
+    "harmful_per_item (insufficient or wrong stop/defer)": {
+     "mean": 0.005747126436781609,
+     "lo": 0.0,
+     "hi": 0.01764705882352941,
+     "n": 174,
+     "clusters": 12
+    },
+    "accepted_but_wrong_per_item": {
+     "mean": 0.06896551724137931,
+     "lo": 0.027777777777777776,
+     "hi": 0.11797752808988764,
+     "n": 174,
+     "clusters": 12
+    },
+    "fields_differing_counts": {
+     "variables+rules": 4,
+     "rules": 8
+    },
+    "planner_pipeline": {
+     "planner_seconds_mean": 0.0004
+    },
+    "_silent_ids": [
+     "G6b569067c0-S02-rb-prose"
+    ],
+    "_detail": {
+     "G8a042a7307-S01-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G8a042a7307-S06-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_m1",
+       "ASK_u1",
+       "ASK_u2",
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "ASK_m1",
+        "ASK_u1",
+        "ASK_u2"
+       ]
+      ],
+      "true_optimal_cost": 11,
+      "plan_cost": 11,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S03-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "COMPUTATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G7be3c81643-S04-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i2",
+       "ASK_i1",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "ASK_i2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S07-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G6cd7cbf62e-S04-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK",
+        "COMPUTE_i2"
+       ],
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S07-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_BULK",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK",
+        "COMPUTE_i2"
+       ],
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S08-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_BULK"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK"
+       ]
+      ],
+      "true_optimal_cost": 2,
+      "plan_cost": 2,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G78ee0aede8-S02-rb-prose": {
+      "family_id": "G78ee0aede8",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S02-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "wrong_stop_or_defer",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       [
+        "ASK_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S06-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i2",
+       "COMPUTE_BULK"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i2",
+        "COMPUTE_BULK"
+       ]
+      ],
+      "true_optimal_cost": 10,
+      "plan_cost": 10,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G7d1b0f89f1-S06-rb-prose": {
+      "family_id": "G7d1b0f89f1",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u2",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_u2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 7,
+      "plan_cost": 7,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     }
+    }
+   },
+   "with_repair": {
+    "items": 174,
+    "accepted": 162,
+    "accepted_exact": 135,
+    "accepted_but_wrong": 27,
+    "classes": {
+     "still_optimal": 23,
+     "sufficient_but_costlier": 0,
+     "insufficient": 0,
+     "unnecessary_intervention": 0,
+     "wrong_stop_or_defer": 3,
+     "planner_error": 1
+    },
+    "class_share_of_accepted_but_wrong": {
+     "still_optimal": 0.852,
+     "sufficient_but_costlier": 0.0,
+     "insufficient": 0.0,
+     "unnecessary_intervention": 0.0,
+     "wrong_stop_or_defer": 0.111,
+     "planner_error": 0.037
+    },
+    "silent_consequential": 3,
+    "silent_consequential_share_of_accepted_but_wrong": {
+     "mean": 0.1111111111111111,
+     "lo": 0.029411764705882353,
+     "hi": 0.20833333333333334,
+     "n": 27,
+     "clusters": 7
+    },
+    "silent_consequential_per_item": {
+     "mean": 0.017241379310344827,
+     "lo": 0.005493012422360251,
+     "hi": 0.034492782678428174,
+     "n": 174,
+     "clusters": 12
+    },
+    "harmful_per_item (insufficient or wrong stop/defer)": {
+     "mean": 0.017241379310344827,
+     "lo": 0.005493012422360251,
+     "hi": 0.034492782678428174,
+     "n": 174,
+     "clusters": 12
+    },
+    "accepted_but_wrong_per_item": {
+     "mean": 0.15517241379310345,
+     "lo": 0.07469141849529785,
+     "hi": 0.23563218390804597,
+     "n": 174,
+     "clusters": 12
+    },
+    "fields_differing_counts": {
+     "variables+rules": 11,
+     "rules": 13,
+     "known": 3
+    },
+    "planner_pipeline": {
+     "planner_error:ValueError": 1,
+     "planner_seconds_mean": 0.0003
+    },
+    "_silent_ids": [
+     "G6b569067c0-S02-rb-prose",
+     "G6cd7cbf62e-S01-rb-syntax",
+     "G78ee0aede8-S01-rb-syntax"
+    ],
+    "_detail": {
+     "G8a042a7307-S01-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G8a042a7307-S06-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_m1",
+       "ASK_u1",
+       "ASK_u2",
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "ASK_m1",
+        "ASK_u1",
+        "ASK_u2"
+       ]
+      ],
+      "true_optimal_cost": 11,
+      "plan_cost": 11,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G8a042a7307-S07-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u1",
+       "ASK_u2",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_u1",
+        "ASK_u2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 10,
+      "plan_cost": 10,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A_val",
+        "B_val",
+        "C_val",
+        "D_val",
+        "E_val",
+        "F2_val",
+        "F3_val",
+        "F4_val",
+        "F5_val",
+        "F6_val",
+        "F7_val",
+        "F8_val",
+        "F9_val",
+        "F_val",
+        "G_val",
+        "H_val"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S02-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S03-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "COMPUTATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G7be3c81643-S04-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i2",
+       "ASK_i1",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "ASK_i2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S07-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S01-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S02-rb-syntax": {
+      "family_id": "G68dfe61882",
+      "wording": "syntax",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "planner_error",
+      "plan_on_extracted_state": null,
+      "decision": null,
+      "true_optimal_plans": [
+       [
+        "ASK_i3"
+       ]
+      ],
+      "true_optimal_cost": 2,
+      "plan_cost": null,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G68dfe61882-S04-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S05-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S07-rb-syntax": {
+      "family_id": "G68dfe61882",
+      "wording": "syntax",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G68dfe61882-S07-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G",
+        "P_H_given_obs"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G6cd7cbf62e-S01-rb-syntax": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "syntax",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "wrong_stop_or_defer",
+      "plan_on_extracted_state": [],
+      "decision": "false",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S04-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK",
+        "COMPUTE_i2"
+       ],
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S05-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S07-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_BULK",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK",
+        "COMPUTE_i2"
+       ],
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S08-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_BULK"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK"
+       ]
+      ],
+      "true_optimal_cost": 2,
+      "plan_cost": 2,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G78ee0aede8-S01-rb-syntax": {
+      "family_id": "G78ee0aede8",
+      "wording": "syntax",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "wrong_stop_or_defer",
+      "plan_on_extracted_state": [],
+      "decision": "false",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G78ee0aede8-S02-rb-prose": {
+      "family_id": "G78ee0aede8",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G78ee0aede8-S06-rb-syntax": {
+      "family_id": "G78ee0aede8",
+      "wording": "syntax",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "COMPUTE_i2",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "COMPUTE_i2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 8,
+      "plan_cost": 8,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G78ee0aede8-S07-rb-prose": {
+      "family_id": "G78ee0aede8",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "COMPUTE_i2",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "COMPUTE_i2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 8,
+      "plan_cost": 8,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S02-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "wrong_stop_or_defer",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       [
+        "ASK_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S05-rb-syntax": {
+      "family_id": "G6b569067c0",
+      "wording": "syntax",
+      "true_class": "NEITHER",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G6b569067c0-S06-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i2",
+       "COMPUTE_BULK"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i2",
+        "COMPUTE_BULK"
+       ]
+      ],
+      "true_optimal_cost": 10,
+      "plan_cost": 10,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G7d1b0f89f1-S04-rb-prose": {
+      "family_id": "G7d1b0f89f1",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u1",
+       "ASK_i2",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i2",
+        "ASK_u1",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 11,
+      "plan_cost": 11,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "B",
+        "C",
+        "D",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7d1b0f89f1-S06-rb-prose": {
+      "family_id": "G7d1b0f89f1",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u2",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_u2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 7,
+      "plan_cost": 7,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     }
+    }
+   },
+   "change_in_silent_consequential_per_item": {
+    "mean": 0.011494252873563218,
+    "lo": 0.0,
+    "hi": 0.028409090909090908,
+    "n": 174,
+    "clusters": 12
+   },
+   "silent_with_repair_from_repair_call": [
+    "G6cd7cbf62e-S01-rb-syntax",
+    "G78ee0aede8-S01-rb-syntax"
+   ]
+  },
+  "gemma-4-26b-a4b-it-schema | N": {
+   "first_answer": {
+    "items": 174,
+    "accepted": 143,
+    "accepted_exact": 117,
+    "accepted_but_wrong": 26,
+    "classes": {
+     "still_optimal": 23,
+     "sufficient_but_costlier": 0,
+     "insufficient": 0,
+     "unnecessary_intervention": 0,
+     "wrong_stop_or_defer": 2,
+     "planner_error": 1
+    },
+    "class_share_of_accepted_but_wrong": {
+     "still_optimal": 0.885,
+     "sufficient_but_costlier": 0.0,
+     "insufficient": 0.0,
+     "unnecessary_intervention": 0.0,
+     "wrong_stop_or_defer": 0.077,
+     "planner_error": 0.038
+    },
+    "silent_consequential": 2,
+    "silent_consequential_share_of_accepted_but_wrong": {
+     "mean": 0.07692307692307693,
+     "lo": 0.0,
+     "hi": 0.2,
+     "n": 26,
+     "clusters": 8
+    },
+    "silent_consequential_per_item": {
+     "mean": 0.011494252873563218,
+     "lo": 0.0,
+     "hi": 0.028409090909090908,
+     "n": 174,
+     "clusters": 12
+    },
+    "harmful_per_item (insufficient or wrong stop/defer)": {
+     "mean": 0.011494252873563218,
+     "lo": 0.0,
+     "hi": 0.028409090909090908,
+     "n": 174,
+     "clusters": 12
+    },
+    "accepted_but_wrong_per_item": {
+     "mean": 0.14942528735632185,
+     "lo": 0.06107142857142864,
+     "hi": 0.2528106031254036,
+     "n": 174,
+     "clusters": 12
+    },
+    "fields_differing_counts": {
+     "variables+rules": 15,
+     "known": 4,
+     "rules": 7
+    },
+    "planner_pipeline": {
+     "planner_error:ValueError": 1,
+     "planner_seconds_mean": 0.0003
+    },
+    "_silent_ids": [
+     "G6b569067c0-S02-rb-prose",
+     "G6cd7cbf62e-S01-rb-prose"
+    ],
+    "_detail": {
+     "G8a042a7307-S04-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G8a042a7307-S06-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_m1",
+       "ASK_u1",
+       "ASK_u2",
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "ASK_m1",
+        "ASK_u1",
+        "ASK_u2"
+       ]
+      ],
+      "true_optimal_cost": 11,
+      "plan_cost": 11,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G8a042a7307-S07-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u1",
+       "ASK_u2",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_u1",
+        "ASK_u2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 10,
+      "plan_cost": 10,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S01-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "false",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H",
+        "P_H_given_obs"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S02-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S05-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S07-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S01-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S02-rb-syntax": {
+      "family_id": "G68dfe61882",
+      "wording": "syntax",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "planner_error",
+      "plan_on_extracted_state": null,
+      "decision": null,
+      "true_optimal_plans": [
+       [
+        "ASK_i3"
+       ]
+      ],
+      "true_optimal_cost": 2,
+      "plan_cost": null,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G68dfe61882-S02-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3"
+       ]
+      ],
+      "true_optimal_cost": 2,
+      "plan_cost": 2,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S04-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S05-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S06-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2",
+       "COMPUTE_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i1",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 6,
+      "plan_cost": 6,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S07-rb-syntax": {
+      "family_id": "G68dfe61882",
+      "wording": "syntax",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G68dfe61882-S07-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G",
+        "P_H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S08-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G6cd7cbf62e-S01-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "wrong_stop_or_defer",
+      "plan_on_extracted_state": [],
+      "decision": "false",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S04-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK",
+        "COMPUTE_i2"
+       ],
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S05-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G78ee0aede8-S02-rb-syntax": {
+      "family_id": "G78ee0aede8",
+      "wording": "syntax",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F2": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G797f46a0b9-S02-rb-prose": {
+      "family_id": "G797f46a0b9",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S01-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "false",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S02-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "wrong_stop_or_defer",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       [
+        "ASK_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S05-rb-syntax": {
+      "family_id": "G6b569067c0",
+      "wording": "syntax",
+      "true_class": "NEITHER",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G6b569067c0-S07-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G7d1b0f89f1-S05-rb-prose": {
+      "family_id": "G7d1b0f89f1",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     }
+    }
+   },
+   "with_repair": {
+    "items": 174,
+    "accepted": 159,
+    "accepted_exact": 129,
+    "accepted_but_wrong": 30,
+    "classes": {
+     "still_optimal": 27,
+     "sufficient_but_costlier": 0,
+     "insufficient": 0,
+     "unnecessary_intervention": 0,
+     "wrong_stop_or_defer": 2,
+     "planner_error": 1
+    },
+    "class_share_of_accepted_but_wrong": {
+     "still_optimal": 0.9,
+     "sufficient_but_costlier": 0.0,
+     "insufficient": 0.0,
+     "unnecessary_intervention": 0.0,
+     "wrong_stop_or_defer": 0.067,
+     "planner_error": 0.033
+    },
+    "silent_consequential": 2,
+    "silent_consequential_share_of_accepted_but_wrong": {
+     "mean": 0.06666666666666667,
+     "lo": 0.0,
+     "hi": 0.15384615384615385,
+     "n": 30,
+     "clusters": 9
+    },
+    "silent_consequential_per_item": {
+     "mean": 0.011494252873563218,
+     "lo": 0.0,
+     "hi": 0.028409090909090908,
+     "n": 174,
+     "clusters": 12
+    },
+    "harmful_per_item (insufficient or wrong stop/defer)": {
+     "mean": 0.011494252873563218,
+     "lo": 0.0,
+     "hi": 0.028409090909090908,
+     "n": 174,
+     "clusters": 12
+    },
+    "accepted_but_wrong_per_item": {
+     "mean": 0.1724137931034483,
+     "lo": 0.08137195936915267,
+     "hi": 0.27472527472527475,
+     "n": 174,
+     "clusters": 12
+    },
+    "fields_differing_counts": {
+     "variables+rules": 15,
+     "rules": 11,
+     "known": 4
+    },
+    "planner_pipeline": {
+     "planner_error:ValueError": 1,
+     "planner_seconds_mean": 0.0003
+    },
+    "_silent_ids": [
+     "G6b569067c0-S02-rb-prose",
+     "G6cd7cbf62e-S01-rb-prose"
+    ],
+    "_detail": {
+     "G8a042a7307-S04-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G8a042a7307-S06-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_m1",
+       "ASK_u1",
+       "ASK_u2",
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "ASK_m1",
+        "ASK_u1",
+        "ASK_u2"
+       ]
+      ],
+      "true_optimal_cost": 11,
+      "plan_cost": 11,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G8a042a7307-S07-rb-prose": {
+      "family_id": "G8a042a7307",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u1",
+       "ASK_u2",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_u1",
+        "ASK_u2",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 10,
+      "plan_cost": 10,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S01-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "false",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H",
+        "P_H_given_obs"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S02-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S05-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G7be3c81643-S07-rb-prose": {
+      "family_id": "G7be3c81643",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "COMPUTE_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "COMPUTE_i3"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "C",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G761c17f24d-S02-rb-prose": {
+      "family_id": "G761c17f24d",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1",
+       "ASK_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1",
+        "ASK_i3"
+       ]
+      ],
+      "true_optimal_cost": 6,
+      "plan_cost": 6,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G68dfe61882-S01-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S02-rb-syntax": {
+      "family_id": "G68dfe61882",
+      "wording": "syntax",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "planner_error",
+      "plan_on_extracted_state": null,
+      "decision": null,
+      "true_optimal_plans": [
+       [
+        "ASK_i3"
+       ]
+      ],
+      "true_optimal_cost": 2,
+      "plan_cost": null,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G68dfe61882-S02-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3"
+       ]
+      ],
+      "true_optimal_cost": 2,
+      "plan_cost": 2,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S04-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S05-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S06-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2",
+       "COMPUTE_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i1",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 6,
+      "plan_cost": 6,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S07-rb-syntax": {
+      "family_id": "G68dfe61882",
+      "wording": "syntax",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G68dfe61882-S07-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i1"
+       ]
+      ],
+      "true_optimal_cost": 3,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "F",
+        "G",
+        "P_H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G68dfe61882-S08-rb-prose": {
+      "family_id": "G68dfe61882",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 5,
+      "plan_cost": 5,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "A",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     },
+     "G6cd7cbf62e-S01-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": true,
+      "class": "wrong_stop_or_defer",
+      "plan_on_extracted_state": [],
+      "decision": "false",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S04-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK",
+        "COMPUTE_i2"
+       ],
+       [
+        "ASK_i3",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S05-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S06-rb-syntax": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "syntax",
+      "true_class": "BOTH",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_BULK",
+       "COMPUTE_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK",
+        "COMPUTE_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6cd7cbf62e-S08-rb-prose": {
+      "family_id": "G6cd7cbf62e",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_BULK"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_BULK"
+       ]
+      ],
+      "true_optimal_cost": 2,
+      "plan_cost": 2,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G78ee0aede8-S02-rb-syntax": {
+      "family_id": "G78ee0aede8",
+      "wording": "syntax",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F2": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G78ee0aede8-S02-rb-prose": {
+      "family_id": "G78ee0aede8",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i1"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i1"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G797f46a0b9-S02-rb-prose": {
+      "family_id": "G797f46a0b9",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i3"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i3"
+       ]
+      ],
+      "true_optimal_cost": 1,
+      "plan_cost": 1,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S01-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "ALREADY_SUFFICIENT",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "false",
+      "true_optimal_plans": [
+       []
+      ],
+      "true_optimal_cost": 0,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S02-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "wrong_stop_or_defer",
+      "plan_on_extracted_state": [],
+      "decision": "true",
+      "true_optimal_plans": [
+       [
+        "ASK_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G6b569067c0-S05-rb-syntax": {
+      "family_id": "G6b569067c0",
+      "wording": "syntax",
+      "true_class": "NEITHER",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_u2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 3,
+      "diff": {
+       "fields_differing": [
+        "known"
+       ],
+       "known_extracted_vs_true": {
+        "F3": [
+         true,
+         false
+        ]
+       }
+      }
+     },
+     "G6b569067c0-S07-rb-prose": {
+      "family_id": "G6b569067c0",
+      "wording": "prose",
+      "true_class": "INFORMATION_ONLY",
+      "true_answer": false,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [
+       "ASK_i2"
+      ],
+      "decision": "defer",
+      "true_optimal_plans": [
+       [
+        "ASK_i2"
+       ]
+      ],
+      "true_optimal_cost": 4,
+      "plan_cost": 4,
+      "diff": {
+       "fields_differing": [
+        "rules"
+       ]
+      }
+     },
+     "G7d1b0f89f1-S05-rb-prose": {
+      "family_id": "G7d1b0f89f1",
+      "wording": "prose",
+      "true_class": "NEITHER",
+      "true_answer": true,
+      "class": "still_optimal",
+      "plan_on_extracted_state": [],
+      "decision": "defer",
+      "true_optimal_plans": [],
+      "true_optimal_cost": null,
+      "plan_cost": 0,
+      "diff": {
+       "fields_differing": [
+        "variables",
+        "rules"
+       ],
+       "variables_extra": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "G",
+        "H"
+       ],
+       "variables_missing": []
+      }
+     }
+    }
+   },
+   "change_in_silent_consequential_per_item": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 174,
+    "clusters": 12
+   },
+   "silent_with_repair_from_repair_call": []
+  },
+  "deepseek-v4-flash | F": {
+   "first_answer": {
+    "items": 174,
+    "accepted": 154,
+    "accepted_exact": 154,
+    "accepted_but_wrong": 0,
+    "classes": {
+     "still_optimal": 0,
+     "sufficient_but_costlier": 0,
+     "insufficient": 0,
+     "unnecessary_intervention": 0,
+     "wrong_stop_or_defer": 0,
+     "planner_error": 0
+    },
+    "class_share_of_accepted_but_wrong": {
+     "still_optimal": null,
+     "sufficient_but_costlier": null,
+     "insufficient": null,
+     "unnecessary_intervention": null,
+     "wrong_stop_or_defer": null,
+     "planner_error": null
+    },
+    "silent_consequential": 0,
+    "silent_consequential_share_of_accepted_but_wrong": {
+     "mean": null,
+     "lo": null,
+     "hi": null,
+     "n": 0,
+     "clusters": 0
+    },
+    "silent_consequential_per_item": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "harmful_per_item (insufficient or wrong stop/defer)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "accepted_but_wrong_per_item": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "fields_differing_counts": {},
+    "planner_pipeline": {
+     "planner_seconds_mean": null
+    },
+    "_silent_ids": [],
+    "_detail": {}
+   },
+   "with_repair": {
+    "items": 174,
+    "accepted": 169,
+    "accepted_exact": 169,
+    "accepted_but_wrong": 0,
+    "classes": {
+     "still_optimal": 0,
+     "sufficient_but_costlier": 0,
+     "insufficient": 0,
+     "unnecessary_intervention": 0,
+     "wrong_stop_or_defer": 0,
+     "planner_error": 0
+    },
+    "class_share_of_accepted_but_wrong": {
+     "still_optimal": null,
+     "sufficient_but_costlier": null,
+     "insufficient": null,
+     "unnecessary_intervention": null,
+     "wrong_stop_or_defer": null,
+     "planner_error": null
+    },
+    "silent_consequential": 0,
+    "silent_consequential_share_of_accepted_but_wrong": {
+     "mean": null,
+     "lo": null,
+     "hi": null,
+     "n": 0,
+     "clusters": 0
+    },
+    "silent_consequential_per_item": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "harmful_per_item (insufficient or wrong stop/defer)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "accepted_but_wrong_per_item": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "fields_differing_counts": {},
+    "planner_pipeline": {
+     "planner_seconds_mean": null
+    },
+    "_silent_ids": [],
+    "_detail": {}
+   },
+   "change_in_silent_consequential_per_item": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 174,
+    "clusters": 12
+   },
+   "silent_with_repair_from_repair_call": []
+  },
+  "deepseek-v4-flash | N": {
+   "first_answer": {
+    "items": 174,
+    "accepted": 165,
+    "accepted_exact": 165,
+    "accepted_but_wrong": 0,
+    "classes": {
+     "still_optimal": 0,
+     "sufficient_but_costlier": 0,
+     "insufficient": 0,
+     "unnecessary_intervention": 0,
+     "wrong_stop_or_defer": 0,
+     "planner_error": 0
+    },
+    "class_share_of_accepted_but_wrong": {
+     "still_optimal": null,
+     "sufficient_but_costlier": null,
+     "insufficient": null,
+     "unnecessary_intervention": null,
+     "wrong_stop_or_defer": null,
+     "planner_error": null
+    },
+    "silent_consequential": 0,
+    "silent_consequential_share_of_accepted_but_wrong": {
+     "mean": null,
+     "lo": null,
+     "hi": null,
+     "n": 0,
+     "clusters": 0
+    },
+    "silent_consequential_per_item": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "harmful_per_item (insufficient or wrong stop/defer)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "accepted_but_wrong_per_item": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "fields_differing_counts": {},
+    "planner_pipeline": {
+     "planner_seconds_mean": null
+    },
+    "_silent_ids": [],
+    "_detail": {}
+   },
+   "with_repair": {
+    "items": 174,
+    "accepted": 169,
+    "accepted_exact": 169,
+    "accepted_but_wrong": 0,
+    "classes": {
+     "still_optimal": 0,
+     "sufficient_but_costlier": 0,
+     "insufficient": 0,
+     "unnecessary_intervention": 0,
+     "wrong_stop_or_defer": 0,
+     "planner_error": 0
+    },
+    "class_share_of_accepted_but_wrong": {
+     "still_optimal": null,
+     "sufficient_but_costlier": null,
+     "insufficient": null,
+     "unnecessary_intervention": null,
+     "wrong_stop_or_defer": null,
+     "planner_error": null
+    },
+    "silent_consequential": 0,
+    "silent_consequential_share_of_accepted_but_wrong": {
+     "mean": null,
+     "lo": null,
+     "hi": null,
+     "n": 0,
+     "clusters": 0
+    },
+    "silent_consequential_per_item": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "harmful_per_item (insufficient or wrong stop/defer)": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "accepted_but_wrong_per_item": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 174,
+     "clusters": 12
+    },
+    "fields_differing_counts": {},
+    "planner_pipeline": {
+     "planner_seconds_mean": null
+    },
+    "_silent_ids": [],
+    "_detail": {}
+   },
+   "change_in_silent_consequential_per_item": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 174,
+    "clusters": 12
+   },
+   "silent_with_repair_from_repair_call": []
+  }
+ }
+}

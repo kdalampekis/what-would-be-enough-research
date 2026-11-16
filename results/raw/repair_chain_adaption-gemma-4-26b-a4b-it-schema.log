@@ -1,0 +1,29 @@
+=== 2026-11-16T00:17:53Z stage 1
+stage 1 prompt F: 174 jobs; already spent 471.2130
+  adaption-gemma-4-26b-a4b-it-schema: 50/174
+  adaption-gemma-4-26b-a4b-it-schema: 100/174
+  adaption-gemma-4-26b-a4b-it-schema: 150/174
+adaption-gemma-4-26b-a4b-it-schema F {'skipped_done': 0, 'ok': 174, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 125, 'budget_stopped': 0, 'retry_cap_reached': 0}
+stage 1 prompt N: 174 jobs; already spent 471.2671
+  adaption-gemma-4-26b-a4b-it-schema: 50/174
+  adaption-gemma-4-26b-a4b-it-schema: 100/174
+  adaption-gemma-4-26b-a4b-it-schema: 150/174
+adaption-gemma-4-26b-a4b-it-schema N {'skipped_done': 0, 'ok': 174, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 145, 'budget_stopped': 0, 'retry_cap_reached': 0}
+=== 2026-11-16T00:38:04Z stage 1
+stage 1 prompt F: 174 jobs; already spent 475.3363
+adaption-gemma-4-26b-a4b-it-schema F {'skipped_done': 174, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+stage 1 prompt N: 174 jobs; already spent 475.3363
+adaption-gemma-4-26b-a4b-it-schema N {'skipped_done': 174, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+=== 2026-11-16T00:38:05Z stage 2
+stage 2 prompt F: 125 jobs; already spent 475.3363
+  adaption-gemma-4-26b-a4b-it-schema: 50/125
+  adaption-gemma-4-26b-a4b-it-schema: 100/125
+adaption-gemma-4-26b-a4b-it-schema F {'skipped_done': 0, 'ok': 125, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 62, 'budget_stopped': 0, 'retry_cap_reached': 0}
+stage 2 prompt N: 31 jobs; already spent 475.3851
+adaption-gemma-4-26b-a4b-it-schema N {'skipped_done': 0, 'ok': 31, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 22, 'budget_stopped': 0, 'retry_cap_reached': 0}
+=== 2026-11-16T00:47:33Z stage 2
+stage 2 prompt F: 125 jobs; already spent 477.4916
+adaption-gemma-4-26b-a4b-it-schema F {'skipped_done': 125, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+stage 2 prompt N: 31 jobs; already spent 477.4916
+adaption-gemma-4-26b-a4b-it-schema N {'skipped_done': 31, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+=== 2026-11-16T00:47:34Z chain done

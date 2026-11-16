@@ -1,0 +1,7 @@
+loaded from .env: ['ADAPTION_API_KEY']
+--rerun-of adaption-glm-53-flash status in ['truncated']: 73 jobs selected
+74 instances, 10 families, 73 jobs per model; pools {'plan': 72, 'judgment': 1}
+WARNING adaption-glm-53-flash-32k: written from SDK source, no live call yet; run --smoke first
+budget credits 24.83; already spent credits 9.91
+smoke adaption-glm-53-flash-32k: status=truncated parse_error=no text tokens={'input_tokens': 1757, 'output_tokens': 32000, 'reasoning_tokens': 32000, 'cached_input_tokens': 0} cost=credits 0.0163 served=glm-5.3-flash seconds=163.38
+smoke test failed: stopping before any further calls

@@ -1,0 +1,16 @@
+=== 2026-11-15T20:23:26Z analyses
+loaded from .env: ['ADAPTION_API_KEY']
+468 instances, 63 families, 1814 jobs per model; pools {'plan': 1215, 'decision': 63, 'judgment': 536}
+wrote results/aggregate/final_test/v3/pilot_test/summary.json and report.md
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468), ('t1test', 804)]; conditions ['s3', 's1']
+wrote results/aggregate/final_test/eop/eop_summary.json
+wrote results/aggregate/final_test/t1/t1_test_summary.json
+=== 2026-11-15T20:30:27Z done
+=== 2026-11-15T22:36:52Z analyses
+loaded from .env: ['ADAPTION_API_KEY']
+468 instances, 63 families, 1814 jobs per model; pools {'plan': 1215, 'decision': 63, 'judgment': 536}
+wrote results/aggregate/final_test/v3/pilot_test/summary.json and report.md
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468), ('t1test', 804)]; conditions ['s3', 's1']
+wrote results/aggregate/final_test/eop/eop_summary.json
+wrote results/aggregate/final_test/t1/t1_test_summary.json
+=== 2026-11-15T22:44:01Z done

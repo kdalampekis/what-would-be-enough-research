@@ -1,0 +1,61 @@
+{
+ "protocol": "EOP_A2",
+ "commit_at_freeze": "cbe64c0f19c6877189f988cc5ee12b4552d5ba56",
+ "files_sha256": {
+  "PREREG_EOP.md": "7eb1a67074285fffc72107050d92ea4221276970db3c4ba49f5b14fbfa80a157",
+  "experiments/run_eop.py": "797c50f8f6265240e3ebc60e2272adf052fb2a9a040dd922a5bdc0fc45afb626",
+  "experiments/analyze_t1.py": "d51af1ac2bba618616863b94dafa3f3f627074e7d6dc0be849833b5414f783ae",
+  "src/msep/models/prompts_s1.py": "5ebc26c1622ce79294dc2f453f5545aa34b5ac87208a5c112b2e5262512e0323",
+  "src/msep/models/prompts.py": "9c43c9a4a0720fe5abfce07c236af92847f4e22cca24ed44e162d0a4166706a3",
+  "src/msep/controllers/realistic_planner.py": "907b6a062fea71551bdfa5a46582aba4f1e6a05b7a79ffbf2489d50238c1252a",
+  "src/msep/controllers/llm_extractor.py": "a5aa1075f37142b98420bd1f0aa56d5ef243ae5888d7f3ba860057d24ff81018",
+  "src/msep/obligations/extraction.py": "f3d70baa9745c501650c0bb6322232a783cd7150b4489e4a6c60a1340bc79f57",
+  "src/msep/obligations/discharge.py": "8a4897ce4ef4e76ebf52269d1958dc505f9429c11f8bb8754203dcbc741fd086",
+  "src/msep/obligations/model.py": "4f60fb891985d8f8cb18367a976fcfdbf6e019025bb6033d56ea36a3ef0df27d",
+  "src/msep/benchmark/parsing.py": "7e9d9a86d0ec6afe3940aae21ce55e4fdfd948286aa3541f1545189932be2003",
+  "src/msep/eval/pilot.py": "227a30b4329162d245b233512c1839f59511017ad8c1520e6a88c241aaaf63e8",
+  "src/msep/eval/plan_metrics.py": "dde88a9086dd1d968a8f8f3607ee9a3a1da843d7a6678b5f57138ab01f46f01d",
+  "src/msep/models/schemas.py": "1f6b868dca7439288be66fac233000e83771ae5046b9f04de46809715aebe4e8",
+  "data/generated/t1_v1/pairs.jsonl": "9215f98f18aa7c8849917c5ab9233ae7d53061dc6fc841f3fd2207ddd71e1c71",
+  "data/generated/pool_v3/instances.jsonl": "660012bdae121635dcaef41a3b018da0bf31cfd2553757f797c8a3267680e2cd"
+ },
+ "models": {
+  "adaption-qwen3.5-397b": {
+   "model_id": "qwen3.5-397b",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2
+   }
+  },
+  "adaption-qwen3.8-27b": {
+   "model_id": "qwen3.8-27b",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2
+   }
+  },
+  "adaption-gemma-4-26b-a4b-it-schema": {
+   "model_id": "gemma-4-26b-a4b-it",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2,
+    "structured": "function_tool"
+   }
+  },
+  "adaption-deepseek-v4-flash": {
+   "model_id": "deepseek-v4-flash",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2
+   }
+  }
+ }
+}

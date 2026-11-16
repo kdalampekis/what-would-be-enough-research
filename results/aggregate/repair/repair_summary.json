@@ -1,0 +1,2477 @@
+{
+ "families": 12,
+ "items": 174,
+ "models": {
+  "adaption-gemma-4-26b-a4b-it-schema": {
+   "F": {
+    "pooled": {
+     "items": 174,
+     "counts": {
+      "first answer accepted by the function-call reading only": 49,
+      "first answer rejected: extraction invalid: ParseError: unknown vari": 54,
+      "repair calls due": 125,
+      "repair calls answered": 125,
+      "first answer accepted": 49,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 44,
+      "first answer rejected: extraction invalid: ParseError: expected 'th": 7,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 17,
+      "first answer rejected: extraction invalid: TypeError: string indice": 3
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.21264367816091953,
+       "lo": 0.13480369741311737,
+       "hi": 0.28823529411764703,
+       "n": 174,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.06896551724137931,
+       "lo": 0.027777777777777776,
+       "hi": 0.11797752808988764,
+       "n": 174,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.7183908045977011,
+       "lo": 0.6453488372093024,
+       "hi": 0.8011363636363636,
+       "n": 174,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 174,
+       "n_resolvable": 126,
+       "unparsed_items": 125,
+       "unparsed_resolvable": 89,
+       "optimal_all": {
+        "mean": 0.2857142857142857,
+        "lo": 0.2,
+        "hi": 0.36507936507936506,
+        "n": 126,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.2857142857142857,
+        "lo": 0.2,
+        "hi": 0.36507936507936506,
+        "n": 126,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 0.972972972972973,
+        "lo": 0.9142857142857143,
+        "hi": 1.0,
+        "n": 37,
+        "clusters": 11
+       },
+       "sufficient_parsed": {
+        "mean": 0.972972972972973,
+        "lo": 0.9142857142857143,
+        "hi": 1.0,
+        "n": 37,
+        "clusters": 11
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 36,
+        "clusters": 11
+       },
+       "regret_parsed": {
+        "mean": 0.7837837837837838,
+        "lo": 0.0,
+        "hi": 2.4857142857142858,
+        "n": 37,
+        "clusters": 11
+       },
+       "class_acc_all": {
+        "mean": 0.27586206896551724,
+        "lo": 0.19443627450980394,
+        "hi": 0.3505747126436782,
+        "n": 174,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.25,
+        "lo": 0.14583333333333334,
+        "hi": 0.3958333333333333,
+        "n": 48,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 125,
+       "planner_seconds_mean": 0.0004
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.7758620689655172,
+       "lo": 0.6761363636363636,
+       "hi": 0.8736607142857141,
+       "n": 174,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.15517241379310345,
+       "lo": 0.07469141849529785,
+       "hi": 0.23563218390804597,
+       "n": 174,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.06896551724137931,
+       "lo": 0.017045454545454544,
+       "hi": 0.12921348314606743,
+       "n": 174,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 174,
+       "n_resolvable": 126,
+       "unparsed_items": 13,
+       "unparsed_resolvable": 8,
+       "optimal_all": {
+        "mean": 0.9285714285714286,
+        "lo": 0.873015873015873,
+        "hi": 0.9761997767857142,
+        "n": 126,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9285714285714286,
+        "lo": 0.873015873015873,
+        "hi": 0.9761997767857142,
+        "n": 126,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 0.9915254237288136,
+        "lo": 0.9739130434782609,
+        "hi": 1.0,
+        "n": 118,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 0.9915254237288136,
+        "lo": 0.9739130434782609,
+        "hi": 1.0,
+        "n": 118,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 117,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.2457627118644068,
+        "lo": 0.0,
+        "hi": 0.7565217391304347,
+        "n": 118,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9137931034482759,
+        "lo": 0.8604651162790697,
+        "hi": 0.9647058823529412,
+        "n": 174,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.8541666666666666,
+        "lo": 0.7083333333333334,
+        "hi": 1.0,
+        "n": 48,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "planner_error:ValueError": 1,
+       "extraction_failed": 12,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.5632183908045977,
+      "lo": 0.46702380952380956,
+      "hi": 0.6511627906976745,
+      "n": 174,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 125,
+      "recovered_exact": 98,
+      "accepted_but_wrong_after_repair": 15,
+      "still_rejected": 12
+     },
+     "calls_per_item_with_repair": 1.718
+    },
+    "syntax": {
+     "items": 87,
+     "counts": {
+      "first answer accepted by the function-call reading only": 3,
+      "first answer rejected: extraction invalid: ParseError: unknown vari": 51,
+      "repair calls due": 84,
+      "repair calls answered": 84,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 25,
+      "first answer accepted": 3,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 7,
+      "first answer rejected: extraction invalid: ParseError: expected 'th": 1
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.034482758620689655,
+       "lo": 0.0,
+       "hi": 0.06818181818181818,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.9655172413793104,
+       "lo": 0.9318181818181818,
+       "hi": 1.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 84,
+       "unparsed_resolvable": 61,
+       "optimal_all": {
+        "mean": 0.031746031746031744,
+        "lo": 0.0,
+        "hi": 0.078125,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.031746031746031744,
+        "lo": 0.0,
+        "hi": 0.078125,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 2,
+        "clusters": 2
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 2,
+        "clusters": 2
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 2,
+        "clusters": 2
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 2,
+        "clusters": 2
+       },
+       "class_acc_all": {
+        "mean": 0.034482758620689655,
+        "lo": 0.0,
+        "hi": 0.06818181818181818,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.041666666666666664,
+        "lo": 0.0,
+        "hi": 0.125,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 84,
+       "planner_seconds_mean": 0.0004
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.8505747126436781,
+       "lo": 0.7444444444444445,
+       "hi": 0.9425287356321839,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.06896551724137931,
+       "lo": 0.011764705882352941,
+       "hi": 0.12790697674418605,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.08045977011494253,
+       "lo": 0.011901260504201686,
+       "hi": 0.1590909090909091,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 8,
+       "unparsed_resolvable": 5,
+       "optimal_all": {
+        "mean": 0.9206349206349206,
+        "lo": 0.8484848484848485,
+        "hi": 0.9836065573770492,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9206349206349206,
+        "lo": 0.8484848484848485,
+        "hi": 0.9836065573770492,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 58,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 58,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 58,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 58,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.896551724137931,
+        "lo": 0.8222222222222222,
+        "hi": 0.9634146341463414,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.7916666666666666,
+        "lo": 0.5833333333333334,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "planner_error:ValueError": 1,
+       "extraction_failed": 7,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.8160919540229885,
+      "lo": 0.7191011235955056,
+      "hi": 0.9146341463414634,
+      "n": 87,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 84,
+      "recovered_exact": 71,
+      "accepted_but_wrong_after_repair": 6,
+      "still_rejected": 7
+     },
+     "calls_per_item_with_repair": 1.966
+    },
+    "prose": {
+     "items": 87,
+     "counts": {
+      "first answer accepted by the function-call reading only": 46,
+      "first answer accepted": 46,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 19,
+      "repair calls due": 41,
+      "repair calls answered": 41,
+      "first answer rejected: extraction invalid: ParseError: expected 'th": 6,
+      "first answer rejected: extraction invalid: ParseError: unknown vari": 3,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 10,
+      "first answer rejected: extraction invalid: TypeError: string indice": 3
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.39080459770114945,
+       "lo": 0.25280172413793117,
+       "hi": 0.5217512077294685,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.13793103448275862,
+       "lo": 0.05555555555555555,
+       "hi": 0.23595505617977527,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.47126436781609193,
+       "lo": 0.33324468085106396,
+       "hi": 0.6222549019607841,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 41,
+       "unparsed_resolvable": 28,
+       "optimal_all": {
+        "mean": 0.5396825396825397,
+        "lo": 0.3769979508196722,
+        "hi": 0.6970057720057719,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.5396825396825397,
+        "lo": 0.3769979508196722,
+        "hi": 0.6970057720057719,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 0.9714285714285714,
+        "lo": 0.9117647058823529,
+        "hi": 1.0,
+        "n": 35,
+        "clusters": 11
+       },
+       "sufficient_parsed": {
+        "mean": 0.9714285714285714,
+        "lo": 0.9117647058823529,
+        "hi": 1.0,
+        "n": 35,
+        "clusters": 11
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 34,
+        "clusters": 11
+       },
+       "regret_parsed": {
+        "mean": 0.8285714285714286,
+        "lo": 0.0,
+        "hi": 2.5588235294117645,
+        "n": 35,
+        "clusters": 11
+       },
+       "class_acc_all": {
+        "mean": 0.5172413793103449,
+        "lo": 0.3677383367139961,
+        "hi": 0.6596548738248387,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.4583333333333333,
+        "lo": 0.25,
+        "hi": 0.6666666666666666,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 41,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.7011494252873564,
+       "lo": 0.5795454545454546,
+       "hi": 0.8333333333333334,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.2413793103448276,
+       "lo": 0.11494252873563218,
+       "hi": 0.3736607142857141,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.05747126436781609,
+       "lo": 0.0,
+       "hi": 0.11904761904761904,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 5,
+       "unparsed_resolvable": 3,
+       "optimal_all": {
+        "mean": 0.9365079365079365,
+        "lo": 0.859375,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9365079365079365,
+        "lo": 0.859375,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 0.9833333333333333,
+        "lo": 0.9482758620689655,
+        "hi": 1.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 0.9833333333333333,
+        "lo": 0.9482758620689655,
+        "hi": 1.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 59,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.48333333333333334,
+        "lo": 0.0,
+        "hi": 1.5,
+        "n": 60,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9310344827586207,
+        "lo": 0.8705882352941177,
+        "hi": 0.9880952380952381,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9166666666666666,
+        "lo": 0.7916666666666666,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 5,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.3103448275862069,
+      "lo": 0.18823529411764706,
+      "hi": 0.44047619047619047,
+      "n": 87,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 41,
+      "recovered_exact": 27,
+      "accepted_but_wrong_after_repair": 9,
+      "still_rejected": 5
+     },
+     "calls_per_item_with_repair": 1.471
+    }
+   },
+   "N": {
+    "pooled": {
+     "items": 174,
+     "counts": {
+      "first answer accepted by the function-call reading only": 29,
+      "first answer accepted": 143,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 5,
+      "repair calls due": 31,
+      "repair calls answered": 31,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 23,
+      "first answer rejected: extraction invalid: KeyError: 'variables'": 1,
+      "first answer rejected: extraction invalid: JSONDecodeError: Extra d": 2
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.6724137931034483,
+       "lo": 0.5454545454545454,
+       "hi": 0.8000301204819276,
+       "n": 174,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.14942528735632185,
+       "lo": 0.06107142857142864,
+       "hi": 0.2528106031254036,
+       "n": 174,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.1781609195402299,
+       "lo": 0.08043691222570537,
+       "hi": 0.2808988764044944,
+       "n": 174,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 174,
+       "n_resolvable": 126,
+       "unparsed_items": 32,
+       "unparsed_resolvable": 30,
+       "optimal_all": {
+        "mean": 0.753968253968254,
+        "lo": 0.6405709134615386,
+        "hi": 0.8688524590163934,
+        "n": 126,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.753968253968254,
+        "lo": 0.6405709134615386,
+        "hi": 0.8688524590163934,
+        "n": 126,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 0.9895833333333334,
+        "lo": 0.9677331697054699,
+        "hi": 1.0,
+        "n": 96,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 0.9895833333333334,
+        "lo": 0.9677331697054699,
+        "hi": 1.0,
+        "n": 96,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 95,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.3020833333333333,
+        "lo": 0.0,
+        "hi": 0.935738078541373,
+        "n": 96,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.8045977011494253,
+        "lo": 0.7101913711288712,
+        "hi": 0.8953488372093024,
+        "n": 174,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9375,
+        "lo": 0.8333333333333334,
+        "hi": 1.0,
+        "n": 48,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 31,
+       "planner_error:ValueError": 1,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.7413793103448276,
+       "lo": 0.6098727422003285,
+       "hi": 0.8630952380952381,
+       "n": 174,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.1724137931034483,
+       "lo": 0.08137195936915267,
+       "hi": 0.27472527472527475,
+       "n": 174,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.08620689655172414,
+       "lo": 0.018281794425087126,
+       "hi": 0.16666666666666666,
+       "n": 174,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 174,
+       "n_resolvable": 126,
+       "unparsed_items": 16,
+       "unparsed_resolvable": 15,
+       "optimal_all": {
+        "mean": 0.873015873015873,
+        "lo": 0.7803030303030303,
+        "hi": 0.9523809523809523,
+        "n": 126,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.873015873015873,
+        "lo": 0.7803030303030303,
+        "hi": 0.9523809523809523,
+        "n": 126,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 0.990990990990991,
+        "lo": 0.9722222222222222,
+        "hi": 1.0,
+        "n": 111,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 0.990990990990991,
+        "lo": 0.9722222222222222,
+        "hi": 1.0,
+        "n": 111,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 110,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.26126126126126126,
+        "lo": 0.0,
+        "hi": 0.8055555555555556,
+        "n": 111,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.896551724137931,
+        "lo": 0.8186688311688312,
+        "hi": 0.9606741573033708,
+        "n": 174,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9583333333333334,
+        "lo": 0.875,
+        "hi": 1.0,
+        "n": 48,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 15,
+       "planner_error:ValueError": 1,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.06896551724137931,
+      "lo": 0.022988505747126436,
+      "hi": 0.1206896551724138,
+      "n": 174,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 31,
+      "recovered_exact": 12,
+      "accepted_but_wrong_after_repair": 4,
+      "still_rejected": 15
+     },
+     "calls_per_item_with_repair": 1.178
+    },
+    "syntax": {
+     "items": 87,
+     "counts": {
+      "first answer accepted by the function-call reading only": 7,
+      "first answer accepted": 72,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 2,
+      "repair calls due": 15,
+      "repair calls answered": 15,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 11,
+      "first answer rejected: extraction invalid: JSONDecodeError: Extra d": 2
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.7816091954022989,
+       "lo": 0.6352941176470588,
+       "hi": 0.9176470588235294,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.04597701149425287,
+       "lo": 0.0,
+       "hi": 0.09523809523809523,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.1724137931034483,
+       "lo": 0.046511627906976744,
+       "hi": 0.31118217054263525,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 16,
+       "unparsed_resolvable": 14,
+       "optimal_all": {
+        "mean": 0.7777777777777778,
+        "lo": 0.6289780934039481,
+        "hi": 0.9180327868852459,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.7777777777777778,
+        "lo": 0.6289780934039481,
+        "hi": 0.9180327868852459,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 49,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 49,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 49,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 49,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.8045977011494253,
+        "lo": 0.6666666666666666,
+        "hi": 0.9294117647058824,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9166666666666666,
+        "lo": 0.7916666666666666,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 15,
+       "planner_error:ValueError": 1,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.8735632183908046,
+       "lo": 0.7554868913857679,
+       "hi": 0.9655172413793104,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.05747126436781609,
+       "lo": 0.011627906976744186,
+       "hi": 0.1087255136168178,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.06896551724137931,
+       "lo": 0.0,
+       "hi": 0.16853932584269662,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 7,
+       "unparsed_resolvable": 6,
+       "optimal_all": {
+        "mean": 0.9047619047619048,
+        "lo": 0.8058966530981457,
+        "hi": 0.9836065573770492,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9047619047619048,
+        "lo": 0.8058966530981457,
+        "hi": 0.9836065573770492,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 57,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 57,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 57,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 57,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9080459770114943,
+        "lo": 0.8131868131868132,
+        "hi": 0.9767441860465116,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9583333333333334,
+        "lo": 0.875,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "planner_error:ValueError": 1,
+       "extraction_failed": 6,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.09195402298850575,
+      "lo": 0.02247191011235955,
+      "hi": 0.17647058823529413,
+      "n": 87,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 15,
+      "recovered_exact": 8,
+      "accepted_but_wrong_after_repair": 1,
+      "still_rejected": 6
+     },
+     "calls_per_item_with_repair": 1.172
+    },
+    "prose": {
+     "items": 87,
+     "counts": {
+      "first answer accepted by the function-call reading only": 22,
+      "first answer accepted": 71,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 12,
+      "repair calls due": 16,
+      "repair calls answered": 16,
+      "first answer rejected: extraction invalid: KeyError: 'variables'": 1,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 3
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.5632183908045977,
+       "lo": 0.4090909090909091,
+       "hi": 0.7325581395348837,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.25287356321839083,
+       "lo": 0.10227272727272728,
+       "hi": 0.4175824175824176,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.1839080459770115,
+       "lo": 0.08235294117647059,
+       "hi": 0.28888888888888886,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 16,
+       "unparsed_resolvable": 16,
+       "optimal_all": {
+        "mean": 0.7301587301587301,
+        "lo": 0.5936789772727274,
+        "hi": 0.861551724137931,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.7301587301587301,
+        "lo": 0.5936789772727274,
+        "hi": 0.861551724137931,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 0.9787234042553191,
+        "lo": 0.9347826086956522,
+        "hi": 1.0,
+        "n": 47,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 0.9787234042553191,
+        "lo": 0.9347826086956522,
+        "hi": 1.0,
+        "n": 47,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 46,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.6170212765957447,
+        "lo": 0.0,
+        "hi": 1.891304347826087,
+        "n": 47,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.8045977011494253,
+        "lo": 0.7045142357642359,
+        "hi": 0.8989044943820222,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9583333333333334,
+        "lo": 0.875,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 16,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.6091954022988506,
+       "lo": 0.4347463768115943,
+       "hi": 0.7926934398654332,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.28735632183908044,
+       "lo": 0.13793103448275862,
+       "hi": 0.44830492057342103,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.10344827586206896,
+       "lo": 0.02247191011235955,
+       "hi": 0.21112745098039207,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 9,
+       "unparsed_resolvable": 9,
+       "optimal_all": {
+        "mean": 0.8412698412698413,
+        "lo": 0.6935173697270473,
+        "hi": 0.9531430288461538,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.8412698412698413,
+        "lo": 0.6935173697270473,
+        "hi": 0.9531430288461538,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 0.9814814814814815,
+        "lo": 0.9423076923076923,
+        "hi": 1.0,
+        "n": 54,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 0.9814814814814815,
+        "lo": 0.9423076923076923,
+        "hi": 1.0,
+        "n": 54,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 53,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.5370370370370371,
+        "lo": 0.0,
+        "hi": 1.6730769230769231,
+        "n": 54,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.8850574712643678,
+        "lo": 0.7790047879616965,
+        "hi": 0.9659186670071501,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9583333333333334,
+        "lo": 0.875,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 9,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.04597701149425287,
+      "lo": 0.011494252873563218,
+      "hi": 0.08139534883720931,
+      "n": 87,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 16,
+      "recovered_exact": 4,
+      "accepted_but_wrong_after_repair": 3,
+      "still_rejected": 9
+     },
+     "calls_per_item_with_repair": 1.184
+    }
+   }
+  },
+  "adaption-deepseek-v4-flash": {
+   "F": {
+    "pooled": {
+     "items": 174,
+     "counts": {
+      "first answer accepted by the function-call reading only": 154,
+      "first answer accepted": 154,
+      "first answer rejected: extraction invalid: ParseError: unknown vari": 2,
+      "repair calls due": 20,
+      "repair calls answered": 20,
+      "first answer rejected: extraction invalid: ParseError: expected 'th": 3,
+      "first answer rejected: no answer text": 4,
+      "first answer rejected: extraction invalid: ValueError: computation ": 2,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 3,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 6
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.8850574712643678,
+       "lo": 0.8275862068965517,
+       "hi": 0.9367995689655172,
+       "n": 174,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 174,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.11494252873563218,
+       "lo": 0.06320043103448279,
+       "hi": 0.1724137931034483,
+       "n": 174,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 174,
+       "n_resolvable": 126,
+       "unparsed_items": 20,
+       "unparsed_resolvable": 13,
+       "optimal_all": {
+        "mean": 0.8968253968253969,
+        "lo": 0.8484848484848485,
+        "hi": 0.9461538461538461,
+        "n": 126,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.8968253968253969,
+        "lo": 0.8484848484848485,
+        "hi": 0.9461538461538461,
+        "n": 126,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 113,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 113,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 113,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 113,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.8850574712643678,
+        "lo": 0.8275862068965517,
+        "hi": 0.9367995689655172,
+        "n": 174,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.8541666666666666,
+        "lo": 0.75,
+        "hi": 0.9583333333333334,
+        "n": 48,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 20,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.9712643678160919,
+       "lo": 0.9418604651162791,
+       "hi": 1.0,
+       "n": 174,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 174,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.028735632183908046,
+       "lo": 0.0,
+       "hi": 0.05813953488372093,
+       "n": 174,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 174,
+       "n_resolvable": 126,
+       "unparsed_items": 5,
+       "unparsed_resolvable": 4,
+       "optimal_all": {
+        "mean": 0.9682539682539683,
+        "lo": 0.9328358208955224,
+        "hi": 1.0,
+        "n": 126,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9682539682539683,
+        "lo": 0.9328358208955224,
+        "hi": 1.0,
+        "n": 126,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 122,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 122,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 122,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 122,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9712643678160919,
+        "lo": 0.9418604651162791,
+        "hi": 1.0,
+        "n": 174,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9791666666666666,
+        "lo": 0.9375,
+        "hi": 1.0,
+        "n": 48,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 5,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.08620689655172414,
+      "lo": 0.0449438202247191,
+      "hi": 0.12654104791258036,
+      "n": 174,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 20,
+      "recovered_exact": 15,
+      "accepted_but_wrong_after_repair": 0,
+      "still_rejected": 5
+     },
+     "calls_per_item_with_repair": 1.115
+    },
+    "syntax": {
+     "items": 87,
+     "counts": {
+      "first answer accepted by the function-call reading only": 74,
+      "first answer accepted": 74,
+      "first answer rejected: extraction invalid: ParseError: unknown vari": 2,
+      "repair calls due": 13,
+      "repair calls answered": 13,
+      "first answer rejected: extraction invalid: ParseError: expected 'th": 3,
+      "first answer rejected: no answer text": 2,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 5,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 1
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.8505747126436781,
+       "lo": 0.7528089887640449,
+       "hi": 0.9318373340143001,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.14942528735632185,
+       "lo": 0.06816266598569973,
+       "hi": 0.24719101123595505,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 13,
+       "unparsed_resolvable": 10,
+       "optimal_all": {
+        "mean": 0.8412698412698413,
+        "lo": 0.7424120234604106,
+        "hi": 0.9354838709677419,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.8412698412698413,
+        "lo": 0.7424120234604106,
+        "hi": 0.9354838709677419,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 53,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 53,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 53,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 53,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.8505747126436781,
+        "lo": 0.7528089887640449,
+        "hi": 0.9318373340143001,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.875,
+        "lo": 0.75,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 13,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.9655172413793104,
+       "lo": 0.9139551192145863,
+       "hi": 1.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.034482758620689655,
+       "lo": 0.0,
+       "hi": 0.08604488078541363,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 3,
+       "unparsed_resolvable": 3,
+       "optimal_all": {
+        "mean": 0.9523809523809523,
+        "lo": 0.8840153452685423,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9523809523809523,
+        "lo": 0.8840153452685423,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9655172413793104,
+        "lo": 0.9139551192145863,
+        "hi": 1.0,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 3,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.11494252873563218,
+      "lo": 0.05813953488372093,
+      "hi": 0.17045454545454544,
+      "n": 87,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 13,
+      "recovered_exact": 10,
+      "accepted_but_wrong_after_repair": 0,
+      "still_rejected": 3
+     },
+     "calls_per_item_with_repair": 1.149
+    },
+    "prose": {
+     "items": 87,
+     "counts": {
+      "first answer accepted by the function-call reading only": 80,
+      "first answer accepted": 80,
+      "first answer rejected: no answer text": 2,
+      "repair calls due": 7,
+      "repair calls answered": 7,
+      "first answer rejected: extraction invalid: ValueError: computation ": 2,
+      "first answer rejected: extraction invalid: ParseError: expected ')'": 2,
+      "first answer rejected: extraction invalid: ParseError: trailing tok": 1
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.9195402298850575,
+       "lo": 0.8674497991967872,
+       "hi": 0.9662921348314607,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.08045977011494253,
+       "lo": 0.033707865168539325,
+       "hi": 0.13255020080321275,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 7,
+       "unparsed_resolvable": 3,
+       "optimal_all": {
+        "mean": 0.9523809523809523,
+        "lo": 0.9032258064516129,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9523809523809523,
+        "lo": 0.9032258064516129,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 60,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9195402298850575,
+        "lo": 0.8674497991967872,
+        "hi": 0.9662921348314607,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.8333333333333334,
+        "lo": 0.7083333333333334,
+        "hi": 0.9583333333333334,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 7,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.9770114942528736,
+       "lo": 0.9431818181818182,
+       "hi": 1.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.022988505747126436,
+       "lo": 0.0,
+       "hi": 0.056818181818181816,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 2,
+       "unparsed_resolvable": 1,
+       "optimal_all": {
+        "mean": 0.9841269841269841,
+        "lo": 0.9523809523809523,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9841269841269841,
+        "lo": 0.9523809523809523,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 62,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 62,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 62,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 62,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9770114942528736,
+        "lo": 0.9431818181818182,
+        "hi": 1.0,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9583333333333334,
+        "lo": 0.875,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 2,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.05747126436781609,
+      "lo": 0.011235955056179775,
+      "hi": 0.11627906976744186,
+      "n": 87,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 7,
+      "recovered_exact": 5,
+      "accepted_but_wrong_after_repair": 0,
+      "still_rejected": 2
+     },
+     "calls_per_item_with_repair": 1.08
+    }
+   },
+   "N": {
+    "pooled": {
+     "items": 174,
+     "counts": {
+      "first answer accepted by the function-call reading only": 165,
+      "first answer accepted": 165,
+      "first answer rejected: no answer text": 9,
+      "repair calls due": 9,
+      "repair calls answered": 9
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.9482758620689655,
+       "lo": 0.9204316875653082,
+       "hi": 0.9764705882352941,
+       "n": 174,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 174,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.05172413793103448,
+       "lo": 0.023529411764705882,
+       "hi": 0.07956831243469162,
+       "n": 174,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 174,
+       "n_resolvable": 126,
+       "unparsed_items": 9,
+       "unparsed_resolvable": 8,
+       "optimal_all": {
+        "mean": 0.9365079365079365,
+        "lo": 0.9057712215320912,
+        "hi": 0.967741935483871,
+        "n": 126,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9365079365079365,
+        "lo": 0.9057712215320912,
+        "hi": 0.967741935483871,
+        "n": 126,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 118,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 118,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 118,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 118,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9482758620689655,
+        "lo": 0.9204316875653082,
+        "hi": 0.9764705882352941,
+        "n": 174,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9791666666666666,
+        "lo": 0.9375,
+        "hi": 1.0,
+        "n": 48,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 9,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.9712643678160919,
+       "lo": 0.9482608259823577,
+       "hi": 0.9940476190476191,
+       "n": 174,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 174,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.028735632183908046,
+       "lo": 0.005952380952380952,
+       "hi": 0.05173917401764226,
+       "n": 174,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 174,
+       "n_resolvable": 126,
+       "unparsed_items": 5,
+       "unparsed_resolvable": 4,
+       "optimal_all": {
+        "mean": 0.9682539682539683,
+        "lo": 0.9328358208955224,
+        "hi": 1.0,
+        "n": 126,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9682539682539683,
+        "lo": 0.9328358208955224,
+        "hi": 1.0,
+        "n": 126,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 122,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 122,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 122,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 122,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9712643678160919,
+        "lo": 0.9482608259823577,
+        "hi": 0.9940476190476191,
+        "n": 174,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9791666666666666,
+        "lo": 0.9375,
+        "hi": 1.0,
+        "n": 48,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 5,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.022988505747126436,
+      "lo": 0.0056179775280898875,
+      "hi": 0.045454545454545456,
+      "n": 174,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 9,
+      "recovered_exact": 4,
+      "accepted_but_wrong_after_repair": 0,
+      "still_rejected": 5
+     },
+     "calls_per_item_with_repair": 1.052
+    },
+    "syntax": {
+     "items": 87,
+     "counts": {
+      "first answer accepted by the function-call reading only": 86,
+      "first answer accepted": 86,
+      "first answer rejected: no answer text": 1,
+      "repair calls due": 1,
+      "repair calls answered": 1
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.9885057471264368,
+       "lo": 0.9647058823529412,
+       "hi": 1.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.011494252873563218,
+       "lo": 0.0,
+       "hi": 0.03529411764705882,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 1,
+       "unparsed_resolvable": 1,
+       "optimal_all": {
+        "mean": 0.9841269841269841,
+        "lo": 0.9508196721311475,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9841269841269841,
+        "lo": 0.9508196721311475,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 62,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 62,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 62,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 62,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9885057471264368,
+        "lo": 0.9647058823529412,
+        "hi": 1.0,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 1,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 1.0,
+       "lo": 1.0,
+       "hi": 1.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 0,
+       "unparsed_resolvable": 0,
+       "optimal_all": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.011494252873563218,
+      "lo": 0.0,
+      "hi": 0.03529411764705882,
+      "n": 87,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 1,
+      "recovered_exact": 1,
+      "accepted_but_wrong_after_repair": 0,
+      "still_rejected": 0
+     },
+     "calls_per_item_with_repair": 1.011
+    },
+    "prose": {
+     "items": 87,
+     "counts": {
+      "first answer accepted by the function-call reading only": 79,
+      "first answer accepted": 79,
+      "first answer rejected: no answer text": 8,
+      "repair calls due": 8,
+      "repair calls answered": 8
+     },
+     "first": {
+      "state_exact": {
+       "mean": 0.9080459770114943,
+       "lo": 0.8620689655172413,
+       "hi": 0.9534883720930233,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.09195402298850575,
+       "lo": 0.046511627906976744,
+       "hi": 0.13793103448275862,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 8,
+       "unparsed_resolvable": 7,
+       "optimal_all": {
+        "mean": 0.8888888888888888,
+        "lo": 0.8225806451612904,
+        "hi": 0.9516129032258065,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.8888888888888888,
+        "lo": 0.8225806451612904,
+        "hi": 0.9516129032258065,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 56,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 56,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 56,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 56,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9080459770114943,
+        "lo": 0.8620689655172413,
+        "hi": 0.9534883720930233,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9583333333333334,
+        "lo": 0.875,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 8,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "with_repair": {
+      "state_exact": {
+       "mean": 0.9425287356321839,
+       "lo": 0.8965216519647153,
+       "hi": 0.9880952380952381,
+       "n": 87,
+       "clusters": 12
+      },
+      "accepted_but_wrong": {
+       "mean": 0.0,
+       "lo": 0.0,
+       "hi": 0.0,
+       "n": 87,
+       "clusters": 12
+      },
+      "rejected": {
+       "mean": 0.05747126436781609,
+       "lo": 0.011904761904761904,
+       "hi": 0.10347834803528452,
+       "n": 87,
+       "clusters": 12
+      },
+      "plan": {
+       "n_items": 87,
+       "n_resolvable": 63,
+       "unparsed_items": 5,
+       "unparsed_resolvable": 4,
+       "optimal_all": {
+        "mean": 0.9365079365079365,
+        "lo": 0.8656716417910447,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "sufficient_all": {
+        "mean": 0.9365079365079365,
+        "lo": 0.8656716417910447,
+        "hi": 1.0,
+        "n": 63,
+        "clusters": 12
+       },
+       "optimal_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 59,
+        "clusters": 12
+       },
+       "sufficient_parsed": {
+        "mean": 1.0,
+        "lo": 1.0,
+        "hi": 1.0,
+        "n": 59,
+        "clusters": 12
+       },
+       "unnecessary_action_rate": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 59,
+        "clusters": 12
+       },
+       "regret_parsed": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n": 59,
+        "clusters": 12
+       },
+       "class_acc_all": {
+        "mean": 0.9425287356321839,
+        "lo": 0.8965216519647153,
+        "hi": 0.9880952380952381,
+        "n": 87,
+        "clusters": 12
+       },
+       "stop_ok_AS_NEITHER": {
+        "mean": 0.9583333333333334,
+        "lo": 0.875,
+        "hi": 1.0,
+        "n": 24,
+        "clusters": 12
+       }
+      },
+      "pipeline": {
+       "extraction_failed": 5,
+       "planner_seconds_mean": 0.0003
+      }
+     },
+     "gain_state_exact": {
+      "mean": 0.034482758620689655,
+      "lo": 0.0,
+      "hi": 0.07060924369747888,
+      "n": 87,
+      "clusters": 12
+     },
+     "of_rejected_first_answers": {
+      "n": 8,
+      "recovered_exact": 3,
+      "accepted_but_wrong_after_repair": 0,
+      "still_rejected": 5
+     },
+     "calls_per_item_with_repair": 1.092
+    }
+   }
+  }
+ }
+}

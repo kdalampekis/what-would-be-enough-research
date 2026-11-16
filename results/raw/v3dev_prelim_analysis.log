@@ -1,0 +1,3 @@
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+wrote results/aggregate/v3dev_prelim/pilot_dev/summary.json and report.md

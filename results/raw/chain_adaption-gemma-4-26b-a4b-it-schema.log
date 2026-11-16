@@ -1,0 +1,235 @@
+=== 2026-11-13T23:58:53Z pass 1: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 19.64
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 3869, 'output_tokens': 529, 'reasoning_tokens': 0, 'cached_input_tokens': 256} cost=credits 0.0004 served=gemma-4-26b-a4b-it seconds=2.66
+  adaption-gemma-4-26b-a4b-it-schema: 50/1646
+  adaption-gemma-4-26b-a4b-it-schema: 100/1646
+  adaption-gemma-4-26b-a4b-it-schema: 150/1646
+  adaption-gemma-4-26b-a4b-it-schema: 200/1646
+  adaption-gemma-4-26b-a4b-it-schema: 250/1646
+  adaption-gemma-4-26b-a4b-it-schema: 300/1646
+  adaption-gemma-4-26b-a4b-it-schema: 350/1646
+  adaption-gemma-4-26b-a4b-it-schema: 400/1646
+  adaption-gemma-4-26b-a4b-it-schema: 450/1646
+  adaption-gemma-4-26b-a4b-it-schema: 500/1646
+  adaption-gemma-4-26b-a4b-it-schema: 550/1646
+  adaption-gemma-4-26b-a4b-it-schema: 600/1646
+  adaption-gemma-4-26b-a4b-it-schema: 650/1646
+  adaption-gemma-4-26b-a4b-it-schema: 700/1646
+  adaption-gemma-4-26b-a4b-it-schema: 750/1646
+  adaption-gemma-4-26b-a4b-it-schema: 800/1646
+  adaption-gemma-4-26b-a4b-it-schema: 850/1646
+  adaption-gemma-4-26b-a4b-it-schema: 900/1646
+  adaption-gemma-4-26b-a4b-it-schema: 950/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1000/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1050/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1100/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1150/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1200/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1250/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1300/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1350/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1400/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1450/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1500/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1550/1646
+  adaption-gemma-4-26b-a4b-it-schema: 1600/1646
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 459, 'ok': 1631, 'refusal': 0, 'truncated': 14, 'error': 1, 'parse_error': 14, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 20.1274 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-gemma-4-26b-a4b-it-schema/pilot_dev/summary.json and report.md
+=== 2026-11-14T02:43:50Z pass 1: T1B
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 272 pairs (544 items) from 42 families
+317 instances, 42 families, 544 jobs per model; pools {'plan_t1': 544}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 52.12
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 3849, 'output_tokens': 114, 'reasoning_tokens': 0, 'cached_input_tokens': 3840} cost=credits 0.0003 served=gemma-4-26b-a4b-it seconds=61.26
+  adaption-gemma-4-26b-a4b-it-schema: 50/543
+  adaption-gemma-4-26b-a4b-it-schema: 100/543
+  adaption-gemma-4-26b-a4b-it-schema: 150/543
+  adaption-gemma-4-26b-a4b-it-schema: 200/543
+  adaption-gemma-4-26b-a4b-it-schema: 250/543
+  adaption-gemma-4-26b-a4b-it-schema: 300/543
+  adaption-gemma-4-26b-a4b-it-schema: 350/543
+  adaption-gemma-4-26b-a4b-it-schema: 400/543
+  adaption-gemma-4-26b-a4b-it-schema: 450/543
+  adaption-gemma-4-26b-a4b-it-schema: 500/543
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 1, 'ok': 538, 'refusal': 0, 'truncated': 4, 'error': 1, 'parse_error': 12, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 52.2873 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T04:03:43Z pass 1: T1 pilot native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 70.37
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 2294, 'output_tokens': 197, 'reasoning_tokens': 0, 'cached_input_tokens': 256} cost=credits 0.0002 served=gemma-4-26b-a4b-it seconds=1.29
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 70.3713 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T04:03:44Z pass 1: EOP
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 70.3797
+smoke adaption-gemma-4-26b-a4b-it-schema v3dev s3: status=ok parse_error=None
+  adaption-gemma-4-26b-a4b-it-schema: 50/544
+  adaption-gemma-4-26b-a4b-it-schema: 100/544
+  adaption-gemma-4-26b-a4b-it-schema: 150/544
+  adaption-gemma-4-26b-a4b-it-schema: 200/544
+  adaption-gemma-4-26b-a4b-it-schema: 250/544
+  adaption-gemma-4-26b-a4b-it-schema: 300/544
+  adaption-gemma-4-26b-a4b-it-schema: 350/544
+  adaption-gemma-4-26b-a4b-it-schema: 400/544
+  adaption-gemma-4-26b-a4b-it-schema: 450/544
+  adaption-gemma-4-26b-a4b-it-schema: 500/544
+adaption-gemma-4-26b-a4b-it-schema v3dev s3 {'skipped_done': 1, 'ok': 544, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 3, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1b s3: status=ok parse_error=None
+  adaption-gemma-4-26b-a4b-it-schema: 50/543
+  adaption-gemma-4-26b-a4b-it-schema: 100/543
+  adaption-gemma-4-26b-a4b-it-schema: 150/543
+  adaption-gemma-4-26b-a4b-it-schema: 200/543
+  adaption-gemma-4-26b-a4b-it-schema: 250/543
+  adaption-gemma-4-26b-a4b-it-schema: 300/543
+  adaption-gemma-4-26b-a4b-it-schema: 350/543
+  adaption-gemma-4-26b-a4b-it-schema: 400/543
+  adaption-gemma-4-26b-a4b-it-schema: 450/543
+  adaption-gemma-4-26b-a4b-it-schema: 500/543
+adaption-gemma-4-26b-a4b-it-schema t1b s3 {'skipped_done': 1, 'ok': 543, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 3, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1pilot s3: status=ok parse_error=None
+  adaption-gemma-4-26b-a4b-it-schema: 50/265
+  adaption-gemma-4-26b-a4b-it-schema: 100/265
+  adaption-gemma-4-26b-a4b-it-schema: 150/265
+  adaption-gemma-4-26b-a4b-it-schema: 200/265
+  adaption-gemma-4-26b-a4b-it-schema: 250/265
+adaption-gemma-4-26b-a4b-it-schema t1pilot s3 {'skipped_done': 1, 'ok': 265, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 2, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema v3dev s1: status=ok parse_error=no text
+  adaption-gemma-4-26b-a4b-it-schema: 50/1017
+  adaption-gemma-4-26b-a4b-it-schema: 100/1017
+  adaption-gemma-4-26b-a4b-it-schema: 150/1017
+  adaption-gemma-4-26b-a4b-it-schema: 200/1017
+  adaption-gemma-4-26b-a4b-it-schema: 250/1017
+  adaption-gemma-4-26b-a4b-it-schema: 300/1017
+  adaption-gemma-4-26b-a4b-it-schema: 350/1017
+  adaption-gemma-4-26b-a4b-it-schema: 400/1017
+  adaption-gemma-4-26b-a4b-it-schema: 450/1017
+  adaption-gemma-4-26b-a4b-it-schema: 500/1017
+  adaption-gemma-4-26b-a4b-it-schema: 550/1017
+  adaption-gemma-4-26b-a4b-it-schema: 600/1017
+  adaption-gemma-4-26b-a4b-it-schema: 650/1017
+  adaption-gemma-4-26b-a4b-it-schema: 700/1017
+  adaption-gemma-4-26b-a4b-it-schema: 750/1017
+  adaption-gemma-4-26b-a4b-it-schema: 800/1017
+  adaption-gemma-4-26b-a4b-it-schema: 850/1017
+  adaption-gemma-4-26b-a4b-it-schema: 900/1017
+  adaption-gemma-4-26b-a4b-it-schema: 950/1017
+  adaption-gemma-4-26b-a4b-it-schema: 1000/1017
+adaption-gemma-4-26b-a4b-it-schema v3dev s1 {'skipped_done': 1, 'ok': 1001, 'refusal': 0, 'truncated': 16, 'error': 0, 'parse_error': 1017, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1b s1: status=ok parse_error=no text
+  adaption-gemma-4-26b-a4b-it-schema: 50/543
+  adaption-gemma-4-26b-a4b-it-schema: 100/543
+  adaption-gemma-4-26b-a4b-it-schema: 150/543
+  adaption-gemma-4-26b-a4b-it-schema: 200/543
+  adaption-gemma-4-26b-a4b-it-schema: 250/543
+  adaption-gemma-4-26b-a4b-it-schema: 300/543
+  adaption-gemma-4-26b-a4b-it-schema: 350/543
+=== 2026-11-14T12:30:01Z restarted at concurrency 10
+=== 2026-11-14T12:30:01Z pass 1: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 176.99
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 3869, 'output_tokens': 529, 'reasoning_tokens': 0, 'cached_input_tokens': 256} cost=credits 0.0004 served=gemma-4-26b-a4b-it seconds=2.66
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 2104, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 176.9857 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-gemma-4-26b-a4b-it-schema/pilot_dev/summary.json and report.md
+=== 2026-11-14T12:32:41Z pass 1: T1B
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 272 pairs (544 items) from 42 families
+317 instances, 42 families, 544 jobs per model; pools {'plan_t1': 544}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 177.32
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 3849, 'output_tokens': 114, 'reasoning_tokens': 0, 'cached_input_tokens': 3840} cost=credits 0.0003 served=gemma-4-26b-a4b-it seconds=61.26
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 543, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 177.3171 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T12:33:43Z pass 1: T1 pilot native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 177.44
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 2294, 'output_tokens': 197, 'reasoning_tokens': 0, 'cached_input_tokens': 256} cost=credits 0.0002 served=gemma-4-26b-a4b-it seconds=1.29
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 177.4406 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T12:33:44Z pass 1: EOP
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 177.4448
+smoke adaption-gemma-4-26b-a4b-it-schema v3dev s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema v3dev s3 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1b s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema t1b s3 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1pilot s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema t1pilot s3 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema v3dev s1: status=ok parse_error=no text
+adaption-gemma-4-26b-a4b-it-schema v3dev s1 {'skipped_done': 1018, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1b s1: status=ok parse_error=no text
+  adaption-gemma-4-26b-a4b-it-schema: 50/165
+  adaption-gemma-4-26b-a4b-it-schema: 100/165
+  adaption-gemma-4-26b-a4b-it-schema: 150/165
+adaption-gemma-4-26b-a4b-it-schema t1b s1 {'skipped_done': 379, 'ok': 165, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 165, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1pilot s1: status=ok parse_error=no text
+  adaption-gemma-4-26b-a4b-it-schema: 50/265
+  adaption-gemma-4-26b-a4b-it-schema: 100/265
+  adaption-gemma-4-26b-a4b-it-schema: 150/265
+  adaption-gemma-4-26b-a4b-it-schema: 200/265
+  adaption-gemma-4-26b-a4b-it-schema: 250/265
+adaption-gemma-4-26b-a4b-it-schema t1pilot s1 {'skipped_done': 1, 'ok': 264, 'refusal': 0, 'truncated': 1, 'error': 0, 'parse_error': 265, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 177.6397 of 519.4324
+=== 2026-11-14T13:21:04Z pass 2: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 180.69
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 3869, 'output_tokens': 529, 'reasoning_tokens': 0, 'cached_input_tokens': 256} cost=credits 0.0004 served=gemma-4-26b-a4b-it seconds=2.66
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 2105, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 1}
+cumulative estimated spend credits 180.6865 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-gemma-4-26b-a4b-it-schema/pilot_dev/summary.json and report.md
+=== 2026-11-14T13:22:43Z pass 2: T1B
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 272 pairs (544 items) from 42 families
+317 instances, 42 families, 544 jobs per model; pools {'plan_t1': 544}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 180.81
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 3849, 'output_tokens': 114, 'reasoning_tokens': 0, 'cached_input_tokens': 3840} cost=credits 0.0003 served=gemma-4-26b-a4b-it seconds=61.26
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 543, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 180.8068 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T13:28:01Z pass 2: T1 pilot native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 181.76
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 2294, 'output_tokens': 197, 'reasoning_tokens': 0, 'cached_input_tokens': 256} cost=credits 0.0002 served=gemma-4-26b-a4b-it seconds=1.29
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 181.7599 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T13:28:02Z pass 2: EOP
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 181.7747
+smoke adaption-gemma-4-26b-a4b-it-schema v3dev s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema v3dev s3 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1b s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema t1b s3 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1pilot s3: status=ok parse_error=None
+adaption-gemma-4-26b-a4b-it-schema t1pilot s3 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema v3dev s1: status=ok parse_error=no text
+adaption-gemma-4-26b-a4b-it-schema v3dev s1 {'skipped_done': 1018, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1b s1: status=ok parse_error=no text
+adaption-gemma-4-26b-a4b-it-schema t1b s1 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-gemma-4-26b-a4b-it-schema t1pilot s1: status=ok parse_error=no text
+adaption-gemma-4-26b-a4b-it-schema t1pilot s1 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 181.7747 of 519.4324
+=== 2026-11-14T13:28:05Z chain done

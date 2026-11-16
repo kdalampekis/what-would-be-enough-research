@@ -1,0 +1,198 @@
+=== 2026-11-13T23:58:53Z pass 1: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 19.64
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 3303, 'output_tokens': 684, 'reasoning_tokens': 578, 'cached_input_tokens': 0} cost=credits 0.0002 served=deepseek-v4-flash seconds=5.1
+  adaption-deepseek-v4-flash: 50/1798
+  adaption-deepseek-v4-flash: 100/1798
+  adaption-deepseek-v4-flash: 150/1798
+=== 2026-11-14T00:40:10Z restarted at concurrency 12
+=== 2026-11-14T00:40:10Z pass 1: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 30.18
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 3303, 'output_tokens': 684, 'reasoning_tokens': 578, 'cached_input_tokens': 0} cost=credits 0.0002 served=deepseek-v4-flash seconds=5.1
+  adaption-deepseek-v4-flash: 50/1630
+  adaption-deepseek-v4-flash: 100/1630
+  adaption-deepseek-v4-flash: 150/1630
+  adaption-deepseek-v4-flash: 200/1630
+  adaption-deepseek-v4-flash: 250/1630
+  adaption-deepseek-v4-flash: 300/1630
+  adaption-deepseek-v4-flash: 350/1630
+  adaption-deepseek-v4-flash: 400/1630
+  adaption-deepseek-v4-flash: 450/1630
+  adaption-deepseek-v4-flash: 500/1630
+  adaption-deepseek-v4-flash: 550/1630
+  adaption-deepseek-v4-flash: 600/1630
+  adaption-deepseek-v4-flash: 650/1630
+  adaption-deepseek-v4-flash: 700/1630
+  adaption-deepseek-v4-flash: 750/1630
+  adaption-deepseek-v4-flash: 800/1630
+  adaption-deepseek-v4-flash: 850/1630
+  adaption-deepseek-v4-flash: 900/1630
+  adaption-deepseek-v4-flash: 950/1630
+  adaption-deepseek-v4-flash: 1000/1630
+  adaption-deepseek-v4-flash: 1050/1630
+  adaption-deepseek-v4-flash: 1100/1630
+  adaption-deepseek-v4-flash: 1150/1630
+  adaption-deepseek-v4-flash: 1200/1630
+  adaption-deepseek-v4-flash: 1250/1630
+  adaption-deepseek-v4-flash: 1300/1630
+  adaption-deepseek-v4-flash: 1350/1630
+  adaption-deepseek-v4-flash: 1400/1630
+  adaption-deepseek-v4-flash: 1450/1630
+  adaption-deepseek-v4-flash: 1500/1630
+  adaption-deepseek-v4-flash: 1550/1630
+  adaption-deepseek-v4-flash: 1600/1630
+adaption-deepseek-v4-flash {'skipped_done': 475, 'ok': 1604, 'refusal': 0, 'truncated': 26, 'error': 0, 'parse_error': 27, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 30.9074 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-deepseek-v4-flash/pilot_dev/summary.json and report.md
+=== 2026-11-14T04:06:56Z pass 1: T1B
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 272 pairs (544 items) from 42 families
+317 instances, 42 families, 544 jobs per model; pools {'plan_t1': 544}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 70.99
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 3283, 'output_tokens': 4658, 'reasoning_tokens': 4535, 'cached_input_tokens': 0} cost=credits 0.0008 served=deepseek-v4-flash seconds=27.89
+  adaption-deepseek-v4-flash: 50/543
+  adaption-deepseek-v4-flash: 100/543
+  adaption-deepseek-v4-flash: 150/543
+  adaption-deepseek-v4-flash: 200/543
+  adaption-deepseek-v4-flash: 250/543
+  adaption-deepseek-v4-flash: 300/543
+  adaption-deepseek-v4-flash: 350/543
+  adaption-deepseek-v4-flash: 400/543
+  adaption-deepseek-v4-flash: 450/543
+  adaption-deepseek-v4-flash: 500/543
+adaption-deepseek-v4-flash {'skipped_done': 1, 'ok': 530, 'refusal': 0, 'truncated': 13, 'error': 0, 'parse_error': 13, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 71.2916 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T05:24:16Z pass 1: T1 pilot native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 90.01
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 1926, 'output_tokens': 1599, 'reasoning_tokens': 1488, 'cached_input_tokens': 0} cost=credits 0.0003 served=deepseek-v4-flash seconds=10.57
+  adaption-deepseek-v4-flash: 50/252
+  adaption-deepseek-v4-flash: 100/252
+  adaption-deepseek-v4-flash: 150/252
+  adaption-deepseek-v4-flash: 200/252
+  adaption-deepseek-v4-flash: 250/252
+adaption-deepseek-v4-flash {'skipped_done': 14, 'ok': 248, 'refusal': 0, 'truncated': 4, 'error': 0, 'parse_error': 4, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 90.1404 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T06:11:17Z pass 1: EOP
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 96.6745
+smoke adaption-deepseek-v4-flash v3dev s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+  adaption-deepseek-v4-flash: 50/544
+  adaption-deepseek-v4-flash: 100/544
+  adaption-deepseek-v4-flash: 150/544
+  adaption-deepseek-v4-flash: 200/544
+  adaption-deepseek-v4-flash: 250/544
+  adaption-deepseek-v4-flash: 300/544
+  adaption-deepseek-v4-flash: 350/544
+  adaption-deepseek-v4-flash: 400/544
+  adaption-deepseek-v4-flash: 450/544
+  adaption-deepseek-v4-flash: 500/544
+adaption-deepseek-v4-flash v3dev s3 {'skipped_done': 1, 'ok': 537, 'refusal': 0, 'truncated': 0, 'error': 7, 'parse_error': 525, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1b s3: status=error parse_error=None
+smoke failed: skipping this model/set/condition
+smoke adaption-deepseek-v4-flash t1pilot s3: status=error parse_error=None
+smoke failed: skipping this model/set/condition
+smoke adaption-deepseek-v4-flash v3dev s1: status=error parse_error=None
+smoke failed: skipping this model/set/condition
+smoke adaption-deepseek-v4-flash t1b s1: status=error parse_error=None
+smoke failed: skipping this model/set/condition
+smoke adaption-deepseek-v4-flash t1pilot s1: status=error parse_error=None
+smoke failed: skipping this model/set/condition
+cumulative spend 96.8114 of 519.4324
+=== 2026-11-14T07:52:24Z pass 2: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 113.09
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 3303, 'output_tokens': 684, 'reasoning_tokens': 578, 'cached_input_tokens': 0} cost=credits 0.0002 served=deepseek-v4-flash seconds=5.1
+adaption-deepseek-v4-flash {'skipped_done': 2105, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 113.0874 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-deepseek-v4-flash/pilot_dev/summary.json and report.md
+=== 2026-11-14T07:54:03Z pass 2: T1B
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 272 pairs (544 items) from 42 families
+317 instances, 42 families, 544 jobs per model; pools {'plan_t1': 544}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 113.37
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 3283, 'output_tokens': 4658, 'reasoning_tokens': 4535, 'cached_input_tokens': 0} cost=credits 0.0008 served=deepseek-v4-flash seconds=27.89
+adaption-deepseek-v4-flash {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 113.3720 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T07:54:05Z pass 2: T1 pilot native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-deepseek-v4-flash: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 113.37
+smoke adaption-deepseek-v4-flash: status=ok parse_error=None tokens={'input_tokens': 1926, 'output_tokens': 1599, 'reasoning_tokens': 1488, 'cached_input_tokens': 0} cost=credits 0.0003 served=deepseek-v4-flash seconds=10.57
+adaption-deepseek-v4-flash {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 113.3720 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T07:54:06Z pass 2: EOP
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 113.3770
+smoke adaption-deepseek-v4-flash v3dev s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+adaption-deepseek-v4-flash v3dev s3 {'skipped_done': 538, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 7, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1b s3: status=error parse_error=None
+smoke failed: skipping this model/set/condition
+smoke adaption-deepseek-v4-flash t1pilot s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+  adaption-deepseek-v4-flash: 50/265
+  adaption-deepseek-v4-flash: 100/265
+  adaption-deepseek-v4-flash: 150/265
+  adaption-deepseek-v4-flash: 200/265
+  adaption-deepseek-v4-flash: 250/265
+adaption-deepseek-v4-flash t1pilot s3 {'skipped_done': 1, 'ok': 265, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 262, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash v3dev s1: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/1017
+  adaption-deepseek-v4-flash: 100/1017
+  adaption-deepseek-v4-flash: 150/1017
+  adaption-deepseek-v4-flash: 200/1017
+  adaption-deepseek-v4-flash: 250/1017
+  adaption-deepseek-v4-flash: 300/1017
+  adaption-deepseek-v4-flash: 350/1017
+  adaption-deepseek-v4-flash: 400/1017
+  adaption-deepseek-v4-flash: 450/1017
+  adaption-deepseek-v4-flash: 500/1017
+  adaption-deepseek-v4-flash: 550/1017
+  adaption-deepseek-v4-flash: 600/1017
+  adaption-deepseek-v4-flash: 650/1017
+  adaption-deepseek-v4-flash: 700/1017
+  adaption-deepseek-v4-flash: 750/1017
+  adaption-deepseek-v4-flash: 800/1017
+  adaption-deepseek-v4-flash: 850/1017
+  adaption-deepseek-v4-flash: 900/1017
+  adaption-deepseek-v4-flash: 950/1017
+  adaption-deepseek-v4-flash: 1000/1017
+adaption-deepseek-v4-flash v3dev s1 {'skipped_done': 1, 'ok': 980, 'refusal': 0, 'truncated': 37, 'error': 0, 'parse_error': 37, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1b s1: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/543
+  adaption-deepseek-v4-flash: 100/543
+  adaption-deepseek-v4-flash: 150/543
+  adaption-deepseek-v4-flash: 200/543
+  adaption-deepseek-v4-flash: 250/543
+  adaption-deepseek-v4-flash: 300/543
+  adaption-deepseek-v4-flash: 350/543
+  adaption-deepseek-v4-flash: 400/543
+  adaption-deepseek-v4-flash: 450/543
+  adaption-deepseek-v4-flash: 500/543
+adaption-deepseek-v4-flash t1b s1 {'skipped_done': 1, 'ok': 526, 'refusal': 0, 'truncated': 17, 'error': 0, 'parse_error': 17, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1pilot s1: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/265
+  adaption-deepseek-v4-flash: 100/265
+  adaption-deepseek-v4-flash: 150/265
+  adaption-deepseek-v4-flash: 200/265
+  adaption-deepseek-v4-flash: 250/265
+adaption-deepseek-v4-flash t1pilot s1 {'skipped_done': 1, 'ok': 257, 'refusal': 0, 'truncated': 8, 'error': 0, 'parse_error': 8, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 114.6053 of 519.4324
+=== 2026-11-14T12:32:39Z chain done

@@ -1,0 +1,43 @@
+{
+ "generator": "rb-v1",
+ "split": "dev",
+ "families": 18,
+ "base_items": 137,
+ "variants": 548,
+ "by_kind": {
+  "lexical": {
+   "n": 137,
+   "inverse_exact": 137,
+   "names_present": 137,
+   "differs_from_canonical": 137,
+   "benchmark_parser_exact": 0,
+   "deterministic": 137
+  },
+  "syntax": {
+   "n": 137,
+   "inverse_exact": 137,
+   "names_present": 137,
+   "differs_from_canonical": 137,
+   "benchmark_parser_exact": 0,
+   "deterministic": 137
+  },
+  "reorder": {
+   "n": 137,
+   "inverse_exact": 137,
+   "names_present": 137,
+   "differs_from_canonical": 137,
+   "benchmark_parser_exact": 137,
+   "deterministic": 137
+  },
+  "prose": {
+   "n": 137,
+   "inverse_exact": 137,
+   "names_present": 137,
+   "differs_from_canonical": 137,
+   "benchmark_parser_exact": 0,
+   "deterministic": 137
+  }
+ },
+ "failures": [],
+ "n_failures": 0
+}

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the report."
+title: "What Would Be Enough? Evaluating Minimal Sufficient Epistemic Plans in LLM Agents"
+type: software
+authors:
+  - family-names: Dalampekis
+    given-names: Konstantinos
+    affiliation: "University of California, Los Angeles"
+date-released: 2026-11-16
+license: Apache-2.0
+keywords:
+  - epistemic planning
+  - information seeking
+  - metareasoning
+  - LLM agents
+  - benchmark
+preferred-citation:
+  type: report
+  title: "What Would Be Enough? Evaluating Minimal Sufficient Epistemic Plans in LLM Agents"
+  authors:
+    - family-names: Dalampekis
+      given-names: Konstantinos
+  year: 2026
+  institution:
+    name: "Apart Research, AI x Epistemics Research Sprint"

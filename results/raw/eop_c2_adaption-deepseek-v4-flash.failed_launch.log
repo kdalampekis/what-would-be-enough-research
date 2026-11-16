@@ -1,0 +1,53 @@
+=== 2026-11-14T11:36:27Z C' pass 1
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 167.5629
+Traceback (most recent call last):
+  File "PROJECT_ROOT/experiments/run_eop.py", line 384, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "PROJECT_ROOT/experiments/run_eop.py", line 365, in main
+    run_jobs(jobs[:1], k, models[k], raw, max_calls=1, ledger=ledger)  # smoke
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "PROJECT_ROOT/src/msep/models/runner.py", line 216, in run_jobs
+    status, perr = f.result()
+                   ~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "PROJECT_ROOT/src/msep/models/runner.py", line 171, in one
+    schema, name = SCHEMAS[schema_kind(job.pool)]
+                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'extract2'
+=== 2026-11-14T11:36:30Z C' pass 2
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 167.5963
+Traceback (most recent call last):
+  File "PROJECT_ROOT/experiments/run_eop.py", line 384, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "PROJECT_ROOT/experiments/run_eop.py", line 365, in main
+    run_jobs(jobs[:1], k, models[k], raw, max_calls=1, ledger=ledger)  # smoke
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "PROJECT_ROOT/src/msep/models/runner.py", line 216, in run_jobs
+    status, perr = f.result()
+                   ~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "PROJECT_ROOT/src/msep/models/runner.py", line 171, in one
+    schema, name = SCHEMAS[schema_kind(job.pool)]
+                   ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'extract2'
+=== C' done

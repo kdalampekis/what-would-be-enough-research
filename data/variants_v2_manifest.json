@@ -1,0 +1,15 @@
+{
+  "pool": "/home/user/what-would-be-enough/data/generated/pool_v2/instances.jsonl",
+  "counts": {
+    "risk": 6000,
+    "shift_width": 3300,
+    "shift_skin": 3300,
+    "shift_depth": 2251,
+    "cost": 2730
+  },
+  "sha256": {
+    "cost": "bdc8282ea9f40d27c4967be0a1aefea44a739f36d6bad6ef66d0e2f8905357f7",
+    "risk": "90cbc9e3156b78edc1ef485e215e60a8207dcda28b045617a54b7d2658a2d27f",
+    "shift": "d5f10763d12a6efaa4b1a90d757a57de4ebd3152939cfa53cd35a772071abf23"
+  }
+}

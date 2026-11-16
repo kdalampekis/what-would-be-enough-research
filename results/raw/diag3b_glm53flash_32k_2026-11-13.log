@@ -1,0 +1,11 @@
+loaded from .env: ['ADAPTION_API_KEY']
+--rerun-of adaption-glm-53-flash status in ['truncated']: 73 jobs selected
+74 instances, 10 families, 73 jobs per model; pools {'plan': 72, 'judgment': 1}
+WARNING adaption-glm-53-flash-32k: written from SDK source, no live call yet; run --smoke first
+budget credits 24.83; already spent credits 9.93
+  (re-run subset: a truncated probe passes the gate; the connector returned a response)
+smoke adaption-glm-53-flash-32k: status=truncated parse_error=no text tokens={'input_tokens': 1757, 'output_tokens': 32000, 'reasoning_tokens': 32000, 'cached_input_tokens': 0} cost=credits 0.0163 served=glm-5.3-flash seconds=163.38
+  adaption-glm-53-flash-32k: 50/72
+adaption-glm-53-flash-32k {'skipped_done': 1, 'ok': 34, 'refusal': 0, 'truncated': 38, 'error': 0, 'parse_error': 38, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 10.6908 of credits 24.83
+diagnostic subset run: analysis and report skipped

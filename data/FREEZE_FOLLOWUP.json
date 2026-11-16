@@ -1,0 +1,55 @@
+{
+ "protocol": "FOLLOWUP",
+ "commit_at_freeze": "639285d9ab072d96c02973d81d454dd60a21ee61",
+ "files_sha256": {
+  "PREREG_FOLLOWUP.md": "5c10a975c97ae796f6372c84207850ef15048210180174e36e19d3a16f687c7b",
+  "experiments/generate_followup.py": "509dd5af68533b3740b3dbcf5f58aef5ba17efaa42a0218c6f52e9112fbdfbda",
+  "experiments/run_followup.py": "45f8f82e5a3c8bc8166ebf6a34df22fb2fa8d90cab8e8116a1fb9cd6d4f8f1a0",
+  "experiments/chain_followup.sh": "6ef9eee5103836e3970179afca1404b41a387ac329d583d707b0e417e3573f90",
+  "data/followup_v1_manifest.json": "3516483ea52b9313ee9b0a4bccc5804e1d4bc183e207847dc65c1014376bca60",
+  "src/msep/models/prompts.py": "9c43c9a4a0720fe5abfce07c236af92847f4e22cca24ed44e162d0a4166706a3",
+  "src/msep/models/schemas.py": "1f6b868dca7439288be66fac233000e83771ae5046b9f04de46809715aebe4e8",
+  "src/msep/models/runner.py": "f9b21b12e22987c02ede6d00876861baa3a2e704bdfd16ad5f5bf4f73ea4c3e8",
+  "src/msep/models/providers/adaption_provider.py": "7a4e7c0ce55c620ac961662ceb128c030111c71ee0d1b92bd28a420175455946",
+  "src/msep/eval/pilot.py": "227a30b4329162d245b233512c1839f59511017ad8c1520e6a88c241aaaf63e8",
+  "src/msep/eval/plan_metrics.py": "dde88a9086dd1d968a8f8f3607ee9a3a1da843d7a6678b5f57138ab01f46f01d",
+  "src/msep/eval/bootstrap.py": "e11dbfde78eaba16b5f2a867a00e25f30136065645ea18b2c3cdc91050929e07",
+  "src/msep/benchmark/rendering.py": "c221456e7ff8ac790d8aba1242c6706124467dd24aa51acc95b49ce474e57795",
+  "src/msep/benchmark/variants.py": "a28c355402750decd44766b98a0aaece3cb24de3dfdc56f77b458f7a01913e81",
+  "data/generated/followup_v1/clarity.jsonl": "028a4e4c549bcd92412724107eac94e0c0a42c95ed78aab6c90cfc66502ba8db",
+  "data/generated/followup_v1/cost.jsonl": "04938eebc76d7302bd636536ee53ba60b42e0f308aa3d938e40cc1bdb85f8375",
+  "data/generated/variants_v3/cost.jsonl": "7273fc7820727557d003ab65248ebe96ddaf62b8e1b084f195af04370eb582a8",
+  "data/generated/t1_v1/pairs.jsonl": "9215f98f18aa7c8849917c5ab9233ae7d53061dc6fc841f3fd2207ddd71e1c71",
+  "data/generated/pool_v3/instances.jsonl": "660012bdae121635dcaef41a3b018da0bf31cfd2553757f797c8a3267680e2cd"
+ },
+ "models": {
+  "adaption-qwen3.5-397b": {
+   "model_id": "qwen3.5-397b",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2
+   }
+  },
+  "adaption-qwen3.8-27b": {
+   "model_id": "qwen3.8-27b",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2
+   }
+  },
+  "adaption-gemma-4-26b-a4b-it-schema": {
+   "model_id": "gemma-4-26b-a4b-it",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2,
+    "structured": "function_tool"
+   }
+  }
+ }
+}

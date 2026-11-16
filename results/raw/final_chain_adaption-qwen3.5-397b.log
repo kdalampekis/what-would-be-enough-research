@@ -1,0 +1,222 @@
+=== 2026-11-14T20:05:05Z pass 1: v3 test native (E1-E9, three modes)
+loaded from .env: ['ADAPTION_API_KEY']
+468 instances, 63 families, 1814 jobs per model; pools {'plan': 1215, 'decision': 63, 'judgment': 536}
+WARNING adaption-qwen3.5-397b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 200.20
+smoke adaption-qwen3.5-397b: status=ok parse_error=None tokens={'input_tokens': 812, 'output_tokens': 9995, 'reasoning_tokens': 9871, 'cached_input_tokens': 0} cost=credits 0.0354 served=qwen3.5-397b-a17b-nvfp4 seconds=108.17
+=== 2026-11-14T20:17:27Z restarted at concurrency 24 (scheduling only)
+=== 2026-11-14T20:17:27Z pass 1: v3 test native (E1-E9, three modes)
+loaded from .env: ['ADAPTION_API_KEY']
+468 instances, 63 families, 1814 jobs per model; pools {'plan': 1215, 'decision': 63, 'judgment': 536}
+WARNING adaption-qwen3.5-397b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 201.19
+smoke adaption-qwen3.5-397b: status=ok parse_error=None tokens={'input_tokens': 812, 'output_tokens': 9995, 'reasoning_tokens': 9871, 'cached_input_tokens': 0} cost=credits 0.0354 served=qwen3.5-397b-a17b-nvfp4 seconds=108.17
+  adaption-qwen3.5-397b: 50/1784
+  adaption-qwen3.5-397b: 100/1784
+  adaption-qwen3.5-397b: 150/1784
+  adaption-qwen3.5-397b: 200/1784
+  adaption-qwen3.5-397b: 250/1784
+  adaption-qwen3.5-397b: 300/1784
+  adaption-qwen3.5-397b: 350/1784
+  adaption-qwen3.5-397b: 400/1784
+  adaption-qwen3.5-397b: 450/1784
+  adaption-qwen3.5-397b: 500/1784
+  adaption-qwen3.5-397b: 550/1784
+  adaption-qwen3.5-397b: 600/1784
+  adaption-qwen3.5-397b: 650/1784
+  adaption-qwen3.5-397b: 700/1784
+  adaption-qwen3.5-397b: 750/1784
+  adaption-qwen3.5-397b: 800/1784
+  adaption-qwen3.5-397b: 850/1784
+  adaption-qwen3.5-397b: 900/1784
+  adaption-qwen3.5-397b: 950/1784
+  adaption-qwen3.5-397b: 1000/1784
+  adaption-qwen3.5-397b: 1050/1784
+  adaption-qwen3.5-397b: 1100/1784
+  adaption-qwen3.5-397b: 1150/1784
+  adaption-qwen3.5-397b: 1200/1784
+  adaption-qwen3.5-397b: 1250/1784
+  adaption-qwen3.5-397b: 1300/1784
+  adaption-qwen3.5-397b: 1350/1784
+  adaption-qwen3.5-397b: 1400/1784
+  adaption-qwen3.5-397b: 1450/1784
+  adaption-qwen3.5-397b: 1500/1784
+  adaption-qwen3.5-397b: 1550/1784
+  adaption-qwen3.5-397b: 1600/1784
+  adaption-qwen3.5-397b: 1650/1784
+  adaption-qwen3.5-397b: 1700/1784
+  adaption-qwen3.5-397b: 1750/1784
+adaption-qwen3.5-397b {'skipped_done': 30, 'ok': 830, 'refusal': 0, 'truncated': 4, 'error': 950, 'parse_error': 4, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 221.6086 of credits 519.43
+wrote results/aggregate/final_test/by_model/adaption-qwen3.5-397b/pilot_test/summary.json and report.md
+=== 2026-11-15T00:52:18Z pass 1: EOP v3 test extraction
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468)]; conditions ['s3v2']
+budget 519.4324; already spent 237.4500
+smoke adaption-qwen3.5-397b v3test s3v2: status=ok parse_error=None
+  adaption-qwen3.5-397b: 50/467
+  adaption-qwen3.5-397b: 100/467
+  adaption-qwen3.5-397b: 150/467
+  adaption-qwen3.5-397b: 200/467
+  adaption-qwen3.5-397b: 250/467
+  adaption-qwen3.5-397b: 300/467
+  adaption-qwen3.5-397b: 350/467
+  adaption-qwen3.5-397b: 400/467
+  adaption-qwen3.5-397b: 450/467
+adaption-qwen3.5-397b v3test s3v2 {'skipped_done': 1, 'ok': 466, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 243.2464 of 519.4324
+=== 2026-11-15T03:27:19Z pass 1: EOP v3 test structured prompt
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468)]; conditions ['s1']
+budget 519.4324; already spent 252.6522
+smoke adaption-qwen3.5-397b v3test s1: status=ok parse_error=None
+  adaption-qwen3.5-397b: 50/872
+  adaption-qwen3.5-397b: 100/872
+  adaption-qwen3.5-397b: 150/872
+  adaption-qwen3.5-397b: 200/872
+  adaption-qwen3.5-397b: 250/872
+  adaption-qwen3.5-397b: 300/872
+  adaption-qwen3.5-397b: 350/872
+  adaption-qwen3.5-397b: 400/872
+  adaption-qwen3.5-397b: 450/872
+  adaption-qwen3.5-397b: 500/872
+  adaption-qwen3.5-397b: 550/872
+  adaption-qwen3.5-397b: 600/872
+  adaption-qwen3.5-397b: 650/872
+  adaption-qwen3.5-397b: 700/872
+  adaption-qwen3.5-397b: 750/872
+  adaption-qwen3.5-397b: 800/872
+  adaption-qwen3.5-397b: 850/872
+adaption-qwen3.5-397b v3test s1 {'skipped_done': 1, 'ok': 865, 'refusal': 0, 'truncated': 3, 'error': 4, 'parse_error': 244, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 279.0290 of 519.4324
+=== 2026-11-15T08:30:56Z pass 1: T1 test native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 402 pairs (804 items) from 63 families
+468 instances, 63 families, 804 jobs per model; pools {'plan_t1': 804}
+WARNING adaption-qwen3.5-397b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 298.96
+smoke adaption-qwen3.5-397b: status=ok parse_error=None tokens={'input_tokens': 787, 'output_tokens': 12726, 'reasoning_tokens': 12588, 'cached_input_tokens': 0} cost=credits 0.0450 served=qwen3.5-397b-a17b-nvfp4 seconds=143.5
+  adaption-qwen3.5-397b: 50/803
+  adaption-qwen3.5-397b: 100/803
+  adaption-qwen3.5-397b: 150/803
+  adaption-qwen3.5-397b: 200/803
+  adaption-qwen3.5-397b: 250/803
+  adaption-qwen3.5-397b: 300/803
+  adaption-qwen3.5-397b: 350/803
+  adaption-qwen3.5-397b: 400/803
+  adaption-qwen3.5-397b: 450/803
+  adaption-qwen3.5-397b: 500/803
+  adaption-qwen3.5-397b: 550/803
+  adaption-qwen3.5-397b: 600/803
+  adaption-qwen3.5-397b: 650/803
+  adaption-qwen3.5-397b: 700/803
+  adaption-qwen3.5-397b: 750/803
+  adaption-qwen3.5-397b: 800/803
+adaption-qwen3.5-397b {'skipped_done': 1, 'ok': 802, 'refusal': 0, 'truncated': 1, 'error': 0, 'parse_error': 1, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 321.0792 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-15T11:58:12Z pass 1: EOP T1 test extraction
+EOP comparison (msep-s1-obligations-v1); sets [('t1test', 804)]; conditions ['s3v2']
+budget 519.4324; already spent 340.7094
+smoke adaption-qwen3.5-397b t1test s3v2: status=ok parse_error=None
+  adaption-qwen3.5-397b: 50/803
+  adaption-qwen3.5-397b: 100/803
+  adaption-qwen3.5-397b: 150/803
+  adaption-qwen3.5-397b: 200/803
+  adaption-qwen3.5-397b: 250/803
+  adaption-qwen3.5-397b: 300/803
+  adaption-qwen3.5-397b: 350/803
+  adaption-qwen3.5-397b: 400/803
+  adaption-qwen3.5-397b: 450/803
+  adaption-qwen3.5-397b: 500/803
+  adaption-qwen3.5-397b: 550/803
+  adaption-qwen3.5-397b: 600/803
+  adaption-qwen3.5-397b: 650/803
+  adaption-qwen3.5-397b: 700/803
+  adaption-qwen3.5-397b: 750/803
+  adaption-qwen3.5-397b: 800/803
+adaption-qwen3.5-397b t1test s3v2 {'skipped_done': 1, 'ok': 801, 'refusal': 0, 'truncated': 0, 'error': 2, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 350.8329 of 519.4324
+=== 2026-11-15T14:12:14Z pass 1: EOP T1 test structured prompt
+EOP comparison (msep-s1-obligations-v1); sets [('t1test', 804)]; conditions ['s1']
+budget 519.4324; already spent 365.5049
+smoke adaption-qwen3.5-397b t1test s1: status=ok parse_error=None
+  adaption-qwen3.5-397b: 50/803
+  adaption-qwen3.5-397b: 100/803
+  adaption-qwen3.5-397b: 150/803
+  adaption-qwen3.5-397b: 200/803
+  adaption-qwen3.5-397b: 250/803
+  adaption-qwen3.5-397b: 300/803
+  adaption-qwen3.5-397b: 350/803
+  adaption-qwen3.5-397b: 400/803
+  adaption-qwen3.5-397b: 450/803
+  adaption-qwen3.5-397b: 500/803
+  adaption-qwen3.5-397b: 550/803
+  adaption-qwen3.5-397b: 600/803
+  adaption-qwen3.5-397b: 650/803
+  adaption-qwen3.5-397b: 700/803
+  adaption-qwen3.5-397b: 750/803
+  adaption-qwen3.5-397b: 800/803
+adaption-qwen3.5-397b t1test s1 {'skipped_done': 1, 'ok': 802, 'refusal': 0, 'truncated': 1, 'error': 0, 'parse_error': 186, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 388.7402 of 519.4324
+=== 2026-11-15T16:44:43Z pass 2: v3 test native (E1-E9, three modes)
+loaded from .env: ['ADAPTION_API_KEY']
+468 instances, 63 families, 1814 jobs per model; pools {'plan': 1215, 'decision': 63, 'judgment': 536}
+WARNING adaption-qwen3.5-397b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 395.96
+smoke adaption-qwen3.5-397b: status=ok parse_error=None tokens={'input_tokens': 812, 'output_tokens': 9995, 'reasoning_tokens': 9871, 'cached_input_tokens': 0} cost=credits 0.0354 served=qwen3.5-397b-a17b-nvfp4 seconds=108.17
+  adaption-qwen3.5-397b: 50/950
+  adaption-qwen3.5-397b: 100/950
+  adaption-qwen3.5-397b: 150/950
+  adaption-qwen3.5-397b: 200/950
+  adaption-qwen3.5-397b: 250/950
+  adaption-qwen3.5-397b: 300/950
+  adaption-qwen3.5-397b: 350/950
+  adaption-qwen3.5-397b: 400/950
+  adaption-qwen3.5-397b: 450/950
+  adaption-qwen3.5-397b: 500/950
+  adaption-qwen3.5-397b: 550/950
+  adaption-qwen3.5-397b: 600/950
+  adaption-qwen3.5-397b: 650/950
+  adaption-qwen3.5-397b: 700/950
+  adaption-qwen3.5-397b: 750/950
+  adaption-qwen3.5-397b: 800/950
+  adaption-qwen3.5-397b: 850/950
+  adaption-qwen3.5-397b: 900/950
+  adaption-qwen3.5-397b: 950/950
+adaption-qwen3.5-397b {'skipped_done': 864, 'ok': 949, 'refusal': 0, 'truncated': 1, 'error': 0, 'parse_error': 1, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 419.0128 of credits 519.43
+wrote results/aggregate/final_test/by_model/adaption-qwen3.5-397b/pilot_test/summary.json and report.md
+=== 2026-11-15T19:02:11Z pass 2: EOP v3 test extraction
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468)]; conditions ['s3v2']
+budget 519.4324; already spent 423.9184
+smoke adaption-qwen3.5-397b v3test s3v2: status=ok parse_error=None
+adaption-qwen3.5-397b v3test s3v2 {'skipped_done': 467, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 423.9290 of 519.4324
+=== 2026-11-15T19:03:39Z pass 2: EOP v3 test structured prompt
+EOP comparison (msep-s1-obligations-v1); sets [('v3test', 468)]; conditions ['s1']
+budget 519.4324; already spent 424.0190
+smoke adaption-qwen3.5-397b v3test s1: status=ok parse_error=None
+adaption-qwen3.5-397b v3test s1 {'skipped_done': 869, 'ok': 4, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 1, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 424.1316 of 519.4324
+=== 2026-11-15T19:05:11Z pass 2: T1 test native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 402 pairs (804 items) from 63 families
+468 instances, 63 families, 804 jobs per model; pools {'plan_t1': 804}
+WARNING adaption-qwen3.5-397b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 424.25
+smoke adaption-qwen3.5-397b: status=ok parse_error=None tokens={'input_tokens': 787, 'output_tokens': 12726, 'reasoning_tokens': 12588, 'cached_input_tokens': 0} cost=credits 0.0450 served=qwen3.5-397b-a17b-nvfp4 seconds=143.5
+adaption-qwen3.5-397b {'skipped_done': 804, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 424.2476 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-15T19:05:12Z pass 2: EOP T1 test extraction
+EOP comparison (msep-s1-obligations-v1); sets [('t1test', 804)]; conditions ['s3v2']
+budget 519.4324; already spent 424.2517
+smoke adaption-qwen3.5-397b t1test s3v2: status=ok parse_error=None
+adaption-qwen3.5-397b t1test s3v2 {'skipped_done': 802, 'ok': 2, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 424.2770 of 519.4324
+=== 2026-11-15T19:06:49Z pass 2: EOP T1 test structured prompt
+EOP comparison (msep-s1-obligations-v1); sets [('t1test', 804)]; conditions ['s1']
+budget 519.4324; already spent 424.4117
+smoke adaption-qwen3.5-397b t1test s1: status=ok parse_error=None
+adaption-qwen3.5-397b t1test s1 {'skipped_done': 804, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 424.4117 of 519.4324
+=== 2026-11-15T19:06:50Z chain done

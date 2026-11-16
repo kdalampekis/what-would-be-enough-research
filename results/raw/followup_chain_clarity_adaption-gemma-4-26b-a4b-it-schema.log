@@ -1,0 +1,30 @@
+=== 2026-11-15T21:03:31Z clarity pass 1
+clarity: 872 jobs per model; budget 519.4324; already spent 426.0413
+  adaption-gemma-4-26b-a4b-it-schema: 50/872
+  adaption-gemma-4-26b-a4b-it-schema: 100/872
+  adaption-gemma-4-26b-a4b-it-schema: 150/872
+  adaption-gemma-4-26b-a4b-it-schema: 200/872
+  adaption-gemma-4-26b-a4b-it-schema: 250/872
+  adaption-gemma-4-26b-a4b-it-schema: 300/872
+  adaption-gemma-4-26b-a4b-it-schema: 350/872
+  adaption-gemma-4-26b-a4b-it-schema: 400/872
+  adaption-gemma-4-26b-a4b-it-schema: 450/872
+  adaption-gemma-4-26b-a4b-it-schema: 500/872
+  adaption-gemma-4-26b-a4b-it-schema: 550/872
+  adaption-gemma-4-26b-a4b-it-schema: 600/872
+  adaption-gemma-4-26b-a4b-it-schema: 650/872
+  adaption-gemma-4-26b-a4b-it-schema: 700/872
+  adaption-gemma-4-26b-a4b-it-schema: 750/872
+  adaption-gemma-4-26b-a4b-it-schema: 800/872
+  adaption-gemma-4-26b-a4b-it-schema: 850/872
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 0, 'ok': 853, 'refusal': 0, 'truncated': 18, 'error': 1, 'parse_error': 26, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 426.3540 of 519.4324
+=== 2026-11-15T21:57:52Z clarity pass 2
+clarity: 872 jobs per model; budget 519.4324; already spent 431.8694
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 871, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 431.8694 of 519.4324
+=== 2026-11-15T21:58:55Z chain done
+=== 2026-11-16T00:54:13Z clarity fill pass
+clarity: 872 jobs per model; budget 519.4324; already spent 479.8687
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 871, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 479.8687 of 519.4324

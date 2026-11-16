@@ -1,0 +1,93 @@
+{
+ "version": "msep-t1-v1",
+ "frozen_on": "2026-11-13",
+ "code_commit_at_freeze": "7ade0ffde8e8cfb8917697deb6c1cee9823aee08",
+ "t1_generator_sha256": "41433b4ed267803b2dd48c9b2482707b651c63f41fa2aad849a7f27b7b6b52dd",
+ "oracle_sha256": "f348aa0789d2661253c23d1e1264c15a28da5ab4621db5afaf246c71950ddb40",
+ "analysis_sha256": "81bcea363520e7aa12f77b514e3f75060f7b1f465ec8fb0d8b155f5b23b8eb78",
+ "t1_generator_files": [
+  "src/msep/benchmark/t1_flips.py",
+  "experiments/generate_t1.py",
+  "src/msep/benchmark/template_v3.py",
+  "src/msep/benchmark/families.py",
+  "src/msep/benchmark/rendering.py",
+  "src/msep/benchmark/schemas.py",
+  "src/msep/benchmark/splits.py",
+  "src/msep/benchmark/variants.py",
+  "src/msep/benchmark/counterfactuals.py",
+  "src/msep/world/state.py",
+  "src/msep/world/constraints.py",
+  "src/msep/world/certified_tasks.py",
+  "src/msep/world/compute_tasks.py",
+  "src/msep/world/probabilities.py",
+  "src/msep/actions/base.py",
+  "src/msep/actions/information.py",
+  "src/msep/actions/computation.py",
+  "experiments/generate_benchmark.py",
+  "experiments/generate_variants.py"
+ ],
+ "oracle_files": [
+  "src/msep/oracle/brute_force.py",
+  "src/msep/oracle/logic.py",
+  "src/msep/oracle/solver.py",
+  "src/msep/oracle/probability.py",
+  "src/msep/oracle/sufficiency.py",
+  "src/msep/oracle/minimal_plan.py",
+  "src/msep/obligations/model.py",
+  "src/msep/obligations/extraction.py",
+  "src/msep/obligations/discharge.py"
+ ],
+ "analysis_files": [
+  "experiments/analyze_t1.py",
+  "src/msep/eval/pilot.py",
+  "src/msep/eval/plan_metrics.py",
+  "src/msep/models/prompts.py",
+  "src/msep/models/schemas.py",
+  "src/msep/eval/experiments.py"
+ ],
+ "data_sha256": {
+  "pool_v3": "660012bdae121635dcaef41a3b018da0bf31cfd2553757f797c8a3267680e2cd",
+  "t1_pairs": "9215f98f18aa7c8849917c5ab9233ae7d53061dc6fc841f3fd2207ddd71e1c71",
+  "t1_validation": "09f3cc93feb242bdfe539482342f15ff14d34ed86d649a7243608dba66e639bd",
+  "protocol": "d3a93d82ded92ed0d7a37918321c3f1ca5dd34780bae33a57c973f821f2e0793"
+ },
+ "seed_scheme": "one edit per base record; rng = Random(int(sha256('t1-v1:' + base_instance_id)))",
+ "pilot": {
+  "split": "dev",
+  "skip_families": 10,
+  "max_families": 20,
+  "mode": "end_to_end",
+  "budget_cap_total": 22.6908,
+  "budget_increment": 12.0,
+  "models": {
+   "adaption-qwen3.5-397b": {
+    "model_id": "qwen3.5-397b",
+    "settings": {
+     "max_tokens": 16000,
+     "temperature": 0.0,
+     "stream": true,
+     "max_retries": 2
+    }
+   },
+   "adaption-qwen3.8-27b": {
+    "model_id": "qwen3.8-27b",
+    "settings": {
+     "max_tokens": 16000,
+     "temperature": 0.0,
+     "stream": true,
+     "max_retries": 2
+    }
+   },
+   "adaption-gemma-4-26b-a4b-it-schema": {
+    "model_id": "gemma-4-26b-a4b-it",
+    "settings": {
+     "max_tokens": 16000,
+     "temperature": 0.0,
+     "stream": true,
+     "max_retries": 2,
+     "structured": "function_tool"
+    }
+   }
+  }
+ }
+}

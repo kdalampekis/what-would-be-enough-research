@@ -1,0 +1,9 @@
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 22.69; already spent credits 19.32
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 2080, 'output_tokens': 2980, 'reasoning_tokens': 2858, 'cached_input_tokens': 0} cost=credits 0.0038 served=qwen3.8-27b seconds=21.02
+adaption-qwen3.8-27b {'skipped_done': 265, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 19.3267 of credits 22.69
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written

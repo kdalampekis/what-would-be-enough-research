@@ -1,0 +1,3329 @@
+[
+ {
+  "audit_id": "T01",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not K4) then (not F3)",
+    "Q if and only if (not (((not F3) and F1) or ((not F3) and K1) or (F1 and K1)))",
+    "K2 if and only if F1",
+    "if (not K3) then K5",
+    "if F2 then K2"
+   ],
+   "known": [
+    {
+     "handle": "F1",
+     "value": false
+    },
+    {
+     "handle": "F2",
+     "value": false
+    },
+    {
+     "handle": "K3",
+     "value": true
+    },
+    {
+     "handle": "K5",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "COMPUTE_K1_K2",
+     "kind": "computation",
+     "cost": 9,
+     "reveals": [
+      "K1",
+      "K2"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K2",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K4",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K5",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K5"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K3",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K1",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K1"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Derived results (each one is completely fixed by the inputs given here; its verified outcome has not been obtained yet)  ...versus...  Established so far: F1 does not hold; F2 does not hold; K3 holds; K5 holds",
+    "readings": [
+     "The specific list of established values overrides the generic header: K3, K5 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K3, K5 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_PRIMALITY_TEST_K3, EXECUTE_CODE_K5), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Actions are offered for handles whose value is already listed as established: ASK_F1, ASK_F2, RUN_PRIMALITY_TEST_K3, EXECUTE_CODE_K5.",
+   "COMPUTE_K1_K2 'execute the verified procedure' (singular) for two unrelated computations (a SAT instance and a posterior)."
+  ]
+ },
+ {
+  "audit_id": "T02",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "F6",
+     "kind": "world"
+    },
+    {
+     "handle": "F7",
+     "kind": "world"
+    },
+    {
+     "handle": "F8",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not K3) then K1",
+    "(not (((not F3) and (not F5)) or ((not F5) and (not K1)) or ((not K1) and (not F3)))) if and only if Q",
+    "if (not F1) then K1",
+    "((not K2) or (not K3)) if and only if F3",
+    "if F2 then (not F6)",
+    "F7 if and only if K2",
+    "if (not F6) then (not F4)",
+    "if (not F4) then (not F8)"
+   ],
+   "known": [
+    {
+     "handle": "F1",
+     "value": true
+    },
+    {
+     "handle": "K3",
+     "value": true
+    },
+    {
+     "handle": "F3",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "ASK_F5",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F5"
+     ]
+    },
+    {
+     "name": "ASK_F5_F7",
+     "kind": "information",
+     "cost": 7,
+     "reveals": [
+      "F5",
+      "F7"
+     ]
+    },
+    {
+     "name": "ASK_F7",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F7"
+     ]
+    },
+    {
+     "name": "ASK_F8",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F8"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K1",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K3",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K2",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K2"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: F1 and K3 are true; F3 is false.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K3 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K3 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (COMPUTE_POSTERIOR_K3), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Negation in front of a parenthesised group that is followed by an 'exactly/precisely when' can be attached either to the group alone or to the whole biconditional. The two parses are logically equivalent here (not(A iff B) is the same as (not A) iff B), so the formal content is not affected, but the same sentence shape with 'and'/'or' would be a real ambiguity. Phrase: 'It is not the case that ((F3 is false and F5 is false) or (F5 is false and K1 is false) or (K1 is false and F3 is false)) precisely when Q is true.'",
+   "Actions are offered for handles whose value is already listed as established: ASK_F1, COMPUTE_POSTERIOR_K3.",
+   "Action sentences alternate between two word orders ('X is an information action with cost N that...' / 'For a cost of N, the information action X...'); harmless."
+  ]
+ },
+ {
+  "audit_id": "T03",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not F4) then F1",
+    "if (not F2) then (not F5)",
+    "if K1 then F3",
+    "if (not F5) then K2",
+    "Q if and only if (((not F3) and F1) or ((not (not F3)) and (not K3)))"
+   ],
+   "known": [
+    {
+     "handle": "K3",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K3",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K2",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K1",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F2"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: K3 is true",
+    "readings": [
+     "The specific list of established values overrides the generic header: K3 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K3 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (EXECUTE_CODE_K3), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "'(not (not F3) and not K3)': a 'not' directly in front of a parenthesised sub-term inside a conjunction. With the usual convention (not binds tightest) this is (not (not F3)) and (not K3); a hasty reader could take the first 'not' over the whole conjunction, which is NOT equivalent. No precedence convention is stated in the text. I judge the standard reading clearly dominant, hence listed as awkward rather than ambiguous.",
+   "Double negation written out instead of the plain handle: 'not (not F3)'.",
+   "Actions are offered for handles whose value is already listed as established: EXECUTE_CODE_K3.",
+   "'Known so far' and the action list come before the handles are introduced."
+  ]
+ },
+ {
+  "audit_id": "T04",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if F2 then F3",
+    "(not (((not F1) if and only if (not K3)) if and only if (not (not K2)))) if and only if Q",
+    "if (not K1) then (not K3)"
+   ],
+   "known": [
+    {
+     "handle": "K3",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "COMPUTE_POSTERIOR_K1",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K2",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K3",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F3"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "There are also derived results; each is completely fixed by the inputs given here, but its verified outcome has not been obtained yet.  ...versus...  At this point it has been established that K3 does not hold.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K3 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K3 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (COMPUTE_POSTERIOR_K3), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Negation in front of a parenthesised group that is followed by an 'exactly/precisely when' can be attached either to the group alone or to the whole biconditional. The two parses are logically equivalent here (not(A iff B) is the same as (not A) iff B), so the formal content is not affected, but the same sentence shape with 'and'/'or' would be a real ambiguity. Phrase: 'It is not the case that ((F1 does not hold exactly when K3 does not hold) precisely when it is not the case that (K2 does not hold)) precisely when Q holds.'",
+   "Double negation written out instead of the plain handle: 'it is not the case that (K2 does not hold)'.",
+   "The Q rule is a four-level nest of negated biconditionals in running prose; correct but very hard to read.",
+   "Actions are offered for handles whose value is already listed as established: COMPUTE_POSTERIOR_K3."
+  ]
+ },
+ {
+  "audit_id": "T05",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if F1 then (not F5)",
+    "K4 if and only if F1",
+    "if F4 then (not K4)",
+    "if F3 then F5",
+    "if (not K1) then (not K3)",
+    "F2 if and only if (F1 or (not F3))",
+    "Q if and only if (((not K2) if and only if (not F2)) if and only if (not F5))"
+   ],
+   "known": [
+    {
+     "handle": "F1",
+     "value": false
+    },
+    {
+     "handle": "F5",
+     "value": false
+    },
+    {
+     "handle": "K1",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F1_F5",
+     "kind": "information",
+     "cost": 6,
+     "reveals": [
+      "F1",
+      "F5"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "ASK_F5",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F5"
+     ]
+    },
+    {
+     "name": "COMPUTE_K2_K4",
+     "kind": "computation",
+     "cost": 5,
+     "reveals": [
+      "K2",
+      "K4"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K4",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K2",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K3",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K3"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Derived results (each one is completely fixed by the inputs given here; its verified outcome has not been obtained yet)  ...versus...  Established so far: F1 does not hold; F5 does not hold; K1 holds",
+    "readings": [
+     "The specific list of established values overrides the generic header: K1 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K1 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_PRIMALITY_TEST_K1), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Actions are offered for handles whose value is already listed as established: ASK_F1, ASK_F5, ASK_F1_F5, RUN_PRIMALITY_TEST_K1."
+  ]
+ },
+ {
+  "audit_id": "T06",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "F6",
+     "kind": "world"
+    },
+    {
+     "handle": "F7",
+     "kind": "world"
+    },
+    {
+     "handle": "F8",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if F5 then F4",
+    "if F2 then (not F8)",
+    "if (not F6) then (not F4)",
+    "F4 if and only if K2",
+    "if F1 then (not K2)",
+    "if F8 then (not F7)",
+    "(((not K2) and (not F3)) or ((not K2) and F1) or (F1 and (not F3))) if and only if Q",
+    "if F7 then (not K1)"
+   ],
+   "known": [
+    {
+     "handle": "F7",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "ASK_F5",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F5"
+     ]
+    },
+    {
+     "name": "ASK_F7",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F7"
+     ]
+    },
+    {
+     "name": "ASK_F8",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F8"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K1",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K1"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [],
+  "awkward": [
+   "Actions are offered for handles whose value is already listed as established: ASK_F7.",
+   "K2 appears in the Q rule but no action computes it (and F6 has no ASK); not ambiguous, just worth a reader's double-check."
+  ]
+ },
+ {
+  "audit_id": "T07",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not F1) then F2",
+    "if K4 then (not K2)",
+    "if K2 then (not K1)",
+    "Q if and only if (not (((not F3) if and only if (not (not K3))) and (not F2)))",
+    "if (not K5) then (not F3)"
+   ],
+   "known": [
+    {
+     "handle": "F2",
+     "value": false
+    },
+    {
+     "handle": "K1",
+     "value": false
+    },
+    {
+     "handle": "F1",
+     "value": true
+    },
+    {
+     "handle": "K3",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F2_F3",
+     "kind": "information",
+     "cost": 10,
+     "reveals": [
+      "F2",
+      "F3"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K3",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K1",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K2",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K4",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F1"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: F2 is false; K1 is false; F1 is true; K3 is false",
+    "readings": [
+     "The specific list of established values overrides the generic header: K1, K3 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K1, K3 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (COMPUTE_POSTERIOR_K1, RUN_PRIMALITY_TEST_K3), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Double negation written out instead of the plain handle: 'not (not K3)'.",
+   "Actions are offered for handles whose value is already listed as established: ASK_F1, ASK_F2_F3 (F2 part), COMPUTE_POSTERIOR_K1, RUN_PRIMALITY_TEST_K3.",
+   "Actions, known values and rules all come before the handles are introduced."
+  ]
+ },
+ {
+  "audit_id": "T08",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if F4 then (not K1)",
+    "((not K1) if and only if ((not F1) if and only if (not F3))) if and only if Q",
+    "if F5 then K2",
+    "if (not F2) then (not K1)"
+   ],
+   "known": [
+    {
+     "handle": "K1",
+     "value": true
+    },
+    {
+     "handle": "F4",
+     "value": false
+    },
+    {
+     "handle": "F3",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F5",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F5"
+     ]
+    },
+    {
+     "name": "ASK_F1_F3",
+     "kind": "information",
+     "cost": 7,
+     "reveals": [
+      "F3",
+      "F1"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "is it the case that Q holds? We refer to this statement as Q.",
+    "readings": [
+     "Q is an opaque yes/no statement with no stated content; only the handle matters and the formal structure is unaffected.",
+     "The definition is circular (Q is defined as 'Q holds'), so the content of Q is missing; a reader may suspect an unfilled placeholder and cannot say what is being decided."
+    ]
+   },
+   {
+    "phrase": "F1 says that fact D holds. F2 says that fact E holds. F5 says that fact G holds. F4 says that fact H holds. F3 says that fact F holds.",
+    "readings": [
+     "'fact A/B/C...' are opaque labels; each F handle is simply an unnamed world condition.",
+     "'fact A/B/C...' refer to facts defined somewhere not shown (the letters used are a non-contiguous subset), i.e. the definitions are missing."
+    ]
+   },
+   {
+    "phrase": "F4 says that fact H holds.  ...and...  K2 says that P(H | all sixteen observations seen) exceeds 0.2602, where P(H) = 53/100",
+    "readings": [
+     "The H inside K2 is a local hypothesis symbol of the probability task, unrelated to 'fact H'; K2 is fixed by the numbers shown (supported by 'completely fixed by the inputs given here').",
+     "H is the same thing as 'fact H', i.e. the condition F4 stands for, so K2 is a statement about the probability of F4 and would interact with the established 'F4 does not hold'."
+    ]
+   },
+   {
+    "phrase": "There are also derived results; each is completely fixed by the inputs given here, but its verified outcome has not been obtained yet.  ...versus...  At this point it has been established that K1 holds and that neither F4 nor F3 holds.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K1 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K1 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_PRIMALITY_TEST_K1), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "'F3 says that fact F holds': the letter F is both the handle prefix and a fact label.",
+   "Actions are offered for handles whose value is already listed as established: ASK_F4, ASK_F3, ASK_F1_F3 (F3 part), RUN_PRIMALITY_TEST_K1.",
+   "K2 has no computing action and F2 no ASK; not ambiguous."
+  ]
+ },
+ {
+  "audit_id": "T09",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not F3) then (not F4)",
+    "if F5 then (not F1)",
+    "if K2 then (not K1)",
+    "if (not F2) then F4",
+    "Q if and only if (((not K1) if and only if (not F2)) if and only if (not F4))"
+   ],
+   "known": [
+    {
+     "handle": "F2",
+     "value": true
+    },
+    {
+     "handle": "F4",
+     "value": true
+    },
+    {
+     "handle": "K1",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K1",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K2",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K2"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Derived results (each one is completely fixed by the inputs given here; its verified outcome has not been obtained yet)  ...versus...  Established so far: F2 holds; F4 holds; K1 holds",
+    "readings": [
+     "The specific list of established values overrides the generic header: K1 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K1 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (EXECUTE_CODE_K1), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Actions are offered for handles whose value is already listed as established: ASK_F2, ASK_F4, EXECUTE_CODE_K1."
+  ]
+ },
+ {
+  "audit_id": "T10",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "F6",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not F4) then (not F5)",
+    "if F6 then F2",
+    "if (not F1) then F3",
+    "if (not K1) then (not F3)",
+    "Q if and only if (not (((not K1) and (not F2)) or (K1 and F3)))"
+   ],
+   "known": [
+    {
+     "handle": "F1",
+     "value": true
+    },
+    {
+     "handle": "F2",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F2_F3",
+     "kind": "information",
+     "cost": 10,
+     "reveals": [
+      "F2",
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "ASK_F5",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F5"
+     ]
+    },
+    {
+     "name": "ASK_F6",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F6"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K1",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K1"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [],
+  "awkward": [
+   "Actions are offered for handles whose value is already listed as established: ASK_F1, ASK_F2, ASK_F2_F3 (F2 part)."
+  ]
+ },
+ {
+  "audit_id": "T11",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "F6",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not F3) then (not K3)",
+    "if (not F1) then (not F2)",
+    "Q if and only if (not ((F6 and K3) or (F6 and K2) or (K3 and K2)))",
+    "if (not K1) then F1",
+    "F6 if and only if (F4 or F5)"
+   ],
+   "known": [
+    {
+     "handle": "K3",
+     "value": false
+    },
+    {
+     "handle": "K2",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "EXECUTE_CODE_K3",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K2",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K1",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: K3 is false; K2 is true",
+    "readings": [
+     "The specific list of established values overrides the generic header: K3, K2 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K3, K2 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (EXECUTE_CODE_K3, EXECUTE_CODE_K2), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Actions are offered for handles whose value is already listed as established: EXECUTE_CODE_K3, EXECUTE_CODE_K2.",
+   "Known values and actions come before the handles are introduced."
+  ]
+ },
+ {
+  "audit_id": "T12",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "Q if and only if ((not (not K2)) if and only if ((not F2) if and only if (not K3)))",
+    "if F3 then (not F1)",
+    "if (not K1) then (not K2)",
+    "if K3 then (not K2)",
+    "if F5 then F4",
+    "if (not F4) then (not F3)"
+   ],
+   "known": [
+    {
+     "handle": "F5",
+     "value": true
+    },
+    {
+     "handle": "F4",
+     "value": true
+    },
+    {
+     "handle": "F3",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "ASK_F5",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F5"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K3",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K2",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K2"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [],
+  "awkward": [
+   "Negation in front of a parenthesised group that is followed by an 'exactly/precisely when' can be attached either to the group alone or to the whole biconditional. The two parses are logically equivalent here (not(A iff B) is the same as (not A) iff B), so the formal content is not affected, but the same sentence shape with 'and'/'or' would be a real ambiguity. Phrase: '(it is not the case that (K2 does not hold) exactly when (F2 does not hold precisely when K3 does not hold))'.",
+   "Double negation written out instead of the plain handle: 'it is not the case that (K2 does not hold)'.",
+   "'F4 holds whenever F5 holds' puts the consequent first, the reverse of the neighbouring 'Whenever A, B' sentences; unambiguous (if F5 then F4) but easy to flip when skimming.",
+   "Actions are offered for handles whose value is already listed as established: ASK_F5, ASK_F3, ASK_F4."
+  ]
+ },
+ {
+  "audit_id": "T13",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "F6",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "F3 if and only if ((not F6) or (not F1))",
+    "if K2 then (not F4)",
+    "if F6 then (not K3)",
+    "Q if and only if (not ((K3 if and only if (not (not K1))) if and only if (not (not F3))))",
+    "if (not K1) then (not F6)",
+    "if F5 then K2",
+    "if (not F4) then (not K4)",
+    "if F2 then K1"
+   ],
+   "known": [
+    {
+     "handle": "F3",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F1_F6",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F1",
+      "F6"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "ASK_F5",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F5"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K4",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K2",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K2"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [],
+  "awkward": [
+   "Double negation written out instead of the plain handle: 'not (not K1)', 'not (not F3)'.",
+   "ASK_F1_F6 (price 1) costs the same as ASK_F1 alone (price 1). Clearly stated, so not ambiguous, but it looks like a possible slip and a reader may distrust it.",
+   "K3 appears in the Q rule but no action computes it; not ambiguous."
+  ]
+ },
+ {
+  "audit_id": "T14",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if K1 then (not K5)",
+    "Q if and only if (((not F2) if and only if (not K5)) and F1)",
+    "if K2 then K4",
+    "if F2 then (not K5)",
+    "((not F4) and (not K3)) if and only if F1",
+    "if (not K4) then (not F3)"
+   ],
+   "known": [
+    {
+     "handle": "K2",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F4"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K2",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K3",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K5",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K5"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Decision: is it true that Q holds (Q)?",
+    "readings": [
+     "Q is an opaque yes/no statement with no stated content; only the handle matters and the formal structure is unaffected.",
+     "The definition is circular (Q is defined as 'Q holds'), so the content of Q is missing; a reader may suspect an unfilled placeholder and cannot say what is being decided."
+    ]
+   },
+   {
+    "phrase": "F1 stands for the statement that fact C holds. F2 ... fact A holds. F3 ... fact F holds. F4 ... fact B holds.",
+    "readings": [
+     "'fact A/B/C...' are opaque labels; each F handle is simply an unnamed world condition.",
+     "'fact A/B/C...' refer to facts defined somewhere not shown (the letters used are a non-contiguous subset), i.e. the definitions are missing."
+    ]
+   },
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: K2 is false.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K2 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K2 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_PRIMALITY_TEST_K2), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "'F3 stands for the statement that fact F holds': the letter F is both the handle prefix and a fact label.",
+   "Actions are offered for handles whose value is already listed as established: RUN_PRIMALITY_TEST_K2.",
+   "F1 appears in the Q rule but has no ASK action; not ambiguous."
+  ]
+ },
+ {
+  "audit_id": "T15",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not F1) then (not K4)",
+    "if (not K1) then F2",
+    "if (not K2) then K3",
+    "if (not F2) then F1",
+    "Q if and only if (not ((F1 if and only if (not (not F2))) if and only if (not (not K4))))",
+    "if (not F3) then (not F1)"
+   ],
+   "known": [
+    {
+     "handle": "K4",
+     "value": false
+    },
+    {
+     "handle": "K2",
+     "value": false
+    },
+    {
+     "handle": "K3",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K2",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K3",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "ASK_F1_F2",
+     "kind": "information",
+     "cost": 6,
+     "reveals": [
+      "F1",
+      "F2"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K4",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K4"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: K4 is false; K2 is false; K3 is true",
+    "readings": [
+     "The specific list of established values overrides the generic header: K4, K2, K3 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K4, K2, K3 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (EXECUTE_CODE_K4, EXECUTE_CODE_K2, RUN_PRIMALITY_TEST_K3), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Double negation written out instead of the plain handle: 'not (not F2)', 'not (not K4)'.",
+   "Actions are offered for handles whose value is already listed as established: EXECUTE_CODE_K4, EXECUTE_CODE_K2, RUN_PRIMALITY_TEST_K3.",
+   "Actions, rules and known values come before the handles are introduced; computed facts are listed before world facts (the reverse of the other texts)."
+  ]
+ },
+ {
+  "audit_id": "T16",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if K5 then K4",
+    "if F2 then F3",
+    "K1 if and only if F2",
+    "((not K4) if and only if ((not (not F3)) if and only if (not F2))) if and only if Q",
+    "if K2 then F3",
+    "if K3 then F1"
+   ],
+   "known": [
+    {
+     "handle": "K5",
+     "value": true
+    },
+    {
+     "handle": "F1",
+     "value": true
+    },
+    {
+     "handle": "K1",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "COMPUTE_POSTERIOR_K4",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K5",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K5"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F2"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "is it the case that Q holds? We refer to this statement as Q.",
+    "readings": [
+     "Q is an opaque yes/no statement with no stated content; only the handle matters and the formal structure is unaffected.",
+     "The definition is circular (Q is defined as 'Q holds'), so the content of Q is missing; a reader may suspect an unfilled placeholder and cannot say what is being decided."
+    ]
+   },
+   {
+    "phrase": "F2 says that fact B holds. F3 says that fact C holds. F1 says that fact D holds.",
+    "readings": [
+     "'fact A/B/C...' are opaque labels; each F handle is simply an unnamed world condition.",
+     "'fact A/B/C...' refer to facts defined somewhere not shown (the letters used are a non-contiguous subset), i.e. the definitions are missing."
+    ]
+   },
+   {
+    "phrase": "There are also derived results; each is completely fixed by the inputs given here, but its verified outcome has not been obtained yet.  ...versus...  At this point it has been established that K5 and F1 hold and that K1 does not hold.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K5, K1 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K5, K1 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_PRIMALITY_TEST_K5), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Negation in front of a parenthesised group that is followed by an 'exactly/precisely when' can be attached either to the group alone or to the whole biconditional. The two parses are logically equivalent here (not(A iff B) is the same as (not A) iff B), so the formal content is not affected, but the same sentence shape with 'and'/'or' would be a real ambiguity. Phrase: '(it is not the case that (F3 does not hold) precisely when F2 does not hold)'.",
+   "Double negation written out instead of the plain handle: 'it is not the case that (F3 does not hold)'.",
+   "'F3 holds whenever F2 holds' puts the consequent first; unambiguous (if F2 then F3) but easy to flip when skimming.",
+   "Actions are offered for handles whose value is already listed as established: ASK_F1, RUN_PRIMALITY_TEST_K5."
+  ]
+ },
+ {
+  "audit_id": "T17",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    },
+    {
+     "handle": "K6",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if K5 then (not F3)",
+    "if (not F1) then K5",
+    "if K6 then K3",
+    "if K2 then (not K4)",
+    "if (not K4) then (not K6)",
+    "Q if and only if (not ((K5 and (not F3)) or (K5 and (not K1)) or ((not F3) and (not K1))))",
+    "if (not F2) then (not K5)"
+   ],
+   "known": [
+    {
+     "handle": "K5",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K2",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K6",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K6"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K4",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K4"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Derived results (each one is completely fixed by the inputs given here; its verified outcome has not been obtained yet)  ...versus...  Established so far: K5 does not hold",
+    "readings": [
+     "The specific list of established values overrides the generic header: K5 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K5 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run."
+    ]
+   }
+  ],
+  "awkward": [
+   "K5 is established but there is no action that computes K5, so under the literal-header reading its value could never be verified."
+  ]
+ },
+ {
+  "audit_id": "T18",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    },
+    {
+     "handle": "K6",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "F2 if and only if K5",
+    "if (not K4) then (not K2)",
+    "Q if and only if ((not (not K5)) if and only if ((not (not F3)) if and only if F1))",
+    "if (not K2) then K3",
+    "if K6 then (not K4)",
+    "if (not K1) then (not K5)"
+   ],
+   "known": [
+    {
+     "handle": "F1",
+     "value": false
+    },
+    {
+     "handle": "K3",
+     "value": false
+    },
+    {
+     "handle": "K4",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F1_F3",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1",
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K4",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K2",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K3",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K6",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K6"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: F1 and K3 are false; K4 is true.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K3, K4 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K3, K4 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_PRIMALITY_TEST_K3, EXECUTE_CODE_K4), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Negation in front of a parenthesised group that is followed by an 'exactly/precisely when' can be attached either to the group alone or to the whole biconditional. The two parses are logically equivalent here (not(A iff B) is the same as (not A) iff B), so the formal content is not affected, but the same sentence shape with 'and'/'or' would be a real ambiguity. Phrase: '(it is not the case that (K5 is false) exactly when (it is not the case that (F3 is false) exactly when F1 is true))' (two nested instances).",
+   "Double negation written out instead of the plain handle: 'it is not the case that (K5 is false)', 'it is not the case that (F3 is false)'.",
+   "Actions are offered for handles whose value is already listed as established: ASK_F1, ASK_F1_F3 (F1 part), EXECUTE_CODE_K4, RUN_PRIMALITY_TEST_K3.",
+   "K5 and K1 appear in rules but no action computes them; not ambiguous."
+  ]
+ },
+ {
+  "audit_id": "T19",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if (not F3) then K2",
+    "if (not K3) then (not K2)",
+    "if (not K3) then (not F1)",
+    "Q if and only if (not ((F1 if and only if (not K2)) if and only if (not K3)))",
+    "if K1 then (not F2)"
+   ],
+   "known": [
+    {
+     "handle": "K2",
+     "value": false
+    },
+    {
+     "handle": "K3",
+     "value": true
+    },
+    {
+     "handle": "F1",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "COMPUTE_K2_K3",
+     "kind": "computation",
+     "cost": 6,
+     "reveals": [
+      "K3",
+      "K2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K1",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K2",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K3",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F1"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: K2 is false; K3 is true; F1 is true",
+    "readings": [
+     "The specific list of established values overrides the generic header: K2, K3 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K2, K3 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (COMPUTE_K2_K3, RUN_SOLVER_K2, COMPUTE_POSTERIOR_K3), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Actions are offered for handles whose value is already listed as established: COMPUTE_K2_K3, RUN_SOLVER_K2, COMPUTE_POSTERIOR_K3, ASK_F1.",
+   "COMPUTE_K2_K3 'run the certified procedure' (singular) for a SAT instance and a posterior; and its reveal list is in the order 'K3, K2', opposite to the name.",
+   "Known values and actions come before the handles are introduced."
+  ]
+ },
+ {
+  "audit_id": "T20",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    },
+    {
+     "handle": "K6",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "(K2 or K4 or ((not F3) and (not K6))) if and only if Q",
+    "if (not K1) then (not K5)",
+    "if (not K3) then (not K4)",
+    "if F2 then (not K2)",
+    "F4 if and only if K2",
+    "if K5 then (not F1)"
+   ],
+   "known": [
+    {
+     "handle": "K6",
+     "value": true
+    },
+    {
+     "handle": "K3",
+     "value": true
+    },
+    {
+     "handle": "F2",
+     "value": false
+    },
+    {
+     "handle": "K4",
+     "value": false
+    },
+    {
+     "handle": "K5",
+     "value": false
+    },
+    {
+     "handle": "F1",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "RUN_SOLVER_K3",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K6",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K6"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K4",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "COMPUTE_K4_K6",
+     "kind": "computation",
+     "cost": 5,
+     "reveals": [
+      "K4",
+      "K6"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F4",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F4"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "There are also derived results; each is completely fixed by the inputs given here, but its verified outcome has not been obtained yet.  ...versus...  At this point it has been established that K6 and K3 hold and that none of F2, K4, K5 and F1 holds.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K6, K3, K4, K5 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K6, K3, K4, K5 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_SOLVER_K3, RUN_PRIMALITY_TEST_K6, RUN_PRIMALITY_TEST_K4, COMPUTE_K4_K6), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Actions are offered for handles whose value is already listed as established: RUN_SOLVER_K3, RUN_PRIMALITY_TEST_K6, RUN_PRIMALITY_TEST_K4, COMPUTE_K4_K6, ASK_F1, ASK_F2.",
+   "'none of F2, K4, K5 and F1 holds' mixes world and computed handles in one list; clear but dense.",
+   "K2 appears in the Q rule but no action computes it; not ambiguous."
+  ]
+ },
+ {
+  "audit_id": "T21",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "F6",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if F4 then (not K1)",
+    "if K2 then (not F6)",
+    "if F3 then F2",
+    "if F6 then F3",
+    "F5 if and only if (F1 or (not K1))",
+    "if (not F1) then (not K3)",
+    "Q if and only if (not (((not F5) if and only if (not F4)) if and only if (not (not K3))))",
+    "if (not K4) then F4"
+   ],
+   "known": [
+    {
+     "handle": "F1",
+     "value": true
+    },
+    {
+     "handle": "F4",
+     "value": false
+    },
+    {
+     "handle": "F5",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F1_F4",
+     "kind": "information",
+     "cost": 7,
+     "reveals": [
+      "F1",
+      "F4"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F6",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F6"
+     ]
+    },
+    {
+     "name": "COMPUTE_POSTERIOR_K2",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K1",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K4",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K3",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K3"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [],
+  "awkward": [
+   "Double negation written out instead of the plain handle: 'not (not K3)'.",
+   "Actions are offered for handles whose value is already listed as established: ASK_F1, ASK_F1_F4."
+  ]
+ },
+ {
+  "audit_id": "T22",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "F4",
+     "kind": "world"
+    },
+    {
+     "handle": "F5",
+     "kind": "world"
+    },
+    {
+     "handle": "F6",
+     "kind": "world"
+    },
+    {
+     "handle": "F7",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if F2 then (not K3)",
+    "Q if and only if (((not F3) and (not F4)) or ((not K2) and (not (not F3))))",
+    "if (not K1) then K4",
+    "if F1 then (not F3)",
+    "if K3 then (not K1)",
+    "if F5 then F1",
+    "if (not F6) then (not K2)",
+    "F4 if and only if ((not F7) or (not F1))"
+   ],
+   "known": [
+    {
+     "handle": "F7",
+     "value": true
+    },
+    {
+     "handle": "K1",
+     "value": true
+    },
+    {
+     "handle": "K3",
+     "value": false
+    },
+    {
+     "handle": "K4",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F1_F3",
+     "kind": "information",
+     "cost": 5,
+     "reveals": [
+      "F1",
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F3"
+     ]
+    },
+    {
+     "name": "ASK_F5",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F5"
+     ]
+    },
+    {
+     "name": "ASK_F6",
+     "kind": "information",
+     "cost": 2,
+     "reveals": [
+      "F6"
+     ]
+    },
+    {
+     "name": "ASK_F7",
+     "kind": "information",
+     "cost": 1,
+     "reveals": [
+      "F7"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K3",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K4",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 3,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K2",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K2"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "Computational facts (each is fully determined by inputs shown here; its certified value is not yet known)  ...versus...  Known so far: F7 and K1 are true; K3 and K4 are false.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K1, K3, K4 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K1, K3, K4 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_PRIMALITY_TEST_K1, EXECUTE_CODE_K3, EXECUTE_CODE_K4), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Double negation written out instead of the plain handle: 'it is not the case that (F3 is false)'.",
+   "'F1 is true whenever F5 is true' puts the consequent first; unambiguous (if F5 then F1) but easy to flip when skimming.",
+   "Actions are offered for handles whose value is already listed as established: ASK_F7, RUN_PRIMALITY_TEST_K1, EXECUTE_CODE_K3, EXECUTE_CODE_K4."
+  ]
+ },
+ {
+  "audit_id": "T23",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "F3",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if K1 then F2",
+    "if K4 then K1",
+    "if K5 then K3",
+    "if (not F2) then F3",
+    "Q if and only if (((not F1) and (not K2)) or ((not (not F1)) and (not K3)))",
+    "if K3 then (not F1)"
+   ],
+   "known": [
+    {
+     "handle": "F3",
+     "value": false
+    }
+   ],
+   "actions": [
+    {
+     "name": "EXECUTE_CODE_K1",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "COMPUTE_K2_K3",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K3",
+      "K2"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "ASK_F2",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F2"
+     ]
+    },
+    {
+     "name": "EXECUTE_CODE_K5",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K5"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K2",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K4",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K4"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K3",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K3"
+     ]
+    },
+    {
+     "name": "ASK_F3",
+     "kind": "information",
+     "cost": 4,
+     "reveals": [
+      "F3"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [],
+  "awkward": [
+   "'(not (not F1) and not K3)': a 'not' directly in front of a parenthesised sub-term inside a conjunction. With the usual convention (not binds tightest) this is (not (not F1)) and (not K3); a hasty reader could take the first 'not' over the whole conjunction, which is NOT equivalent. No precedence convention is stated. Standard reading clearly dominant, hence awkward rather than ambiguous.",
+   "Double negation written out instead of the plain handle: 'not (not F1)'.",
+   "Actions are offered for handles whose value is already listed as established: ASK_F3.",
+   "COMPUTE_K2_K3 'run the certified procedure' (singular) for a primality test and a SAT instance; reveal list order 'K3, K2' is opposite to the name.",
+   "Actions, rules and known values come before the handles are introduced; computed facts are listed before world facts."
+  ]
+ },
+ {
+  "audit_id": "T24",
+  "state": {
+   "variables": [
+    {
+     "handle": "F1",
+     "kind": "world"
+    },
+    {
+     "handle": "F2",
+     "kind": "world"
+    },
+    {
+     "handle": "K1",
+     "kind": "computed"
+    },
+    {
+     "handle": "K2",
+     "kind": "computed"
+    },
+    {
+     "handle": "K3",
+     "kind": "computed"
+    },
+    {
+     "handle": "K4",
+     "kind": "computed"
+    },
+    {
+     "handle": "K5",
+     "kind": "computed"
+    },
+    {
+     "handle": "K6",
+     "kind": "computed"
+    }
+   ],
+   "rules": [
+    "if F1 then (not F2)",
+    "if K1 then F1",
+    "if F2 then (not F1)",
+    "if K3 then K2",
+    "Q if and only if (not (((not (not F2)) if and only if K6) if and only if (not F1)))",
+    "if K5 then (not K3)",
+    "if (not K4) then F1"
+   ],
+   "known": [
+    {
+     "handle": "K3",
+     "value": false
+    },
+    {
+     "handle": "K4",
+     "value": false
+    },
+    {
+     "handle": "K5",
+     "value": true
+    },
+    {
+     "handle": "K1",
+     "value": true
+    }
+   ],
+   "actions": [
+    {
+     "name": "COMPUTE_POSTERIOR_K5",
+     "kind": "computation",
+     "cost": 4,
+     "reveals": [
+      "K5"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K2",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K2"
+     ]
+    },
+    {
+     "name": "ASK_F1",
+     "kind": "information",
+     "cost": 3,
+     "reveals": [
+      "F1"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K6",
+     "kind": "computation",
+     "cost": 2,
+     "reveals": [
+      "K6"
+     ]
+    },
+    {
+     "name": "RUN_PRIMALITY_TEST_K1",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K1"
+     ]
+    },
+    {
+     "name": "ASK_F1_F2",
+     "kind": "information",
+     "cost": 6,
+     "reveals": [
+      "F2",
+      "F1"
+     ]
+    },
+    {
+     "name": "RUN_SOLVER_K3",
+     "kind": "computation",
+     "cost": 1,
+     "reveals": [
+      "K3"
+     ]
+    }
+   ]
+  },
+  "ambiguities": [
+   {
+    "phrase": "There are also derived results; each is completely fixed by the inputs given here, but its verified outcome has not been obtained yet.  ...versus...  At this point it has been established that neither K3 nor K4 holds and that K5 and K1 hold.",
+    "readings": [
+     "The specific list of established values overrides the generic header: K3, K4, K5, K1 already have known (verified) values and are part of the decision state as given. This is the reading used in 'state' and the more plausible one.",
+     "The header is literal: no computed fact has a verified/certified outcome yet, so the listed value(s) of K3, K4, K5, K1 come from some unverified route; because the closing paragraph says a computed fact enters the decision state only through its verified result, they would not count until the matching computation is run. The text also offers a computation for an already-listed handle (RUN_SOLVER_K3, COMPUTE_POSTERIOR_K5, RUN_PRIMALITY_TEST_K1), which makes this reading less far-fetched."
+    ]
+   }
+  ],
+  "awkward": [
+   "Negation in front of a parenthesised group that is followed by an 'exactly/precisely when' can be attached either to the group alone or to the whole biconditional. The two parses are logically equivalent here (not(A iff B) is the same as (not A) iff B), so the formal content is not affected, but the same sentence shape with 'and'/'or' would be a real ambiguity. Phrase: '((it is not the case that (F2 does not hold) exactly when K6 holds) exactly when F1 does not hold)'.",
+   "Double negation written out instead of the plain handle: 'it is not the case that (F2 does not hold)'.",
+   "'K2 holds whenever K3 holds' and 'F1 holds whenever K4 does not hold' put the consequent first; unambiguous but easy to flip when skimming.",
+   "'Whenever F1 holds, F2 does not hold' and 'In every case where F2 holds, F1 does not hold' are the same constraint stated twice (contrapositives); harmless but may make a reader look for a difference.",
+   "Actions are offered for handles whose value is already listed as established: RUN_SOLVER_K3, COMPUTE_POSTERIOR_K5, RUN_PRIMALITY_TEST_K1."
+  ]
+ }
+]

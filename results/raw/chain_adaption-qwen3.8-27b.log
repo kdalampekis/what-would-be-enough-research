@@ -1,0 +1,238 @@
+=== 2026-11-13T23:58:53Z pass 1: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 19.64
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 3658, 'output_tokens': 624, 'reasoning_tokens': 522, 'cached_input_tokens': 0} cost=credits 0.0009 served=qwen3.8-27b seconds=4.49
+  adaption-qwen3.8-27b: 50/1795
+  adaption-qwen3.8-27b: 100/1795
+  adaption-qwen3.8-27b: 150/1795
+  adaption-qwen3.8-27b: 200/1795
+  adaption-qwen3.8-27b: 250/1795
+  adaption-qwen3.8-27b: 300/1795
+  adaption-qwen3.8-27b: 350/1795
+  adaption-qwen3.8-27b: 400/1795
+  adaption-qwen3.8-27b: 450/1795
+  adaption-qwen3.8-27b: 500/1795
+  adaption-qwen3.8-27b: 550/1795
+  adaption-qwen3.8-27b: 600/1795
+  adaption-qwen3.8-27b: 650/1795
+  adaption-qwen3.8-27b: 700/1795
+  adaption-qwen3.8-27b: 750/1795
+  adaption-qwen3.8-27b: 800/1795
+  adaption-qwen3.8-27b: 850/1795
+  adaption-qwen3.8-27b: 900/1795
+  adaption-qwen3.8-27b: 950/1795
+  adaption-qwen3.8-27b: 1000/1795
+  adaption-qwen3.8-27b: 1050/1795
+  adaption-qwen3.8-27b: 1100/1795
+  adaption-qwen3.8-27b: 1150/1795
+  adaption-qwen3.8-27b: 1200/1795
+  adaption-qwen3.8-27b: 1250/1795
+  adaption-qwen3.8-27b: 1300/1795
+  adaption-qwen3.8-27b: 1350/1795
+  adaption-qwen3.8-27b: 1400/1795
+  adaption-qwen3.8-27b: 1450/1795
+  adaption-qwen3.8-27b: 1500/1795
+  adaption-qwen3.8-27b: 1550/1795
+  adaption-qwen3.8-27b: 1600/1795
+  adaption-qwen3.8-27b: 1650/1795
+  adaption-qwen3.8-27b: 1700/1795
+  adaption-qwen3.8-27b: 1750/1795
+adaption-qwen3.8-27b {'skipped_done': 310, 'ok': 1768, 'refusal': 0, 'truncated': 27, 'error': 0, 'parse_error': 27, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 28.3490 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-qwen3.8-27b/pilot_dev/summary.json and report.md
+=== 2026-11-14T05:11:31Z pass 1: T1B
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 272 pairs (544 items) from 42 families
+317 instances, 42 families, 544 jobs per model; pools {'plan_t1': 544}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 85.85
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 3638, 'output_tokens': 6358, 'reasoning_tokens': 6228, 'cached_input_tokens': 0} cost=credits 0.0081 served=qwen3.8-27b seconds=105.17
+  adaption-qwen3.8-27b: 50/543
+  adaption-qwen3.8-27b: 100/543
+  adaption-qwen3.8-27b: 150/543
+  adaption-qwen3.8-27b: 200/543
+  adaption-qwen3.8-27b: 250/543
+  adaption-qwen3.8-27b: 300/543
+  adaption-qwen3.8-27b: 350/543
+  adaption-qwen3.8-27b: 400/543
+  adaption-qwen3.8-27b: 450/543
+  adaption-qwen3.8-27b: 500/543
+adaption-qwen3.8-27b {'skipped_done': 1, 'ok': 537, 'refusal': 0, 'truncated': 6, 'error': 0, 'parse_error': 6, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 88.7910 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T06:50:42Z pass 1: T1 pilot native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 102.65
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 2080, 'output_tokens': 2980, 'reasoning_tokens': 2858, 'cached_input_tokens': 0} cost=credits 0.0038 served=qwen3.8-27b seconds=21.02
+adaption-qwen3.8-27b {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 102.6509 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T06:50:43Z pass 1: EOP
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 102.6515
+smoke adaption-qwen3.8-27b v3dev s3: status=ok parse_error=None
+  adaption-qwen3.8-27b: 50/544
+  adaption-qwen3.8-27b: 100/544
+  adaption-qwen3.8-27b: 150/544
+  adaption-qwen3.8-27b: 200/544
+  adaption-qwen3.8-27b: 250/544
+  adaption-qwen3.8-27b: 300/544
+  adaption-qwen3.8-27b: 350/544
+  adaption-qwen3.8-27b: 400/544
+  adaption-qwen3.8-27b: 450/544
+  adaption-qwen3.8-27b: 500/544
+adaption-qwen3.8-27b v3dev s3 {'skipped_done': 1, 'ok': 544, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 191, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1b s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+  adaption-qwen3.8-27b: 50/543
+  adaption-qwen3.8-27b: 100/543
+  adaption-qwen3.8-27b: 150/543
+  adaption-qwen3.8-27b: 200/543
+  adaption-qwen3.8-27b: 250/543
+  adaption-qwen3.8-27b: 300/543
+  adaption-qwen3.8-27b: 350/543
+  adaption-qwen3.8-27b: 400/543
+  adaption-qwen3.8-27b: 450/543
+  adaption-qwen3.8-27b: 500/543
+adaption-qwen3.8-27b t1b s3 {'skipped_done': 1, 'ok': 543, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 188, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1pilot s3: status=ok parse_error=None
+  adaption-qwen3.8-27b: 50/265
+  adaption-qwen3.8-27b: 100/265
+  adaption-qwen3.8-27b: 150/265
+  adaption-qwen3.8-27b: 200/265
+  adaption-qwen3.8-27b: 250/265
+adaption-qwen3.8-27b t1pilot s3 {'skipped_done': 1, 'ok': 265, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 88, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b v3dev s1: status=ok parse_error=None
+  adaption-qwen3.8-27b: 50/1017
+  adaption-qwen3.8-27b: 100/1017
+  adaption-qwen3.8-27b: 150/1017
+  adaption-qwen3.8-27b: 200/1017
+  adaption-qwen3.8-27b: 250/1017
+  adaption-qwen3.8-27b: 300/1017
+  adaption-qwen3.8-27b: 350/1017
+  adaption-qwen3.8-27b: 400/1017
+  adaption-qwen3.8-27b: 450/1017
+  adaption-qwen3.8-27b: 500/1017
+  adaption-qwen3.8-27b: 550/1017
+  adaption-qwen3.8-27b: 600/1017
+  adaption-qwen3.8-27b: 650/1017
+  adaption-qwen3.8-27b: 700/1017
+  adaption-qwen3.8-27b: 750/1017
+  adaption-qwen3.8-27b: 800/1017
+  adaption-qwen3.8-27b: 850/1017
+  adaption-qwen3.8-27b: 900/1017
+  adaption-qwen3.8-27b: 950/1017
+  adaption-qwen3.8-27b: 1000/1017
+adaption-qwen3.8-27b v3dev s1 {'skipped_done': 1, 'ok': 1011, 'refusal': 0, 'truncated': 6, 'error': 0, 'parse_error': 6, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1b s1: status=ok parse_error=None
+  adaption-qwen3.8-27b: 50/543
+=== 2026-11-14T14:13:37Z restarted at concurrency 20
+=== 2026-11-14T14:13:37Z pass 1: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 188.11
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 3658, 'output_tokens': 624, 'reasoning_tokens': 522, 'cached_input_tokens': 0} cost=credits 0.0009 served=qwen3.8-27b seconds=4.49
+adaption-qwen3.8-27b {'skipped_done': 2105, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 188.1085 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-qwen3.8-27b/pilot_dev/summary.json and report.md
+=== 2026-11-14T14:15:16Z pass 1: T1B
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 272 pairs (544 items) from 42 families
+317 instances, 42 families, 544 jobs per model; pools {'plan_t1': 544}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 188.37
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 3638, 'output_tokens': 6358, 'reasoning_tokens': 6228, 'cached_input_tokens': 0} cost=credits 0.0081 served=qwen3.8-27b seconds=105.17
+adaption-qwen3.8-27b {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 188.3688 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T14:15:18Z pass 1: T1 pilot native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 188.37
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 2080, 'output_tokens': 2980, 'reasoning_tokens': 2858, 'cached_input_tokens': 0} cost=credits 0.0038 served=qwen3.8-27b seconds=21.02
+adaption-qwen3.8-27b {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 188.3688 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T14:15:19Z pass 1: EOP
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 188.3688
+smoke adaption-qwen3.8-27b v3dev s3: status=ok parse_error=None
+adaption-qwen3.8-27b v3dev s3 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1b s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+adaption-qwen3.8-27b t1b s3 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1pilot s3: status=ok parse_error=None
+adaption-qwen3.8-27b t1pilot s3 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b v3dev s1: status=ok parse_error=None
+adaption-qwen3.8-27b v3dev s1 {'skipped_done': 1018, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1b s1: status=ok parse_error=None
+  adaption-qwen3.8-27b: 50/483
+  adaption-qwen3.8-27b: 100/483
+  adaption-qwen3.8-27b: 150/483
+  adaption-qwen3.8-27b: 200/483
+  adaption-qwen3.8-27b: 250/483
+  adaption-qwen3.8-27b: 300/483
+  adaption-qwen3.8-27b: 350/483
+  adaption-qwen3.8-27b: 400/483
+  adaption-qwen3.8-27b: 450/483
+adaption-qwen3.8-27b t1b s1 {'skipped_done': 61, 'ok': 481, 'refusal': 0, 'truncated': 1, 'error': 1, 'parse_error': 1, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1pilot s1: status=ok parse_error=None
+  adaption-qwen3.8-27b: 50/265
+  adaption-qwen3.8-27b: 100/265
+  adaption-qwen3.8-27b: 150/265
+  adaption-qwen3.8-27b: 200/265
+  adaption-qwen3.8-27b: 250/265
+adaption-qwen3.8-27b t1pilot s1 {'skipped_done': 1, 'ok': 264, 'refusal': 0, 'truncated': 1, 'error': 0, 'parse_error': 1, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 191.5526 of 519.4324
+=== 2026-11-14T16:08:26Z pass 2: v3 dev
+loaded from .env: ['ADAPTION_API_KEY']
+545 instances, 72 families, 2105 jobs per model; pools {'plan': 1419, 'decision': 72, 'judgment': 614}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 199.80
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 3658, 'output_tokens': 624, 'reasoning_tokens': 522, 'cached_input_tokens': 0} cost=credits 0.0009 served=qwen3.8-27b seconds=4.49
+adaption-qwen3.8-27b {'skipped_done': 2105, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 199.7974 of credits 519.43
+wrote results/aggregate/v3dev_by_model/adaption-qwen3.8-27b/pilot_dev/summary.json and report.md
+=== 2026-11-14T16:10:06Z pass 2: T1B
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 272 pairs (544 items) from 42 families
+317 instances, 42 families, 544 jobs per model; pools {'plan_t1': 544}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 199.90
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 3638, 'output_tokens': 6358, 'reasoning_tokens': 6228, 'cached_input_tokens': 0} cost=credits 0.0081 served=qwen3.8-27b seconds=105.17
+adaption-qwen3.8-27b {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 199.8995 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T16:10:07Z pass 2: T1 pilot native
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-qwen3.8-27b: written from SDK source, no live call yet; run --smoke first
+budget credits 519.43; already spent credits 199.90
+smoke adaption-qwen3.8-27b: status=ok parse_error=None tokens={'input_tokens': 2080, 'output_tokens': 2980, 'reasoning_tokens': 2858, 'cached_input_tokens': 0} cost=credits 0.0038 served=qwen3.8-27b seconds=21.02
+adaption-qwen3.8-27b {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 199.8995 of credits 519.43
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written
+=== 2026-11-14T16:10:09Z pass 2: EOP
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3', 's1']
+budget 519.4324; already spent 199.8995
+smoke adaption-qwen3.8-27b v3dev s3: status=ok parse_error=None
+adaption-qwen3.8-27b v3dev s3 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1b s3: status=ok parse_error=extraction invalid: TypeError: string indices must be integers, not 'str'
+adaption-qwen3.8-27b t1b s3 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1pilot s3: status=ok parse_error=None
+adaption-qwen3.8-27b t1pilot s3 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b v3dev s1: status=ok parse_error=None
+adaption-qwen3.8-27b v3dev s1 {'skipped_done': 1018, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1b s1: status=ok parse_error=None
+adaption-qwen3.8-27b t1b s1 {'skipped_done': 543, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.8-27b t1pilot s1: status=ok parse_error=None
+adaption-qwen3.8-27b t1pilot s1 {'skipped_done': 266, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 199.9062 of 519.4324
+=== 2026-11-14T16:10:53Z chain done

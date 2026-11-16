@@ -1,0 +1,67 @@
+{
+ "protocol": "ROBUST",
+ "commit_at_freeze": "ba04b3739b0b422cf5ae244099b074de9d2dc511",
+ "files_sha256": {
+  "PREREG_ROBUST.md": "faed176e17909df9275cd5fe58514908a20f53ca72fd9a2774d3d376330618f1",
+  "experiments/run_robust.py": "36d6fc5eb0787d1412e6c049d98c88ea4228efbb5b7aa3f58a9741ba5ae4042d",
+  "experiments/generate_robust.py": "cdbc81f01886668438196accfdd1fe42734bcdbf6e42deb60b07c30398d3b329",
+  "experiments/chain_robust.sh": "cd748160859641055b7c215510c84ba939bc58ec2638b59e9a68b3af6953b37d",
+  "experiments/run_eop.py": "253ec5e8120350adb62534b3fdbba09ad9ee7da82eff78ac4f10214a56f7d3a7",
+  "src/msep/benchmark/rephrase.py": "68b9c87a2fb451a5f3c333cf16b6b5f359258451c4d2dc3e5ecb15e1b83ffc30",
+  "src/msep/controllers/extraction_v3.py": "fe17086a4d6b579fad5d3317cad3d59a1f03eb59f001f087df6a593742f87b75",
+  "src/msep/controllers/llm_extractor.py": "a5aa1075f37142b98420bd1f0aa56d5ef243ae5888d7f3ba860057d24ff81018",
+  "src/msep/controllers/realistic_planner.py": "907b6a062fea71551bdfa5a46582aba4f1e6a05b7a79ffbf2489d50238c1252a",
+  "src/msep/eval/extraction_match.py": "489b686eea776373ee9ed3be6c66785f3d475bf7d4bcd2749b7431fc002869b1",
+  "src/msep/benchmark/parsing.py": "7e9d9a86d0ec6afe3940aae21ce55e4fdfd948286aa3541f1545189932be2003",
+  "src/msep/models/prompts_s1.py": "5ebc26c1622ce79294dc2f453f5545aa34b5ac87208a5c112b2e5262512e0323",
+  "src/msep/models/prompts.py": "9c43c9a4a0720fe5abfce07c236af92847f4e22cca24ed44e162d0a4166706a3",
+  "src/msep/models/runner.py": "f9b21b12e22987c02ede6d00876861baa3a2e704bdfd16ad5f5bf4f73ea4c3e8",
+  "src/msep/eval/pilot.py": "227a30b4329162d245b233512c1839f59511017ad8c1520e6a88c241aaaf63e8",
+  "src/msep/eval/plan_metrics.py": "dde88a9086dd1d968a8f8f3607ee9a3a1da843d7a6678b5f57138ab01f46f01d",
+  "src/msep/eval/bootstrap.py": "e11dbfde78eaba16b5f2a867a00e25f30136065645ea18b2c3cdc91050929e07",
+  "data/generated/robust_v1/items.jsonl": "01670d42760f571daf2ecb2b0730e6dcda29aee1f647c3fb59da9116a6567e9a",
+  "data/generated/robust_v1/validation.json": "f1e320ff10d7380a5d9239aae78006919438b7bfc55de0d56bea9e6d7245bc2c",
+  "ROBUST_AUDIT.md": "1b281e1ed8bbc6c548a86a46849c5fdaa2ee6dbe89a7934497a01ebfe68f5651",
+  "data/robust_v1_validation.json": "f1e320ff10d7380a5d9239aae78006919438b7bfc55de0d56bea9e6d7245bc2c",
+  "data/generated/pool_v3/instances.jsonl": "660012bdae121635dcaef41a3b018da0bf31cfd2553757f797c8a3267680e2cd"
+ },
+ "models": {
+  "adaption-qwen3.5-397b": {
+   "model_id": "qwen3.5-397b",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2
+   }
+  },
+  "adaption-qwen3.8-27b": {
+   "model_id": "qwen3.8-27b",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2
+   }
+  },
+  "adaption-gemma-4-26b-a4b-it-schema": {
+   "model_id": "gemma-4-26b-a4b-it",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2,
+    "structured": "function_tool"
+   }
+  },
+  "adaption-deepseek-v4-flash": {
+   "model_id": "deepseek-v4-flash",
+   "settings": {
+    "max_tokens": 16000,
+    "temperature": 0.0,
+    "stream": true,
+    "max_retries": 2
+   }
+  }
+ }
+}

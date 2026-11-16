@@ -1,0 +1,122 @@
+{
+ "split": "test",
+ "exploratory": true,
+ "states_offering_a_computation_for_a_known_computational_fact": {
+  "n": 214,
+  "of": 232
+ },
+ "models": {
+  "adaption-qwen3.5-397b": {
+   "native_already_sufficient": {
+    "already_sufficient_items": 63,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 55,
+    "non_empty_plan": 8,
+    "every_action_reveals_only_known_values": 5,
+    "some_action_reveals_an_unknown_value": 3,
+    "a_computation_on_an_already_known_computational_fact": 5,
+    "plan_is_computation_only": 8,
+    "rate_non_empty_plan": 0.12698412698412698,
+    "rate_acting_on_an_unknown_value": 0.047619047619047616
+   },
+   "edited_into_already_sufficient": {
+    "already_sufficient_items": 169,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 135,
+    "non_empty_plan": 34,
+    "every_action_reveals_only_known_values": 21,
+    "some_action_reveals_an_unknown_value": 13,
+    "a_computation_on_an_already_known_computational_fact": 23,
+    "plan_is_computation_only": 31,
+    "rate_non_empty_plan": 0.20118343195266272,
+    "rate_acting_on_an_unknown_value": 0.07692307692307693
+   }
+  },
+  "adaption-qwen3.8-27b": {
+   "native_already_sufficient": {
+    "already_sufficient_items": 63,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 63,
+    "non_empty_plan": 0,
+    "every_action_reveals_only_known_values": 0,
+    "some_action_reveals_an_unknown_value": 0,
+    "a_computation_on_an_already_known_computational_fact": 0,
+    "plan_is_computation_only": 0,
+    "rate_non_empty_plan": 0.0,
+    "rate_acting_on_an_unknown_value": 0.0
+   },
+   "edited_into_already_sufficient": {
+    "already_sufficient_items": 169,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 169,
+    "non_empty_plan": 0,
+    "every_action_reveals_only_known_values": 0,
+    "some_action_reveals_an_unknown_value": 0,
+    "a_computation_on_an_already_known_computational_fact": 0,
+    "plan_is_computation_only": 0,
+    "rate_non_empty_plan": 0.0,
+    "rate_acting_on_an_unknown_value": 0.0
+   }
+  },
+  "adaption-deepseek-v4-flash": {
+   "native_already_sufficient": {
+    "already_sufficient_items": 63,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 63,
+    "non_empty_plan": 0,
+    "every_action_reveals_only_known_values": 0,
+    "some_action_reveals_an_unknown_value": 0,
+    "a_computation_on_an_already_known_computational_fact": 0,
+    "plan_is_computation_only": 0,
+    "rate_non_empty_plan": 0.0,
+    "rate_acting_on_an_unknown_value": 0.0
+   },
+   "edited_into_already_sufficient": {
+    "already_sufficient_items": 169,
+    "no_response": 0,
+    "unparsed": 0,
+    "empty_plan": 169,
+    "non_empty_plan": 0,
+    "every_action_reveals_only_known_values": 0,
+    "some_action_reveals_an_unknown_value": 0,
+    "a_computation_on_an_already_known_computational_fact": 0,
+    "plan_is_computation_only": 0,
+    "rate_non_empty_plan": 0.0,
+    "rate_acting_on_an_unknown_value": 0.0
+   }
+  },
+  "adaption-gemma-4-26b-a4b-it-schema": {
+   "native_already_sufficient": {
+    "already_sufficient_items": 63,
+    "no_response": 0,
+    "unparsed": 4,
+    "empty_plan": 21,
+    "non_empty_plan": 38,
+    "every_action_reveals_only_known_values": 3,
+    "some_action_reveals_an_unknown_value": 35,
+    "a_computation_on_an_already_known_computational_fact": 5,
+    "plan_is_computation_only": 23,
+    "rate_non_empty_plan": 0.6031746031746031,
+    "rate_acting_on_an_unknown_value": 0.5555555555555556
+   },
+   "edited_into_already_sufficient": {
+    "already_sufficient_items": 169,
+    "no_response": 0,
+    "unparsed": 12,
+    "empty_plan": 48,
+    "non_empty_plan": 109,
+    "every_action_reveals_only_known_values": 13,
+    "some_action_reveals_an_unknown_value": 96,
+    "a_computation_on_an_already_known_computational_fact": 26,
+    "plan_is_computation_only": 63,
+    "rate_non_empty_plan": 0.6449704142011834,
+    "rate_acting_on_an_unknown_value": 0.5680473372781065
+   }
+  }
+ }
+}

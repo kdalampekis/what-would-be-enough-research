@@ -1,0 +1,14 @@
+loaded from .env: ['ADAPTION_API_KEY']
+T1 pairs: 133 pairs (266 items) from 20 families
+154 instances, 20 families, 266 jobs per model; pools {'plan_t1': 266}
+WARNING adaption-gemma-4-26b-a4b-it-schema: written from SDK source, no live call yet; run --smoke first
+budget credits 22.69; already spent credits 12.05
+smoke adaption-gemma-4-26b-a4b-it-schema: status=ok parse_error=None tokens={'input_tokens': 2294, 'output_tokens': 197, 'reasoning_tokens': 0, 'cached_input_tokens': 256} cost=credits 0.0002 served=gemma-4-26b-a4b-it seconds=1.29
+  adaption-gemma-4-26b-a4b-it-schema: 50/265
+  adaption-gemma-4-26b-a4b-it-schema: 100/265
+  adaption-gemma-4-26b-a4b-it-schema: 150/265
+  adaption-gemma-4-26b-a4b-it-schema: 200/265
+  adaption-gemma-4-26b-a4b-it-schema: 250/265
+adaption-gemma-4-26b-a4b-it-schema {'skipped_done': 1, 'ok': 262, 'refusal': 0, 'truncated': 3, 'error': 0, 'parse_error': 8, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative estimated spend credits 12.1299 of credits 22.69
+T1 run: analysis is experiments/analyze_t1.py (pair metrics); the v3 report is not written

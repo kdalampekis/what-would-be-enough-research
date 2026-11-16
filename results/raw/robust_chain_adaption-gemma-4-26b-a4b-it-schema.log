@@ -1,0 +1,79 @@
+=== 2026-11-14T20:37:28Z pass 1
+robustness study: 548 variant items; conditions ['frozen', 's3v3', 'a', 's1']
+budget 519.4324; already spent 204.7137
+=== 2026-11-14T20:41:26Z restarted at concurrency 6 (scheduling only)
+=== 2026-11-14T20:41:26Z pass 1
+robustness study: 548 variant items; conditions ['frozen', 's3v3', 'a', 's1']
+budget 519.4324; already spent 205.8610
+  adaption-gemma-4-26b-a4b-it-schema: 50/548
+  adaption-gemma-4-26b-a4b-it-schema: 100/548
+  adaption-gemma-4-26b-a4b-it-schema: 150/548
+  adaption-gemma-4-26b-a4b-it-schema: 200/548
+  adaption-gemma-4-26b-a4b-it-schema: 250/548
+  adaption-gemma-4-26b-a4b-it-schema: 300/548
+  adaption-gemma-4-26b-a4b-it-schema: 350/548
+  adaption-gemma-4-26b-a4b-it-schema: 400/548
+  adaption-gemma-4-26b-a4b-it-schema: 450/548
+  adaption-gemma-4-26b-a4b-it-schema: 500/548
+adaption-gemma-4-26b-a4b-it-schema s3 {'skipped_done': 0, 'ok': 474, 'refusal': 0, 'truncated': 0, 'error': 74, 'parse_error': 161, 'budget_stopped': 0, 'retry_cap_reached': 0}
+  adaption-gemma-4-26b-a4b-it-schema: 50/548
+  adaption-gemma-4-26b-a4b-it-schema: 100/548
+  adaption-gemma-4-26b-a4b-it-schema: 150/548
+  adaption-gemma-4-26b-a4b-it-schema: 200/548
+  adaption-gemma-4-26b-a4b-it-schema: 250/548
+  adaption-gemma-4-26b-a4b-it-schema: 300/548
+  adaption-gemma-4-26b-a4b-it-schema: 350/548
+  adaption-gemma-4-26b-a4b-it-schema: 400/548
+  adaption-gemma-4-26b-a4b-it-schema: 450/548
+  adaption-gemma-4-26b-a4b-it-schema: 500/548
+adaption-gemma-4-26b-a4b-it-schema s3v3 {'skipped_done': 0, 'ok': 540, 'refusal': 0, 'truncated': 0, 'error': 8, 'parse_error': 454, 'budget_stopped': 0, 'retry_cap_reached': 0}
+  adaption-gemma-4-26b-a4b-it-schema: 50/548
+  adaption-gemma-4-26b-a4b-it-schema: 100/548
+  adaption-gemma-4-26b-a4b-it-schema: 150/548
+  adaption-gemma-4-26b-a4b-it-schema: 200/548
+  adaption-gemma-4-26b-a4b-it-schema: 250/548
+  adaption-gemma-4-26b-a4b-it-schema: 300/548
+  adaption-gemma-4-26b-a4b-it-schema: 350/548
+  adaption-gemma-4-26b-a4b-it-schema: 400/548
+  adaption-gemma-4-26b-a4b-it-schema: 450/548
+  adaption-gemma-4-26b-a4b-it-schema: 500/548
+adaption-gemma-4-26b-a4b-it-schema a {'skipped_done': 0, 'ok': 544, 'refusal': 0, 'truncated': 3, 'error': 1, 'parse_error': 42, 'budget_stopped': 0, 'retry_cap_reached': 0}
+  adaption-gemma-4-26b-a4b-it-schema: 50/548
+  adaption-gemma-4-26b-a4b-it-schema: 100/548
+  adaption-gemma-4-26b-a4b-it-schema: 150/548
+  adaption-gemma-4-26b-a4b-it-schema: 200/548
+  adaption-gemma-4-26b-a4b-it-schema: 250/548
+  adaption-gemma-4-26b-a4b-it-schema: 300/548
+  adaption-gemma-4-26b-a4b-it-schema: 350/548
+  adaption-gemma-4-26b-a4b-it-schema: 400/548
+  adaption-gemma-4-26b-a4b-it-schema: 450/548
+  adaption-gemma-4-26b-a4b-it-schema: 500/548
+adaption-gemma-4-26b-a4b-it-schema s1 {'skipped_done': 0, 'ok': 537, 'refusal': 0, 'truncated': 11, 'error': 0, 'parse_error': 548, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 206.7837 of 519.4324
+=== 2026-11-15T08:09:58Z pass 2
+robustness study: 548 variant items; conditions ['frozen', 's3v3', 'a', 's1']
+budget 519.4324; already spent 296.5552
+  adaption-gemma-4-26b-a4b-it-schema: 50/74
+adaption-gemma-4-26b-a4b-it-schema s3 {'skipped_done': 474, 'ok': 74, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 23, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-gemma-4-26b-a4b-it-schema s3v3 {'skipped_done': 540, 'ok': 8, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 7, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-gemma-4-26b-a4b-it-schema a {'skipped_done': 547, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-gemma-4-26b-a4b-it-schema s1 {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 296.5917 of 519.4324
+=== 2026-11-15T08:56:12Z chain done
+=== 2026-11-15T22:35:31Z pass 1
+robustness study: 548 variant items; conditions ['frozen', 's3v3', 'a', 's1']
+budget 519.4324; already spent 435.9828
+adaption-gemma-4-26b-a4b-it-schema s3 {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-gemma-4-26b-a4b-it-schema s3v3 {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-gemma-4-26b-a4b-it-schema a {'skipped_done': 547, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-gemma-4-26b-a4b-it-schema s1 {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 435.9828 of 519.4324
+=== 2026-11-15T22:36:33Z pass 2
+robustness study: 548 variant items; conditions ['frozen', 's3v3', 'a', 's1']
+budget 519.4324; already spent 436.2941
+adaption-gemma-4-26b-a4b-it-schema s3 {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-gemma-4-26b-a4b-it-schema s3v3 {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+adaption-gemma-4-26b-a4b-it-schema a {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 1}
+adaption-gemma-4-26b-a4b-it-schema s1 {'skipped_done': 548, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 436.2941 of 519.4324
+=== 2026-11-15T22:36:34Z chain done

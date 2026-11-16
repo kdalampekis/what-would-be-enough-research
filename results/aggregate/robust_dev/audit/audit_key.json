@@ -1,0 +1,98 @@
+{
+ "T01": {
+  "instance_id": "Gf30b39cdfc-S05",
+  "kind": "lexical"
+ },
+ "T02": {
+  "instance_id": "G82650a3024-S04",
+  "kind": "syntax"
+ },
+ "T03": {
+  "instance_id": "Gca56ada511-S06",
+  "kind": "reorder"
+ },
+ "T04": {
+  "instance_id": "Gabfb15f4a5-S06",
+  "kind": "prose"
+ },
+ "T05": {
+  "instance_id": "Gf365b040a3-S03",
+  "kind": "lexical"
+ },
+ "T06": {
+  "instance_id": "Ge15acf24c5-S02",
+  "kind": "syntax"
+ },
+ "T07": {
+  "instance_id": "Ga6f5fa3ff8-S02",
+  "kind": "reorder"
+ },
+ "T08": {
+  "instance_id": "G2bb528a227-S02",
+  "kind": "prose"
+ },
+ "T09": {
+  "instance_id": "Ga3766fb47a-S01",
+  "kind": "lexical"
+ },
+ "T10": {
+  "instance_id": "Gde857630e9-S06",
+  "kind": "syntax"
+ },
+ "T11": {
+  "instance_id": "G986367d322-S05",
+  "kind": "reorder"
+ },
+ "T12": {
+  "instance_id": "G225ae9213e-S05",
+  "kind": "prose"
+ },
+ "T13": {
+  "instance_id": "G54e0f5f2dd-S05",
+  "kind": "lexical"
+ },
+ "T14": {
+  "instance_id": "Gb75a6f4786-S06",
+  "kind": "syntax"
+ },
+ "T15": {
+  "instance_id": "G17f523a5d4-S07",
+  "kind": "reorder"
+ },
+ "T16": {
+  "instance_id": "G3af5bcc283-S02",
+  "kind": "prose"
+ },
+ "T17": {
+  "instance_id": "G3361f867df-S08",
+  "kind": "lexical"
+ },
+ "T18": {
+  "instance_id": "Gab7dc8eaae-S06",
+  "kind": "syntax"
+ },
+ "T19": {
+  "instance_id": "G9e6aab85f4-S01",
+  "kind": "reorder"
+ },
+ "T20": {
+  "instance_id": "G7b6b93d6c0-S02",
+  "kind": "prose"
+ },
+ "T21": {
+  "instance_id": "G13ed3ef47d-S03",
+  "kind": "lexical"
+ },
+ "T22": {
+  "instance_id": "Gb00898ee0b-S07",
+  "kind": "syntax"
+ },
+ "T23": {
+  "instance_id": "G01b67af98a-S07",
+  "kind": "reorder"
+ },
+ "T24": {
+  "instance_id": "G39da6f59d4-S03",
+  "kind": "prose"
+ }
+}

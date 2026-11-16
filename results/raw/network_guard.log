@@ -1,0 +1,11 @@
+2026-11-14T23:28:51Z guard started
+2026-11-15T00:29:19Z provider unreachable: paused 8 processes
+2026-11-15T00:29:40Z provider reachable: resumed 8 processes
+2026-11-15T00:30:58Z provider unreachable: paused 8 processes
+2026-11-15T00:50:39Z provider reachable: resumed 8 processes
+2026-11-15T20:22:42Z provider answers 502 'Model provider request failed' for deepseek-v4-flash since 19:57Z: paused 1 processes by hand (owner's instruction)
+2026-11-15T20:54:41Z resumed by hand to test whether the provider answers deepseek-v4-flash again (owner's instruction; rule in results/aggregate/final_test/INTERIM_NOTE.md)
+2026-11-15T20:55:30Z provider answers deepseek-v4-flash again: run left running
+2026-11-15T21:03:31Z guard started
+2026-11-15T22:27:40Z deepseek-v4-flash held-out chain finished (7,759 of 7,759) at 22:26:37Z, before the 00:00Z cut-off
+2026-11-16T00:17:53Z guard started

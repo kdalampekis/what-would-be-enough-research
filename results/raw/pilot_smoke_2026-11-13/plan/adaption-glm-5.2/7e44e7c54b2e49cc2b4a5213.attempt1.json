@@ -1,0 +1,46 @@
+{
+ "job_id": "7e44e7c54b2e49cc2b4a5213",
+ "model_key": "adaption-glm-5.2",
+ "model_id": "glm-5.2",
+ "provider": "adaption",
+ "served_model": null,
+ "prompt_version": "msep-prompts-v2-certified-compute",
+ "pool": "plan",
+ "instance_id": "G1fa1c8da9e-S01",
+ "family_id": "G1fa1c8da9e",
+ "mode": "end_to_end",
+ "candidate": [],
+ "meta": {},
+ "prompt_sha256": "eae2021d06df782b5f82268e8db0ef9d4f1ea69f63eefc8d299702deed7565fa",
+ "request": {
+  "model": "glm-5.2",
+  "input": "Decision: is it true that the experiment run is approved (Q)?\n\nFacts about the world (each is true or false):\n  F1: the centrifuge is calibrated\n  F2: the protocol version is current\n  F3: the reagent batch arrived\n  F4: the freezer log was checked\n  F5: the safety officer signed off\n  F6: condition F6 is met\n  F7: the visitor list is closed\n  F8: the waste bin was emptied\n  F9: the backup generator is tested\nComputational facts (each is fully determined by inputs shown here; its certified value is not yet known):\n  K1: the following constraint set over x1..x20 is satisfiable (all 85 clauses true at once): (x17 or x4 or not x9); (x5 or x8 or x11); (x5 or not x12 or x6); (not x17 or not x9 or not x19); (x4 or x19 or not x7); (x2 or not x16 or not x20); (not x6 or x14 or x8); (not x10 or not x17 or x4); (not x4 or x7 or not x17); (x18 or not x14 or x11); (x20 or x6 or not x10); (not x11 or not x3 or x13); (x18 or not x17 or x7); (x16 or not x12 or not x19); (x7 or x13 or x14); (not x17 or not x10 or x4); (not x19 or x17 or not x1); (not x16 or not x18 or x9); (x13 or x14 or x9); (not x13 or not x2 or x9); (x9 or x20 or x15); (x13 or not x17 or not x9); (not x3 or not x5 or x12); (not x11 or not x16 or x10); (x15 or not x6 or x16); (x20 or x5 or x11); (not x1 or x17 or x6); (not x14 or x1 or not x20); (not x8 or x3 or not x4); (not x1 or x3 or not x6); (not x14 or x1 or x11); (not x15 or x19 or x9); (x5 or not x7 or not x2); (x16 or not x6 or x1); (not x9 or not x20 or not x18); (x16 or x15 or x6); (x17 or not x16 or x2); (not x14 or not x3 or x6); (x20 or x5 or x4); (not x2 or not x5 or not x12); (not x9 or x11 or not x14); (not x18 or not x5 or not x14); (x1 or not x13 or not x19); (x17 or not x6 or x14); (x14 or x5 or not x20); (not x2 or not x16 or not x15); (not x17 or not x8 or x4); (not x18 or x6 or not x12); (not x17 or x5 or not x3); (x1 or not x13 or not x6); (not x15 or x12 or not x9); (not x17 or not x6 or x4); (not x13 or x6 or not x14); (not x2 or x15 or x17); (x19 or not x8 or x1); (x14 or x16 or not x19); (x5 or not x18 or not x6); (not x13 or x9 or x4); (x13 or x9 or x5); (x8 or not x13 or not x16); (x7 or not x13 or x11); (x18 or not x2 or x6); (x17 or not x18 or x4); (not x7 or x9 or x6); (x17 or not x14 or x16); (not x16 or x1 or x3); (x13 or not x10 or not x5); (not x1 or x8 or x14); (x14 or not x12 or x11); (x14 or x9 or not x15); (not x9 or x10 or x12); (x14 or not x15 or not x16); (not x13 or x4 or not x2); (not x8 or not x9 or not x10); (x5 or x4 or not x16); (not x4 or x6 or not x18); (not x12 or x20 or x17); (not x5 or x13 or not x11); (not x14 or x9 or x17); (x10 or x14 or x17); (x12 or not x11 or x15); (x15 or not x17 or x18); (not x19 or not x17 or not x7); (not x15 or not x3 or x2); (x3 or x20 or not x5)\n\nRules (all of these are true):\n  1. if not F4 then not F2\n  2. if not F5 then F6\n  3. if not F9 then F8\n  4. F7 if and only if (F1 and not F2)\n  5. Q if and only if ((F4 if and only if not (not F7)) and K1)\n  6. if not F3 then not F4\n  7. if F8 then not F5\n\nKnown so far: F4 is true; F6 is true; F7 is true; K1 is true\n\nAvailable actions:\n  ASK_F1 (information, cost 3): find out the value of F1\n  ASK_F2 (information, cost 4): find out the value of F2\n  ASK_F2_F4 (information, cost 8): find out the value of F2, F4\n  ASK_F3 (information, cost 2): find out the value of F3\n  ASK_F4 (information, cost 2): find out the value of F4\n  ASK_F6 (information, cost 3): find out the value of F6\n  ASK_F8 (information, cost 1): find out the value of F8\n  ASK_F9 (information, cost 1): find out the value of F9\n  RUN_SOLVER_K1 (computation, cost 1): run the certified procedure and record the value of K1\n\nDecision rule: a decision about Q is justified only if it follows with certainty from the rules and the known values.\nInformation actions (ASK_...) are the only way to obtain new evidence about the world. Computation actions run a certified procedure (code execution, a primality test, a SAT solver, or an exact posterior calculation) on inputs you already have; a computational fact becomes part of the decision state only through its certified result, not through an uncertified estimate. You are choosing a plan before running anything: actions are chosen together, before any result is seen.\n\n\nAnswer with one JSON object and nothing else:\n{\n  \"state_sufficient\": true or false,\n  \"resource_class\": \"ALREADY_SUFFICIENT\" | \"INFORMATION_ONLY\" | \"COMPUTATION_ONLY\" | \"BOTH\" | \"NEITHER\",\n  \"plan\": [{\"type\": \"ASK\" or \"COMPUTE\", \"action\": \"<action name exactly as listed>\"}],\n  \"stop_after_plan\": true or false,\n  \"decision\": \"true\" | \"false\" | \"defer\",\n  \"confidence\": number between 0 and 1,\n  \"short_justification\": \"<one or two sentences>\"\n}\n\"plan\" is the cheapest set of actions that would make the decision justified whatever their results are.\nUse an empty plan if the decision is already justified, or if no available plan can justify it.\n\"decision\" is your answer about Q now if the decision is already justified, otherwise \"defer\".",
+  "max_output_tokens": 8000,
+  "store": false,
+  "temperature": 0.0
+ },
+ "status": "error",
+ "error": "504: <html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n</body>\r\n</html>",
+ "usage": {},
+ "tokens": {
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "reasoning_tokens": null,
+  "cached_input_tokens": null
+ },
+ "cost_usd": 0.0,
+ "prices": {
+  "currency": "credits",
+  "input_per_mtok": 1.4,
+  "output_per_mtok": 4.4,
+  "source": "Adaption Models docs page (pasted 2026-11-13)"
+ },
+ "raw_response": {
+  "error": "<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body>\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n</body>\r\n</html>"
+ },
+ "text": null,
+ "parsed": null,
+ "parse_error": null,
+ "seconds": 375.6,
+ "timestamp": "2026-11-13T15:14:49.442687+00:00"
+}

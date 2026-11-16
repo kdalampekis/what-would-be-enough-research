@@ -1,0 +1,2 @@
+{"model_key": "adaption-glm-5.2", "job_id": "7e44e7c54b2e49cc2b4a5213", "pool": "plan", "status": "error", "input_tokens": 0, "output_tokens": 0, "reasoning_tokens": null, "cached_input_tokens": null, "cost_usd": 0.0, "timestamp": "2026-11-13T15:14:49.441668+00:00"}
+{"model_key": "adaption-qwen3.5-397b", "job_id": "57a7807cb5049087ad440d38", "pool": "plan", "status": "ok", "input_tokens": 1954, "output_tokens": 4685, "reasoning_tokens": 4578, "cached_input_tokens": 0, "cost_usd": 0.0174722, "timestamp": "2026-11-13T15:16:55.387848+00:00"}

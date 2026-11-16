@@ -1,0 +1,51 @@
+=== 2026-11-14T11:37:36Z C' pass 1
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 167.9210
+smoke adaption-qwen3.5-397b v3dev s3v2: status=ok parse_error=None
+  adaption-qwen3.5-397b: 50/544
+  adaption-qwen3.5-397b: 100/544
+  adaption-qwen3.5-397b: 150/544
+  adaption-qwen3.5-397b: 200/544
+  adaption-qwen3.5-397b: 250/544
+=== 2026-11-14T13:10:13Z restarted at concurrency 24
+=== 2026-11-14T13:10:13Z C' pass 1
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 179.9323
+smoke adaption-qwen3.5-397b v3dev s3v2: status=ok parse_error=None
+  adaption-qwen3.5-397b: 50/291
+  adaption-qwen3.5-397b: 100/291
+  adaption-qwen3.5-397b: 150/291
+  adaption-qwen3.5-397b: 200/291
+  adaption-qwen3.5-397b: 250/291
+adaption-qwen3.5-397b v3dev s3v2 {'skipped_done': 254, 'ok': 291, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.5-397b t1b s3v2: status=ok parse_error=None
+  adaption-qwen3.5-397b: 50/543
+  adaption-qwen3.5-397b: 100/543
+  adaption-qwen3.5-397b: 150/543
+  adaption-qwen3.5-397b: 200/543
+  adaption-qwen3.5-397b: 250/543
+  adaption-qwen3.5-397b: 300/543
+  adaption-qwen3.5-397b: 350/543
+  adaption-qwen3.5-397b: 400/543
+  adaption-qwen3.5-397b: 450/543
+  adaption-qwen3.5-397b: 500/543
+adaption-qwen3.5-397b t1b s3v2 {'skipped_done': 1, 'ok': 532, 'refusal': 0, 'truncated': 0, 'error': 11, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.5-397b t1pilot s3v2: status=ok parse_error=None
+  adaption-qwen3.5-397b: 50/265
+  adaption-qwen3.5-397b: 100/265
+  adaption-qwen3.5-397b: 150/265
+  adaption-qwen3.5-397b: 200/265
+  adaption-qwen3.5-397b: 250/265
+adaption-qwen3.5-397b t1pilot s3v2 {'skipped_done': 1, 'ok': 264, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 194.0164 of 519.4324
+=== 2026-11-14T16:05:20Z C' pass 2
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 199.4587
+smoke adaption-qwen3.5-397b v3dev s3v2: status=ok parse_error=None
+adaption-qwen3.5-397b v3dev s3v2 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.5-397b t1b s3v2: status=ok parse_error=None
+adaption-qwen3.5-397b t1b s3v2 {'skipped_done': 533, 'ok': 11, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-qwen3.5-397b t1pilot s3v2: status=ok parse_error=None
+adaption-qwen3.5-397b t1pilot s3v2 {'skipped_done': 265, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 199.6319 of 519.4324
+=== C' done

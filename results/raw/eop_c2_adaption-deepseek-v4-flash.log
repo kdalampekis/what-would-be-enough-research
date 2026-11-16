@@ -1,0 +1,46 @@
+=== 2026-11-14T11:37:36Z C' pass 1
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 167.9210
+smoke adaption-deepseek-v4-flash v3dev s3v2: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/544
+  adaption-deepseek-v4-flash: 100/544
+  adaption-deepseek-v4-flash: 150/544
+  adaption-deepseek-v4-flash: 200/544
+  adaption-deepseek-v4-flash: 250/544
+  adaption-deepseek-v4-flash: 300/544
+  adaption-deepseek-v4-flash: 350/544
+  adaption-deepseek-v4-flash: 400/544
+  adaption-deepseek-v4-flash: 450/544
+  adaption-deepseek-v4-flash: 500/544
+adaption-deepseek-v4-flash v3dev s3v2 {'skipped_done': 1, 'ok': 544, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1b s3v2: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/543
+  adaption-deepseek-v4-flash: 100/543
+  adaption-deepseek-v4-flash: 150/543
+  adaption-deepseek-v4-flash: 200/543
+  adaption-deepseek-v4-flash: 250/543
+  adaption-deepseek-v4-flash: 300/543
+  adaption-deepseek-v4-flash: 350/543
+  adaption-deepseek-v4-flash: 400/543
+  adaption-deepseek-v4-flash: 450/543
+  adaption-deepseek-v4-flash: 500/543
+adaption-deepseek-v4-flash t1b s3v2 {'skipped_done': 1, 'ok': 543, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1pilot s3v2: status=ok parse_error=None
+  adaption-deepseek-v4-flash: 50/265
+  adaption-deepseek-v4-flash: 100/265
+  adaption-deepseek-v4-flash: 150/265
+  adaption-deepseek-v4-flash: 200/265
+  adaption-deepseek-v4-flash: 250/265
+adaption-deepseek-v4-flash t1pilot s3v2 {'skipped_done': 1, 'ok': 264, 'refusal': 0, 'truncated': 0, 'error': 1, 'parse_error': 1, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 168.2455 of 519.4324
+=== 2026-11-14T15:39:37Z C' pass 2
+EOP comparison (msep-s1-obligations-v1); sets [('v3dev', 545), ('t1b', 544), ('t1pilot', 266)]; conditions ['s3v2']
+budget 519.4324; already spent 195.7572
+smoke adaption-deepseek-v4-flash v3dev s3v2: status=ok parse_error=None
+adaption-deepseek-v4-flash v3dev s3v2 {'skipped_done': 545, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1b s3v2: status=ok parse_error=None
+adaption-deepseek-v4-flash t1b s3v2 {'skipped_done': 544, 'ok': 0, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+smoke adaption-deepseek-v4-flash t1pilot s3v2: status=ok parse_error=None
+adaption-deepseek-v4-flash t1pilot s3v2 {'skipped_done': 265, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 195.7575 of 519.4324
+=== C' done

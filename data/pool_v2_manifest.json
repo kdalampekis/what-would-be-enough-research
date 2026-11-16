@@ -1,0 +1,33 @@
+{
+  "families": 300,
+  "seed_offset": 0,
+  "instances": 3300,
+  "sibling_types": {
+    "ALREADY_SUFFICIENT": 300,
+    "INFORMATION_ONLY": 300,
+    "COMPUTATION_ONLY": 300,
+    "BOTH": 300,
+    "NEITHER": 300,
+    "RELEVANT_INSUFFICIENT_INFORMATION": 300,
+    "RELEVANT_INSUFFICIENT_COMPUTATION": 300,
+    "SUFFICIENT_NON_MINIMAL": 300,
+    "MULTIPLE_PLANS_DIFFERENT_COSTS": 300,
+    "PREMATURE_STOP": 300,
+    "UNNECESSARY_EXTRA_ACTION": 300
+  },
+  "resource_classes": {
+    "ALREADY_SUFFICIENT": 300,
+    "INFORMATION_ONLY": 1500,
+    "COMPUTATION_ONLY": 600,
+    "BOTH": 600,
+    "NEITHER": 300
+  },
+  "families_per_split": {
+    "train": 166,
+    "test": 73,
+    "dev": 61
+  },
+  "instances_jsonl_sha256": "0330a6a2c8a70d05c690686963816f70737942a26634d43ee5eb30d03050cb43",
+  "regenerate": "python experiments/generate_benchmark.py --families 300 --out data/generated/pool_v2",
+  "family_template": "v2 (randomised redundant actions, 6 distractors, decoy noise); supersedes pool_v1 after the shortcut audit"
+}

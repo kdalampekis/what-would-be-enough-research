@@ -1,0 +1,41 @@
+Decision: is it true that Q holds (Q)?
+
+Facts about the world (each is true or false):
+  F1: fact E holds
+  F2: fact H holds
+  F3: fact B holds
+  F4: fact A holds
+  F5: fact C holds
+  F6: fact G holds
+  F7: fact D holds
+Computational facts (each is fully determined by inputs shown here; its certified value is not yet known):
+  K1: the following constraint set over x1..x20 is satisfiable (all 85 clauses true at once): (not x15 or not x10 or not x8); (x4 or not x12 or not x13); (not x1 or not x6 or x15); (not x20 or x8 or x3); (not x3 or x19 or not x17); (x16 or x10 or not x17); (x19 or not x17 or x20); (not x14 or not x1 or not x16); (not x3 or x20 or not x9); (not x9 or x7 or not x20); (x10 or x19 or x5); (x12 or not x16 or not x4); (not x18 or not x2 or not x7); (x5 or x2 or not x6); (x19 or not x10 or x11); (not x16 or x5 or not x3); (x5 or x17 or x11); (not x3 or x16 or x4); (not x13 or x2 or not x1); (not x19 or not x16 or x1); (not x4 or x19 or x11); (x19 or x10 or not x20); (x8 or not x14 or not x7); (x11 or x10 or not x12); (x4 or x19 or x20); (x20 or x12 or x13); (x13 or x15 or x2); (x2 or not x17 or not x19); (not x11 or x1 or x6); (not x15 or x12 or not x18); (not x13 or x4 or x8); (not x11 or x2 or x10); (not x15 or x12 or x2); (not x3 or not x5 or not x6); (x19 or not x2 or x8); (x1 or x19 or not x14); (not x10 or not x19 or not x18); (not x12 or x1 or x2); (not x9 or x20 or x11); (not x1 or x17 or x19); (not x8 or not x9 or not x10); (not x15 or not x8 or not x5); (not x3 or not x16 or not x7); (x13 or x11 or x2); (not x6 or not x5 or x15); (x3 or not x6 or x17); (x5 or not x15 or not x14); (x19 or x20 or not x2); (not x12 or x6 or x18); (x12 or x6 or x20); (x18 or x20 or not x17); (x12 or not x15 or not x9); (not x6 or x9 or not x16); (x3 or x7 or x17); (x9 or not x13 or x15); (not x12 or x3 or not x9); (not x20 or x12 or x1); (not x5 or not x11 or x8); (x15 or not x16 or not x9); (not x16 or not x12 or x13); (x18 or x14 or not x7); (not x9 or x17 or x6); (x4 or not x11 or x19); (x3 or x10 or not x8); (x5 or x20 or not x18); (x6 or not x9 or x3); (not x1 or x5 or not x18); (not x3 or not x6 or not x11); (not x4 or x5 or x7); (not x6 or not x16 or not x15); (not x13 or x10 or x15); (not x20 or not x16 or x13); (x18 or x10 or x9); (x11 or not x12 or x5); (not x12 or x19 or x8); (x19 or x18 or x5); (not x1 or x7 or not x10); (not x11 or x6 or x1); (x18 or not x15 or x2); (not x11 or not x17 or x15); (x4 or x8 or not x3); (not x14 or x8 or not x5); (not x14 or x10 or x4); (not x4 or not x10 or x1); (not x3 or not x20 or not x16)
+  K2: pow(54775257691, 13138314301, 31692351546) equals 12368726401
+  K3: P(H | all six observations seen) exceeds 0.374, where P(H) = 7/10, the observations are independent given H and given not H, and observation 1: P(seen | H) = 9/10, P(seen | not H) = 7/10; observation 2: P(seen | H) = 1/5, P(seen | not H) = 13/20; observation 3: P(seen | H) = 3/10, P(seen | not H) = 17/20; observation 4: P(seen | H) = 2/5, P(seen | not H) = 1/4; observation 5: P(seen | H) = 13/20, P(seen | not H) = 1/5; observation 6: P(seen | H) = 1/4, P(seen | not H) = 13/20
+  K4: pow(17180278417, 10385762165, 567708172870) equals 164271860544
+  K5: the following constraint set over x1..x20 is satisfiable (all 85 clauses true at once): (not x15 or x13 or not x17); (not x10 or x1 or not x6); (x14 or not x13 or x12); (x13 or not x15 or x1); (not x1 or not x5 or not x7); (not x16 or not x6 or not x3); (x14 or not x12 or not x5); (not x10 or not x6 or not x1); (not x14 or x3 or x18); (x15 or x17 or x8); (not x14 or x13 or x19); (x18 or x11 or x2); (not x9 or not x6 or x15); (x3 or x2 or not x5); (x15 or x12 or x17); (x16 or not x8 or not x17); (not x20 or x10 or x17); (not x13 or x18 or x17); (x17 or not x14 or not x2); (not x17 or not x15 or not x8); (x14 or x17 or x10); (x7 or not x5 or x19); (x19 or not x1 or x11); (x5 or x18 or not x17); (not x19 or x13 or x8); (not x13 or x15 or x3); (x9 or not x8 or not x15); (x10 or not x17 or not x18); (not x12 or x3 or x9); (x1 or x15 or x8); (x1 or not x6 or not x17); (not x1 or not x20 or not x6); (x7 or x12 or not x9); (not x7 or x17 or not x13); (not x1 or x17 or not x14); (not x1 or not x6 or not x11); (not x20 or x9 or not x11); (x3 or not x14 or x8); (not x14 or not x20 or x4); (x13 or x11 or not x5); (not x18 or not x19 or not x20); (x1 or x17 or x16); (not x20 or x7 or not x5); (x20 or x9 or not x18); (x6 or x5 or not x2); (x11 or x5 or x4); (not x9 or not x8 or x16); (not x7 or not x1 or x12); (x5 or not x3 or not x13); (x4 or not x10 or x18); (not x4 or not x17 or x14); (not x9 or not x2 or not x3); (x10 or not x16 or not x15); (x9 or x7 or not x4); (not x16 or not x13 or x11); (not x13 or x1 or x20); (not x4 or not x20 or not x2); (not x13 or x12 or not x6); (not x13 or not x14 or not x2); (x13 or not x19 or not x6); (x8 or not x11 or not x18); (not x9 or not x12 or x2); (x17 or not x19 or not x13); (x16 or not x18 or x8); (x3 or x8 or x5); (not x5 or x17 or x19); (x10 or not x5 or x20); (x9 or not x17 or x5); (x3 or not x12 or not x14); (x3 or not x17 or x9); (x12 or x10 or not x6); (not x2 or x9 or not x15); (not x14 or x3 or not x13); (not x7 or x11 or not x4); (not x2 or not x7 or x10); (not x17 or not x3 or x11); (not x16 or x4 or x2); (not x6 or not x15 or x2); (x15 or x8 or not x3); (x4 or x8 or not x12); (not x2 or x16 or not x20); (not x20 or x14 or not x19); (x6 or not x3 or not x12); (x12 or not x18 or x9); (not x1 or x16 or x18)
+
+Rules (all of these are true):
+  1. F3 if and only if F7
+  2. Q if and only if (F7 or not F5 or not K2)
+  3. if F1 then K1
+  4. if F6 then not F7
+  5. if K4 then K2
+  6. if not F2 then not F4
+  7. if not K5 then K3
+
+Known so far: F5 is true; K1 is true; K5 is true
+
+Available actions:
+  ASK_F1 (information, cost 1): find out the value of F1
+  ASK_F2 (information, cost 3): find out the value of F2
+  ASK_F4 (information, cost 2): find out the value of F4
+  ASK_F5 (information, cost 2): find out the value of F5
+  ASK_F7 (information, cost 3): find out the value of F7
+  COMPUTE_POSTERIOR_K3 (computation, cost 3): run the certified procedure and record the value of K3
+  EXECUTE_CODE_K2 (computation, cost 2): run the certified procedure and record the value of K2
+  RUN_SOLVER_K1 (computation, cost 3): run the certified procedure and record the value of K1
+  RUN_SOLVER_K5 (computation, cost 1): run the certified procedure and record the value of K5
+
+Decision rule: a decision about Q is justified only if it follows with certainty from the rules and the known values.
+Information actions (ASK_...) are the only way to obtain new evidence about the world. Computation actions run a certified procedure (code execution, a primality test, a SAT solver, or an exact posterior calculation) on inputs you already have; a computational fact becomes part of the decision state only through its certified result, not through an uncertified estimate. You are choosing a plan before running anything: actions are chosen together, before any result is seen.

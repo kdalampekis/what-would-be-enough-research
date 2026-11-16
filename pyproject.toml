@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msep"
+version = "0.1.0"
+description = "What Would Be Enough? Minimal Sufficient Epistemic Planning benchmark"
+requires-python = ">=3.11"
+dependencies = ["python-sat>=1.8.dev1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+models = ["anthropic", "openai", "adaption>=0.19", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

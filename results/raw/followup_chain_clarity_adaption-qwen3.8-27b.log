@@ -1,0 +1,26 @@
+=== 2026-11-15T21:03:31Z clarity pass 1
+clarity: 872 jobs per model; budget 519.4324; already spent 426.0413
+  adaption-qwen3.8-27b: 50/872
+  adaption-qwen3.8-27b: 100/872
+  adaption-qwen3.8-27b: 150/872
+  adaption-qwen3.8-27b: 200/872
+  adaption-qwen3.8-27b: 250/872
+  adaption-qwen3.8-27b: 300/872
+  adaption-qwen3.8-27b: 350/872
+  adaption-qwen3.8-27b: 400/872
+  adaption-qwen3.8-27b: 450/872
+  adaption-qwen3.8-27b: 500/872
+  adaption-qwen3.8-27b: 550/872
+  adaption-qwen3.8-27b: 600/872
+  adaption-qwen3.8-27b: 650/872
+  adaption-qwen3.8-27b: 700/872
+  adaption-qwen3.8-27b: 750/872
+  adaption-qwen3.8-27b: 800/872
+  adaption-qwen3.8-27b: 850/872
+adaption-qwen3.8-27b {'skipped_done': 0, 'ok': 856, 'refusal': 0, 'truncated': 15, 'error': 1, 'parse_error': 15, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 429.2567 of 519.4324
+=== 2026-11-15T23:32:59Z clarity pass 2
+clarity: 872 jobs per model; budget 519.4324; already spent 455.9143
+adaption-qwen3.8-27b {'skipped_done': 871, 'ok': 1, 'refusal': 0, 'truncated': 0, 'error': 0, 'parse_error': 0, 'budget_stopped': 0, 'retry_cap_reached': 0}
+cumulative spend 455.9272 of 519.4324
+=== 2026-11-15T23:34:11Z chain done
