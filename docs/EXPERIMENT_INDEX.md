@@ -147,23 +147,23 @@ Status is one of: done (dev) · done (pre-sprint, no model) · running (held-out
 
 ## 3. Hypotheses
 
-H1–H6 are worded in [EXPERIMENT_PLAN.md](../research/working_documents/EXPERIMENT_PLAN.md) §2 (committed 2026-11-03). H-OI is in [PREREG_T1B.md](../PREREG_T1B.md). Held-out tests are in [PREREG_FINAL.md](../PREREG_FINAL.md) §5.
+H1–H6 are worded in [EXPERIMENT_PLAN.md](../research/working_documents/EXPERIMENT_PLAN.md) §2 (committed 2026-11-03). H-OI is in [PREREG_T1B.md](../experiments/preregistrations/PREREG_T1B.md). Held-out tests are in [PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §5.
 
 | ID | Claim as registered | Test registered in | Tested by | Dev result (source) | Tier on dev | Held-out test |
 |---|---|---|---|---|---|---|
-| H1 | "Models will perform better in Detection-Controlled mode than End-to-End mode, but substantial planning error will remain." | Exploratory by [PROTOCOL.md](../PROTOCOL.md) §8 | E2, mode decomposition | Plan optimal E2E → DC: 0.963→0.955 / 0.963→0.975 / 0.950→0.963 / 0.406→0.446. Share failing in all three modes: 0.00 / 0.00 / 0.00 / 0.09. V3 `by_model.<key>.plan_sufficiency_by_mode.*.optimal_all_answers`, `mode_decomposition` | 4 | None (descriptive on test) |
+| H1 | "Models will perform better in Detection-Controlled mode than End-to-End mode, but substantial planning error will remain." | Exploratory by [PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §8 | E2, mode decomposition | Plan optimal E2E → DC: 0.963→0.955 / 0.963→0.975 / 0.950→0.963 / 0.406→0.446. Share failing in all three modes: 0.00 / 0.00 / 0.00 / 0.09. V3 `by_model.<key>.plan_sufficiency_by_mode.*.optimal_all_answers`, `mode_decomposition` | 4 | None (descriptive on test) |
 | H2 | "Models may correctly identify [the class] while still selecting an insufficient or wasteful plan." | PROTOCOL.md §8 (test split only) | E3 vs plan sufficiency | Class correct − plan sufficient, DC, n = 401: −0.035 / −0.005 / +0.002 / −0.090. The registered direction is positive. V3 `E3.detection_controlled.h2_paired_class_minus_sufficient` | 4 | F0: pending (held-out run in progress) |
 | H3 | "Models will often choose interventions that are semantically relevant but do not actually make the decision sufficient." | PROTOCOL.md §8 (test split only) | E5 judgments | Sufficient − insufficient candidates judged correctly: −0.015 / +0.005 / +0.013 / −0.318. V3 `E5.a_judgment.paired_diff_sufficient_minus_insufficient` | 4 | F0: pending (held-out run in progress) |
 | H4 | "Models will perform disproportionately worse on instances requiring mixed information + computation than on single-resource instances." | PROTOCOL.md §8 as H4a, H4b (test split only) | E7 | Plan sufficient, IO − BOTH: 0.000 / +0.028 / +0.014 / +0.028. CO − BOTH: 0.000 / +0.014 / 0.000 / +0.097. V3 `E7.detection_controlled.paired_*_minus_BOTH_plan_sufficient` | 4 | F0: pending (held-out run in progress) |
 | H5 | "Even when models find a sufficient plan, they may over-consume resources or continue acting after sufficiency is achieved." | Exploratory by PROTOCOL.md §8 | E6, E8, E9, T1B | Optimal given sufficient (DC): 0.955 / 0.985 / 0.982 / 0.514. Correct defer on NEITHER (DC): 0.806 / 0.875 / 0.931 / 0.000. V3 `E6.detection_controlled.optimal_given_sufficient`, `E8.detection_controlled.correct_defer` | 4 | None (descriptive on test) |
-| H6 | "An obligation-guided planner will reduce insufficient actions, premature stopping, and excess resource cost relative to confidence-based and generic routing baselines." [PREREG_EOP.md](../PREREG_EOP.md) restates it "relative to native planning and a structured prompt". | PREREG_EOP.md "Comparisons" | EOP comparison | Registered C − A, plan optimal, DC: −0.264 / −0.329 / −0.935 / +0.546. Holm p: 1 / 1 / 1 / 0.0. Supported for gemma +schema only. EOP `v3dev.models.<key>.detection_controlled.paired["C-A\|plan_optimal"]`, `v3dev.confirmatory_C_minus_A_optimal_DC` | 1 (C); 3 (C′) | F1 (EOP − A, amended method): pending (held-out run in progress) |
+| H6 | "An obligation-guided planner will reduce insufficient actions, premature stopping, and excess resource cost relative to confidence-based and generic routing baselines." [PREREG_EOP.md](../experiments/preregistrations/PREREG_EOP.md) restates it "relative to native planning and a structured prompt". | PREREG_EOP.md "Comparisons" | EOP comparison | Registered C − A, plan optimal, DC: −0.264 / −0.329 / −0.935 / +0.546. Holm p: 1 / 1 / 1 / 0.0. Supported for gemma +schema only. EOP `v3dev.models.<key>.detection_controlled.paired["C-A\|plan_optimal"]`, `v3dev.confirmatory_C_minus_A_optimal_DC` | 1 (C); 3 (C′) | F1 (EOP − A, amended method): pending (held-out run in progress) |
 | H-OI | "When a single intervention makes a previously insufficient state already sufficient, models continue to propose information or computation actions that are no longer needed." | PREREG_T1B.md | T1B | O1 on 122 newly sufficient states: 0.172 / 0.000 / 0.016 / 0.680. T-OI-1 supported for qwen3.5-397b (Holm p 0.0012) and gemma +schema (Holm p 0.0). T-OI-2 supported for no model. T1B `models.<key>.{O1_into_AS,T_OI_1,T_OI_2}` | 2 | F2 (T-OI-1 only): pending (held-out run in progress) |
 
 Notes.
 
 - H6 was tested against native planning and a structured prompt only. The confidence-based and routing baselines named in EXPERIMENT_PLAN.md were not built (paper draft §3.3).
 - A Holm p of 0.0 in a file means no bootstrap resample fell at or below the threshold.
-- F1 tests the amended method. By [PREREG_FINAL.md](../PREREG_FINAL.md) §1 it cannot turn the registered dev result of C into a success.
+- F1 tests the amended method. By [PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §1 it cannot turn the registered dev result of C into a success.
 
 ## 4. Experiments
 
@@ -186,7 +186,7 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.2 Shortcut audit v2 → v3 and heuristic baselines
 
 - **Question.** Can the benchmark be solved from surface features or by reading one rule?
-- **Protocol.** Not registered. History: [BENCHMARK_CHANGELOG.md](../research/working_documents/BENCHMARK_CHANGELOG.md); reporting units: [PROTOCOL.md](../PROTOCOL.md) §6. Run 2026-11-04. Freeze: FREEZE_v3.json.
+- **Protocol.** Not registered. History: [BENCHMARK_CHANGELOG.md](../research/working_documents/BENCHMARK_CHANGELOG.md); reporting units: [PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §6. Run 2026-11-04. Freeze: FREEZE_v3.json.
 - **Data.** `pool_v2` (3,300 instances), `pool_v3` (2,282). Probe trained on train, read on dev; test not used.
 - **Models and settings.** None. Heuristics h1, h1p, h1pp read the prompt text only.
 - **Run.** `experiments/benchmark_audit.py`; `experiments/run_offline.py --baselines-only` (full commands in [README.md](../README.md)).
@@ -200,7 +200,7 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.3 Calibration on 10 dev families
 
 - **Question.** Do runner, prompts and scoring work? Is there a ceiling or floor?
-- **Protocol.** [PROTOCOL.md](../PROTOCOL.md) §4 and §12 (v0.2, 2026-11-04). Diagnostic; no registered test. Data freeze: FREEZE_v3.json.
+- **Protocol.** [PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §4 and §12 (v0.2, 2026-11-04). Diagnostic; no registered test. Data freeze: FREEZE_v3.json.
 - **Data.** First 10 dev families: 74 states, 54 resolvable; 278 calls per model.
 - **Models and settings.** qwen3.5-397b, qwen3.8-27b, deepseek-v4-flash, gemma-4-26b-a4b-it (plain and +schema), glm-5.3-flash (16k cap; 32k re-runs of truncated jobs). Settings as §1.
 - **Run.** `experiments/run_pilot.py … --splits dev --max-families 10`, 2026-11-13. Exact invocations: `step*`, `calibration_*`, `diag*` logs (not opened).
@@ -214,7 +214,7 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.4 v3 dev, E1–E9 in three modes
 
 - **Question.** Where along detection → diagnosis → planning → stopping do models fail?
-- **Protocol.** [PROTOCOL.md](../PROTOCOL.md) §4–§8 (v0.2, 2026-11-04; models amendment 2026-11-14). By §8 all dev values are exploratory. Freeze: FREEZE_v3.json.
+- **Protocol.** [PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §4–§8 (v0.2, 2026-11-04; models amendment 2026-11-14). By §8 all dev values are exploratory. Freeze: FREEZE_v3.json.
 - **Data.** All 72 dev families: 545 states, 401 resolvable. 2,105 requests per model (1,419 plan, 614 judgment, 72 decision).
 - **Models and settings.** The four dev models (§1).
 - **Run.** [experiments/chain_dev_eval.sh](../experiments/chain_dev_eval.sh) step 1; fill pass in [experiments/gate_finalize.sh](../experiments/gate_finalize.sh).
@@ -228,7 +228,7 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.5 T1 pilot
 
 - **Question.** When one more fact becomes known, does the model's plan change as the optimal plan does?
-- **Protocol.** [PREREG_T1.md](../PREREG_T1.md) §3–§5, committed 2026-11-13 21:22 UTC, before any T1 response. Freeze: [data/FREEZE_T1.json](../data/FREEZE_T1.json).
+- **Protocol.** [PREREG_T1.md](../experiments/preregistrations/PREREG_T1.md) §3–§5, committed 2026-11-13 21:22 UTC, before any T1 response. Freeze: [data/FREEZE_T1.json](../data/FREEZE_T1.json).
 - **Data.** `t1_v1`, dev families ranked 11–30: 133 pairs (85 direct, 48 indirect), 266 items, E2E.
 - **Models and settings.** qwen3.5-397b, qwen3.8-27b, gemma +schema. deepseek-v4-flash answered these items later, as EOP condition A only.
 - **Run.** `experiments/run_pilot.py --experiments t1 --t1 data/generated/t1_v1/pairs.jsonl --splits dev --skip-families 10 --max-families 20`. Logs `t1_pilot_*_2026-11-13.log` (not opened).
@@ -242,7 +242,7 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.6 T1B
 
 - **Question.** H-OI: do models keep proposing actions after one edit has made the state sufficient?
-- **Protocol.** [PREREG_T1B.md](../PREREG_T1B.md), committed 2026-11-13 23:53 UTC, before any response on its families. Freeze: [data/FREEZE_T1B.json](../data/FREEZE_T1B.json).
+- **Protocol.** [PREREG_T1B.md](../experiments/preregistrations/PREREG_T1B.md), committed 2026-11-13 23:53 UTC, before any response on its families. Freeze: [data/FREEZE_T1B.json](../data/FREEZE_T1B.json).
 - **Data.** `t1_v1`, dev families ranked 31–72: 272 pairs, 544 items. Primary: the 122 pairs whose edited state is ALREADY_SUFFICIENT. Contrast: the 42 native ALREADY_SUFFICIENT states of the same families.
 - **Models and settings.** The four dev models; E2E.
 - **Run.** chain_dev_eval.sh step 2; fill pass in gate_finalize.sh.
@@ -256,7 +256,7 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.7 EOP on dev: registered conditions A, B, C
 
 - **Question.** H6: does planning exactly on an LLM-extracted state (C) beat native planning (A) and a structured prompt (B)?
-- **Protocol.** [PREREG_EOP.md](../PREREG_EOP.md) "Conditions", "Comparisons", committed 2026-11-13 23:58 UTC, before any B, C or D response. Freeze: [data/FREEZE_EOP.json](../data/FREEZE_EOP.json) (no longer verifies; §6).
+- **Protocol.** [PREREG_EOP.md](../experiments/preregistrations/PREREG_EOP.md) "Conditions", "Comparisons", committed 2026-11-13 23:58 UTC, before any B, C or D response. Freeze: [data/FREEZE_EOP.json](../data/FREEZE_EOP.json) (no longer verifies; §6).
 - **Data.** v3 dev (72 families; E2E and DC; primary), T1 pilot items (266), T1B items (544).
 - **Models and settings.** The four dev models. Prompts: native `msep-prompts-v2-certified-compute`; B `msep-s1-obligations-v1`; C `msep-extraction-v1`.
 - **Run.** chain_dev_eval.sh step 4 (`run_eop.py --conditions s3,s1`); fill pass in gate_finalize.sh.
@@ -312,7 +312,7 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.11 Parser baseline P
 
 - **Question.** What does the same planner score on a rule-based parse of the prompt, with no model?
-- **Protocol.** Upper bound U in PREREG_EOP.md "Conditions"; baseline P in [PREREG_FINAL.md](../PREREG_FINAL.md) §3 and [PREREG_ROBUST.md](../PREREG_ROBUST.md) §2.
+- **Protocol.** Upper bound U in PREREG_EOP.md "Conditions"; baseline P in [PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §3 and [PREREG_ROBUST.md](../experiments/preregistrations/PREREG_ROBUST.md) §2.
 - **Data.** The dev item sets of 4.7; the 548 robustness items for the last sentence of the finding.
 - **Models and settings.** None. Parser `parse_state` in `src/msep/benchmark/parsing.py`; planner `src/msep/controllers/realistic_planner.py`.
 - **Run.** Inside `run_eop.py --analyze-only`; `generate_robust.py` for the variants.
@@ -326,7 +326,7 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.12 Held-out evaluation (design only)
 
 - **Question.** Do the registered tests hold on the untouched test split: F0 (H2, H3, H4a, H4b), F1 (EOP − A, amended method), F2 (T-OI-1)?
-- **Protocol.** [PREREG_FINAL.md](../PREREG_FINAL.md) §3–§6, committed 2026-11-14 20:04 UTC; first chain step logged 20:05 UTC. Freeze: [data/FREEZE_FINAL.json](../data/FREEZE_FINAL.json) (verifies).
+- **Protocol.** [PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §3–§6, committed 2026-11-14 20:04 UTC; first chain step logged 20:05 UTC. Freeze: [data/FREEZE_FINAL.json](../data/FREEZE_FINAL.json) (verifies).
 - **Data.** Test split: 63 families, 468 states; 402 T1 pairs (804 items). 5,567 calls per model.
 - **Models and settings.** The four dev models, unchanged. EOP is C′ for three models and registered C for gemma +schema. Registered C is not run on test for the other three.
 - **Run.** [experiments/chain_final.sh](../experiments/chain_final.sh) per model, then [experiments/final_finalize.sh](../experiments/final_finalize.sh).
@@ -340,13 +340,13 @@ Every block has the same eleven fields. "§1" refers to the shared tables above.
 ### 4.13 Linguistic robustness (design and model-free facts only)
 
 - **Question.** Does extraction, and EOP with it, survive rewording? Does an LLM extractor then give anything the parser does not?
-- **Protocol.** [PREREG_ROBUST.md](../PREREG_ROBUST.md) §1–§4, committed 2026-11-14 20:20 UTC; first chain step logged 20:20 UTC. Freeze: [data/FREEZE_ROBUST.json](../data/FREEZE_ROBUST.json) (verifies). One registered test: EOP − A on plan optimality, pooled over wordings.
+- **Protocol.** [PREREG_ROBUST.md](../experiments/preregistrations/PREREG_ROBUST.md) §1–§4, committed 2026-11-14 20:20 UTC; first chain step logged 20:20 UTC. Freeze: [data/FREEZE_ROBUST.json](../data/FREEZE_ROBUST.json) (verifies). One registered test: EOP − A on plan optimality, pooled over wordings.
 - **Data.** `robust_v1`: 18 dev families (positions 0, 4, 8, …), 137 states, four wordings (lexical, syntax, reorder, prose), 548 items. 2,192 calls per model.
 - **Models and settings.** The four dev models; E2E. Conditions A, B, EOP (frozen configuration), EOP-N (normalising extraction prompt v3), P.
 - **Run.** [experiments/chain_robust.sh](../experiments/chain_robust.sh), then `experiments/run_robust.py --analyze-only`.
 - **Raw responses.** Working pool, archived at the end of the run. Logs `robust_chain_<key>.log`.
 - **Analysis script.** `experiments/run_robust.py`.
-- **Result files.** Model-free: RBV → `by_kind.<kind>.{inverse_exact,benchmark_parser_exact}`, `n_failures`. Audit: [ROBUST_AUDIT.md](../ROBUST_AUDIT.md), [results/aggregate/robust_dev/audit/](../results/aggregate/robust_dev/audit/). Model outcomes: not opened.
+- **Result files.** Model-free: RBV → `by_kind.<kind>.{inverse_exact,benchmark_parser_exact}`, `n_failures`. Audit: [ROBUST_AUDIT.md](../experiments/preregistrations/ROBUST_AUDIT.md), [results/aggregate/robust_dev/audit/](../results/aggregate/robust_dev/audit/). Model outcomes: not opened.
 - **Figure/table.** Shells R1–R4 in paper draft §11.6.
 - **Finding.** Model results pending. Model-free: all 548 variants pass validation (137 of 137 per wording recovered by the inverse parser; 0 failures). The benchmark's own parser reads 137 of 137 reorder variants and 0 of 137 of each other wording. Audit: one language-model reader recovered the true state from 24 of 24 sampled train-split variants (ROBUST_AUDIT.md; not recomputed here).
 - **Tier and caveats.** Tier 2 when complete; the validation is tier 5. The variants are still template-made. The audit reader was a language model, not a person, and read the texts before the last wording fix. Nothing found here changes the test run (PREREG_FINAL.md §7).

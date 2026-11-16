@@ -57,7 +57,7 @@ This registry answers one question: for every experiment of the project, which h
 - **Question.** Do runner, prompts and scoring work? Is there a ceiling or floor?
 - **Population.** First 10 dev families: 74 states, 54 resolvable; 278 calls per model.
 - **Conditions.** qwen3.5-397b, qwen3.8-27b, deepseek-v4-flash, gemma (plain and +schema), glm-5.3-flash. Native answer, three modes.
-- **Registration.** [`PROTOCOL.md`](../PROTOCOL.md) §4, §12 (v0.2, commit `0b7f846`, 2026-11-04 20:55 UTC). Diagnostic; no test.
+- **Registration.** [`PROTOCOL.md`](../experiments/preregistrations/PROTOCOL.md) §4, §12 (v0.2, commit `0b7f846`, 2026-11-04 20:55 UTC). Diagnostic; no test.
 - **Result.** Plan optimal (DC): 0.963 / 0.963 / 0.981; gemma +schema 0.333; plain gemma 0.259; glm-5.3-flash 0.556 (INDEX §4.3).
 - **Interpretation and limitations.** Three models at ceiling on ten families. The +schema condition changes behaviour as well as format.
 - **Sources.** [`analyze_calibration.py`](analyze_calibration.py); [`results/aggregate/diagnostics_2026-11-13/FINDINGS.md`](../results/aggregate/diagnostics_2026-11-13/FINDINGS.md); archives `pilot_calibration_2026-11-13.tar.gz`, `pilot_phase2_2026-11-13.tar.gz`, `pilot_diagnostics_2026-11-13.tar.gz`.
@@ -79,7 +79,7 @@ This registry answers one question: for every experiment of the project, which h
 - **Question.** When one more fact becomes known, does the plan change as the optimal plan does?
 - **Population.** `t1_v1`, dev families ranked 11–30: 133 pairs (85 direct, 48 indirect), 266 items, E2E. qwen3.5-397b, qwen3.8-27b, gemma +schema.
 - **Metric and rules.** Joint pair accuracy on indirect pairs; three decision rules, no significance test.
-- **Registration.** [`PREREG_T1.md`](../PREREG_T1.md) §3–§5, commit `7ade0ff`/`314469d`, 2026-11-13 21:22 UTC, before any T1 response.
+- **Registration.** [`PREREG_T1.md`](../experiments/preregistrations/PREREG_T1.md) §3–§5, commit `7ade0ff`/`314469d`, 2026-11-13 21:22 UTC, before any T1 response.
 - **Result.** Joint accuracy, indirect pairs: 0.792 [0.667, 0.902] / 0.938 [0.870, 1.000] / gemma 0.146 [0.048, 0.278]. Ceiling rule met by no model; gap rule not met (qwen3.5 upper bound 0.902). Exploratory: qwen3.5 over-intervened on 10 of 55 newly sufficient states, gemma on 30 of 55 ([`T1_PILOT_FINDINGS.md`](../results/aggregate/t1_pilot_dev/T1_PILOT_FINDINGS.md)).
 - **Interpretation and limitations.** Inconclusive for both qwen models. The edit-tracking rule is met by construction near ceiling and is uninformative.
 - **Sources.** [`generate_t1.py`](generate_t1.py); [`analyze_t1.py`](analyze_t1.py); archive `t1_pilot_raw_2026-11-13.tar.gz`.
@@ -90,7 +90,7 @@ This registry answers one question: for every experiment of the project, which h
 - **Hypothesis.** H-OI: after one edit makes a state sufficient, models keep proposing actions.
 - **Population.** Dev families ranked 31–72: 272 pairs, 544 items; primary set 122 newly sufficient states; contrast 42 natively sufficient states. Four models, E2E.
 - **Tests.** T-OI-1: O1 > 0.05, one-sided bootstrap, Holm across models. T-OI-2: higher than on natively sufficient states.
-- **Registration.** [`PREREG_T1B.md`](../PREREG_T1B.md), commit `51223e4`/`ecb0678`, 2026-11-13 23:53 UTC.
+- **Registration.** [`PREREG_T1B.md`](../experiments/preregistrations/PREREG_T1B.md), commit `51223e4`/`ecb0678`, 2026-11-13 23:53 UTC.
 - **Result.** O1: 0.172 [0.099, 0.256] / 0.000 / 0.016 [0.000, 0.041] / 0.680 [0.561, 0.780]. T-OI-1 supported for qwen3.5 (Holm p 0.0012) and gemma; T-OI-2 supported for no model ([`t1b_summary.json`](../results/aggregate/t1b_dev/t1b_summary.json); INDEX §4.6).
 - **Interpretation and limitations.** Over-intervention shown for two models, not shown to be specific to the edit. One native response touched by a smoke test before registration (disclosed in PREREG_T1B.md).
 - **Sources.** [`analyze_t1b.py`](analyze_t1b.py); archive `dev_gate2_t1_2026-11-14.tar.gz`.
@@ -98,7 +98,7 @@ This registry answers one question: for every experiment of the project, which h
 
 ### X7. EOP on dev: registered conditions A, B, C
 
-- **Hypothesis.** H6 as restated in [`PREREG_EOP.md`](../PREREG_EOP.md): planning on an LLM-extracted state (C) beats native planning (A) and a structured obligation prompt (B).
+- **Hypothesis.** H6 as restated in [`PREREG_EOP.md`](../experiments/preregistrations/PREREG_EOP.md): planning on an LLM-extracted state (C) beats native planning (A) and a structured obligation prompt (B).
 - **Population.** v3 dev (72 families, E2E and DC; primary), T1 pilot items (266), T1B items (544). Four models.
 - **Test.** C − A on plan optimality, v3 dev, DC, n = 401; one-sided bootstrap, Holm across models.
 - **Registration.** PREREG_EOP.md, commit `2b5f5af`/`0dfee91`, 2026-11-13 23:58 UTC, before any B, C or D response.
@@ -135,13 +135,13 @@ This registry answers one question: for every experiment of the project, which h
 ### X11. Parser baseline P
 
 - **Question.** What does the same planner score on a rule-based parse of the prompt, with no model?
-- **Registration.** Upper bound in PREREG_EOP.md; baseline in [`PREREG_FINAL.md`](../PREREG_FINAL.md) §3 and [`PREREG_ROBUST.md`](../PREREG_ROBUST.md) §2.
+- **Registration.** Upper bound in PREREG_EOP.md; baseline in [`PREREG_FINAL.md`](../experiments/preregistrations/PREREG_FINAL.md) §3 and [`PREREG_ROBUST.md`](../experiments/preregistrations/PREREG_ROBUST.md) §2.
 - **Result.** Plan optimal 1.00 on dev and held-out (both modes) ([`RESULTS_TABLES.md`](../results/aggregate/final_test/RESULTS_TABLES.md)). On reworded items: 1.00 on reorder, 0.00 on lexical, syntax and prose ([`robust_report.md`](../results/aggregate/robust_dev/robust_report.md)).
 - **Interpretation and limitations.** The parser inverts the benchmark's own renderer and was written by the benchmark authors. On canonical text EOP adds nothing over it; its value is only shown under rewording.
 
 ### X12. Held-out evaluation
 
-- **Hypotheses and tests.** F0: H2, H3, H4a, H4b (exact two-sided McNemar, DC, Holm across four tests per model). F1: EOP − A on plan optimality (amended H6; one-sided bootstrap, Holm across models). F2: T-OI-1. No correction across families ([`PREREG_FINAL.md`](../PREREG_FINAL.md) §5).
+- **Hypotheses and tests.** F0: H2, H3, H4a, H4b (exact two-sided McNemar, DC, Holm across four tests per model). F1: EOP − A on plan optimality (amended H6; one-sided bootstrap, Holm across models). F2: T-OI-1. No correction across families ([`PREREG_FINAL.md`](../experiments/preregistrations/PREREG_FINAL.md) §5).
 - **Population.** Test split: 63 families, 468 states (342 resolvable in DC); 402 T1 pairs (804 items), 169 newly sufficient states. 5,567 calls per model (PREREG_FINAL.md §6).
 - **Conditions.** A, B, EOP (C′ for three models; registered C for gemma), D′/D, Bt/Dt, P, heuristics and fixed policies.
 - **Registration.** PREREG_FINAL.md, commit `a13f9b7`/`d00ada4`, 2026-11-14 20:04 UTC; freeze [`data/FREEZE_FINAL.json`](../data/FREEZE_FINAL.json).
@@ -155,7 +155,7 @@ This registry answers one question: for every experiment of the project, which h
 - **Interpretation.** Native planning replicates near ceiling for three models. F1 is evidence for the amended method only; it does not turn the registered dev result into a success. The gain is large only for gemma, and P matches EOP on this text.
 - **Limitations.** First viewed during a provider outage with one run incomplete (see Deviations). Seven gemma calls failed all three attempts and count as wrong ([`paper/report.md`](../paper/report.md) Appendix B).
 - **Sources.** [`chain_final.sh`](chain_final.sh); [`final_finalize.sh`](final_finalize.sh); [`analyze_final.py`](analyze_final.py); [`eop_tables.md`](../results/aggregate/final_test/eop/eop_tables.md); logs `final_chain_*.log`; archives `final_runs_plan*`, `final_runs_extract*`, `final_runs_decision`, `final_runs_judgment`, `final_runs_heuristics`, `final_runs_logs_ledger` (all `_2026-11-15.tar.gz`; mapping to studies by archive name, not unpacked).
-- **Next decision.** The re-certification split of qwen3.5's over-intervention (21 of 34 unnecessary plans re-obtain values the text lists as known; script committed 2026-11-14 22:12 UTC, before the held-out analysis) led to Study 1 ([`PREREG_FOLLOWUP.md`](../PREREG_FOLLOWUP.md) §1).
+- **Next decision.** The re-certification split of qwen3.5's over-intervention (21 of 34 unnecessary plans re-obtain values the text lists as known; script committed 2026-11-14 22:12 UTC, before the held-out analysis) led to Study 1 ([`PREREG_FOLLOWUP.md`](../experiments/preregistrations/PREREG_FOLLOWUP.md) §1).
 
 ### X13. Rewording study
 
@@ -163,19 +163,19 @@ This registry answers one question: for every experiment of the project, which h
 - **Population.** `robust_v1`: 18 dev families, 137 states, four wordings (lexical, syntax, reorder, prose), 548 items, E2E; 2,192 calls per model (INDEX §4.13). Four models.
 - **Conditions.** A, B, EOP (frozen configuration), EOP-N (normalising prompt v3), P.
 - **Test.** One: EOP − A on plan optimality, pooled over wordings; one-sided bootstrap, Holm across models.
-- **Registration.** [`PREREG_ROBUST.md`](../PREREG_ROBUST.md), commit `ba04b37`/`35b983b`, 2026-11-14 20:20 UTC.
+- **Registration.** [`PREREG_ROBUST.md`](../experiments/preregistrations/PREREG_ROBUST.md), commit `ba04b37`/`35b983b`, 2026-11-14 20:20 UTC.
 - **Result.** Pooled EOP − A: +0.01 [−0.00, +0.03], Holm p 0.154 / +0.03 [+0.01, +0.06], Holm p 0.014 / −0.03 [−0.06, +0.00], Holm p 0.984 / +0.36 [+0.29, +0.43], Holm p < 0.001. EOP on syntax: 1.00 / 1.00 / 0.81 / 0.05. Parser 0.00 on lexical, syntax and prose ([`robust_report.md`](../results/aggregate/robust_dev/robust_report.md)).
 - **Interpretation.** EOP holds for the two qwen models and breaks for deepseek and gemma on some wordings. EOP − P is +0.40 to +0.75, so the LLM extractor adds coverage the parser lacks.
 - **Limitations.** Variants are template-made. Under EOP-N gemma's answers written as message text were scored as empty; Study 3 showed this understates EOP-N for gemma ([`paper/report.md`](../paper/report.md) §4).
 - **Sources.** [`generate_robust.py`](generate_robust.py); [`run_robust.py`](run_robust.py); [`chain_robust.sh`](chain_robust.sh); logs `robust_chain_*.log`; archives `final_runs_extract_rb*`, `final_runs_plan_rb*`.
-- **Next decision.** Extraction failures (gemma syntax: 118 of 137 rejected) motivated Study 3 ([`PREREG_REPAIR.md`](../PREREG_REPAIR.md) §0).
+- **Next decision.** Extraction failures (gemma syntax: 118 of 137 rejected) motivated Study 3 ([`PREREG_REPAIR.md`](../experiments/preregistrations/PREREG_REPAIR.md) §0).
 
 ### X14. Follow-up Study 1: wording clarity
 
 - **Hypothesis.** Over-intervention on sufficient states comes partly from the benchmark text, which calls every certified value "not yet known" while listing some as known.
 - **Population.** First 60 train families: 436 states, 872 items (W0 original, W1 clarified); 256 ALREADY_SUFFICIENT states (60 from the start, 196 after one edit), 60 each COMPUTATION_ONLY, BOTH, NEITHER as controls. E2E, native. qwen3.5-397b, qwen3.8-27b, gemma (deepseek excluded to finish its held-out run).
 - **Test.** Primary: rate of acting on the 256 sufficient states, W1 − W0 paired, one-sided bootstrap, Holm across three models. Readings fixed in advance.
-- **Registration.** [`PREREG_FOLLOWUP.md`](../PREREG_FOLLOWUP.md) §1, commit `fd8145c`, 2026-11-15 21:03 UTC, after the held-out results were viewed (20:23 UTC). Freeze `data/FREEZE_FOLLOWUP.json`.
+- **Registration.** [`PREREG_FOLLOWUP.md`](../experiments/preregistrations/PREREG_FOLLOWUP.md) §1, commit `fd8145c`, 2026-11-15 21:03 UTC, after the held-out results were viewed (20:23 UTC). Freeze `data/FREEZE_FOLLOWUP.json`.
 - **Result.** Acts: 0.14 [0.09, 0.19] → 0.03 [0.01, 0.05], Holm p < 0.001 / 0.00 → 0.00, Holm p 0.368 / gemma 0.73 [0.67, 0.79] → 0.59 [0.51, 0.66], Holm p < 0.001 ([`followup_report.md`](../results/aggregate/followup/followup_report.md)).
 - **Interpretation.** The wording contributes for qwen3.5 and gemma; the error persists without the ambiguity for gemma only. Most of qwen3.5's over-intervention came from an ambiguity in the benchmark text, which changes the reading of F2 for that model (F2 stands as measured).
 - **Limitations.** A new wording intervention on new items, not a replication of F2. No premature-stop harm beyond the registered threshold ([`hypothesis_tracker.md`](../research/hypothesis_tracker.md)).
@@ -198,7 +198,7 @@ This registry answers one question: for every experiment of the project, which h
 - **Question.** Does one repair call for a rejected extraction raise the share of exactly recovered states, and at what cost in accepted-but-wrong states?
 - **Population.** First 12 train families not used by Studies 1–2: 87 states in the syntax and prose rewordings, 174 items. gemma and deepseek; first prompt F (frozen) or N (translating v3), each with and without repair.
 - **Readings (no test).** Useful if the lower end of the gain interval exceeds 0.05; harmful if the accepted-but-wrong rise has an interval excluding 0.
-- **Registration.** [`PREREG_REPAIR.md`](../PREREG_REPAIR.md), commit `2935522`, 2026-11-16 00:13 UTC. Exploratory by its own registration.
+- **Registration.** [`PREREG_REPAIR.md`](../experiments/preregistrations/PREREG_REPAIR.md), commit `2935522`, 2026-11-16 00:13 UTC. Exploratory by its own registration.
 - **Result.** Exact state, first → with repair: gemma F 0.21 → 0.78 (gain 0.56 [0.47, 0.65]); gemma N 0.67 → 0.74 (0.07 [0.02, 0.12]); deepseek F 0.89 → 0.97 (0.09 [0.04, 0.13]); deepseek N 0.95 → 0.97 (0.02 [0.01, 0.05]). Accepted-but-wrong, gemma F 0.07 → 0.16 ([`repair_report.md`](../results/aggregate/repair/repair_report.md)); rise 0.086 [0.029, 0.150]; gemma N rise 0.023 [0.006, 0.051]; deepseek 0 ([`repair_supplement.json`](../results/aggregate/repair/repair_supplement.json)).
 - **Interpretation.** By the fixed readings: useful and harmful for gemma F; harmful, not useful, for gemma N; neither for deepseek (lower end of its F gain 0.04) ([`hypothesis_tracker.md`](../research/hypothesis_tracker.md)). Repair trades visible failures for some invisible ones.
 - **Limitations.** Designed with knowledge of the rewording results. The planned third arm (source-grounded typed extraction) was not run.

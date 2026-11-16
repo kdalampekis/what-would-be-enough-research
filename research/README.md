@@ -35,7 +35,7 @@ This folder answers the question of how the project "What Would Be Enough? Evalu
 ## Where the rest of the release is
 
 - Report and extended report: [`../paper/`](../paper/).
-- Protocol and registrations: [`../PROTOCOL.md`](../PROTOCOL.md) and the `PREREG_*.md` files in the repository root.
+- Protocol and registrations: [`PROTOCOL.md`](../experiments/preregistrations/PROTOCOL.md) and the `PREREG_*.md` files in `experiments/preregistrations/`.
 - Methods: [`../methodology/`](../methodology/).
 - Registry of experiments: [`../experiments/experiment_registry.md`](../experiments/experiment_registry.md).
 - Result files and figures: [`../results/`](../results/), [`../figures/`](../figures/).

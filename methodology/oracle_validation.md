@@ -152,7 +152,7 @@ The E0 run covers 100 v3 families generated for the run. The frozen 300-family p
 | `pool_v3` | Rendering round trip: "state rebuilt from the prompt text alone, then re-solved" | 2,282 instances, 0 mismatches | same, §4d |
 | `pool_v2` (3,300 states) | Brute-force re-verification of labels | 3,300, 0 mismatches | [docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §4.2 |
 | Variants for E10–E12, deterministic sample | Brute-force label re-verification; rendering round trip | 534 variants, 0 mismatches each | [results/audit_v3/benchmark_audit.md](../results/audit_v3/benchmark_audit.md) §5 |
-| T1 pairs (3,938 items) | "SAT oracle = brute-force oracle on every member", with three structural checks | 1,969 pairs, 0 failed checks | [PREREG_T1.md](../PREREG_T1.md) §1; EXPERIMENT_INDEX §4.1 |
+| T1 pairs (3,938 items) | "SAT oracle = brute-force oracle on every member", with three structural checks | 1,969 pairs, 0 failed checks | [PREREG_T1.md](../experiments/preregistrations/PREREG_T1.md) §1; EXPERIMENT_INDEX §4.1 |
 | Rewordings (548 items) | Inverse parser recovers a state equal to the canonical one | 548, 0 failures | [data/robust_v1_validation.json](../data/robust_v1_validation.json) |
 | Study 1 items (436 states) | The generator re-solves every state and asserts the stored class, cost and optimal plans | assertion in the generator; a failure stops generation | [experiments/generate_followup.py](../experiments/generate_followup.py), `check_oracle` |
 | Study 2 items (209 sweeps) | The generator re-solves every item and checks the below / equal / above property and the stored labels | 0 sweeps dropped for failing re-verification; 49 dropped for lacking a side | [data/followup_v1_manifest.json](../data/followup_v1_manifest.json) |

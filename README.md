@@ -101,7 +101,7 @@ Details: [`methodology/formal_problem.md`](methodology/formal_problem.md), [`met
 | Exploratory | The split of over-intervention by re-certified values; extraction repair has no test |
 | No model | Exact oracle; parser plus planner |
 
-Registrations, each with a freeze record in `data/FREEZE_*.json`: [`PROTOCOL.md`](PROTOCOL.md), [`PREREG_T1.md`](PREREG_T1.md), [`PREREG_T1B.md`](PREREG_T1B.md), [`PREREG_EOP.md`](PREREG_EOP.md), [`PREREG_FINAL.md`](PREREG_FINAL.md), [`PREREG_ROBUST.md`](PREREG_ROBUST.md), [`PREREG_FOLLOWUP.md`](PREREG_FOLLOWUP.md), [`PREREG_REPAIR.md`](PREREG_REPAIR.md). Amendments and deviations: [`methodology/protocol_amendments.md`](methodology/protocol_amendments.md).
+Registrations, each with a freeze record in `data/FREEZE_*.json`: [`PROTOCOL.md`](experiments/preregistrations/PROTOCOL.md), [`PREREG_T1.md`](experiments/preregistrations/PREREG_T1.md), [`PREREG_T1B.md`](experiments/preregistrations/PREREG_T1B.md), [`PREREG_EOP.md`](experiments/preregistrations/PREREG_EOP.md), [`PREREG_FINAL.md`](experiments/preregistrations/PREREG_FINAL.md), [`PREREG_ROBUST.md`](experiments/preregistrations/PREREG_ROBUST.md), [`PREREG_FOLLOWUP.md`](experiments/preregistrations/PREREG_FOLLOWUP.md), [`PREREG_REPAIR.md`](experiments/preregistrations/PREREG_REPAIR.md). Amendments and deviations: [`methodology/protocol_amendments.md`](methodology/protocol_amendments.md).
 
 ## Reproduce without any API call
 
@@ -164,7 +164,7 @@ The full list, with dual-use considerations: [`methodology/limitations.md`](meth
 | [`results/`](results/) | Result tables and summaries (`aggregate/`) and archived raw model responses, logs and the spend ledger (`raw/`) |
 | [`figures/`](figures/) | Figures as PNG and SVG |
 | [`tests/`](tests/) | Test suite |
-| `PROTOCOL.md`, `PREREG_*.md` | Registrations, kept at the top level because the freeze records pin their paths |
+| [`experiments/preregistrations/`](experiments/preregistrations/) | Registrations (`PROTOCOL.md`, `PREREG_*.md`), each pinned by a freeze record in `data/` |
 
 ## Before the sprint and during it
 
@@ -175,6 +175,6 @@ AI assistance: Claude (Anthropic), through Claude Code, was used throughout to w
 
 ## Licence, citation and acknowledgement
 
-Code: Apache-2.0 ([`LICENSE`](LICENSE)). Writing, figures and synthetic datasets: CC BY 4.0. Model outputs are included as research evidence and are not licensed by us; the provider's terms apply. See [`DATA_LICENSE.md`](DATA_LICENSE.md) and [`CITATION.cff`](CITATION.cff).
+Code: Apache-2.0 ([`LICENSE`](LICENSE)). Writing, figures and synthetic datasets: CC BY 4.0. Model outputs are included as research evidence and are not licensed by us; the provider's terms apply. See [`DATA_LICENSE.md`](LICENSES/DATA_LICENSE.md) and [`CITATION.cff`](CITATION.cff).
 
 We thank Apart Research for organizing the AI x Epistemics Research Sprint and Adaption for providing inference credits supporting the experiments.

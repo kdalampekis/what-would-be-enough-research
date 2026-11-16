@@ -75,4 +75,4 @@ Re-running the models themselves needs an API key and spends provider credits, a
 
 ## Raw responses
 
-The archives in `results/raw/` hold every response we received, including failed attempts, with the prompt hash, settings, served model, token counts and cost. Local file paths in the logs were replaced by `PROJECT_ROOT`. The model outputs are not licensed by us; the provider's terms apply ([`DATA_LICENSE.md`](../DATA_LICENSE.md)).
+The archives in `results/raw/` hold every response we received, including failed attempts, with the prompt hash, settings, served model, token counts and cost. Local file paths in the logs were replaced by `PROJECT_ROOT`. The model outputs are not licensed by us; the provider's terms apply ([`DATA_LICENSE.md`](../LICENSES/DATA_LICENSE.md)).

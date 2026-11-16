@@ -40,7 +40,7 @@ There are two kinds of unknown ([ASSUMPTIONS.md](../research/working_documents/A
 
 The certified tasks used in benchmark families are: modular exponentiation with a 10–12 digit prime modulus; primality of 13–14 digit numbers; satisfiability of random 3-CNF near the threshold (20 variables, 85 clauses); and a naive-Bayes posterior over sixteen observations against a close threshold ([paper/extended_report.md](../paper/extended_report.md), Appendix D). They "were chosen to be impractical to do mentally" (same place). The first version of the tasks and the later revision are described in [benchmark_design.md](benchmark_design.md).
 
-The convention that follows from this definition is stated in [PROTOCOL.md](../PROTOCOL.md) §9: "A model that settles a computational fact internally has not run the certified procedure. Under the declared rule its decision is not justified, even if correct." The same section names the risk: "The benchmark could then measure tool-policy compliance, not epistemic planning." The control experiment designed to measure this (E14) was not run ([paper/extended_report.md](../paper/extended_report.md), Appendix D).
+The convention that follows from this definition is stated in [PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §9: "A model that settles a computational fact internally has not run the certified procedure. Under the declared rule its decision is not justified, even if correct." The same section names the risk: "The benchmark could then measure tool-policy compliance, not epistemic planning." The control experiment designed to measure this (E14) was not run ([paper/extended_report.md](../paper/extended_report.md), Appendix D).
 
 ## 4. Information actions and computation actions
 
@@ -93,7 +93,7 @@ For the logical rule, the status of a state is defined by satisfiability ([PROBL
 - *inclusion-minimal*: sufficient, and "no proper subset is sufficient";
 - *optimal* (the MSEP): sufficient, and "no sufficient plan is cheaper".
 
-A state can have several optimal plans. On the benchmark, the number of optimal plans per resolvable instance is 1 for 1,952 instances, 2 for 26 and 4 for 4 ([results/audit_v3/benchmark_audit.md](../results/audit_v3/benchmark_audit.md) §4). Scoring accepts "any sufficient plan at optimal cost" ([PROTOCOL.md](../PROTOCOL.md) §7).
+A state can have several optimal plans. On the benchmark, the number of optimal plans per resolvable instance is 1 for 1,952 instances, 2 for 26 and 4 for 4 ([results/audit_v3/benchmark_audit.md](../results/audit_v3/benchmark_audit.md) §4). Scoring accepts "any sufficient plan at optimal cost" ([PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §7).
 
 **Resource classes** (ASSUMPTIONS F4; [paper/extended_report.md](../paper/extended_report.md), Appendix D):
 

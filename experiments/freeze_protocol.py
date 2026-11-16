@@ -97,6 +97,8 @@ PROTOCOLS = {
 
 def _sha(p: str) -> str | None:
     f = ROOT / p
+    if not f.exists():  # registrations live in experiments/preregistrations/ in the public release
+        f = ROOT / "experiments" / "preregistrations" / Path(p).name
     return hashlib.sha256(f.read_bytes()).hexdigest() if f.exists() else None
 
 

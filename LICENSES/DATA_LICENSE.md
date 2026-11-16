@@ -6,9 +6,9 @@ This repository has two licences, one for code and one for writing and data.
 
 | What | Licence | Text |
 |---|---|---|
-| Original source code: everything under `src/`, `experiments/`, `tests/`, `paper/*.py`, and the configuration files | Apache License 2.0 | [`LICENSE`](LICENSE) |
-| Original research writing: the report and its source under `paper/`, the Markdown documents in the repository root and under `docs/`, and the figures under `figures/` | Creative Commons Attribution 4.0 International (CC BY 4.0) | [`LICENSES/CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt) |
-| The synthetic benchmark: the generators' outputs (`pool_v3`, the T1 pairs, the rewording set, the variants), the manifests and freeze records under `data/`, and the oracle labels | CC BY 4.0 | [`LICENSES/CC-BY-4.0.txt`](LICENSES/CC-BY-4.0.txt) |
+| Original source code: everything under `src/`, `experiments/`, `tests/`, `paper/*.py`, and the configuration files | Apache License 2.0 | [`LICENSE`](../LICENSE) |
+| Original research writing: the report and its source under `paper/`, the Markdown documents in the repository root and under `docs/`, and the figures under `figures/` | Creative Commons Attribution 4.0 International (CC BY 4.0) | [`LICENSES/CC-BY-4.0.txt`](../LICENSES/CC-BY-4.0.txt) |
+| The synthetic benchmark: the generators' outputs (`pool_v3`, the T1 pairs, the rewording set, the variants), the manifests and freeze records under `data/`, and the oracle labels | CC BY 4.0 | [`LICENSES/CC-BY-4.0.txt`](../LICENSES/CC-BY-4.0.txt) |
 
 ## Not covered by these licences
 

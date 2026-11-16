@@ -4,7 +4,7 @@ This document describes the mitigation tested in this project as it is implement
 
 ## 1. The failure it targets
 
-The hypothesis, written before the sprint ([EXPERIMENT_PLAN.md](../research/working_documents/EXPERIMENT_PLAN.md) §2, H6): "An obligation-guided planner will reduce insufficient actions, premature stopping, and excess resource cost relative to confidence-based and generic routing baselines." The registered EOP comparison restates it "relative to native planning and a structured prompt" ([PREREG_EOP.md](../PREREG_EOP.md)). The confidence-based and routing baselines were not built ([docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §3, notes).
+The hypothesis, written before the sprint ([EXPERIMENT_PLAN.md](../research/working_documents/EXPERIMENT_PLAN.md) §2, H6): "An obligation-guided planner will reduce insufficient actions, premature stopping, and excess resource cost relative to confidence-based and generic routing baselines." The registered EOP comparison restates it "relative to native planning and a structured prompt" ([PREREG_EOP.md](../experiments/preregistrations/PREREG_EOP.md)). The confidence-based and routing baselines were not built ([docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §3, notes).
 
 The pipeline as specified ([PROBLEM_SPEC.md](../research/working_documents/PROBLEM_SPEC.md) §14): "1. model or parser constructs the current formal state; 2. unresolved epistemic obligations are identified; 3. candidate information/computation actions are generated; 4. the formal layer checks which obligations each action can discharge; 5. a planner searches for a minimum-cost sufficient plan; 6. the agent executes only the selected plan; 7. after each step, sufficiency is re-evaluated; 8. execution stops immediately when sufficient; 9. if no plan exists, defer/abstain."
 
@@ -40,7 +40,7 @@ Computational facts stay opaque: "Computation tasks stay opaque: the extracted s
 
 For gemma-4-26b +schema, the extraction schema is sent as a forced function tool, as for its plan answers ([evaluation_protocol.md](evaluation_protocol.md) §2.3). For the other three models the schema is not enforced; the layout comes from the prompt.
 
-One extraction call is made per state. "One extraction per state; the plan does not depend on the mode" ([PREREG_EOP.md](../PREREG_EOP.md), condition C).
+One extraction call is made per state. "One extraction per state; the plan does not depend on the mode" ([PREREG_EOP.md](../experiments/preregistrations/PREREG_EOP.md), condition C).
 
 ## 4. The reader and what it rejects
 
@@ -61,7 +61,7 @@ The reader is `state_from_extraction` in [src/msep/controllers/llm_extractor.py]
 
 At planning time one more case fails: if the extracted rules and known values are contradictory, `status` raises "state is inconsistent", and the item is a planner error ([src/msep/oracle/logic.py](../src/msep/oracle/logic.py); `planned_results` in [experiments/run_eop.py](../experiments/run_eop.py): "inconsistent extracted state, unknown handle, solver error"). Test: `test_inconsistent_extraction_is_a_pipeline_failure` in [tests/test_eop_driver.py](../tests/test_eop_driver.py).
 
-**What it accepts without complaint.** A variable whose kind is not `world` is read as computed; an action whose kind is not `information` is read as a computation; a leading list number such as "1." is stripped from a rule. Above all, the reader accepts any well-formed state, whether or not it is the true one. Such an extraction is "accepted but wrong": "This is the error a system cannot see" ([PREREG_REPAIR.md](../PREREG_REPAIR.md) §3). Whether an accepted state is the true one is measured separately against the exact parse of the canonical text ([src/msep/eval/extraction_match.py](../src/msep/eval/extraction_match.py)).
+**What it accepts without complaint.** A variable whose kind is not `world` is read as computed; an action whose kind is not `information` is read as a computation; a leading list number such as "1." is stripped from a rule. Above all, the reader accepts any well-formed state, whether or not it is the true one. Such an extraction is "accepted but wrong": "This is the error a system cannot see" ([PREREG_REPAIR.md](../experiments/preregistrations/PREREG_REPAIR.md) §3). Whether an accepted state is the true one is measured separately against the exact parse of the canonical text ([src/msep/eval/extraction_match.py](../src/msep/eval/extraction_match.py)).
 
 **Rejection messages seen in practice.** For gemma-4-26b +schema's first answers with its frozen prompt in Study 3 (125 rejected): unknown variable 54, trailing tokens 44, expected ")" 17, expected "th…" 7, `TypeError` 3 ([results/aggregate/repair/repair_report.md](../results/aggregate/repair/repair_report.md)).
 
@@ -88,7 +88,7 @@ The driver turns this into an answer in the same JSON as a model's answer and sc
 
 ## 6. What the planner never sees
 
-"No condition sees hidden-world truth, oracle labels, true values or certified results before COMPUTE: planning uses only the prompt text via the extraction" ([PREREG_EOP.md](../PREREG_EOP.md), "Conditions"). The same sentence is in [PREREG_FINAL.md](../PREREG_FINAL.md) §3.
+"No condition sees hidden-world truth, oracle labels, true values or certified results before COMPUTE: planning uses only the prompt text via the extraction" ([PREREG_EOP.md](../experiments/preregistrations/PREREG_EOP.md), "Conditions"). The same sentence is in [PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §3.
 
 | Not seen | How it is kept out | Test |
 |---|---|---|
@@ -115,7 +115,7 @@ Before answering, reason about the epistemic obligations step by step:
 You may write this reasoning briefly before the JSON object, without curly braces; the JSON object must come last.
 ```
 
-The module assumed: "With a forced-schema provider condition (structured function tool) the model can only reason internally." This did not hold for gemma ([PREREG_EOP.md](../PREREG_EOP.md), Amendment 2).
+The module assumed: "With a forced-schema provider condition (structured function tool) the model can only reason internally." This did not hold for gemma ([PREREG_EOP.md](../experiments/preregistrations/PREREG_EOP.md), Amendment 2).
 
 ### 7.2 Extraction prompt v1 (registered condition C; gemma's frozen prompt)
 
@@ -162,7 +162,7 @@ Return one JSON object:
 - "actions": every available action or step with its exact name, its kind ("information" if it obtains evidence about the world, "computation" if it runs a procedure), its cost and the handles it reveals.
 ```
 
-Why it exists: "prompt v2 tells the model to copy rules 'exactly in the same notation' and names the canonical section 'Known so far'; on reworded text those instructions do not literally apply. v3 asks for the same JSON and tells the model to translate. It separates 'the frozen prompt's wording' from 'the model cannot formalise the text'. Secondary; never used on test" ([PREREG_ROBUST.md](../PREREG_ROBUST.md) §2).
+Why it exists: "prompt v2 tells the model to copy rules 'exactly in the same notation' and names the canonical section 'Known so far'; on reworded text those instructions do not literally apply. v3 asks for the same JSON and tells the model to translate. It separates 'the frozen prompt's wording' from 'the model cannot formalise the text'. Secondary; never used on test" ([PREREG_ROBUST.md](../experiments/preregistrations/PREREG_ROBUST.md) §2).
 
 ### 7.5 Repair prompt (Study 3)
 
@@ -181,11 +181,11 @@ Write the extraction again so that the reader accepts it.
 Each entry of "rules" must be one formula in the notation above and nothing else: no other words, no explanation, no trailing text. Use only the handles listed in "variables", and Q.
 ```
 
-"There is at most one repair call per item and prompt. The exact planner and the reader are unchanged" ([PREREG_REPAIR.md](../PREREG_REPAIR.md) §2). A first answer that is missing or whose call failed gets no repair call (`job2` in `run_repair.py`).
+"There is at most one repair call per item and prompt. The exact planner and the reader are unchanged" ([PREREG_REPAIR.md](../experiments/preregistrations/PREREG_REPAIR.md) §2). A first answer that is missing or whose call failed gets no repair call (`job2` in `run_repair.py`).
 
 ## 8. The comparison conditions
 
-Definitions from [PREREG_EOP.md](../PREREG_EOP.md) ("Conditions" and the two amendments) and [PREREG_FINAL.md](../PREREG_FINAL.md) §3. "Strict scoring: if a call fails, an extraction is invalid or inconsistent, or B's answer does not parse, C/D count as failures (no fallback to another condition)" (PREREG_EOP).
+Definitions from [PREREG_EOP.md](../experiments/preregistrations/PREREG_EOP.md) ("Conditions" and the two amendments) and [PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §3. "Strict scoring: if a call fails, an extraction is invalid or inconsistent, or B's answer does not parse, C/D count as failures (no fallback to another condition)" (PREREG_EOP).
 
 | Label | Definition | Where it was run | Result key | Tier |
 |---|---|---|---|---|
@@ -202,11 +202,11 @@ Definitions from [PREREG_EOP.md](../PREREG_EOP.md) ("Conditions" and the two ame
 | EOP-N | extraction prompt v3, then the same planner | rewording study; arm N of Study 3 | – | rewording study (secondary); Study 3 |
 | F, N, with or without repair | Study 3: first answer with the frozen prompt (F) or v3 (N), each with and without one repair call | Study 3 | – | follow-up, exploratory |
 
-**The frozen EOP configuration on held-out data** ([PREREG_FINAL.md](../PREREG_FINAL.md) §3): C′ for qwen3.5-397b, qwen3.8-27b and deepseek-v4-flash; registered C (prompt v1 under the forced schema) for gemma-4-26b +schema, "the configuration validated on dev (the schema supplies the layout); the v2 prompt was never run with this model". "Registered C (v1 prompt) is **not** run on test for the three models without schema enforcement: it is a known instrument defect, and its dev results are the registered outcome." The report calls this configuration "EOP" and D′/Dt "verifier only".
+**The frozen EOP configuration on held-out data** ([PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §3): C′ for qwen3.5-397b, qwen3.8-27b and deepseek-v4-flash; registered C (prompt v1 under the forced schema) for gemma-4-26b +schema, "the configuration validated on dev (the schema supplies the layout); the v2 prompt was never run with this model". "Registered C (v1 prompt) is **not** run on test for the three models without schema enforcement: it is a known instrument defect, and its dev results are the registered outcome." The report calls this configuration "EOP" and D′/Dt "verifier only".
 
 **Labels.** "The code and PROTOCOL.md §10 call the extractor condition S2; PREREG_EOP.md calls it S3 and uses S2 for the verifier. Result keys: `C2`, `D2` for C′, D′; `upper_bound_parser_EOP` for P" ([docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §5).
 
-**About the parser.** "Audit (2026-11-14): the parser's only input is the prompt text; it uses a fixed grammar and no generator metadata, oracle label or hidden value. … It was written by the benchmark authors as the inverse of the benchmark's own renderer, so its score on canonical text says nothing about other wordings" ([PREREG_FINAL.md](../PREREG_FINAL.md) §3).
+**About the parser.** "Audit (2026-11-14): the parser's only input is the prompt text; it uses a fixed grammar and no generator metadata, oracle label or hidden value. … It was written by the benchmark authors as the inverse of the benchmark's own renderer, so its score on canonical text says nothing about other wordings" ([PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §3).
 
 ## 9. The planner is exact, so EOP measures extraction
 
@@ -285,7 +285,7 @@ Tier: follow-up, registered after the held-out results were viewed; exploratory;
 | deepseek-v4-flash | F (v2) | 0.89 → 0.97 (+0.09 [+0.04, +0.13]) | 0.00 → 0.00 | 0.90 → 0.97 | 15 / 0 / 5 of 20 |
 | deepseek-v4-flash | N (v3) | 0.95 → 0.97 (+0.02 [+0.01, +0.05]) | 0.00 → 0.00 | 0.94 → 0.97 | 4 / 0 / 5 of 9 |
 
-**The readings fixed in advance** ([PREREG_REPAIR.md](../PREREG_REPAIR.md) §3), applied to these numbers: repair is "useful" if the lower end of the gain interval is above 0.05, and "harmful" if the accepted-but-wrong rate rises with an interval that excludes 0.
+**The readings fixed in advance** ([PREREG_REPAIR.md](../experiments/preregistrations/PREREG_REPAIR.md) §3), applied to these numbers: repair is "useful" if the lower end of the gain interval is above 0.05, and "harmful" if the accepted-but-wrong rate rises with an interval that excludes 0.
 
 | Model, prompt | Lower end of the gain | Useful by the fixed reading | Rise interval excludes 0 | Harmful by the fixed reading |
 |---|---|---|---|---|
@@ -302,7 +302,7 @@ The message-text reading rule of Study 3 matters for these numbers. Under the fu
 
 Three patterns, each with its source:
 
-- **Layout, not content, on the registered prompt.** "Inspection: the models extracted the correct content (variables and kinds, rules, known values) in other JSON layouts" ([PREREG_EOP.md](../PREREG_EOP.md), Amendment 1).
+- **Layout, not content, on the registered prompt.** "Inspection: the models extracted the correct content (variables and kinds, rules, known values) in other JSON layouts" ([PREREG_EOP.md](../experiments/preregistrations/PREREG_EOP.md), Amendment 1).
 - **Formalising reworded rules.** Under rewording, most rejections are formula errors in the rule strings (Section 10.3). The parser cannot read three of the four wordings at all.
 - **Silent errors.** Well-formed wrong states occur for gemma on prose (24 of 137) and rise with repair (Section 10.4). A wrong state gives a confident wrong plan or stop. "A wrong but well-formed state yields a confident wrong plan, so symbolic correctness is not the same as reliability in use" ([paper/report.md](../paper/report.md) §5).
 

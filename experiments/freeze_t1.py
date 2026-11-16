@@ -23,7 +23,7 @@ T1_GENERATOR = ["src/msep/benchmark/t1_flips.py", "experiments/generate_t1.py"]
 ANALYSIS = ["experiments/analyze_t1.py", "src/msep/eval/pilot.py", "src/msep/eval/plan_metrics.py",
             "src/msep/models/prompts.py", "src/msep/models/schemas.py", "src/msep/eval/experiments.py"]
 DATA = {"pool_v3": "data/generated/pool_v3/instances.jsonl", "t1_pairs": "data/generated/t1_v1/pairs.jsonl",
-        "t1_validation": "data/generated/t1_v1/validation.json", "protocol": "PREREG_T1.md"}
+        "t1_validation": "data/generated/t1_v1/validation.json", "protocol": "experiments/preregistrations/PREREG_T1.md"}
 PILOT_MODELS = ["adaption-qwen3.5-397b", "adaption-qwen3.8-27b", "adaption-gemma-4-26b-a4b-it-schema"]
 
 

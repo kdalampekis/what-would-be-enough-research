@@ -43,7 +43,7 @@ Evidence tiers are named in each decision and are not mixed: registered held-out
 
 **Rationale.** Exactness removes circular evaluation and makes minimality checkable. Under the logical rule a plan is sufficient exactly when it resolves every obligation, so the cheapest plan is a minimum-cost hitting set, which is what the mitigation would later use ([`ASSUMPTIONS.md`](working_documents/ASSUMPTIONS.md) F5). The probabilistic rule was excluded from the core benchmark because it is not monotone in information and the obligation-cover property does not hold for it ([`PROBLEM_SPEC.md`](working_documents/PROBLEM_SPEC.md) §6).
 
-**Consequence.** Oracle validation (E0) passed: 228,199 checks, 0 failures ([`results/oracle_validation.md`](../results/oracle_validation.md); no-model evidence). The certified-computation convention created a known risk: a model that computes a value internally is scored as not having run the procedure. A control experiment (E14) was prepared for it on 2026-11-04 and was never run ([`PROTOCOL.md`](../PROTOCOL.md) §9). The scope choices are limitations of every later result: no sequential plans, no probabilities, synthetic tasks ([`paper/report.md`](../paper/report.md) Appendix A).
+**Consequence.** Oracle validation (E0) passed: 228,199 checks, 0 failures ([`results/oracle_validation.md`](../results/oracle_validation.md); no-model evidence). The certified-computation convention created a known risk: a model that computes a value internally is scored as not having run the procedure. A control experiment (E14) was prepared for it on 2026-11-04 and was never run ([`PROTOCOL.md`](../experiments/preregistrations/PROTOCOL.md) §9). The scope choices are limitations of every later result: no sequential plans, no probabilities, synthetic tasks ([`paper/report.md`](../paper/report.md) Appendix A).
 
 ## 3. The shortcut discovered in benchmark v2 (2026-11-04)
 
@@ -68,8 +68,8 @@ Evidence tiers are named in each decision and are not mixed: registered held-out
 
 **Decision.**
 - Make v3 the main benchmark and freeze it as v3.0: 300 families, 2,282 states, 165 train / 72 dev / 63 test families ([`data/FREEZE_v3.json`](../data/FREEZE_v3.json); commit `0b7f846`).
-- Accept the residual: a heuristic still gets about half of the plans. Report the heuristics beside every model result and pre-register a stress subset (`heuristic_hard`) of items the heuristic fails ([`PROTOCOL.md`](../PROTOCOL.md) §6).
-- Write the evaluation protocol with the confirmatory tests for the test split ([`PROTOCOL.md`](../PROTOCOL.md) §8, v0.2).
+- Accept the residual: a heuristic still gets about half of the plans. Report the heuristics beside every model result and pre-register a stress subset (`heuristic_hard`) of items the heuristic fails ([`PROTOCOL.md`](../experiments/preregistrations/PROTOCOL.md) §6).
+- Write the evaluation protocol with the confirmatory tests for the test split ([`PROTOCOL.md`](../experiments/preregistrations/PROTOCOL.md) §8, v0.2).
 
 **Rationale.** After the freeze, risks are "handled in analysis and reporting, not by further redesign" ([`RISKS.md`](working_documents/RISKS.md), header). Only objective bug fixes are allowed, each with a new freeze record.
 
@@ -77,7 +77,7 @@ Evidence tiers are named in each decision and are not mixed: registered held-out
 
 ## 5. First model calibration and the near-ceiling result (2026-11-13)
 
-**Research state.** The sprint began. The protocol named proprietary models for the pilot ([`PROTOCOL.md`](../PROTOCOL.md) §3). The models actually run were open-weight models hosted by one provider ([`PROTOCOL.md`](../PROTOCOL.md), amendment of 2026-11-14). Why the model set changed: Not recorded.
+**Research state.** The sprint began. The protocol named proprietary models for the pilot ([`PROTOCOL.md`](../experiments/preregistrations/PROTOCOL.md) §3). The models actually run were open-weight models hosted by one provider ([`PROTOCOL.md`](../experiments/preregistrations/PROTOCOL.md), amendment of 2026-11-14). Why the model set changed: Not recorded.
 
 **Evidence** (exploratory; 10 dev families, 74 states, 54 resolvable; [`FINDINGS.md`](../results/aggregate/diagnostics_2026-11-13/FINDINGS.md)).
 - Optimal plans, Detection-Controlled: 0.96 / 0.96 / 0.98 for qwen3.5-397b, qwen3.8-27b and deepseek-v4-flash. All three are at a ceiling for sufficiency and optimality in every mode.
@@ -116,7 +116,7 @@ Cost edits were excluded from T1 because they are E10. v3 stays frozen and prima
 
 **Rationale.** Difficulty should come from structure, not size, and no item may be selected by a tested model's behaviour ([`CHALLENGE_V4_DESIGN.md`](working_documents/CHALLENGE_V4_DESIGN.md) §1). The design draft discloses that it was written after seeing which models were at ceiling.
 
-**Consequence.** T1 was registered and frozen at 21:22 ([`PREREG_T1.md`](../PREREG_T1.md); commit `314469d`). Two things differ from the design draft. The draft speaks of a new v4 pool; the registered T1 edits states of the frozen v3 pool. The draft lists three edit kinds; the registered generator has two (a world fact becomes observed; a computed fact gets its certified value), and the "action becomes unavailable" edit is absent. The reasons for both changes: Not recorded. T3 was never run. The literature map also suggested a grounded-verification controller as a baseline for the mitigation. No registration names such a condition; the closest registered condition is the verifier ablation D ([`PREREG_EOP.md`](../PREREG_EOP.md)).
+**Consequence.** T1 was registered and frozen at 21:22 ([`PREREG_T1.md`](../experiments/preregistrations/PREREG_T1.md); commit `314469d`). Two things differ from the design draft. The draft speaks of a new v4 pool; the registered T1 edits states of the frozen v3 pool. The draft lists three edit kinds; the registered generator has two (a world fact becomes observed; a computed fact gets its certified value), and the "action becomes unavailable" edit is absent. The reasons for both changes: Not recorded. T3 was never run. The literature map also suggested a grounded-verification controller as a baseline for the mitigation. No registration names such a condition; the closest registered condition is the verifier ablation D ([`PREREG_EOP.md`](../experiments/preregistrations/PREREG_EOP.md)).
 
 ## 7. The T1 result (2026-11-13)
 
@@ -140,12 +140,12 @@ Cost edits were excluded from T1 because they are E10. v3 stays frozen and prima
 **Research state.** An exploratory pattern existed for two models on 55 states.
 
 **Evidence** (registered development; 42 dev families not used by the calibration or the T1 pilot; 122 states that one edit made sufficient; four models; [`t1b_summary.json`](../results/aggregate/t1b_dev/t1b_summary.json), [`GATE2_DEV_REPORT.md`](../results/aggregate/GATE2_DEV_REPORT.md) §2).
-- Hypothesis H-OI: after a single intervention makes a state sufficient, models continue to propose actions that are no longer needed ([`PREREG_T1B.md`](../PREREG_T1B.md)).
+- Hypothesis H-OI: after a single intervention makes a state sufficient, models continue to propose actions that are no longer needed ([`PREREG_T1B.md`](../experiments/preregistrations/PREREG_T1B.md)).
 - T-OI-1 (the rate exceeds 0.05): rate 0.172 [0.099, 0.256] / 0.000 / 0.016 [0.000, 0.041] / 0.680 [0.561, 0.780]. Supported for qwen3.5-397b (Holm p 0.0012) and gemma +schema (Holm p < 0.001). Not supported for the other two.
 - T-OI-2 (the rate is higher than on states that were sufficient from the start): difference +0.053 [−0.050, 0.153] for qwen3.5-397b and +0.037 [−0.122, 0.197] for gemma. Supported for no model.
 - Descriptive: qwen3.5-397b's extra actions were mostly computations (0.172 of states against 0.016 for information actions), and it never said "sufficient" and then acted.
 
-**Decision.** At the dev gate, carry T-OI-1 to the held-out split as a confirmatory test (family F2). Report T-OI-2 on held-out data descriptively, because it was not supported on dev ([`PREREG_FINAL.md`](../PREREG_FINAL.md) §5).
+**Decision.** At the dev gate, carry T-OI-1 to the held-out split as a confirmatory test (family F2). Report T-OI-2 on held-out data descriptively, because it was not supported on dev ([`PREREG_FINAL.md`](../experiments/preregistrations/PREREG_FINAL.md) §5).
 
 **Rationale.** Over-intervention was shown for two models. It was not shown to be specific to the edit. The registration states that non-significant results are not evidence of absence.
 
@@ -155,22 +155,22 @@ Cost edits were excluded from T1 because they are E10. v3 stays frozen and prima
 
 **Research state.** The planner and a state-extraction interface had been built before the sprint. With a rule-based parser the planner was exact on this benchmark, because the rendering is regular; the open question was the planner behind an LLM extractor ([`ASSUMPTIONS.md`](working_documents/ASSUMPTIONS.md) F10).
 
-**Why obligations.** The mitigation was part of the original design: unresolved requirements are represented as obligations, actions discharge them, and a planner finds a minimum-cost plan that discharges all ([`PROBLEM_SPEC.md`](working_documents/PROBLEM_SPEC.md) §8, §14; hypothesis H6). Under the logical rule this is exact (decision 2). The originally planned comparators, confidence-based and routing baselines, were not built; the registration restates H6 "relative to native planning and a structured prompt" ([`PREREG_EOP.md`](../PREREG_EOP.md)).
+**Why obligations.** The mitigation was part of the original design: unresolved requirements are represented as obligations, actions discharge them, and a planner finds a minimum-cost plan that discharges all ([`PROBLEM_SPEC.md`](working_documents/PROBLEM_SPEC.md) §8, §14; hypothesis H6). Under the logical rule this is exact (decision 2). The originally planned comparators, confidence-based and routing baselines, were not built; the registration restates H6 "relative to native planning and a structured prompt" ([`PREREG_EOP.md`](../experiments/preregistrations/PREREG_EOP.md)).
 
-**Decision A: the registered comparison (23:58 on 2026-11-13, before any B, C or D response).** Conditions: A native answer; B structured obligation prompt; C extraction by the model (prompt v1) followed by the exact planner; D verifier ablation. One confirmatory test: C minus A on plan optimality, v3 dev, Detection-Controlled, Holm across four models. Strict scoring: an invalid extraction counts as a failure, with no fallback ([`PREREG_EOP.md`](../PREREG_EOP.md); commit `0dfee91`).
+**Decision A: the registered comparison (23:58 on 2026-11-13, before any B, C or D response).** Conditions: A native answer; B structured obligation prompt; C extraction by the model (prompt v1) followed by the exact planner; D verifier ablation. One confirmatory test: C minus A on plan optimality, v3 dev, Detection-Controlled, Holm across four models. Strict scoring: an invalid extraction counts as a failure, with no fallback ([`PREREG_EOP.md`](../experiments/preregistrations/PREREG_EOP.md); commit `0dfee91`).
 
 **Evidence for the registered condition** (registered development; 72 dev families, 401 resolvable states; [`eop_summary.json`](../results/aggregate/eop_dev/eop_summary.json)).
 - C minus A: −0.264 [−0.328, −0.200] / −0.329 [−0.379, −0.285] / −0.935 [−0.957, −0.911] / +0.546 [0.485, 0.606]. Holm p 1 / 1 / 1 / < 0.001. The registered test is supported for gemma +schema only.
 - Invalid v1 extractions: 171 / 191 / 533 / 3 of 545.
 - Cause: the v1 prompt described its output fields in prose and never showed the layout the reader requires. Models without schema enforcement returned the right content in other layouts. gemma received the layout through its forced schema.
 
-**Decision B: Amendment 1 (2026-11-14, 11:36).** Add condition C′ (and D′): the v1 prompt plus the exact JSON template. Nothing else changes. Run it for the three models without schema enforcement. Report C and D exactly as registered. The confirmatory test stays C minus A ([`PREREG_EOP.md`](../PREREG_EOP.md), Amendment 1; commits `e1fb301`, `6ff8d16`).
+**Decision B: Amendment 1 (2026-11-14, 11:36).** Add condition C′ (and D′): the v1 prompt plus the exact JSON template. Nothing else changes. Run it for the three models without schema enforcement. Report C and D exactly as registered. The confirmatory test stays C minus A ([`PREREG_EOP.md`](../experiments/preregistrations/PREREG_EOP.md), Amendment 1; commits `e1fb301`, `6ff8d16`).
 
 **Rationale for Amendment 1.** "Under strict scoring, condition C therefore mostly measured whether a model guesses our layout." The amendment was decided after a pipeline check of extraction validity and before any C or D outcome was scored. It was still made after seeing dev data, and the documents say so.
 
 **Evidence for the amended condition** (exploratory, development-informed). C′ gives an optimal plan on all 401 resolvable dev states; 0 of 545 extractions are invalid. C′ minus A: +0.045 [0.025, 0.069] / +0.025 [0.010, 0.040] / +0.037 [0.020, 0.058].
 
-**Decision C: Amendment 2 (2026-11-14, 13:32; analysis only).** Under the structured prompt, gemma +schema answered as message text with no function call in all 1,018 responses, so registered B and D have no parsed answer for it. A sensitivity condition Bt reads the JSON from the message text; Dt is its verifier variant. Registered B and D are reported unchanged ([`PREREG_EOP.md`](../PREREG_EOP.md), Amendment 2; commit `58315e7`). Bt gives optimal plans on 0.394 of states (Detection-Controlled) against gemma's native 0.446; the difference is −0.052 [−0.131, 0.030].
+**Decision C: Amendment 2 (2026-11-14, 13:32; analysis only).** Under the structured prompt, gemma +schema answered as message text with no function call in all 1,018 responses, so registered B and D have no parsed answer for it. A sensitivity condition Bt reads the JSON from the message text; Dt is its verifier variant. Registered B and D are reported unchanged ([`PREREG_EOP.md`](../experiments/preregistrations/PREREG_EOP.md), Amendment 2; commit `58315e7`). Bt gives optimal plans on 0.394 of states (Detection-Controlled) against gemma's native 0.446; the difference is −0.052 [−0.131, 0.030].
 
 **Further evidence at the dev gate.**
 - The structured prompt alone helps no model. For qwen3.5-397b it loses 252 of 1,018 answers to parsing ([`GATE2_DEV_REPORT.md`](../results/aggregate/GATE2_DEV_REPORT.md) §1 and "Corrections").
@@ -178,8 +178,8 @@ Cost edits were excluded from T1 because they are E10. v3 stays frozen and prima
 
 **Consequence.**
 - The registered experiment failed for three of four models, and that result stands ([`paper/report.md`](../paper/report.md) Appendix B, Table B1).
-- The amended method is development-informed. A held-out result for it can only be a prospective test of the amended method ([`PREREG_FINAL.md`](../PREREG_FINAL.md) §1).
-- The parser was promoted from an upper bound to a reported baseline after an audit found that it reads only the prompt text ([`PREREG_FINAL.md`](../PREREG_FINAL.md) §3). Because it matched EOP, a rewording study was registered (decision 10).
+- The amended method is development-informed. A held-out result for it can only be a prospective test of the amended method ([`PREREG_FINAL.md`](../experiments/preregistrations/PREREG_FINAL.md) §1).
+- The parser was promoted from an upper bound to a reported baseline after an audit found that it reads only the prompt text ([`PREREG_FINAL.md`](../experiments/preregistrations/PREREG_FINAL.md) §3). Because it matched EOP, a rewording study was registered (decision 10).
 - The freeze records of the registration and of both amendments no longer verify, because each later step added to the same files; the held-out freeze pins the final versions ([`docs/EXPERIMENT_INDEX.md`](../docs/EXPERIMENT_INDEX.md) §6).
 - The gate report was re-read independently on 2026-11-14 and corrected in place, with a log of the earlier wording.
 
@@ -189,7 +189,7 @@ Cost edits were excluded from T1 because they are E10. v3 stays frozen and prima
 
 **Evidence at the gate.** Dev results for E1–E9, T1B and the EOP comparison (decisions 8 and 9). Dev pointed against H2 and H4 and showed a ceiling on H3 for the strong models. EOP extraction matched the visible state in 545 of 545 dev cases for the three models with prompt v2, and so did the parser.
 
-**Decision A: the held-out protocol** ([`PREREG_FINAL.md`](../PREREG_FINAL.md); frozen 20:04 on 2026-11-14, commit `d00ada4`; first call logged 20:05).
+**Decision A: the held-out protocol** ([`PREREG_FINAL.md`](../experiments/preregistrations/PREREG_FINAL.md); frozen 20:04 on 2026-11-14, commit `d00ada4`; first call logged 20:05).
 - One run on 63 test families (468 states, 402 counterfactual pairs), four models, unchanged settings.
 - Three families of confirmatory tests, Holm within each: F0 (H2, H3, H4a, H4b, as registered on 2026-11-04); F1 (EOP minus native, plan optimality); F2 (T-OI-1).
 - EOP on the test split is the amended C′ for three models and the registered C for gemma. The registered C is not run on test for the other three: "it is a known instrument defect, and its dev results are the registered outcome."
@@ -198,9 +198,9 @@ Cost edits were excluded from T1 because they are E10. v3 stays frozen and prima
 
 **Rationale.** The protocol says what the run is and is not: for EOP it is "a prospective test of the amended method" and does "not turn the original registered experiment into a success". F0 was kept as registered although dev pointed against it. No correction is applied across the three families, and the protocol states this so that it can be judged.
 
-**Decision B: the rewording study** ([`PREREG_ROBUST.md`](../PREREG_ROBUST.md); frozen 20:20, commit `35b983b`). 18 dev families, 137 states, four rewordings that keep the formal state (lexical, syntax, reorder, prose), 548 items. Conditions: native, structured prompt, EOP in its frozen configuration, EOP with a translating prompt (EOP-N), parser. One registered test: EOP minus native, pooled over wordings. Nothing found there may change EOP or cause a re-run on the test split.
+**Decision B: the rewording study** ([`PREREG_ROBUST.md`](../experiments/preregistrations/PREREG_ROBUST.md); frozen 20:20, commit `35b983b`). 18 dev families, 137 states, four rewordings that keep the formal state (lexical, syntax, reorder, prose), 548 items. Conditions: native, structured prompt, EOP in its frozen configuration, EOP with a translating prompt (EOP-N), parser. One registered test: EOP minus native, pooled over wordings. Nothing found there may change EOP or cause a re-run on the test split.
 
-**Rationale.** The benchmark's wording is regular and machine-generated, and a parser with no model matched EOP on it. The study asks whether the result survives rewording and whether a model extractor gives anything a parser does not. One fact was known in advance from the generator alone: the parser reads the reorder variants and none of the others. An independent reading of 24 sampled variants by a language model, not a person, recovered the true state in 24 of 24 and led to one wording fix before the freeze ([`ROBUST_AUDIT.md`](../ROBUST_AUDIT.md)).
+**Rationale.** The benchmark's wording is regular and machine-generated, and a parser with no model matched EOP on it. The study asks whether the result survives rewording and whether a model extractor gives anything a parser does not. One fact was known in advance from the generator alone: the parser reads the reorder variants and none of the others. An independent reading of 24 sampled variants by a language model, not a person, recovered the true state in 24 of 24 and led to one wording fix before the freeze ([`ROBUST_AUDIT.md`](../experiments/preregistrations/ROBUST_AUDIT.md)).
 
 **The outage and the first view.**
 - From 19:57 on 2026-11-15 the provider answered every deepseek-v4-flash call with an error. The run was paused by hand at 20:22 so that calls that could not succeed would not use up their three attempts ([`network_guard.log`](../results/raw/network_guard.log)).
@@ -228,7 +228,7 @@ Cost edits were excluded from T1 because they are E10. v3 stays frozen and prima
 
 ## 11. Three follow-up studies and what they changed (2026-11-15 to 2026-11-16)
 
-**Research state.** The held-out results had been viewed at 20:23 on 2026-11-15. Two observations were open. First, the benchmark text says of every computational fact that "its certified value is not yet known", while the known-values line can list such a value; the independent reader of the rewording audit had noted this on 2026-11-14 in 18 of 24 texts ([`ROBUST_AUDIT.md`](../ROBUST_AUDIT.md)). Second, EOP failed under rewording mostly because the reader rejected the model's extraction.
+**Research state.** The held-out results had been viewed at 20:23 on 2026-11-15. Two observations were open. First, the benchmark text says of every computational fact that "its certified value is not yet known", while the known-values line can list such a value; the independent reader of the rewording audit had noted this on 2026-11-14 in 18 of 24 texts ([`ROBUST_AUDIT.md`](../experiments/preregistrations/ROBUST_AUDIT.md)). Second, EOP failed under rewording mostly because the reader rejected the model's extraction.
 
 **Evidence that motivated the studies** (exploratory). An analysis specified while the held-out run was in progress and before its analysis (commit `8efd1db`, 2026-11-14 22:12) splits unnecessary plans by whether they only re-obtain values the text lists as known. On the held-out split, 21 of the 34 unnecessary plans of qwen3.5-397b on newly sufficient states are of this kind ([`recertification.json`](../results/aggregate/final_test/recertification/recertification.json)).
 
@@ -236,9 +236,9 @@ Cost edits were excluded from T1 because they are E10. v3 stays frozen and prima
 
 | Study | Registered | Question | Design |
 |---|---|---|---|
-| 1, wording clarity | 21:03 on 2026-11-15 ([`PREREG_FOLLOWUP.md`](../PREREG_FOLLOWUP.md); commit `fd8145c`) | Whether an unambiguous wording removes the stopping errors | 60 families, 436 states, each rendered in the benchmark wording and in a wording that differs in two lines only; three models |
+| 1, wording clarity | 21:03 on 2026-11-15 ([`PREREG_FOLLOWUP.md`](../experiments/preregistrations/PREREG_FOLLOWUP.md); commit `fd8145c`) | Whether an unambiguous wording removes the stopping errors | 60 families, 436 states, each rendered in the benchmark wording and in a wording that differs in two lines only; three models |
 | 2, cost sensitivity (the planned E10) | Same registration | Whether models follow the cheapest plan when one price crosses the point where it changes | 60 other families, 209 price sweeps, 780 items; three models |
-| 3, extraction repair | 00:13 on 2026-11-16 ([`PREREG_REPAIR.md`](../PREREG_REPAIR.md); commit `2935522`) | Whether one repair call recovers extractions the reader rejects | 12 other families, 174 reworded items; gemma and deepseek; exploratory by its own registration, no test |
+| 3, extraction repair | 00:13 on 2026-11-16 ([`PREREG_REPAIR.md`](../experiments/preregistrations/PREREG_REPAIR.md); commit `2935522`) | Whether one repair call recovers extractions the reader rejects | 12 other families, 174 reworded items; gemma and deepseek; exploratory by its own registration, no test |
 
 **Rationale.** Study 1: "The stopping errors may come from the wording, from the model, or from both." Study 2 replaces the decision of decision 5 by "the project owner's instruction of 2026-11-15 to run it"; the reason for the instruction: Not recorded. Study 3 follows from the rewording failures; a planned third arm with source-grounded extraction was not run because it would have required changes to frozen code. deepseek-v4-flash was left out of Study 1 because its capacity was reserved for finishing the held-out run; Study 2 lists the same three models without restating a reason.
 

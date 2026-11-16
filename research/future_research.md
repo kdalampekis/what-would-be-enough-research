@@ -18,7 +18,7 @@ A rejected extraction is an error the system can see. An accepted but wrong extr
 
 | Direction (as named in the report) | What it would test (our gloss of the report's phrase) | Status in this project |
 |---|---|---|
-| Source-linked extraction | The model cites the source sentence of every rule it extracts, so each element of the formal state can be traced to the text | A source-grounded, typed extraction arm was planned for Study 3 and not run: the forced output schema of one model and the frozen runner accept only the existing layout ([`../PREREG_REPAIR.md`](../PREREG_REPAIR.md) §0) |
+| Source-linked extraction | The model cites the source sentence of every rule it extracts, so each element of the formal state can be traced to the text | A source-grounded, typed extraction arm was planned for Study 3 and not run: the forced output schema of one model and the frozen runner accept only the existing layout ([`../PREREG_REPAIR.md`](../experiments/preregistrations/PREREG_REPAIR.md) §0) |
 | Agreement between independent formalizations | Whether two extractions made independently agree, as a signal of a faithful state | Not run |
 | Roundtrip checks [R15] | Whether a state, rendered back to text and re-read, returns the same state | Not run on model extractions. The benchmark's own rendering has a model-free round trip with 0 mismatches on all 2,282 states ([`../paper/extended_report.md`](../paper/extended_report.md), Appendix D) |
 | Abstention on ambiguous text | Whether the extractor declines when the text has more than one reading | Not run. The benchmark text itself contained one such ambiguity, which Study 1 measured (`paper/report.md` §4.2) |
@@ -64,7 +64,7 @@ The table lists what the plan contained and what exists. The first two columns f
 | E11 risk sensitivity | Whether models change the plan or defer when the penalty or threshold changes | Frozen variants; analysis not wired into the driver | Not run |
 | E12 structural shift | Generalisation to deeper or larger structures and unseen renderings | Variants with a theme shift only | Not run. The rewording study is not E12 |
 | E13 external validity | Transfer to external tasks | Converter only | Not run |
-| E14 computation-capability control | Whether a model that can do a computation in its head skips the certified action more often | Opt-in runner and analysis | Not run. Until it is run, how much the certified-computation convention matters is unmeasured (extended report, Appendix D; [`../PROTOCOL.md`](../PROTOCOL.md) §9) |
+| E14 computation-capability control | Whether a model that can do a computation in its head skips the certified action more often | Opt-in runner and analysis | Not run. Until it is run, how much the certified-computation convention matters is unmeasured (extended report, Appendix D; [`../PROTOCOL.md`](../experiments/preregistrations/PROTOCOL.md) §9) |
 | T2 information-source switching | The same unknown reachable by information or by certified computation | Design text; a semantics decision is open | Not run (`CHALLENGE_V4_DESIGN.md` §3) |
 | T3 necessity versus relevance | The model's own pruning at fixed action count and prompt length | Design text only | Not run |
 | T4 conditional sequential planning | Section 2 | Design text only; needs a new oracle | Not run |
@@ -75,12 +75,12 @@ The table lists what the plan contained and what exists. The first two columns f
 | Source-grounded extraction arm of Study 3 | Section 1 | Planned in the registration | Not run (`PREREG_REPAIR.md` §0) |
 | 64 development counterfactual pairs of the 10 calibration families | — | Generated; in no item set | Not run |
 
-**One item changed status.** E10, cost sensitivity, is listed as not run in the roadmap matrix and in the experiment index, both written on 2026-11-14. It was run afterwards as follow-up Study 2, by a decision of 2026-11-15 recorded in [`../PREREG_FOLLOWUP.md`](../PREREG_FOLLOWUP.md) §0. Its result is a follow-up result, registered after the held-out results were viewed.
+**One item changed status.** E10, cost sensitivity, is listed as not run in the roadmap matrix and in the experiment index, both written on 2026-11-14. It was run afterwards as follow-up Study 2, by a decision of 2026-11-15 recorded in [`../PREREG_FOLLOWUP.md`](../experiments/preregistrations/PREREG_FOLLOWUP.md) §0. Its result is a follow-up result, registered after the held-out results were viewed.
 
 ## 6. Other open points from the limitations
 
 - **More models and repeated runs.** Four open-weight models from one provider were run at temperature 0 with one answer per item. No closed frontier model was run, and there is no estimate of run-to-run variation (`paper/report.md`, Appendix A).
-- **Stopping, re-measured.** Study 1 measured the effect of the ambiguous wording on fresh train families. The extended report lists a corrected benchmark text, to re-measure stopping without the ambiguity, as future work. Study 1 used train families only, and the held-out data, prompts and results were not changed ([`../PREREG_FOLLOWUP.md`](../PREREG_FOLLOWUP.md) §0).
+- **Stopping, re-measured.** Study 1 measured the effect of the ambiguous wording on fresh train families. The extended report lists a corrected benchmark text, to re-measure stopping without the ambiguity, as future work. Study 1 used train families only, and the held-out data, prompts and results were not changed ([`../PREREG_FOLLOWUP.md`](../experiments/preregistrations/PREREG_FOLLOWUP.md) §0).
 - **Deferral.** With the ambiguity removed, what remains for the strong models is imperfect deferral when nothing available can settle the question: 0.89, 0.87 and 0.97 on the held-out split (descriptive, no registered test; [`../results/aggregate/final_test/RESULTS_TABLES.md`](../results/aggregate/final_test/RESULTS_TABLES.md)). Why they act on the remaining states is not analysed. Not recorded.
 - **The weak model's profile.** gemma's plans are usually sufficient and rarely the cheapest, ignore prices, and continue when nothing more is needed (`paper/report.md` §5). It was observed in one model. Whether other models share it was not tested.
 - **Literature.** The candidate list is not a systematic search. Whether the full list of search queries in the novelty map was repeated before submission is not recorded ([`research_gap_and_novelty.md`](research_gap_and_novelty.md), Section 3).

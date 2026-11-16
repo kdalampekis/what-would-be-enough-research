@@ -15,7 +15,7 @@ Benchmark v3.0 (`pool_v3`) has 300 families and 2,282 states ([data/pool_v3_mani
 | States by oracle class | ALREADY_SUFFICIENT 300, INFORMATION_ONLY 419, COMPUTATION_ONLY 415, BOTH 848, NEITHER 300 | `resource_classes` in the manifest |
 | States by sibling type | five core types, 300 each; RELEVANT_INSUFFICIENT_INFORMATION 200; RELEVANT_INSUFFICIENT_COMPUTATION 173; SUFFICIENT_NON_MINIMAL 178; PREMATURE_STOP 231 | `sibling_types` in the manifest |
 | Dev split | 545 states, 401 resolvable | [docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §1 |
-| Test split | 468 states; 342 resolvable | [PREREG_FINAL.md](../PREREG_FINAL.md) §1; denominators in [paper/extended_report.md](../paper/extended_report.md) Appendix E.1 |
+| Test split | 468 states; 342 resolvable | [PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §1; denominators in [paper/extended_report.md](../paper/extended_report.md) Appendix E.1 |
 | Mean number of actions, mean prompt length (dev) | 7.66 actions; 5,770.91 characters | [results/audit_v3/benchmark_audit.md](../results/audit_v3/benchmark_audit.md) §4d |
 
 A resolvable state is one whose class is INFORMATION_ONLY, COMPUTATION_ONLY or BOTH.
@@ -53,7 +53,7 @@ Trap siblings are optional. They "are added when a draw has that property" (`_tr
 | SUFFICIENT_NON_MINIMAL | Some action is *dominated*: it is in an inclusion-minimal sufficient plan and in no cheapest one | 178 |
 | PREMATURE_STOP | The first cheapest plan has at least two actions, and no single action of it settles Q in the actual world | 231 |
 
-These states carry the two contrasts named in the paper: "relevant but insufficient plans; sufficient but not minimal plans" ([paper/report.md](../paper/report.md) §3.2). Because trap siblings are optional, "Families of the same sibling type that are missing in a family ... are excluded from the paired tests that need them; the counts are reported" ([PROTOCOL.md](../PROTOCOL.md) §8).
+These states carry the two contrasts named in the paper: "relevant but insufficient plans; sufficient but not minimal plans" ([paper/report.md](../paper/report.md) §3.2). Because trap siblings are optional, "Families of the same sibling type that are missing in a family ... are excluded from the paired tests that need them; the counts are reported" ([PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §8).
 
 ## 4. The family-level split
 
@@ -63,7 +63,7 @@ The split "is a deterministic function of the family id alone, so it cannot depe
 
 | Split | Families | Use | Source |
 |---|---|---|---|
-| train | 165 | Planned for prompt development and probe training. No train family was sent to any model before the follow-up studies, which then used 132 of them | [PROTOCOL.md](../PROTOCOL.md) §2; [PREREG_FOLLOWUP.md](../PREREG_FOLLOWUP.md) §0; [PREREG_REPAIR.md](../PREREG_REPAIR.md) §1 |
+| train | 165 | Planned for prompt development and probe training. No train family was sent to any model before the follow-up studies, which then used 132 of them | [PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §2; [PREREG_FOLLOWUP.md](../experiments/preregistrations/PREREG_FOLLOWUP.md) §0; [PREREG_REPAIR.md](../experiments/preregistrations/PREREG_REPAIR.md) §1 |
 | dev | 72 | Calibration, development runs, the registered development comparisons, the rewording study (18 families) | [docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §4 |
 | test | 63 | "the single frozen final evaluation. The code refuses it without `--allow-test`" | PROTOCOL.md §2 |
 
@@ -109,7 +109,7 @@ All three template versions were written on 2026-11-03 and 2026-11-04, before an
 | Heuristic h1pp | Not recorded | 100.0% / 90.9% / 90.9% | 74.7% / 75.4% / 50.6% | same |
 | Posterior task solved by rounded log-likelihood sums | Not recorded | 100.0% (n = 293) | 51.5% (n = 233) | §4c of the two audit files |
 
-The v2 pool is kept only as "a shallow subset", for a structural comparison that was not run ([PROTOCOL.md](../PROTOCOL.md) §1; [docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §4.14).
+The v2 pool is kept only as "a shallow subset", for a structural comparison that was not run ([PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §1; [docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §4.14).
 
 ## 7. The v3 redesign
 
@@ -153,12 +153,12 @@ How to read them:
 
 - **Sufficiency alone is a weak metric on this benchmark.** "The strongest heuristic still gives a sufficient plan on 0.85 of resolvable dev states, so sufficiency alone is a weak metric here; optimality and stopping are harder" ([paper/extended_report.md](../paper/extended_report.md) §3.2).
 - **Deferral on NEITHER is not evidence of reasoning by itself.** h1pp "defers on every NEITHER state, so NEITHER results are not evidence of reasoning" ([docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §4.2).
-- **`heuristic_hard`** is "a pre-registered stress-test subset": the states where h1pp fails, "determined from the prompt text alone". It has 198 of 545 dev states and no NEITHER state. "Compare within class only, never pooled against the full set" ([PROTOCOL.md](../PROTOCOL.md) §6; [results/audit_v3/benchmark_audit.md](../results/audit_v3/benchmark_audit.md) §4d). The pre-registered secondary tests (H2–H4) on this subset are absent from the result files ([docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §5).
+- **`heuristic_hard`** is "a pre-registered stress-test subset": the states where h1pp fails, "determined from the prompt text alone". It has 198 of 545 dev states and no NEITHER state. "Compare within class only, never pooled against the full set" ([PROTOCOL.md](../experiments/preregistrations/PROTOCOL.md) §6; [results/audit_v3/benchmark_audit.md](../results/audit_v3/benchmark_audit.md) §4d). The pre-registered secondary tests (H2–H4) on this subset are absent from the result files ([docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §5).
 - **Surface-count probe.** It is "reported as a surface-feature baseline alongside every E3 result" (audit §1). In the held-out diagnosis table its value is 0.45 ([paper/extended_report.md](../paper/extended_report.md) Appendix E.1).
 
 ## 9. Counterfactual pairs (T1)
 
-T1 was designed during the sprint, after calibration showed three models at ceiling, and was registered on 2026-11-13 before any model had seen a T1 item ([PREREG_T1.md](../PREREG_T1.md)).
+T1 was designed during the sprint, after calibration showed three models at ceiling, and was registered on 2026-11-13 before any model had seen a T1 item ([PREREG_T1.md](../experiments/preregistrations/PREREG_T1.md)).
 
 **Construction** ([src/msep/benchmark/t1_flips.py](../src/msep/benchmark/t1_flips.py); PREREG_T1 §1):
 
@@ -176,9 +176,9 @@ T1 was designed during the sprint, after calibration showed three models at ceil
 | Set | Pairs (items) | Pairs whose edited state is ALREADY_SUFFICIENT | Source |
 |---|---|---|---|
 | Full set | 1,969 (3,938): train 1,098, dev 469, test 402 | Not recorded for the full set | PREREG_T1 §1 |
-| Dev pilot, families ranked 11–30 | 133 (266): 85 direct, 48 indirect | 55 | PREREG_T1 §3; [PREREG_T1B.md](../PREREG_T1B.md) |
+| Dev pilot, families ranked 11–30 | 133 (266): 85 direct, 48 indirect | 55 | PREREG_T1 §3; [PREREG_T1B.md](../experiments/preregistrations/PREREG_T1B.md) |
 | Dev follow-up T1B, families ranked 31–72 | 272 (544) | 122 | PREREG_T1B, "Items" |
-| Held-out test | 402 (804) | 169 | [PREREG_FINAL.md](../PREREG_FINAL.md) §1; [results/aggregate/final_test/RESULTS_TABLES.md](../results/aggregate/final_test/RESULTS_TABLES.md) |
+| Held-out test | 402 (804) | 169 | [PREREG_FINAL.md](../experiments/preregistrations/PREREG_FINAL.md) §1; [results/aggregate/final_test/RESULTS_TABLES.md](../results/aggregate/final_test/RESULTS_TABLES.md) |
 | Dev pairs of the 10 calibration families | 64 | in no item set | [docs/EXPERIMENT_INDEX.md](../docs/EXPERIMENT_INDEX.md) §4.14 |
 
 **Shortcut control.** On the pilot families, "text-only heuristics reach 0.81–0.84 transition accuracy on direct pairs and 0.00–0.28 on indirect pairs". So "the indirect stratum is the primary test; direct pairs are a shortcut control" (PREREG_T1 §2).
@@ -197,11 +197,11 @@ Cost variants keep "the epistemic structure (variables, rules, knowledge, menu)"
 | equal | b | "plans with and without d tie; all tied plans count as correct" | 209 |
 | above | b + 1 and the original cost | "no cheapest plan contains d" | 362 |
 
-**Selection for Study 2** ([PREREG_FOLLOWUP.md](../PREREG_FOLLOWUP.md) §2; [experiments/generate_followup.py](../experiments/generate_followup.py); [data/followup_v1_manifest.json](../data/followup_v1_manifest.json)). The generator re-solves every item and checks the three properties and the stored labels. "Sweeps without all three sides (a cost below 1 would be needed) are dropped before families are chosen: 49 sweeps." Then "the first 60 train families, in sorted order after the 60 of Study 1, that have a complete sweep: 209 sweeps, 780 items". Tier of Study 2: follow-up, registered after the held-out results were viewed.
+**Selection for Study 2** ([PREREG_FOLLOWUP.md](../experiments/preregistrations/PREREG_FOLLOWUP.md) §2; [experiments/generate_followup.py](../experiments/generate_followup.py); [data/followup_v1_manifest.json](../data/followup_v1_manifest.json)). The generator re-solves every item and checks the three properties and the stored labels. "Sweeps without all three sides (a cost below 1 would be needed) are dropped before families are chosen: 49 sweeps." Then "the first 60 train families, in sorted order after the 60 of Study 1, that have a complete sweep: 209 sweeps, 780 items". Tier of Study 2: follow-up, registered after the held-out results were viewed.
 
 ## 11. The four rewordings and their validation
 
-The rewording study asks whether results depend on the benchmark's regular wording. It was registered separately on 2026-11-14 ([PREREG_ROBUST.md](../PREREG_ROBUST.md)). Tier: rewording study (registered separately).
+The rewording study asks whether results depend on the benchmark's regular wording. It was registered separately on 2026-11-14 ([PREREG_ROBUST.md](../experiments/preregistrations/PREREG_ROBUST.md)). Tier: rewording study (registered separately).
 
 **Base items.** "v3 dev families at positions 0, 4, 8, … of the sorted family ids: 18 families, all 137 of their states. Chosen by position, not by any model result." Four variants per state give 548 items.
 
@@ -220,13 +220,13 @@ One example state in all five wordings is in [paper/extended_report.md](../paper
 
 1. **Inverse parser.** "an inverse parser written for these templates recovers, from each rendered unit, a state equal to the canonical one"; every handle and action name occurs in the variant; generation is deterministic. Result: 137 of 137 per wording, 0 failures over 548 items ([data/robust_v1_validation.json](../data/robust_v1_validation.json)); also run on "all 5,076 variants of the train split during development" (PREREG_ROBUST §1).
 2. **Stated limit of layer 1.** "it shows that the intended reading recovers the state. It cannot show that no other reading is plausible."
-3. **Independent reading of a sample** ([ROBUST_AUDIT.md](../ROBUST_AUDIT.md)). 24 train-split variants, 6 per wording, from 24 different families, were read by a language model that "received only the 24 texts: no code, no data, no labels, no description of the generator". "It is a language model, not a person. A human audit was not done." Its 24 written-down states were compared with the true states by program: "24 of 24 equal to the true state". It raised one scope risk: "It is not the case that (X) exactly when Y" could attach the negation to X or to the whole sentence. The fix: "a negated compound statement that is an argument of another connective is now parenthesised". After the fix "all 548 dev variants and all 5,076 train variants were regenerated and validated again (0 failures)". "The 24 audited texts were read before this last fix; the fix only adds parentheses."
+3. **Independent reading of a sample** ([ROBUST_AUDIT.md](../experiments/preregistrations/ROBUST_AUDIT.md)). 24 train-split variants, 6 per wording, from 24 different families, were read by a language model that "received only the 24 texts: no code, no data, no labels, no description of the generator". "It is a language model, not a person. A human audit was not done." Its 24 written-down states were compared with the true states by program: "24 of 24 equal to the true state". It raised one scope risk: "It is not the case that (X) exactly when Y" could attach the negation to X or to the whole sentence. The fix: "a negated compound statement that is an argument of another connective is now parenthesised". After the fix "all 548 dev variants and all 5,076 train variants were regenerated and validated again (0 failures)". "The 24 audited texts were read before this last fix; the fix only adds parentheses."
 
-**Reuse.** Follow-up Study 3 uses the same generator, unchanged, on other families: the first 12 train families used by neither Study 1 nor Study 2, every state (87), in the syntax and prose wordings, 174 items ([PREREG_REPAIR.md](../PREREG_REPAIR.md) §1; [data/repair_v1_manifest.json](../data/repair_v1_manifest.json)).
+**Reuse.** Follow-up Study 3 uses the same generator, unchanged, on other families: the first 12 train families used by neither Study 1 nor Study 2, every state (87), in the syntax and prose wordings, 174 items ([PREREG_REPAIR.md](../experiments/preregistrations/PREREG_REPAIR.md) §1; [data/repair_v1_manifest.json](../data/repair_v1_manifest.json)).
 
 ## 12. The clarified wording of follow-up Study 1
 
-**The ambiguity.** "The benchmark text says of every computational fact that 'its certified value is not yet known', while the 'Known so far' line can list such a value and the action for it is usually still offered" ([PREREG_FOLLOWUP.md](../PREREG_FOLLOWUP.md) §1). A model that re-runs that computation is counted as acting on a state that is already sufficient. "The intended reading: the known list is authoritative" ([ROBUST_AUDIT.md](../ROBUST_AUDIT.md)).
+**The ambiguity.** "The benchmark text says of every computational fact that 'its certified value is not yet known', while the 'Known so far' line can list such a value and the action for it is usually still offered" ([PREREG_FOLLOWUP.md](../experiments/preregistrations/PREREG_FOLLOWUP.md) §1). A model that re-runs that computation is counted as acting on a state that is already sufficient. "The intended reading: the known list is authoritative" ([ROBUST_AUDIT.md](../experiments/preregistrations/ROBUST_AUDIT.md)).
 
 **The intervention.** Each state is rendered twice. W0 is the benchmark text, unchanged. W1 differs in two lines only (PREREG_FOLLOWUP §1; [data/followup_v1_manifest.json](../data/followup_v1_manifest.json)):
 
@@ -264,14 +264,14 @@ Manifests with counts and regeneration commands: [data/pool_v3_manifest.json](..
 
 These are stated plainly because several results depend on them.
 
-1. **The header of the computational facts contradicts the known-values line.** The header says the certified value "is not yet known"; the known-values line can list one; the action for it is usually still offered. This affects one headline stopping measure. Extent: 18 of 24 audited texts ([ROBUST_AUDIT.md](../ROBUST_AUDIT.md)); 214 of the 232 already-sufficient held-out states offer a computation for a known computational fact ([results/aggregate/final_test/recertification/recertification.json](../results/aggregate/final_test/recertification/recertification.json)); 237 of 256 already-sufficient states in Study 1. Measured effect (Study 1; follow-up tier): acting on already-sufficient states falls from 0.14 to 0.03 for qwen3.5-397b and from 0.73 to 0.59 for gemma-4-26b +schema under the clarified wording ([results/aggregate/followup/followup_report.md](../results/aggregate/followup/followup_report.md)). The frozen text was not corrected; "A corrected benchmark text, to re-measure stopping without the ambiguity" is listed as future work ([paper/extended_report.md](../paper/extended_report.md) §5).
+1. **The header of the computational facts contradicts the known-values line.** The header says the certified value "is not yet known"; the known-values line can list one; the action for it is usually still offered. This affects one headline stopping measure. Extent: 18 of 24 audited texts ([ROBUST_AUDIT.md](../experiments/preregistrations/ROBUST_AUDIT.md)); 214 of the 232 already-sufficient held-out states offer a computation for a known computational fact ([results/aggregate/final_test/recertification/recertification.json](../results/aggregate/final_test/recertification/recertification.json)); 237 of 256 already-sufficient states in Study 1. Measured effect (Study 1; follow-up tier): acting on already-sufficient states falls from 0.14 to 0.03 for qwen3.5-397b and from 0.73 to 0.59 for gemma-4-26b +schema under the clarified wording ([results/aggregate/followup/followup_report.md](../results/aggregate/followup/followup_report.md)). The frozen text was not corrected; "A corrected benchmark text, to re-measure stopping without the ambiguity" is listed as future work ([paper/extended_report.md](../paper/extended_report.md) §5).
 2. **The wording is regular and machine-generated.** A parser written as the inverse of the renderer recovers every state, and the parser with an exact planner scores 1.00 on the benchmark's own wording ([results/aggregate/final_test/RESULTS_TABLES.md](../results/aggregate/final_test/RESULTS_TABLES.md)). "A high score on it is not a certificate of good epistemic behaviour" ([paper/report.md](../paper/report.md), Appendix A).
-3. **The closing paragraph is underspecified on entailed values.** It "says a computational fact enters the decision state 'only through its certified result', next to rules that link facts; whether a value entailed by the rules counts is not spelled out there (the decision rule sentence says it does ...)" ([ROBUST_AUDIT.md](../ROBUST_AUDIT.md)).
+3. **The closing paragraph is underspecified on entailed values.** It "says a computational fact enters the decision state 'only through its certified result', next to rules that link facts; whether a value entailed by the rules counts is not spelled out there (the decision rule sentence says it does ...)" ([ROBUST_AUDIT.md](../experiments/preregistrations/ROBUST_AUDIT.md)).
 4. **Some labels carry no content.** In the abstract skin, "'is it true that Q holds (Q)?' and 'fact D holds' have no content beyond the label; one text uses 'fact H' beside a task description that mentions 'P(H \| …)'" (ROBUST_AUDIT). When a skin runs out of phrases, a fact is labelled "condition F6 is met" (`rendering.py`; visible in example 2 of [docs/EXAMPLES.md](../docs/EXAMPLES.md)).
 5. **Awkward but unambiguous constructions.** "Double negations written out ('not (not F3)'), actions that reveal an already known value, a joint action costing the same as one of its parts, the same rule stated twice in contrapositive form" (ROBUST_AUDIT).
 6. **Shallow heuristics still score well on part of the task.** h1pp gives a sufficient plan on 0.85 (dev) and 0.88 (held-out) of resolvable states, an optimal plan on about half of dev states, and defers on every NEITHER state (Section 8).
 7. **Surface counts keep some signal.** "The residual is partly inherent" ([ASSUMPTIONS.md](../research/working_documents/ASSUMPTIONS.md) F8).
 8. **Narrow variety.** Four motifs, three skins, small worlds ("up to 16 variables for brute force", ASSUMPTIONS F7). "Linguistic shift" was tested only through the four template-made rewordings.
-9. **The rewordings are template-made and were not read by people.** "It is one reader, a language model, on 24 texts. It does not show that every human would read every variant the same way" ([ROBUST_AUDIT.md](../ROBUST_AUDIT.md)). Defects 1, 3, 4 and 5 are "inherited from the canonical benchmark text" and were kept in the rewordings "because the variants must say what the canonical text says".
+9. **The rewordings are template-made and were not read by people.** "It is one reader, a language model, on 24 texts. It does not show that every human would read every variant the same way" ([ROBUST_AUDIT.md](../experiments/preregistrations/ROBUST_AUDIT.md)). Defects 1, 3, 4 and 5 are "inherited from the canonical benchmark text" and were kept in the rewordings "because the variants must say what the canonical text says".
 
 Limitations that concern the evaluation and the claims, not the text, are in [limitations.md](limitations.md).
