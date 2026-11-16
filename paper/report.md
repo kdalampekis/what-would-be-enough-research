@@ -61,13 +61,13 @@ We compare four conditions (Figure 1): the model's **native** answer; a **struct
 
 **Figure 1.** The conditions. In EOP the model only extracts the visible state; an exact planner then checks whether Q is decided, lists the obligations and returns a cheapest hitting set. The evaluation oracle is separate and sees the true state.
 
-### 3.5 What was registered, and how to read each result
+### 3.5 Registration
 
-Every comparison was registered and hashed before its data existed, and results differ in standing. **Registered, held-out:** the planning hypotheses (H2–H4) and the test of over-intervention on newly sufficient states. **Prospective test of an amended method:** EOP on held-out data; the registered extraction prompt never showed the layout our reader requires, so we added it after the development split and report both versions (Appendix B). **Rewording study:** registered separately; never used to change EOP. **Follow-up studies:** registered *after* the held-out results had been viewed, on train families no model had seen; new evidence, not part of the original confirmation. **Exploratory and post hoc:** labelled where they occur.
+Every comparison was registered and hashed before its data existed. Results differ in standing (registered held-out, prospective test of an amended method, separately registered rewording study, follow-ups registered after the held-out results were viewed, exploratory); each is marked where it appears and listed in Appendix B.
 
 ## 4. Results
 
-**Table 1.** Held-out test split (63 families). Columns 2–5: share of cheapest sufficient plans on resolvable states, Detection-Controlled. EOP − native: registered one-sided test, Holm p ≤ 0.005 for every model. Last two columns: the native answer's deferral on NEITHER states, and the share of 169 newly sufficient states on which it still acts (registered test that the rate exceeds 0.05: Holm p < 0.001 for qwen3.5 and gemma, 1.0 for the others).
+**Table 1.** Held-out split (63 families). Columns 2–5: optimal-plan rate on resolvable states, Detection-Controlled; EOP − native: registered one-sided test, Holm p ≤ 0.005 for every model. Last columns: deferral on NEITHER states, and acting on 169 newly sufficient states (registered test of a rate above 0.05: Holm p < 0.001 for qwen3.5 and gemma).
 
 | Model | Native | Structured prompt | EOP | Parser | EOP − native | Defers when nothing helps | Acts on newly sufficient states |
 |---|---|---|---|---|---|---|---|
@@ -119,17 +119,17 @@ When no available action can settle the question, the three stronger models defe
 
 ## 5. Discussion and Limitations
 
-**Where the errors came from.** We expected models to confuse relevance with sufficiency; mostly they did not. The failures had two sources. One was our own text: a benchmark that states what is known inconsistently measures how a model resolves the inconsistency, not whether it knows when to stop; the registered result stands, its interpretation changes. The other is real: the weakest model's plans usually settle the question but are rarely the cheapest, ignore prices, and continue when nothing more is needed.
+**Where the errors came from.** Models rarely confused relevance with sufficiency. One source of error was our own text, which stated inconsistently what was known: the registered stopping result stands, but its interpretation changes. The other is real: the weakest model's plans settle the question but are rarely the cheapest, ignore prices, and continue when nothing more is needed.
 
-**Formal correctness is conditional on semantic faithfulness.** An exact planner removes planning errors by construction, and its stopping decisions can be audited. But its guarantees hold for the state it is given, not for the task the text describes: the parser fails on rewording, extraction holds for some models only, and repair turns some rejected extractions into accepted wrong ones. A reader that accepts an answer has checked its form, not its meaning, and the wrong states that mattered produced the worst outcome available, an immediate confident answer with no check. Solver-backed agents should report this condition next to their guarantees.
+**Formal correctness is conditional on semantic faithfulness.** An exact planner removes planning errors by construction, and its stopping decisions can be audited. But its guarantees hold for the state it is given, not for the task the text describes: the parser fails on rewording, extraction holds for some models only, and repair turns some rejected extractions into accepted wrong ones. A reader that accepts an answer has checked its form, not its meaning; the wrong states that mattered produced immediate, confident wrong answers. Solver-backed agents should report this condition next to their guarantees.
 
 ### Limitations
 
-Small synthetic logic problems in generated language, not open-ended decisions. EOP measures extraction, and its held-out version was fixed on development data. Four open-weight models from one provider, temperature 0, one answer per item. Static plans that must guarantee the answer; abstract costs. Rewordings from our own templates, audited by a language model, not people. The held-out results were first viewed during a provider outage, before one run had finished, under a rule fixed beforehand (Appendix B); the follow-ups were designed afterwards. Full list: Appendix A.
+Synthetic logic problems in generated language; four open-weight models from one provider, one answer per item; static plans that must guarantee the answer; EOP's held-out version fixed on development data; rewordings from our own templates; follow-ups designed after the held-out results were viewed. Full list: Appendix A.
 
 ### Future Work
 
-The next problem is faithful translation from language to a formal state, and knowing when a translation is faithful enough to act on: extraction that cites its source sentences; typed or grammar-constrained decoding [13]; verification independent of the extractor, including roundtrip checks [15]; several independent formalizations, acting only when they agree; and abstention calibrated to the chance the state is wrong. Consistency alone cannot show faithfulness [14]; this benchmark supplies exact references. Such methods should be tested on human-written, ambiguous tasks and judged by the consequences of undetected errors, not extraction accuracy alone. Further: sequential plans and probabilistic sufficiency [24].
+The next problem is faithful translation from language to a formal state, and knowing when a translation is faithful enough to act on: source-cited extraction, constrained decoding [13], verification independent of the extractor such as roundtrip checks [15], agreement between independent formalizations, and calibrated abstention. Consistency alone cannot show faithfulness [14]; this benchmark supplies exact references, and such methods should be judged by the consequences of undetected errors on human-written, ambiguous tasks. Further: sequential plans and probabilistic sufficiency [24].
 
 ## 6. Conclusion
 
@@ -138,13 +138,12 @@ We asked whether language models can tell what would be enough to settle a quest
 ## Code and Data
 
 - **Code repository:** https://github.com/kdalampekis/what-would-be-enough-research
-- **Data:** every dataset regenerates deterministically from the repository and is pinned by SHA-256 in freeze records. The raw model responses behind every reported table are archived in the repository.
-- **Registrations:** `PROTOCOL.md`, `PREREG_T1.md`, `PREREG_T1B.md`, `PREREG_EOP.md` (two amendments), `PREREG_FINAL.md`, `PREREG_ROBUST.md`, `PREREG_FOLLOWUP.md`, `PREREG_REPAIR.md`.
-- **Extended report:** formal details and proofs, all result tables with intervals, prompts, example items in every wording and the full literature review (`paper/extended_report.md`).
+- **Data:** datasets regenerate deterministically and are pinned by SHA-256 in freeze records; the raw model responses behind every table are archived in the repository.
+- **Also in the repository:** all registrations with their freeze records, the extended technical report and the full literature review.
 
 ## Author Contributions
 
-Konstantinos Dalampekis is the sole author. The author set the research question and direction, made the decisions recorded at each registration and gate, and is responsible for the content. The role of AI tools is described in the LLM Usage Statement.
+Konstantinos Dalampekis is the sole author: the author set the research question and direction, made the decisions recorded at each registration and gate, and is responsible for the content. The role of AI tools is described in the LLM Usage Statement.
 
 ## Acknowledgements
 
@@ -212,6 +211,8 @@ Format: Authors (Year). Title. Venue or arXiv id. URL. Unless marked, each entry
 - *Preexisting code, written before the sprint:* the library under `src/msep/` (formal state, oracle, benchmark generator, obligation planner, prompts, runner, scoring), the benchmark, validation and evaluation scripts, and the tests. Seven library modules were added during the sprint (rewording generator, counterfactual edits, extraction prompt v3, state comparison, structured prompt, provider connector, environment loading), and eight existing modules were extended.
 - *Built during the sprint:* the provider integration and every model run; the counterfactual pairs and their analyses; the EOP comparison with both amendments and the parser audit; the held-out protocol and evaluation; the rewording study; the three follow-up studies; this report.
 - *Reuse of the author's earlier code:* about 30 lines of syllogism semantics from an earlier project, used only in random oracle-validation instances and checked against brute force. No results from earlier projects are reported.
+
+**Standing of each result.** **Registered, held-out:** the planning hypotheses (H2–H4) and the test of over-intervention on newly sufficient states. **Prospective test of an amended method:** EOP on held-out data; the registered extraction prompt never showed the layout our reader requires, so we added it after the development split and report both versions (Appendix B). **Rewording study:** registered separately; never used to change EOP. **Follow-up studies:** registered *after* the held-out results had been viewed, on train families no model had seen; new evidence, not part of the original confirmation. **Exploratory and post hoc:** labelled where they occur.
 
 **EOP as registered.** The registered extraction prompt described the output fields in prose and never showed the layout the reader requires. Models without schema enforcement returned the right content in other layouts and were rejected. Table B1 shows the registered outcome on the development split beside the amended prompt.
 
