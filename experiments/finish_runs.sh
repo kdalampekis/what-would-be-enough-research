@@ -51,7 +51,6 @@ analyze)
   $PY experiments/make_figures.py --eop results/aggregate/final_test/eop/eop_summary.json --set v3test --t1-set t1test --label test
   $PY experiments/make_figures.py --robust results/aggregate/robust_dev/robust_summary.json
   $PY experiments/make_figures.py --eop results/aggregate/eop_dev/eop_summary.json --set v3dev --t1-set t1b --label dev --architecture
-  $PY experiments/render_results.py > results/aggregate/final_test/RESULTS_TABLES.md
   ;;
 archive)
   for d in results/raw/pilot/*/; do

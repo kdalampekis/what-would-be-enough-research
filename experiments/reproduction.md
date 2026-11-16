@@ -13,7 +13,7 @@ On 2026-11-16 (UTC) we exported this repository into an empty directory, created
 | Freeze checks: benchmark v3, T1, FINAL, ROBUST, FOLLOWUP, REPAIR | all pass (in our first trial ROBUST failed because we had moved a pinned file; the export now keeps every pinned file in place and checks this) |
 | Test suite | 777 passed, 2 skipped |
 | Unpack the raw model responses | 83,892 response files |
-| Re-run every analysis: held-out, rewording, exploratory re-certification split, follow-up Studies 1–3, the Study 3 supplement, tables, figures, report tables | all succeeded, about 16 minutes |
+| Re-run every analysis: held-out, rewording, exploratory re-certification split, follow-up Studies 1–3, the Study 3 supplement, tables and figures | all succeeded, about 16 minutes |
 
 **What changed on re-running:** nothing that is reported. The only differences from the committed files were:
 
@@ -62,7 +62,6 @@ experiments/finish_runs.sh analyze          # held-out, rewording, re-certificat
 $PY experiments/run_followup.py --analyze-only --models adaption-qwen3.5-397b,adaption-qwen3.8-27b,adaption-gemma-4-26b-a4b-it-schema
 $PY experiments/run_repair.py --analyze-only --models adaption-gemma-4-26b-a4b-it-schema,adaption-deepseek-v4-flash
 $PY experiments/repair_supplement.py > results/aggregate/repair/repair_supplement.json
-(cd paper && ../$PY fill_report.py && ../$PY build_report.py)   # report tables; the PDF build needs Google Chrome
 ```
 
 Then `git status` shows what changed. Expect only the items listed above.

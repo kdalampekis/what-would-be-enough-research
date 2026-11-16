@@ -1,7 +1,3 @@
-<!-- Submission report in the structure of the Apart template. Tables between BEGIN/END markers are filled from
-     the result files by paper/fill_report.py. The longer record, with formal details, all result tables, prompts
-     and the literature review, is paper/extended_report.md. -->
-
 # What Would Be Enough? Evaluating Minimal Sufficient Epistemic Plans in LLM Agents[^1]
 
 Konstantinos Dalampekis  
@@ -75,14 +71,12 @@ Every comparison was registered and hashed before its data existed, and results 
 
 **Table 1.** Held-out test split (63 families). Columns 2–5: share of cheapest sufficient plans on resolvable states, Detection-Controlled. EOP − native: registered one-sided test, Holm p ≤ 0.005 for every model. Last two columns: the native answer's deferral on NEITHER states, and the share of 169 newly sufficient states on which it still acts (registered test that the rate exceeds 0.05: Holm p < 0.001 for qwen3.5 and gemma, 1.0 for the others).
 
-<!-- BEGIN table-headline -->
 | Model | Native | Structured prompt | EOP | Parser | EOP − native | Defers when nothing helps | Acts on newly sufficient states |
 |---|---|---|---|---|---|---|---|
 | qwen3.5-397b | 0.93 | 0.62 | 1.00 | 1.00 | +0.07 [+0.04, +0.10] | 0.89 | 0.20 [0.14, 0.27] |
 | qwen3.8-27b | 0.98 | 0.96 | 1.00 | 1.00 | +0.02 [+0.01, +0.04] | 0.87 | 0.00 [0.00, 0.00] |
 | deepseek-v4-flash | 0.98 | 0.94 | 1.00 | 1.00 | +0.02 [+0.01, +0.04] | 0.97 | 0.00 [0.00, 0.00] |
 | gemma-4-26b +schema | 0.42 | 0.40 | 0.99 | 1.00 | +0.57 [+0.51, +0.62] | 0.00 | 0.72 [0.64, 0.79] |
-<!-- END table-headline -->
 
 ### 4.1 Native planning is strong, including under price changes
 
@@ -94,14 +88,12 @@ Every comparison was registered and hashed before its data existed, and results 
 
 **Table 2.** The three follow-up studies (fresh train families; intervals and tests in Appendix C). Cost: optimal-plan rate with one price just above and just below the point where the cheapest plan changes. Clarity: share of already-sufficient states on which the model still acts. Repair: exact extracted state on reworded items, frozen prompt.
 
-<!-- BEGIN table-followup -->
 | Model | Cost: cheapest plan, price above / below | Clarity: acts, original → clarified wording | Repair: exact state, first → with repair |
 |---|---|---|---|
 | qwen3.5-397b | 0.95 / 0.97 | 0.14 → 0.03 | not run |
 | qwen3.8-27b | 0.95 / 0.98 | 0.00 → 0.00 | not run |
 | deepseek-v4-flash | not run | not run | 0.89 → 0.97 |
 | gemma-4-26b +schema | 0.31 / 0.16 | 0.73 → 0.59 | 0.21 → 0.78 |
-<!-- END table-followup -->
 
 ### 4.2 Stopping: partly an artifact of our text, partly real
 
@@ -247,38 +239,32 @@ The registered test (EOP better than native) was supported for gemma only. That 
 
 ## Appendix C. Follow-up studies: full tables
 
-Generated from the result files by `paper/fill_report.py`. All three studies were registered after the held-out results had been viewed, used train families that no model had seen, and were analysed once. Full output: `results/aggregate/followup/` and `results/aggregate/repair/`.
+All three studies were registered after the held-out results had been viewed, used train families that no model had seen, and were analysed once. Full output: `results/aggregate/followup/` and `results/aggregate/repair/`.
 
 **Table C1.** Study 1, wording clarity (End-to-End; 256 already-sufficient states and 120 control states from 60 families; all attempted). Registered test: the rate of acting falls under the clarified wording (one-sided, Holm across models).
 
-<!-- BEGIN table-clarity -->
 | Model | Acts, original wording | Acts, clarified wording | Change | Holm p | Re-runs a known computation | Premature stops on states that need action, change |
 |---|---|---|---|---|---|---|
 | qwen3.5-397b | 0.14 [0.09, 0.19] | 0.03 [0.01, 0.05] | -0.11 [-0.16, -0.06] | < 0.001 | 0.10 → 0.00 | -1 of 120 |
 | qwen3.8-27b | 0.00 [0.00, 0.01] | 0.00 [0.00, 0.00] | -0.00 [-0.01, +0.00] | 0.368 | 0.00 → 0.00 | +0 of 120 |
 | gemma-4-26b +schema | 0.73 [0.67, 0.79] | 0.59 [0.51, 0.66] | -0.15 [-0.21, -0.09] | < 0.001 | 0.14 → 0.02 | +2 of 120 |
-<!-- END table-clarity -->
 
 **Table C2.** Study 2, cost sensitivity (Detection-Controlled; 209 price sweeps from 60 families; all attempted). Registered test: the optimal-plan rate is higher just above the boundary than just below it (one-sided, Holm across models).
 
-<!-- BEGIN table-cost -->
 | Model | Cheapest plan, price just above | Cheapest plan, price just below | Above − below | Holm p | Sufficient, below | Below items: cheapest / kept old plan / other sufficient / insufficient or none |
 |---|---|---|---|---|---|---|
 | qwen3.5-397b | 0.95 [0.92, 0.98] | 0.97 [0.95, 0.99] | -0.02 [-0.06, +0.02] | 1.000 | 1.00 | 203 / 0 / 6 / 0 |
 | qwen3.8-27b | 0.95 [0.90, 0.98] | 0.98 [0.95, 1.00] | -0.03 [-0.08, +0.01] | 1.000 | 0.98 | 204 / 0 / 0 / 5 |
 | gemma-4-26b +schema | 0.31 [0.24, 0.38] | 0.16 [0.11, 0.22] | +0.14 [+0.06, +0.23] | < 0.001 | 0.89 | 34 / 62 / 91 / 22 |
-<!-- END table-cost -->
 
 **Table C3.** Study 3, one diagnostic repair call (174 reworded items from 12 families; all attempted; exploratory, no test). Rise: paired 95% interval of the change in accepted-but-wrong extractions. A registered reading rule applies: an answer written as message text instead of a function call is read from the text.
 
-<!-- BEGIN table-repair -->
 | Model | First prompt | Exact state: first → with repair | Gain | Accepted but wrong: first → with repair (rise) | Optimal plan: first → with repair | Rejected first answers: recovered / wrong / still rejected |
 |---|---|---|---|---|---|---|
 | gemma-4-26b +schema | frozen | 0.21 → 0.78 | +0.56 [+0.47, +0.65] | 0.07 → 0.16 (+0.09 [+0.03, +0.15]) | 0.29 → 0.93 | 98 / 15 / 12 of 125 |
 | gemma-4-26b +schema | translating | 0.67 → 0.74 | +0.07 [+0.02, +0.12] | 0.15 → 0.17 (+0.02 [+0.01, +0.05]) | 0.75 → 0.87 | 12 / 4 / 15 of 31 |
 | deepseek-v4-flash | frozen | 0.89 → 0.97 | +0.09 [+0.04, +0.13] | 0.00 → 0.00 (+0.00 [+0.00, +0.00]) | 0.90 → 0.97 | 15 / 0 / 5 of 20 |
 | deepseek-v4-flash | translating | 0.95 → 0.97 | +0.02 [+0.01, +0.05] | 0.00 → 0.00 (+0.00 [+0.00, +0.00]) | 0.94 → 0.97 | 4 / 0 / 5 of 9 |
-<!-- END table-repair -->
 
 **Reader artifact.** Study 3 also exposed a reader artifact: gemma's "empty" answers under the translating prompt (EOP-N in Figure 2) were answers written as plain text instead of the forced function call. Read as text, that prompt gives the exact state on 0.67 of the Study 3 items, so Figure 2 understates EOP-N for gemma.
 

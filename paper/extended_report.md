@@ -1,6 +1,3 @@
-<!-- Extended technical report: the long version of the report as it stood on 2026-11-15, before the follow-up studies.
-     The submission report is paper/report.md. Result tables here are filled from the complete held-out data. -->
-
 > **Read this first.** This is the extended technical report, kept for its formal details, full result tables, prompts, example items and literature review. It was written before the three follow-up studies. Its reading of the stopping results ("what remains is stopping") is **superseded**: follow-up Study 1 showed that most of one strong model's over-intervention came from an ambiguity in the benchmark text. The submission report, [`report.md`](report.md), states the final claims.
 
 # What Would Be Enough? Evaluating Minimal Sufficient Epistemic Plans in LLM Agents[^1]
@@ -46,7 +43,6 @@ Decision-theoretic metareasoning weighs the value of computation [9, 10], and co
 **Starting point.** Sufficiency and minimality appear separately for information [1], reasoning [21], evidence [23] and tools [5]. We did not find them scored jointly over information and certified computation, in one priced action space with states that need either, both or neither, against an exact oracle, with detection, diagnosis and planning measured separately.
 
 **Logical roots.** The oracle is related to the logic of the reasons behind decisions [30, 31]: a minimal sufficient plan resembles a sufficient reason, and an obligation a necessary reason, with unknown variables in place of known values. That correspondence is our reading. The same-decision probability [32] is a probabilistic relative of our sufficiency test.
-
 
 We do not claim that uncertainty detection, abstention, adaptive retrieval or computation, minimal sufficient information or epistemic planning are new, or that we are first.
 
@@ -103,7 +99,6 @@ For 137 dev states (18 families) we generated four rewordings that keep the form
 
 All rates count a failed call or an unreadable answer as wrong. The held-out split has 63 families: 468 states, and 804 states in counterfactual pairs. It was run under the frozen protocol.
 
-
 ### 4.1 Planning and stopping on held-out data
 
 **Planning replicates.** In Detection-Controlled mode, qwen3.5, qwen3.8 and deepseek give a cheapest sufficient plan on 0.93, 0.98 and 0.98 of resolvable states (dev: 0.96, 0.98, 0.96); gemma on 0.42 (dev: 0.45). No item of the three stronger models fails in all three modes, so the mode decomposition attributes none of their errors to planning itself. For gemma it attributes 0.24 of items to diagnosis and 0.07 to planning.
@@ -114,14 +109,12 @@ All rates count a failed call or an unreadable answer as wrong. The held-out spl
 
 **Table 1.** Stopping on the held-out split, native answer. Acts: proposes any action on a state that is already sufficient. Last column: registered test T-OI-1.
 
-<!-- BEGIN table-stopping -->
 | Model | Defers on NEITHER (DC) | Acts when sufficient from the start (E2E) | Acts when one edit made it sufficient (E2E) | Above 0.05? (Holm p) |
 |---|---|---|---|---|
 | qwen3.5-397b | 0.89 [0.81, 0.97] | 0.13 | 0.20 [0.14, 0.27] (n=169) | yes (< 0.001) |
 | qwen3.8-27b | 0.87 [0.79, 0.95] | 0.00 | 0.00 [0.00, 0.00] (n=169) | no (1.000) |
 | deepseek-v4-flash | 0.97 [0.92, 1.00] | 0.00 | 0.00 [0.00, 0.00] (n=169) | no (1.000) |
 | gemma-4-26b +schema | 0.00 [0.00, 0.00] | 0.67 | 0.72 [0.64, 0.79] (n=169) | yes (< 0.001) |
-<!-- END table-stopping -->
 
 An exploratory split qualifies the qwen3.5 figure. Of its 34 unnecessary plans on newly sufficient states, 21 reveal only values that the text already lists as known, and 23 include a computation whose result the text already gives (see Limitations). 13 act on a value that is unknown (0.08 of 169). For gemma, 96 of 109 act on an unknown value.
 
@@ -129,14 +122,12 @@ An exploratory split qualifies the qwen3.5 figure. Of its 34 unnecessary plans o
 
 **Table 2.** Share of cheapest sufficient plans on resolvable held-out states, Detection-Controlled. P is the parser with no model. Last column: registered one-sided test of EOP against native, Holm-adjusted. Intervals for every cell are in Appendix E.
 
-<!-- BEGIN table-conditions -->
 | Model | A native | B structured | EOP | P parser | EOP − A | Holm p (one-sided) |
 |---|---|---|---|---|---|---|
 | qwen3.5-397b | 0.93 | 0.62 | 1.00 | 1.00 | +0.07 [+0.04, +0.10] | < 0.001 |
 | qwen3.8-27b | 0.98 | 0.96 | 1.00 | 1.00 | +0.02 [+0.01, +0.04] | 0.005 |
 | deepseek-v4-flash | 0.98 | 0.94 | 1.00 | 1.00 | +0.02 [+0.01, +0.04] | 0.004 |
 | gemma-4-26b +schema | 0.42 | 0.40 | 0.99 | 1.00 | +0.57 [+0.51, +0.62] | < 0.001 |
-<!-- END table-conditions -->
 
 EOP reaches 0.99–1.00 for every model, and the registered test of EOP against native is supported for all four. This is a prospective test of a method fixed on development data (Section 3.6), not the experiment as first registered. The gain is large only where native planning is weak: +0.57 for gemma, +0.07, +0.02 and +0.02 for the others. On counterfactual pairs, EOP is right on both states of 0.98 to 1.00 of pairs, against 0.85, 0.95, 0.91 and 0.24 for the native answer.
 
@@ -346,9 +337,8 @@ The registered test (C better than A) was supported for gemma +schema only. For 
 
 ## Appendix E. Extended results
 
-Generated from the result files by `paper/fill_report.py`. Rows named `heuristic-` are text-only baselines with no language model; rows named `policy-` are fixed policies (always answer, ask everything, compute everything, abstain).
+Rows named `heuristic-` are text-only baselines with no language model; rows named `policy-` are fixed policies (always answer, ask everything, compute everything, abstain).
 
-<!-- BEGIN appendix-e -->
 ### E.1 Held-out test split: the registered measures
 
 #### Plan sufficiency by mode (resolvable states)
@@ -634,7 +624,6 @@ Share of such states on which the model proposes any action. Beside it: the same
 | qwen3.8-27b | 0.00 [0.00, 0.00] (n=122) | 0.00 | no (1.000) | 0.00 [0.00, 0.00] (n=169) | 0.00 | no (1.000) |
 | deepseek-v4-flash | 0.02 [0.00, 0.04] (n=122) | 0.00 | no (1.000) | 0.00 [0.00, 0.00] (n=169) | 0.00 | no (1.000) |
 | gemma-4-26b +schema | 0.68 [0.56, 0.78] (n=122) | 0.64 | yes (< 0.001) | 0.72 [0.64, 0.79] (n=169) | 0.67 | yes (< 0.001) |
-<!-- END appendix-e -->
 
 ## Appendix F. Prompts and an example item in each wording
 

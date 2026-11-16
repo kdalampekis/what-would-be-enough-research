@@ -1,13 +1,3 @@
-<!-- Literature review for the MSEP report. Written 2026-11-14; extended the same day with the author's
-     consolidated list (paper/LITERATURE_REFERENCES_MASTER.md, 28 candidate entries).
-     Part A is a drop-in candidate for paper/report.md §2. Part B is an appendix. Citation numbers match Part C.
-     [1]–[8] keep their earlier numbering; [9]–[29] are the newly checked entries.
-     † in Part C: bibliographic details from Crossref; not read at the source. Such entries are cited only for
-     what their title and venue show.
-     The two slots once left open for the author's references are filled; see Part E.
-     Every number attributed to another paper is recorded in LITERATURE_FAILURE_MAP.md (read at the source on
-     2026-11-13) or was seen in an abstract or page fetched on 2026-11-14 (Part D). -->
-
 # Literature review: What Would Be Enough? Minimal Sufficient Epistemic Plans
 
 ## Part A. Related Work (main text)
@@ -25,7 +15,6 @@ Decision-theoretic metareasoning weighs the value of computation [9, 10], and co
 **Starting point.** Sufficiency and minimality appear separately for information [1], reasoning [21], evidence [23] and tools [5]. We did not find them scored jointly over information and certified computation, in one priced action space with states that need either, both or neither, against an exact oracle, with detection, diagnosis and planning measured separately.
 
 **Logical roots.** The oracle is related to the logic of the reasons behind decisions [30, 31]: a minimal sufficient plan resembles a sufficient reason, and an obligation a necessary reason, with unknown variables in place of known values. That correspondence is our reading. The same-decision probability [32] is a probabilistic relative of our sufficiency test.
-
 
 We do not claim that uncertainty detection, abstention, adaptive retrieval or computation, minimal sufficient information or epistemic planning are new, or that we are first.
 
