@@ -147,14 +147,14 @@ We asked whether language models can tell what would be enough to settle a quest
 
 ## Code and Data
 
-- **Code repository:** ⟦link⟧
+- **Code repository:** https://github.com/kdalampekis/what-would-be-enough-research
 - **Data:** every dataset regenerates deterministically from the repository and is pinned by SHA-256 in freeze records. The raw model responses behind every reported table are archived in the repository.
 - **Registrations:** `PROTOCOL.md`, `PREREG_T1.md`, `PREREG_T1B.md`, `PREREG_EOP.md` (two amendments), `PREREG_FINAL.md`, `PREREG_ROBUST.md`, `PREREG_FOLLOWUP.md`, `PREREG_REPAIR.md`.
 - **Extended report:** formal details and proofs, all result tables with intervals, prompts, example items in every wording and the full literature review (`paper/extended_report.md`).
 
 ## Author Contributions
 
-⟦Draft for the author to confirm or rewrite: Konstantinos Dalampekis is the sole author. The author set the research question and direction, made the decisions recorded at each registration and gate, and is responsible for the content. The role of AI tools is described in the LLM Usage Statement.⟧
+Konstantinos Dalampekis is the sole author. The author set the research question and direction, made the decisions recorded at each registration and gate, and is responsible for the content. The role of AI tools is described in the LLM Usage Statement.
 
 ## Acknowledgements
 
@@ -295,6 +295,6 @@ Generated from the result files by `paper/fill_report.py`. All three studies wer
 
 ## LLM Usage Statement
 
-⟦Draft for the author to confirm or rewrite: We used Claude (Anthropic), through Claude Code, throughout the project: to write and test most of the code, to run and monitor the experiments, to analyse results and to draft this report. A separate Claude agent, given only the texts, audited a sample of the reworded items for ambiguity; this is not a human audit. The author set the research questions, made the protocol decisions recorded in the registrations (including both amendments, the choice of held-out conditions and the follow-up studies), and reviewed the results and the text. Every number in the report is read from result files in the repository.⟧
+We used Claude (Anthropic), through Claude Code, throughout the project: to write and test most of the code, to run and monitor the experiments, to analyse results and to draft this report. A separate Claude agent, given only the texts, audited a sample of the reworded items for ambiguity; this is not a human audit. The author set the research questions, made the protocol decisions recorded in the registrations (including both amendments, the choice of held-out conditions and the follow-up studies), and reviewed the results and the text. Every number in the report is read from result files in the repository.
 
 [^1]: Research conducted at the AI x Epistemics Research Sprint, November 2026.

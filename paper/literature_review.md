@@ -4,7 +4,7 @@
      [1]–[8] keep their earlier numbering; [9]–[29] are the newly checked entries.
      † in Part C: bibliographic details from Crossref; not read at the source. Such entries are cited only for
      what their title and venue show.
-     ⟦OPEN SLOT⟧ marks a sentence that waits for references from the author. Nothing is cited for those slots.
+     The two slots once left open for the author's references are filled; see Part E.
      Every number attributed to another paper is recorded in LITERATURE_FAILURE_MAP.md (read at the source on
      2026-11-13) or was seen in an abstract or page fetched on 2026-11-14 (Part D). -->
 
@@ -146,8 +146,8 @@ All fetches were made on 2026-11-14. Statuses: **source** = verified at source (
 | When Planning Fails Despite Correct Execution (NOVELTY_MAP §9) | arXiv abstract page 2605.23414; ICML 2026 virtual site | source | [8]. Four authors; ICML 2026 poster. |
 | "Evaluating LLM Responses to Moral Scenarios" | none | not a reference | A stray link caption in the material the author pasted. Seen, not treated as a bibliography entry, not checked, not cited. |
 | "Ask-before-Plan: Proactive Language Agents for Real-World Planning" | none | not a reference | As above. |
-| Work on automated reasoning by Prof. Adnan Darwiche (author's note) | none | no | No repo document names a paper. Open slot 1. |
-| Sycophancy papers associated with Prof. J.D. Zamfirescu-Pereira (author's note) | none | no | No repo document names a paper or mentions sycophancy. Open slot 2. |
+| Work on automated reasoning by Prof. Adnan Darwiche (author's note) | [30]–[33] | yes | Filled after this review; see Part E. |
+| Sycophancy papers associated with Prof. J.D. Zamfirescu-Pereira (author's note) | [34], [35] | yes | Filled after this review; see Part E. |
 
 **Numbers spot-checked against the full text on 2026-11-14.** All matched LITERATURE_FAILURE_MAP.md: [1] 0.4 and 0.2 exact-set accuracy, "below 0.5 for k≥2", 0.6±0.8%, equal query cost; [2] 92.57% and 85.56%, 303 of 321, 468 of 551, 4,320 prompts, 92.59 → 94.58 → 97.59; [3] 0 of 24, 53 of 53, 0.36%, 345 of 725, 1,036 checkpoints; [4] −0.156 and +0.428 (Spearman, FEVER); [5] 0.83, 0.61, 0.72, 0.65, 0.99; [6] 98.7% and 98.3%, "modest". Other numbers in LITERATURE_FAILURE_MAP.md were not re-checked. Numbers for [12]–[29] come from the abstracts only.
 
@@ -169,20 +169,10 @@ All fetches were made on 2026-11-14. Statuses: **source** = verified at source (
 14. LITERATURE_FAILURE_MAP §3 notes ("mine") that the interval of SURE-Act's 0.0575 gain includes zero. This was not re-checked.
 15. The final search sweep required by NOVELTY_MAP §8 and ASSUMPTIONS A18 (within 24 hours of submission) was not run in this task. The master list states that it is not a systematic search.
 
-## Part E. Open slots
+## Part E. Two slots filled after this review was written
 
-Two citations wait for the author, who reports that the project drew on (i) Prof. Adnan Darwiche's work on automated reasoning and (ii) papers on sycophancy associated with Prof. J.D. Zamfirescu-Pereira. No repo document cites a paper for either, and the 28-entry master list contains none. Nothing is cited for them here.
+The author reported that the project drew on Prof. Adnan Darwiche's work on automated reasoning and on papers about sycophancy and chatbot design associated with Prof. J.D. Zamfirescu-Pereira. The papers were verified at their sources on 2026-11-14 and are listed in Part C as [30]–[35]. The two sentences, as used in the reports (`paper/report.md`, `paper/extended_report.md`):
 
-**Slot 1 — logical foundations.** Location: Part A, after "Starting point"; Part B, after "Why we start here". Text:
+**Logical foundations.** "The oracle is related to the logic of sufficient and necessary reasons for decisions [30, 31]; that correspondence is our reading." The same-decision probability [32] is a probabilistic relative of the sufficiency test, and [33] studies feature selection for decision robustness. The wording is "is related to", not "builds on": the oracle uses a SAT encoding of a distinguishing pair and weighted MaxSAT for cheapest hitting sets, not knowledge compilation.
 
-> ⟦OPEN SLOT 1 — logical foundations (references pending): "The oracle's satisfiability test and its minimal sets of missing facts (obligations) build on ___ [REF]."⟧
-
-What the repo supports for this sentence: the oracle checks sufficiency with a SAT encoding of a distinguishing pair, finds cheapest plans as minimum-cost hitting sets by weighted MaxSAT, and uses exact weighted model counting for the posterior rule only. The repo does not use knowledge compilation. If the supplied papers are about knowledge compilation or sufficient reasons, say "is related to", not "builds on", unless the author confirms the dependence.
-
-**Slot 2 — behavioural motivation.** Location: Part A, after "Starting point"; Part B, end of B.2. Text:
-
-> ⟦OPEN SLOT 2 — behavioural motivation (references pending): "Work on sycophancy reports that models defer to users instead of to evidence ___ [finding, REF]; MSEP asks what would settle the question."⟧
-
-What the repo supports for this sentence: nothing yet. No repo document mentions sycophancy, and the benchmark does not test deference to a user. The link is motivation only and should be worded that way. The words "defer to users instead of to evidence" must be replaced by what the supplied papers report.
-
-To fill a slot: verify the paper at its source (title, full author list, year, venue), add it to Part C as [30] or [31], add a row to Part D, and replace the marker with the completed sentence in both places.
+**Behavioural motivation.** "Assistants have been reported to match their answers to a user's stated views instead of the truth [35], and designers have found that no prompt made a model reliably say 'I don't know' when it should [34]." The benchmark does not test deference to a user; the link is motivation only.
